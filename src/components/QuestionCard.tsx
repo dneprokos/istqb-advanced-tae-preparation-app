@@ -34,9 +34,13 @@ export function QuestionCard({ question, selected, isFlagged, onAnswer, onToggle
             <span className="text-xs px-2 py-0.5 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 rounded">
               {question.points} pts
             </span>
-            {isMultiple && (
-              <span className="text-xs px-2 py-0.5 bg-amber-100 dark:bg-amber-900 text-amber-700 dark:text-amber-300 rounded">
-                Select {selectCount}
+            {isMultiple ? (
+              <span className="text-xs px-2 py-0.5 bg-amber-100 dark:bg-amber-900 text-amber-700 dark:text-amber-300 rounded font-medium">
+                Multiple answers &middot; select {selectCount}
+              </span>
+            ) : (
+              <span className="text-xs px-2 py-0.5 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 rounded">
+                Single answer
               </span>
             )}
           </div>
@@ -58,14 +62,20 @@ export function QuestionCard({ question, selected, isFlagged, onAnswer, onToggle
             <button
               key={opt.id}
               onClick={() => handleOption(opt.id)}
-              className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition
+              className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition flex items-center gap-3
                 ${isSelected
                   ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/30 text-blue-900 dark:text-blue-100'
                   : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500 hover:bg-gray-50 dark:hover:bg-gray-700'
                 }`}
             >
-              <span className="font-semibold mr-2">{opt.id.toUpperCase()}.</span>
-              {opt.text}
+              <span
+                className={`flex-shrink-0 w-4 h-4 border-2 ${isMultiple ? 'rounded' : 'rounded-full'}
+                  ${isSelected ? 'border-blue-500 bg-blue-500' : 'border-gray-400 dark:border-gray-500'}`}
+              />
+              <span>
+                <span className="font-semibold mr-2">{opt.id.toUpperCase()}.</span>
+                {opt.text}
+              </span>
             </button>
           );
         })}
