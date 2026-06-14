@@ -2,6 +2,8 @@
 
 A browser-based practice tool for the ISTQB Advanced Level Test Automation Engineer (CTAL-TAE) certification exam.
 
+**Live app:** https://dneprokos.github.io/istqb-advanced-tae-preparation-app/
+
 ## Overview
 
 Covers all 8 exam chapters with a combined question bank of 40+ questions per chapter. Supports timed full-exam simulation (40 questions, 90 minutes, 65% pass threshold) and per-chapter practice sessions. Progress is saved in the browser and persists across sessions.
