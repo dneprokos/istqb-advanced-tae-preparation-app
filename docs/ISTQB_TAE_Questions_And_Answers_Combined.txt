@@ -1,0 +1,2008 @@
+ISTQB Advanced Test Automation Engineer v2.0
+Combined Questions and Answers Source File
+
+=== QUESTIONS PDF ===
+
+
+===== PAGE 1 =====
+ 
+Version 2.2 of sample exam A   2024/10/16 
+© International Software Testing Qualifications Board   
+ 
+ 
+ 
+Sample Exam – Questions 
+Sample Exam set A 
+Version 2.2 
+ 
+ 
+ISTQB® Test Automation Engineering 
+Advanced Level 
+ 
+Compatible with Syllabus version 2.0 
+ 
+ 
+International Software Testing Qualifications Board 
+ 
+ 
+ 
+ 
+ 
+
+
+
+===== PAGE 2 =====
+Advanced Level Test Automation Engineering (TAE) 
+Sample Exam set A 
+Sample Exam – Questions 
+ 
+ 
+Version 2.2 of sample exam A Page 2 of 21 2024/10/16 
+ 
+© International Software Testing Qualifications Board 
+Copyright Notice 
+Copyright Notice © International Software Testing Qualifications Board (hereinafter called 
+ISTQB®). 
+ISTQB® is a registered trademark of the International Software Testing Qualifications Board. 
+All rights reserved. 
+The authors hereby transfer the copyright to the ISTQB®. The authors (as current copyright 
+holders) and ISTQB® (as the future copyright holder) have agreed to the following conditions of 
+use: 
+Extracts, for non-commercial use, from this document may be copied if the source is 
+acknowledged. 
+Any Accredited Training Provider may use this sample exam in their training course if the authors 
+and the ISTQB® are acknowledged as the source and copyright owners of the sample exam and 
+provided that any advertisement of such a training course is done only after official Accreditation of 
+the training materials has been received from an ISTQB®-recognized Member Board. 
+Any individual or group of individuals may use this sample exam in articles and books, if the 
+authors and the ISTQB® are acknowledged as the source and copyright owners of the sample 
+exam. 
+Any other use of this sample exam is prohibited without first obtaining the approval in writing of the 
+ISTQB®. 
+Any ISTQB®-recognized Member Board may translate this sample exam provided they reproduce 
+the above mentioned Copyright Notice in the translated version of the sample exam. 
+Document Responsibility 
+The ISTQB® Examination Working Group is responsible for this document.  
+This document is maintained by a core team from ISTQB® consisting of the Syllabus Working 
+Group and Exam Working Group. 
+Acknowledgements 
+This document was produced by a core team from ISTQB®: Andrew Pollner (chair), Péter Földházi, 
+Patrick Quilter, Gergely Ágnecz, and Geza Bujdoso. 
+The core team thanks the Exam Working Group review team, the Syllabus Working Group and 
+Member Boards for their suggestions and input. 
+The technical review was performed by Judy McKay and Gary Mogyorodi. 
+
+
+===== PAGE 3 =====
+Advanced Level Test Automation Engineering (TAE) 
+Sample Exam set A 
+Sample Exam – Questions 
+ 
+ 
+Version 2.2 of sample exam A Page 3 of 21 2024/10/16 
+ 
+© International Software Testing Qualifications Board 
+Revision History 
+ 
+Version Date Remarks 
+v2.2 2024/10/16 Changes to Q# 1, 3, 5, 7, 8, 9, 10, 11, 13, 14, 16, 18, 20, 23, 
+24, 25, 26, 27, 28, 29, 30, 40 
+v2.1 2024/07/04 Minor visual changes to questions 3, 12, 18, 30. 
+Content is not changed! 
+v2.0 2024/05/03 GA Release 
+   
+   
+  
+
+
+===== PAGE 4 =====
+Advanced Level Test Automation Engineering (TAE) 
+Sample Exam set A 
+Sample Exam – Questions 
+ 
+ 
+Version 2.2 of sample exam A Page 4 of 21 2024/10/16 
+ 
+© International Software Testing Qualifications Board 
+Table of Contents 
+ 
+Copyright Notice ................................ ................................ ................................ ............................. 2 
+Revision History ................................ ................................ ................................ .............................. 3 
+Table of Contents................................ ................................ ................................ ............................ 4 
+Introduction ................................ ................................ ................................ ................................ ..... 5 
+Purpose of this document ................................ ................................ ................................ ............ 5 
+Instructions ................................ ................................ ................................ ................................ .. 5 
+Questions ................................ ................................ ................................ ................................ ....... 6 
+Question #1 (1 Point) ................................................................................................................................. 6 
+Question #2 (1 Point) ................................................................................................................................. 6 
+Question #3 (1 Point) ................................................................................................................................. 6 
+Question #4 (1 Point) ................................................................................................................................. 6 
+Question #5 (1 Point) ................................................................................................................................. 7 
+Question #6 (1 Point) ................................................................................................................................. 7 
+Question #7 (3 Points) ............................................................................................................................... 7 
+Question #8 (3 Points) ............................................................................................................................... 8 
+Question #9 (1 Point) ................................................................................................................................. 8 
+Question #10 (1 Point) ............................................................................................................................... 9 
+Question #11 (2 Points) ............................................................................................................................. 9 
+Question #12 (2 Points) ............................................................................................................................. 9 
+Question #13 (2 Points) ........................................................................................................................... 10 
+Question #14 (2 Points) ........................................................................................................................... 10 
+Question #15 (2 Points) ........................................................................................................................... 11 
+Question #16 (3 Points) ........................................................................................................................... 12 
+Question #17 (1 Point) ............................................................................................................................. 13 
+Question #18 (1 Point) ............................................................................................................................. 13 
+Question #19 (2 Points) ........................................................................................................................... 13 
+Question #20 (2 Points) ........................................................................................................................... 13 
+Question #21 (1 Point) ............................................................................................................................. 14 
+Question #22 (1 Point) ............................................................................................................................. 14 
+Question #23 (1 Point) ............................................................................................................................. 14 
+Question #24 (1 Point) ............................................................................................................................. 14 
+Question #25 (2 Points) ........................................................................................................................... 15 
+Question #26 (2 Points) ........................................................................................................................... 15 
+Question #27 (3 Points) ........................................................................................................................... 16 
+Question #28 (1 Point) ............................................................................................................................. 16 
+Question #29 (2 Points) ........................................................................................................................... 17 
+Question #30 (2 Points) ........................................................................................................................... 17 
+Question #31 (1 Point) ............................................................................................................................. 18 
+Question #32 (1 Point) ............................................................................................................................. 18 
+Question #33 (1 Point) ............................................................................................................................. 18 
+Question #34 (1 Point) ............................................................................................................................. 19 
+Question #35 (2 Points) ........................................................................................................................... 19 
+Question #36 (2 Points) ........................................................................................................................... 20 
+Question #37 (3 Points) ........................................................................................................................... 20 
+Question #38 (3 Points) ........................................................................................................................... 20 
+Question #39 (2 Points) ........................................................................................................................... 21 
+Question #40 (1 Point) ............................................................................................................................. 21 
+ 
+
+
+===== PAGE 5 =====
+Advanced Level Test Automation Engineering (TAE) 
+Sample Exam set A 
+Sample Exam – Questions 
+ 
+ 
+Version 2.2 of sample exam A Page 5 of 21 2024/10/16 
+ 
+© International Software Testing Qualifications Board 
+Introduction 
+Purpose of this document 
+The example questions and answers and associated justifications in this sample exam have been 
+created by a team of subject matter experts and experienced question writers with the aim of: 
+● Assisting ISTQB® Member Boards and Exam Boards in their question writing activities 
+● Providing training providers and exam candidates with examples of exam questions 
+These questions cannot be used as-is in any official examination. 
+Note, that real exams may include a wide variety of questions, and this sample exam is not 
+intended to include examples of all possible question types, styles, or lengths, also this sample 
+exam may both be more difficult or less difficult than any official exam. 
+Instructions 
+In this document you may find: 
+● Questions1, including for each question: 
+- Any scenario needed by the question stem 
+- Point value 
+- Response (answer) option set 
+● Additional questions, including for each question [does not apply to all sample exams]: 
+- Any scenario needed by the question stem 
+- Point value 
+- Response (answer) option set 
+ 
+● Answers, including justification are contained in a separate document 
+ 
+1 In this sample exam the questions are sorted by the LO they target; this cannot be expected of a live exam.  
+
+
+===== PAGE 6 =====
+Advanced Level Test Automation Engineering (TAE) 
+Sample Exam set A 
+Sample Exam – Questions 
+ 
+ 
+Version 2.2 of sample exam A Page 6 of 21 2024/10/16 
+ 
+© International Software Testing Qualifications Board 
+Questions 
+Question #1 (1 Point) 
+Which of the following is a limitation of test automation? 
+a) Only usability tests can be automated effectively  
+b) Test automation can be executed only after system testing is done 
+c) Test automation can only check results that can be verified visually  
+d) Test automation can only check results that can be verified by code  
+Select ONE option. 
+Question #2 (1 Point) 
+Which of the following is true about test automation and the SDLC?  
+a) In Agile software development automated tests focus more on acceptance tests than on 
+component tests 
+b) In Agile software development automated tests focus more on component tests than on 
+acceptance tests 
+c) In the V-model automated test execution must be performed after manual test execution 
+d) In the V-model implementation of test automation is performed throughout the whole 
+software development cycle 
+Select ONE option. 
+Question #3 (1 Point) 
+Which one of the following factors is NOT necessary to consider when selecting suitable test tools? 
+a) SUT architecture 
+b) Actual composition and experience of the test team 
+c) Licensing and support of the test tool 
+d) Quality of the SUT requirements 
+Select ONE option. 
+Question #4 (1 Point) 
+When a system is designed for testability, one of the characteristics is that the test automation 
+framework (TAF) can access interfaces to perform actions on the system. What is this 
+characteristic called? 
+a) Observability 
+b) Controllability 
+c) Maintainability 
+d) Interoperability 
+Select ONE option. 
+  
+
+
+===== PAGE 7 =====
+Advanced Level Test Automation Engineering (TAE) 
+Sample Exam set A 
+Sample Exam – Questions 
+ 
+ 
+Version 2.2 of sample exam A Page 7 of 21 2024/10/16 
+ 
+© International Software Testing Qualifications Board 
+Question #5 (1 Point) 
+What type of test automation is mainly performed in the Preproduction environment?  
+a) Component testing 
+b) Performance efficiency testing and user acceptance testing 
+c) Static analysis 
+d) Component Integration testing 
+Select ONE option. 
+Question #6 (1 Point) 
+In which environment is a fully automated test suite typically executed against a release candidate 
+for the first time? 
+a) Preproduction/staging environment 
+b) Build environment 
+c) Production/operational environment 
+d) Integration/test environment 
+Select ONE option. 
+Question #7 (3 Points) 
+You are working for an IT company which is developing a built -in Android-based car multimedia 
+system. The software contains several components working together. Developers are following the 
+test-driven development approach. After the development of the software, it is delivered to another 
+IT company which integrates the software with the hardware elements and sells them together to 
+car manufacturers. 
+Which of the following should be considered during capturing the test automation requirements by 
+the IT company you are working for?  
+a) Is it important for the test automation approach to support component testing? 
+b) Should the test automation approach support beta testing? 
+c) Is it important for the test automation approach to support the testing of the software in as 
+many different types of cars as possible? 
+d) Which tester roles should be supported by the test automation approach? 
+e) Is it important for the test automation approach to support the mobile application store 
+approval? 
+Select TWO options. 
+  
+
+
+===== PAGE 8 =====
+Advanced Level Test Automation Engineering (TAE) 
+Sample Exam set A 
+Sample Exam – Questions 
+ 
+ 
+Version 2.2 of sample exam A Page 8 of 21 2024/10/16 
+ 
+© International Software Testing Qualifications Board 
+Question #8 (3 Points) 
+You are evaluating test automation tool s. The following is a list of findings for one of the tools that 
+were evaluated against the selection requirements:  
+• The tool has a very informative dashboard which shows all the relevant test information about 
+the SUT.  
+• The tool includes a test logging component which logs all the necessary information that 
+follows test execution and to troubleshoot problems found during the tests.  
+• The tool includes a customizable test reporting component.  
+• During the proof of concept, the tool performed very slowly against the SUT , compared to 
+the other tools that were evaluated.  
+• The current test environment is valid according to the release notes of the tool which means 
+it fulfills the hardware and software requirements.  
+What should be your next step regarding the selection of this tool?  
+a) Acquire more hardware resources for the SUT to decrease the performance degradation 
+b) Turn off test logging to improve performance of the tool 
+c) Recommend not selecting this tool 
+d) Plan to migrate the SUT to another hardware/software environment where there is a 
+possibility for the elimination of the tool overhead 
+Select ONE option. 
+Question #9 (1 Point) 
+Match the list of tasks in the Test Automation Architecture Capabilities below with its correct role 
+name below. 
+1. Mapping the abstract test cases to concrete test cases suitable for execution. 
+2. Implementation of test cases and/or test suites. 
+3. Test logging with detailed information about the test steps and actions. 
+4. Mechanism for connecting to the SUT via protocols, and services.  
+  
+A. Test Definition  
+B. Test Adaptation  
+C. Test Generation  
+D. Test Execution   
+ 
+a) 1D, 2A, 3C, 4B    
+b) 1C, 2A, 3B, 4D     
+c) 1A, 2B, 3D, 4C    
+d) 1C, 2A, 3D, 4B 
+Select ONE option. 
+  
+
+
+===== PAGE 9 =====
+Advanced Level Test Automation Engineering (TAE) 
+Sample Exam set A 
+Sample Exam – Questions 
+ 
+ 
+Version 2.2 of sample exam A Page 9 of 21 2024/10/16 
+ 
+© International Software Testing Qualifications Board 
+Select ONE option. 
+Question #10 (1 Point) 
+As a Test Automation engineer You have encountered a problem during initial implementation of 
+the test automation solution (TAS). The output from the system tests could not be translated back 
+to the automated test cases to determine the test results.  
+Which option may have MOST LIKELY been a cause of the problem? 
+a) The test tool libraries were NOT designed to be updated upon each SUT version release. 
+b) The integration to the SUT system under test was NOT setup via APIs. 
+c) The SUT-Specific adaptors for the selected tool were NOT implemented. 
+d) The SUT and the test management tool were NOT compatible. 
+Question #11 (2 Points) 
+You are working in an Android development team and have been maintaining a test automation 
+framework. An additional development team has formed to build a new application. Your project 
+manager asks you to build a test automation framework for this newly fo rmed team. At first, you 
+identify the components that could be reused in building that new framework, then start implementing 
+the additional libraries based on the new application. 
+In which layer do you configure the connection to the new app? 
+a) Core libraries layer 
+b) Test scripts layer 
+c) Feature files layer 
+d) Business logic layer 
+ 
+Select ONE option.      
+Question #12 (2 Points) 
+You are working on a test automation project that is used to automate GUI testing of a web -based 
+public transport service. The project has a limited timescale. There are manual test cases which can 
+be automated first. One of the goals is to implement test cases directly into the automated test 
+scripts.  
+Which technique or approach should be used for automating test cases to meet the goals?  
+a) Using the keyword-driven test technique 
+b) Using the behavior-driven development approach 
+c) Using the capture/playback test automation approach 
+d) Using the data-driven test automation technique 
+Select ONE option. 
+  
+
+
+===== PAGE 10 =====
+Advanced Level Test Automation Engineering (TAE) 
+Sample Exam set A 
+Sample Exam – Questions 
+ 
+ 
+Version 2.2 of sample exam A Page 10 of 21 2024/10/16 
+ 
+© International Software Testing Qualifications Board 
+Question #13 (2 Points) 
+You join a company where manual testing is mature, but test automation has been abandoned for a 
+while now. The testers have generated a massive amount of test data and are typically using 10 to 
+20 variations per scenario. After your initial review, you see  that the TAF  (Test Automation 
+Framework) can easily be fixed, but the test cases need to be completely revamped.  
+Which of the following test automation approaches should you choose to achieve great results 
+quickly?  
+a) Data-driven testing 
+b) Behavior-driven development 
+c) Capture/playback 
+d) Acceptance test-driven development 
+Select ONE option.      
+Question #14 (2 Points) 
+You are working on a test automation project that is used to automate GUI testing of an e-commerce 
+site. The site contains a digital assistant which helps users to set up their accounts, their name, 
+billing address, shipping address, and security credentia ls. Currently, the development of the 
+software is in a phase where usability testers check the digital assistant and give recommendations 
+on necessary changes. This is done iteratively; the developers modify the graphical user interface 
+(GUI), and the usability testers check the modifications, and do usability testing again.  
+Which design pattern is the best implemented in this case? 
+a) Implement the page object pattern and store all the user actions associated with the GUI 
+elements in the relevant page models 
+b) Implement the flow model pattern, store all the web elements in the relevant page models, 
+and store all the user actions associated with the GUI elements in the relevant flow models 
+c) Implement the facade design pattern and provide interfaces for the GUI elements to hide 
+the used internal locator mechanism  
+d) Implement the singleton design pattern and create a single piece of code to handle the 
+locating of elements 
+Select ONE option. 
+  
+
+
+===== PAGE 11 =====
+Advanced Level Test Automation Engineering (TAE) 
+Sample Exam set A 
+Sample Exam – Questions 
+ 
+ 
+Version 2.2 of sample exam A Page 11 of 21 2024/10/16 
+ 
+© International Software Testing Qualifications Board 
+Question #15 (2 Points) 
+The senior management wants to implement a TAS in your organization and asks you to lead this 
+initiative. You have been given directions to start a pilot project.  
+Which of the following statements best describes the objective of this pilot project? 
+i. Document the SUT parts which have not been documented during the development 
+ii. Identify the metrics and the measurement methods to monitor the SUT in the 
+production environment 
+iii. Analyze defects found during the testing of the TAS 
+iv. Evaluate licensing options and corporation rules 
+v. Select the most suitable commercial off-the-shelf or open-source tool  
+ 
+a) i, ii and iii are valid objectives of the pilot project 
+b) ii and iv are valid objectives of the pilot project 
+c) i, ii and v are valid objectives of the pilot project 
+d) iv and v are valid objectives of the pilot project 
+Select ONE option. 
+  
+
+
+===== PAGE 12 =====
+Advanced Level Test Automation Engineering (TAE) 
+Sample Exam set A 
+Sample Exam – Questions 
+ 
+ 
+Version 2.2 of sample exam A Page 12 of 21 2024/10/16 
+ 
+© International Software Testing Qualifications Board 
+Question #16 (3 Points) 
+You are tasked with implementing a Test Automation Solution (TAS) for functional suitability tests 
+that must be executed automatically after each daily build. The TAS needs to integrate seamlessly 
+with the existing CI/CD pipeline and provide quick feedback on the software's quality. However, 
+you've identified several potential risks that could impact the successful deployment and operation 
+of the TAS. 
+As the test automation engineer, you need to analyze the deployment risks associated with 
+implementing the TAS and determine the BEST mitigation strategies for each risk. Your goal is to 
+ensure a smooth integration of the TAS into the existing development process while maintaining 
+the quality and reliability of the testing process. 
+Which of the following BEST matches the deployment risks with their appropriate mitigation 
+strategies? 
+ 1. Test execution not triggered by the build 
+2. Only the full test suite can be executed 
+3. Test data unavailable when starting the test 
+4. Difficulty in troubleshooting failed tests 
+  
+A. Log detailed information during test execution 
+B. Integrate test automation into the CI/CD pipeline 
+C. Use third-party tools to generate test data 
+D. Utilize test harnesses and test fixtures 
+ 
+a) 1-B, 2-A, 3-D, 4-C 
+b) 1-A, 2-B, 3-C, 4-D 
+c) 1-B, 2-D, 3-C, 4-A  
+d) 1-D, 2-B, 3-C, 4-A 
+Select ONE option. 
+      
+  
+
+
+===== PAGE 13 =====
+Advanced Level Test Automation Engineering (TAE) 
+Sample Exam set A 
+Sample Exam – Questions 
+ 
+ 
+Version 2.2 of sample exam A Page 13 of 21 2024/10/16 
+ 
+© International Software Testing Qualifications Board 
+Question #17 (1 Point) 
+Which one of the following is an important factor to improve code maintainability? 
+a) Define generic functions with all the necessary parameters  
+b) Let developers uniquely name code variables 
+c) Use static analyzers to keep the code clean 
+d) Hardcode values to easily understand their meaning 
+Select ONE option. 
+Question #18 (1 Point) 
+ What is the most effective way to reduce the maintenance time for test automation code? 
+a) Keep the code outside of a version control system 
+b) Embed static data directly within the test scripts for easier access 
+c) Apply design patterns in your test automation framework 
+d)  Regularly rewrite test scripts from scratch instead of reusing existing components 
+Select ONE option. 
+Question #19 (2 Points) 
+There is an IT company which develops an often-changing financial software product using the Agile 
+software development model. The development, the integration and the deployment processes are 
+highly automated. There is a CI/CD pipeline currently establish ed. You are working on a TAS. The 
+goal is to create a TAS which can be used for as many test automation purposes as possible. 
+Which of the following options are valid purposes for test automation in this case? 
+a) Run a regression test suite every night 
+b) Execute a build of a component 
+c) Run a static code analysis 
+d) Execute an automated performance efficiency test in the CI/CD pipeline 
+e) Package and deploy the application as part of the deployment phase 
+Select TWO options. 
+Question #20 (2 Points) 
+Which statement is correct? 
+a) Tests are not executed as part of the deployment phase 
+b) Tests are not executed as a separate pipeline, triggered by the successful deployment 
+c) Test cases do not act as a quality gate when different automated test suites will run on 
+each deployment 
+d)  Pipelines are not recommended for regression testing due to the extensive scope and size 
+of these tests 
+e)  
+Select ONE option. 
+  
+
+
+===== PAGE 14 =====
+Advanced Level Test Automation Engineering (TAE) 
+Sample Exam set A 
+Sample Exam – Questions 
+ 
+ 
+Version 2.2 of sample exam A Page 14 of 21 2024/10/16 
+ 
+© International Software Testing Qualifications Board 
+Question #21 (1 Point) 
+How is configuration management used in test automation?  
+a) It enables the management of test data and test environment configurations 
+b) The SUT configuration can be stored and easily removed 
+c) It enables management of user rights for accessing test automation 
+d) Test automation results can easily be analyzed 
+Select ONE option. 
+Question #22 (1 Point) 
+Which item below is NOT part of the test environment configuration?  
+a) Uniform resource locators (URLs) 
+b) Credentials 
+c) Test data 
+d) Common core library 
+Select ONE option. 
+Question #23 (1 Point) 
+How does contract testing NOT contribute to API test automation dependencies in an 
+infrastructure? 
+a) Ensures that APIs adhere to predefined contracts for communication 
+b) Can be used to test the communication of microservices 
+c) Validates the compatibility of two separate systems 
+d) Verifies whether a system satisfies its contractual requirements 
+Select ONE option. 
+Question #24 (1 Point) 
+You are on a project where the teams are working on breaking down an old monolithic web service 
+into several microservices.  Which of the following documents can assist you in identifying 
+dependencies and developing your Test Automation Solution (TAS) for API testing? 
+i. Application programming interface (API) specification 
+ii. System architecture diagram 
+iii. Test strategy 
+iv. Release notes 
+a) i, ii, and iv 
+b) i and ii 
+c) ii, iii, and iv 
+d) i 
+Select ONE option. 
+  
+
+
+===== PAGE 15 =====
+Advanced Level Test Automation Engineering (TAE) 
+Sample Exam set A 
+Sample Exam – Questions 
+ 
+ 
+Version 2.2 of sample exam A Page 15 of 21 2024/10/16 
+ 
+© International Software Testing Qualifications Board 
+Question #25 (2 Points) 
+You are working on a test automation project that is used to automate GUI testing of an online web 
+shop. The web shop contains a wizard which helps users to set up their accounts, their name, billing 
+address, shipping address, and security credentials. Dur ing the test automation, the steps of the 
+wizard are recorded first. Screenshots are taken and stored during these steps. We consider these 
+as the baseline. The baseline was then rerun with no change to the SUT and all tests passed.   
+After the developers submit a change to the wizard, the recorded test scripts are played back, and 
+the screenshots of each step are compared with the baseline screenshots.  During a playback, all 
+test cases failed, even though the visible content seems unchanged. 
+ What could be the cause? 
+a) An internally used technical session ID is also recorded, which changes during the 
+playback. This should be substituted with variables to avoid failures. 
+b)  Screenshots are not correctly associated with the test steps, leading to 
+comparisons being made in the wrong order. 
+c)  The failure occurred because relying solely on screenshot comparisons led to 
+inaccurate results. 
+d) The date in the GUI header is different from the date when it was recorded. This date 
+field should be excluded from the comparison 
+e)  Screenshots were captured in low resolution, causing details to be blurred, 
+making the comparison unreliable. 
+Select TWO options. 
+Question #26 (2 Points) 
+You are working on a project where you are responsible to extend the current TAF that is used for 
+web service testing, with additional test logging capabilities. The TAF uses a third-party tool to create 
+file logs and an HTML report to quickly visualize th e test results.  In the test implementation, 
+various dynamic values are used to generate the actual test data, and the SUT, a web 
+service without a UI, connects to multiple legacy test systems. Unfortunately, the tests are very 
+unstable, and you need to add meaningful information to the test logging to better analyze the 
+reasons for the failures. 
+What additional information should not be included in the test logging to make it more useful and 
+why? 
+a) Timestamps should be included in the test logs to see if the failure connects to a given legacy 
+system outage 
+b) Screenshots should be included to see actual request-response pairs 
+c) Randomly generated values should be logged to allow for analysis of the actual 
+results occured during test executions 
+d) In case of assertion failures meaningful information like actual results versus expected results 
+should be logged instead of stack traces 
+Select ONE option. 
+ 
+
+
+===== PAGE 16 =====
+Advanced Level Test Automation Engineering (TAE) 
+Sample Exam set A 
+Sample Exam – Questions 
+ 
+ 
+Version 2.2 of sample exam A Page 16 of 21 2024/10/16 
+ 
+© International Software Testing Qualifications Board 
+Question #27 (3 Points) 
+During the design phase of a performance critical software product, management decides to create 
+a TAS to do load testing on the software to measure its performance. The product contains different 
+architectural components, including a browser -based front end, microservices implemented in the 
+back end, and a relational database. It is important to measure all individual transactions in the entire 
+architectural stack. 
+How can you automatically provide this information from the test automation software? 
+a) You cannot. This information has to be gathered manually at the end of every transaction 
+b) The test automation engineer (TAE) can record the timing information during the execution 
+of all transactions 
+c) Trace IDs should be populated across the software components and measured time values 
+should be associated with these IDs to correlate the performance data. 
+d) Third-party tools should be inserted into the different layers of the architecture and these 
+agents should log the collected data into a database 
+Select ONE option. 
+Question #28 (1 Point) 
+As a test automation engineer, you are tasked with demonstrating to management whether the test 
+success rate is improving over a series of test runs.  
+What is the right approach to fulfill this requirement? 
+a) Compare the test results with the expected results 
+b) Use traffic light indicators to show test execution progress 
+c) Detailed test reports with percentages of test completion 
+d) Implement an analysis feature that compares previous test results and highlights 
+trends 
+Select ONE option.      
+  
+
+
+===== PAGE 17 =====
+Advanced Level Test Automation Engineering (TAE) 
+Sample Exam set A 
+Sample Exam – Questions 
+ 
+ 
+Version 2.2 of sample exam A Page 17 of 21 2024/10/16 
+ 
+© International Software Testing Qualifications Board 
+Question #29 (2 Points) 
+Your team has developed a Test Automation Solution (TAS) for a computer-aided design (CAD) 
+software program. This software has several different versions in production and has been ported 
+to different languages and platforms. Manual testers have been using the TAS on their local 
+computers with different language settings, versions, and platforms. Before proceeding with further 
+automated testing, you need to verify the test automation environment. 
+What is an important consideration when verifying the environment for this TAS? 
+a) Establish a central repository to verify that all testers are using the same version of the 
+capture/playback tool and can access it correctly 
+b) Create and document a procedure to verify the proper installation of the CAD software on each 
+tester's machine 
+c) Set up a central test environment where the CAD software is installed and verify that automation 
+scripts can interact with it from each local computer 
+d) Use configuration management to verify the consistency of test data and scripts across different 
+environments 
+Select ONE option. 
+Question #30 (2 Points) 
+You work in a software development team that requires testing to occur in many different test 
+environments. Your manager has expressed that the team is spending a significant amount of time 
+overcoming false-positive results because the test automation solution (TAS) is not configured 
+correctly when using it in a new test environment. Additionally, there appear to be version 
+differences when comparing the TAS in each test environment. Even new test environments 
+sometimes are set up with very old TAS components.  
+Which TWO options would help address this situation? 
+a) Create an automated installation script for the tools and configurations that make up the 
+TAS 
+b) Limit the TAS to only be used in the most important test environments 
+c) Utilize a repository to store the TAS that is accessible to all test environments 
+d) Leverage manual testing to verify that the TAS has been configured properly in all test 
+environments 
+e) Due to time constraints skip the implementation of components tests for the TAS 
+Select TWO options. 
+  
+
+
+===== PAGE 18 =====
+Advanced Level Test Automation Engineering (TAE) 
+Sample Exam set A 
+Sample Exam – Questions 
+ 
+ 
+Version 2.2 of sample exam A Page 18 of 21 2024/10/16 
+ 
+© International Software Testing Qualifications Board 
+Question #31 (1 Point) 
+You are about to verify an automated test suite. During the verification process you have found that 
+some test scripts pass one time and fail at another, therefore not providing reliable test results.  
+What should you do to verify the validity of your test scripts? 
+a) This is due to the parallel execution of the test scripts; synchronization would solve the 
+problem 
+b) Re-execute the automated test suite and analyze the test results again 
+c) Remove the test scripts from the automated test suite and analyze them separately 
+d) This happens because several test scripts are using the same test data, so the separation 
+of test data for each test script would resolve the problem 
+Select ONE option. 
+Question #32 (1 Point) 
+You have a test suite containing 25 automated tests that verify the login functionality of an 
+application’s home page. The test suite is executed at the end of each two-week sprint cycle for 
+regression test purposes. You notice that two test cases out of the 25 may sometimes cause a 
+race condition in the application or receive a random error.  
+What action should you take for these two test cases?  
+a) Take no action because sometimes they execute successfully 
+b) Reduce the amount of test cases in the test suite from 25 to 15 and see if the test suite 
+passes with the smaller amount 
+c) Remove the two test cases from the active test suite and analyze them separately to find 
+the root cause 
+d) Replace the two test cases with ones that pass repeatedly so that the test suite still has 25 
+automated test cases 
+Select ONE option. 
+Question #33 (1 Point) 
+You are working on a project to automate a regression test suite. When the regression test suite 
+was executed manually last time, all the tests passed. But when you execute them via the test 
+automation solution (TAS), you find there are some failed tests.  
+What should you do to handle this situation? 
+a) Analyze log files to identify the root cause of the problem 
+b) Eliminate these test cases from the automated test suite, so the remaining tests can pass 
+c) Open a defect for the SUT as the failed tests are indicating an SUT problem 
+d) This is normal because automated tests behave differently than manual tests 
+Select ONE option. 
+  
+
+
+===== PAGE 19 =====
+Advanced Level Test Automation Engineering (TAE) 
+Sample Exam set A 
+Sample Exam – Questions 
+ 
+ 
+Version 2.2 of sample exam A Page 19 of 21 2024/10/16 
+ 
+© International Software Testing Qualifications Board 
+Question #34 (1 Point) 
+You are preparing to execute a test automation suite for a security -critical application which has to 
+fulfill the highest security requirements.  
+Which approach should you follow to verify the test automation code? 
+a) Search the test longs for possible credential data 
+b) Eliminate test cases using sensitive test data 
+c) Execute the test suite slowly and methodically to check if there are any security vulnerabilities 
+d) Use a static analysis tool to identify security vulnerabilities 
+Select ONE option. 
+Question #35 (2 Points) 
+You are working on a test automation project that is used to automate graphical user interface (GUI) 
+testing of an online web shop. The web shop contains a wizard which helps users set up their 
+accounts: their names, billing address, shipping address and s ecurity credentials. Currently, the 
+development of the software is in a phase when usability testers check the wizard and give 
+recommendations about the necessary changes. This is done iteratively; the developers modify the 
+GUI, the usability testers check  the modifications and  repeat the usability testing. The test 
+automation is mainly focusing on maintenance testing. In these UI -based test cases, data also 
+includes UI locator values. An existing problem is that developers often change the internal identifiers 
+of UI elements, so maintaining tests requires a lot of effort. 
+Which of the following could be an important opportunity for improvement? 
+a) Apply schema validation, which checks if mandatory response elements are present on the 
+GUI 
+b) Improve test logging to include information about UI elements and their locators to easily 
+identify the broken test cases 
+c) Create a test histogram, which enables the TAEs to identify and select test cases that are 
+fragile 
+d) Use an artificial intelligence (AI) algorithm - which is based on machine learning and image 
+recognition - to identify the new selectors and use self-healing to fix the test cases 
+Select ONE option. 
+  
+
+
+===== PAGE 20 =====
+Advanced Level Test Automation Engineering (TAE) 
+Sample Exam set A 
+Sample Exam – Questions 
+ 
+ 
+Version 2.2 of sample exam A Page 20 of 21 2024/10/16 
+ 
+© International Software Testing Qualifications Board 
+Question #36 (2 Points) 
+Your organization maintains a regression test suite of over 1000 automated test cases that has 
+been extremely reliable over the years. Recently the development team has decided to modernize 
+their technology stack and are currently refactoring how their front end operates. You notice that 
+the application is far more API-driven than the previous version and this has an impact on how UI 
+elements render. You anticipate this is going to impact the success rate of 75% of your automated 
+test cases.  
+What data analysis approaches should you use to determine how to fix your impacted automated 
+test cases? 
+a) Run the test cases several times in a CI/CD pipeline, perform visual report analysis, and 
+draw conclusions from a test histogram 
+b) Use AI algorithms and API schema validation tools 
+c) Recreate automated test cases to replace the ones that are not working properly and will 
+execute on the new application 
+d) Avoid automating certain test cases after analyzing exception logs, screenshots, and error 
+messages 
+Select ONE option. 
+Question #37 (3 Points) 
+You are working on an automated regression test suite that takes too long a time to execute, and 
+its execution does not finish overnight. The test environment is only available for regression testing 
+during the night. Running multiple suites in parallel is not an option, as the target system is 
+expensive and exists only as a single instance. What should be your next steps to ensure the test 
+suite execution finishes overnight? 
+a) Split the test suite into multiple parts, executing the parts on different nights of the week 
+b) Isolate test result verification from the test execution and start the verification process after 
+the test execution during morning hours 
+c) Rewrite the tests using the keyword-driven technique as that will be executed faster 
+d) Remove some tests from the test suite to reduce overall execution time 
+e) Remove any duplicate tests from the test suite 
+Select TWO options. 
+Question #38 (3 Points) 
+As a TAE, you are evaluating new versions of core libraries.  
+Which is the correct order that can help you achieve these results? 
+a) Create adoption plan; determine impact; update dependencies; perform pilot  
+b) Perform pilot; determine impact; create adoption plan; update dependencies 
+c) Update dependencies; determine impact; perform pilot; create adoption plan  
+d) Determine impact; update dependencies; create adoption plan; perform pilot 
+Select ONE option.      
+  
+
+
+===== PAGE 21 =====
+Advanced Level Test Automation Engineering (TAE) 
+Sample Exam set A 
+Sample Exam – Questions 
+ 
+ 
+Version 2.2 of sample exam A Page 21 of 21 2024/10/16 
+ 
+© International Software Testing Qualifications Board 
+Question #39 (2 Points) 
+You have been performing a quality review of a TAS to optimize the interaction of controls within the 
+GUI. The GUI includes several types of controls (e.g., dropdown list, checkbox, text field). There are 
+also separate functions in the test scripts which act upon the different types of GUI controls to gather 
+information and to set them (e.g., visible/not visible, enabled/not enabled). Which of the following 
+steps should you consider to increase the efficiency of the TAS? 
+a) Separate the testing of the controls based on their types into different test suites 
+b) Research if there is a test automation tool which can replace the current solution 
+c) Check if there are any functions that can work with several types of controls, and consolidate 
+the test scripts using these functions 
+d) Use the new operating system functions in the test scripts to handle the GUI controls 
+Select ONE option. 
+Question #40 (1 Point) 
+As a test automation engineer, you have automated the performance test of a customer 
+management system. In order to effectively test the performance of this system, you need 
+to create diverse test data that includes customers with varying profiles based on  different 
+input criteria. 
+What is the best way to implement such a solution? 
+a) Employ a test automation tool to invoke a web service API that creates new user 
+accounts and populates their profiles with the specified data. 
+b) Register these users manually via the GUI, so the GUI functionality can also be tested 
+c) Use the production database during the test as it has the real volume and type of data 
+d) Implement a test automation script to anonymize customer data before using it during the 
+performance test 
+Select ONE option. 
+
+=== ANSWERS PDF ===
+
+
+===== PAGE 1 =====
+v2.4  2026/05/12 
+© International Software Testing Qualifications Board   
+ 
+ 
+ 
+Sample Exam – Answers 
+Sample Exam set A 
+Version 2.4 
+ 
+ 
+ISTQB® Test Automation Engineering 
+Advanced Level 
+ 
+Compatible with Syllabus version 2.0 
+ 
+ 
+International Software Testing Qualifications Board 
+ 
+ 
+ 
+ 
+ 
+
+
+
+===== PAGE 2 =====
+Advanced Level Test Automation Engineering (TAE) 
+Sample Exam set A 
+Sample Exam – Questions 
+Version 2.4 of sample exam A Page 2 of 30 2026/05/12 
+ 
+© International Software Testing Qualifications Board 
+Copyright Notice 
+Copyright Notice © International Software Testing Qualifications Board (hereinafter called 
+ISTQB®). 
+ISTQB® is a registered trademark of the International Software Testing Qualifications Board.  
+All rights reserved. 
+The authors hereby transfer the copyright to the ISTQB®. The authors (as current copyright 
+holders) and ISTQB® (as the future copyright holder) have agreed to the following conditions of 
+use: 
+Extracts, for non-commercial use, from this document may be copied if the source is 
+acknowledged. 
+Any Accredited Training Provider may use this sample exam in their training course if the authors 
+and the ISTQB® are acknowledged as the source and copyright owners of the sample exam and 
+provided that any advertisement of such a training course is done only after official Accreditation of 
+the training materials has been received from an ISTQB®-recognized Member Board. 
+Any individual or group of individuals may use this sample exam in articles and books, if the 
+authors and the ISTQB® are acknowledged as the source and copyright owners of the sample 
+exam. 
+Any other use of this sample exam is prohibited without first obtaining the approval in writing of the 
+ISTQB®. 
+Any ISTQB®-recognized Member Board may translate this sample exam provided they reproduce 
+the abovementioned Copyright Notice in the translated version of the sample exam. 
+Document Responsibility 
+The ISTQB® Examination Working Group is responsible for this document.  
+This document is maintained by a core team from ISTQB® consisting of the Syllabus Working 
+Group and Exam Working Group. 
+Acknowledgements 
+This document was produced by a core team from the ISTQB®: Andrew Pollner (chair), Péter 
+Földházi, Patrick Quilter, and Gergely Ágnecz. 
+The core team thanks the Exam Working Group review team, the Syllabus Working Group and 
+Member Boards for their suggestions and input. 
+The technical review was performed by Judy McKay and Gary Mogyorodi. 
+ 
+
+
+===== PAGE 3 =====
+Advanced Level Test Automation Engineering (TAE) 
+Sample Exam set A 
+Sample Exam – Questions 
+Version 2.4 of sample exam A Page 3 of 30 2026/05/12 
+ 
+© International Software Testing Qualifications Board 
+Revision History 
+ 
+   
+Version Date Remarks 
+v2.4 2026/05/12 Align doc version with Questions file 
+v2.3 2025/11/17 Corrected answer to Q#16. 
+v2.2 2024/10/16 Changes to Q# 1, 2, 3, 5, 9, 10, 11, 13, 16, 18, 19, 20, 23, 24, 
+25, 26, 28, 29, 30 
+v2.1 2024/07/04 Correct numbering for questions 3, 5 
+v2.0 2024/05/03 GA Release 
+   
+   
+  
+
+
+===== PAGE 4 =====
+Advanced Level Test Automation Engineering (TAE) 
+Sample Exam set A 
+Sample Exam – Questions 
+Version 2.4 of sample exam A Page 4 of 30 2026/05/12 
+ 
+© International Software Testing Qualifications Board 
+Table of Contents 
+Copyright Notice .............................................................................................................................  2 
+Revision History ..............................................................................................................................  3 
+Table of Contents............................................................................................................................  4 
+Introduction .....................................................................................................................................  5 
+Purpose of this document ............................................................................................................  5 
+Instructions ..................................................................................................................................  5 
+Answer Key .....................................................................................................................................  6 
+Answers ..........................................................................................................................................  7 
+1 ................................................................................................................................................................. 7 
+2 ................................................................................................................................................................. 8 
+3 ................................................................................................................................................................. 8 
+4 ................................................................................................................................................................. 9 
+5 ................................................................................................................................................................. 9 
+6 ............................................................................................................................................................... 10 
+7 ............................................................................................................................................................... 10 
+8 ............................................................................................................................................................... 11 
+9 ............................................................................................................................................................... 12 
+10 ............................................................................................................................................................. 13 
+11 ............................................................................................................................................................. 13 
+12 ............................................................................................................................................................. 14 
+13 ............................................................................................................................................................. 14 
+14 ............................................................................................................................................................. 15 
+15 ............................................................................................................................................................. 15 
+16 ............................................................................................................................................................. 16 
+17 ............................................................................................................................................................. 16 
+18 ............................................................................................................................................................. 17 
+19 ............................................................................................................................................................. 17 
+20 ............................................................................................................................................................. 18 
+21 ............................................................................................................................................................. 18 
+22 ............................................................................................................................................................. 19 
+23 ............................................................................................................................................................. 19 
+24 ............................................................................................................................................................. 20 
+25 ............................................................................................................................................................. 21 
+26 ............................................................................................................................................................. 22 
+27 ............................................................................................................................................................. 22 
+28 ............................................................................................................................................................. 23 
+29 ............................................................................................................................................................. 24 
+30 ............................................................................................................................................................. 25 
+31 ............................................................................................................................................................. 25 
+32 ............................................................................................................................................................. 26 
+33 ............................................................................................................................................................. 26 
+34 ............................................................................................................................................................. 27 
+35 ............................................................................................................................................................. 27 
+36 ............................................................................................................................................................. 28 
+37 ............................................................................................................................................................. 29 
+38 ............................................................................................................................................................. 29 
+39 ............................................................................................................................................................. 30 
+40 ............................................................................................................................................................. 30 
+ 
+
+
+===== PAGE 5 =====
+Advanced Level Test Automation Engineering (TAE) 
+Sample Exam set A 
+Sample Exam – Questions 
+Version 2.4 of sample exam A Page 5 of 30 2026/05/12 
+ 
+© International Software Testing Qualifications Board 
+Introduction 
+Purpose of this document 
+The example questions and answers and associated justifications in this sample exam have been 
+created by a team of subject matter experts and experienced question writers with the aim of: 
+● Assisting ISTQB ® Member Boards and Exam Boards in their question writing activities 
+● Providing training providers and exam candidates with examples of exam questions 
+These questions cannot be used as-is in any official examination. 
+Note, that real exams may include a wide variety of questions, and this sample exam is not 
+intended to include examples of all possible question types, styles or lengths, also this sample 
+exam may both be more difficult or less difficult than any official exam. 
+Instructions 
+In this document you may find: 
+● Answer Key table, including for each correct answer: 
+- K-level, Learning Objective, and Point value 
+● Answer sets, including for all questions: 
+- Correct answer 
+- Justification for each response (answer) option 
+- K-level, Learning Objective, and Point value 
+● Additional answer sets, including for all questions [does not apply to all sample exam s]: 
+- Correct answer 
+- Justification for each response (answer) option 
+- K-level, Learning Objective, and Point value 
+ 
+● Questions are contained in a separate document
+
+
+===== PAGE 6 =====
+Advanced Level Test Automation Engineering (TAE)  
+Sample Exam set A 
+Sample Exam – Answers 
+ 
+ 
+Version 2.2 of sample exam A Page 6 of 30 2024/10/16 
+© International Software Testing Qualifications Board   
+ 
+Answer Key  
+Question 
+Number (#) 
+Correct Answer LO K-Level Points  Question 
+Number (#) 
+Correct Answer LO K-Level Points 
+1 d TAE-1.1.1 K2 1  21 a TAE-5.1.2 K2 1 
+2 b TAE-1.2.1 K2 1  22 d TAE-5.1.2 K2 1 
+3 d TAE-1.2.2 K2 1  23 d TAE-5.1.3 K2 1 
+4 b TAE-2.1.1 K2 1  24 b TAE-5.1.3 K2 1 
+5 b TAE-2.1.2 K2 1  25 a, d TAE-6.1.1 K3 2 
+6 d TAE-2.1.2 K2 1  26 b TAE-6.1.1 K3 2 
+7 a, d TAE-2.2.1 K4 3  27 c TAE-6.1.2 K4 3 
+8 c TAE-2.2.2 K4 3  28 d TAE-6.1.3 K2 1 
+9 d TAE-3.1.1 K2 1  29 a TAE-7.1.1 K3 2 
+10 c TAE-3.1.2 K2 1  30 a, c TAE-7.1.1 K3 2 
+11 d TAE-3.1.3 K3 2  31 c TAE-7.1.2 K2 1 
+12 c TAE-3.1.4 K3 2  32 c TAE-7.1.2 K2 1 
+13 a TAE-3.1.4 K3 2  33 a TAE-7.1.3 K2 1 
+14 b TAE-3.1.5 K3 2  34 d TAE-7.1.4 K2 1 
+15 d TAE-4.1.1 K3 2  35 d TAE-8.1.1 K3 2 
+16 c TAE-4.2.1 K4 3  36 b TAE-8.1.1 K3 2 
+17 c TAE-4.3.1 K2 1  37 a, e TAE-8.1.2 K4 3 
+18 c TAE-4.3.1 K2 1  38 b TAE-8.1.2 K4 3 
+19 a, d TAE-5.1.1 K3 2  39 c TAE-8.1.3 K3 2 
+20 c TAE-5.1.1 K3 2  40 a TAE-8.1.4 K2 1 
+
+
+===== PAGE 7 =====
+Advanced Level Test Automation Engineering (TAE)  
+Sample Exam set A 
+Sample Exam – Answers 
+ 
+ 
+Version 2.2 of sample exam A Page 7 of 30 2024/10/16 
+© International Software Testing Qualifications Board   
+ 
+Answers 
+Question 
+Number 
+(#) 
+Correct 
+Answer 
+Explanation / Rationale Learning 
+Objective 
+(LO) 
+K-Level Number 
+of 
+Points 
+1 d a)  Is not correct. Test automation can be performed before and after 
+system testing. 
+b)  Is not correct. It refers to non-existing limitation. 
+c)  Is not correct. Test automation is not limited to check only the 
+results that can be verified visually. 
+d)  Is correct. As in syllabus: "Test automation can only check test 
+results that can be verified by an automated test oracle". This is a 
+limitation and means that results of the automated scripts are 
+verified by the machine which is programmed to do so (code). 
+TAE-1.1.1 K2 1 
+
+
+===== PAGE 8 =====
+Advanced Level Test Automation Engineering (TAE)  
+Sample Exam set A 
+Sample Exam – Answers 
+ 
+ 
+Version 2.2 of sample exam A Page 8 of 30 2024/10/16 
+© International Software Testing Qualifications Board   
+ 
+Question 
+Number 
+(#) 
+Correct 
+Answer 
+Explanation / Rationale Learning 
+Objective 
+(LO) 
+K-Level Number 
+of 
+Points 
+2 b a) Is not correct. In Agile software development, automated component 
+tests are higher in volume compared to automated acceptance tests. 
+b) Is correct. In Agile software development, automated component tests 
+are higher in volume compared to automated acceptance tests. 
+c) Is not correct. There is no such rule in the V-model. 
+d) Is not correct. V-model test planning, including planning of test 
+automation, is performed in the early phase of the software 
+development lifecycle. 
+TAE-1.2.1 K2 1 
+3 d a) Is not correct. The SUT architecture should be considered. 
+b) Is not correct. The actual composition and experience of the test team 
+needs to be evaluated. 
+c) Is not correct. It is necessary to have knowledge about the licensing 
+and support of the tool. 
+d)  Is correct. The quality of the SUT requirements is not directly related to 
+selecting the tool itself. 
+TAE-1.2.2 K2 1 
+
+
+===== PAGE 9 =====
+Advanced Level Test Automation Engineering (TAE)  
+Sample Exam set A 
+Sample Exam – Answers 
+ 
+ 
+Version 2.2 of sample exam A Page 9 of 30 2024/10/16 
+© International Software Testing Qualifications Board   
+ 
+Question 
+Number 
+(#) 
+Correct 
+Answer 
+Explanation / Rationale Learning 
+Objective 
+(LO) 
+K-Level Number 
+of 
+Points 
+4 b a) Is not correct. Observability means to give insight into the system. 
+b) Is correct. See Chapter 2.1.1 of the syllabus.  
+c) Is not correct. Maintainability is a quality characteristic. 
+e) Is not correct. Interoperability is also a quality characteristic. 
+TAE-2.1.1 K2 1 
+5 b a) Is not correct. Component testing is performed in a build and 
+development environment. 
+b) Is correct. It is necessary to perform performance efficiency testing and 
+user acceptance testing in a preproduction environment to test real 
+world scenarios. 
+c) Is not correct. Static analysis is usually done at the development 
+environment. 
+d) Is not correct. Component integration testing is done at the 
+development environment. 
+TAE-2.1.2 K2 1 
+
+
+===== PAGE 10 =====
+Advanced Level Test Automation Engineering (TAE)  
+Sample Exam set A 
+Sample Exam – Answers 
+ 
+ 
+Version 2.2 of sample exam A Page 10 of 30 2024/10/16 
+© International Software Testing Qualifications Board   
+ 
+Question 
+Number 
+(#) 
+Correct 
+Answer 
+Explanation / Rationale Learning 
+Objective 
+(LO) 
+K-Level Number 
+of 
+Points 
+6 d a) Is not correct. Preproduction or staging environment testing has less 
+focus on functional aspects. 
+b) Is not correct. A build environment is not ready for more robust test 
+execution. 
+c) Is not correct. Full functional test suites are not typically executed 
+against products in production. 
+d) Is correct. Robust user interface (UI), and application programming 
+interface (API) test suites are typically executed against fully integrated 
+systems. 
+TAE-2.1.2 K2 1 
+7 a, d a) Is correct. Component testing is performed by the developing IT 
+company. 
+b) Is not correct. Beta testing is not performed. 
+c) Is not correct. The testing of as many different types of cars as possible 
+is performed by the integrator IT company. 
+d) Is correct. Automated component tests are designed and executed by 
+the developers. 
+e) Is not correct. The test automation approach to support the mobile 
+application store approval is not performed. 
+TAE-2.2.1 K4 3 
+
+
+===== PAGE 11 =====
+Advanced Level Test Automation Engineering (TAE)  
+Sample Exam set A 
+Sample Exam – Answers 
+ 
+ 
+Version 2.2 of sample exam A Page 11 of 30 2024/10/16 
+© International Software Testing Qualifications Board   
+ 
+Question 
+Number 
+(#) 
+Correct 
+Answer 
+Explanation / Rationale Learning 
+Objective 
+(LO) 
+K-Level Number 
+of 
+Points 
+8 c a) Is not correct. The test environment is valid according to the release 
+notes. 
+b) Is not correct. The test logging component is essential for 
+troubleshooting. 
+c) Is correct. The tool does not meet selection requirements. 
+d) Is not correct. It is completely wrong to migrate the SUT. 
+TAE-2.2.2 K4 3 
+
+
+===== PAGE 12 =====
+Advanced Level Test Automation Engineering (TAE)  
+Sample Exam set A 
+Sample Exam – Answers 
+ 
+ 
+Version 2.2 of sample exam A Page 12 of 30 2024/10/16 
+© International Software Testing Qualifications Board   
+ 
+Question 
+Number 
+(#) 
+Correct 
+Answer 
+Explanation / Rationale Learning 
+Objective 
+(LO) 
+K-Level Number 
+of 
+Points 
+9 d 1-C. Test Generation. mapping the abstract test cases to concrete test 
+cases suitable for execution. This is where model based testing tools 
+support the automated design of test cases based on a test model.  
+2-A. Test Definition. Implementation of test cases and/or test suites.  This 
+layer supports the definition and implementation of test cases and/or test 
+suites. 
+3-D. Test Execution. Test logging with detailed information about the test 
+steps and actions. This layer provides a test execution tool to run the 
+selected tests automatically, and a test logging and test reporting 
+component. 
+4-B. Test Adaptation. Mechanism for connecting to the SUT via protocols, 
+and services. This layer provides functionality to adapt the automated tests 
+for the various components or interfaces of the SUT. It provides different 
+adaptors for integration mechanism. 
+  
+a) 1D, 2A, 3C, 4B   INCORRECT  
+b) 1C, 2A, 3B, 4D   INCORRECT 
+c) 1A, 2B, 3D, 4C   INCORRECT 
+d) 1C, 2A, 3D, 4B   CORRECT 
+TAE-3.1.1 K2 1 
+
+
+===== PAGE 13 =====
+Advanced Level Test Automation Engineering (TAE)  
+Sample Exam set A 
+Sample Exam – Answers 
+ 
+ 
+Version 2.2 of sample exam A Page 13 of 30 2024/10/16 
+© International Software Testing Qualifications Board   
+ 
+Question 
+Number 
+(#) 
+Correct 
+Answer 
+Explanation / Rationale Learning 
+Objective 
+(LO) 
+K-Level Number 
+of 
+Points 
+10 c a) a) Is not correct. The problem was found in the initial implementation 
+and no updates were introduced yet. 
+b) Is not correct. The integration method used does not matter whether it is 
+via APIs or other mechanism. 
+c) Is correct. The adaptors are necessary for the translation of the test 
+results. 
+d) Is not correct. The question does not mention test management tool 
+incompatibility. 
+TAE-3.1.2 K2 1 
+11 d a) Is not correct. Core libraries should be application independent and 
+generic. 
+b) Is not correct. Test scripts should only contain test scripts and no 
+configuration. 
+c) Is not correct. Feature files contain scenarios written in the Gherkin 
+language. 
+d) Is correct. The business logic layer is used to set up the TAF to run 
+against the SUT. 
+TAE-3.1.3 K3 2 
+
+
+===== PAGE 14 =====
+Advanced Level Test Automation Engineering (TAE)  
+Sample Exam set A 
+Sample Exam – Answers 
+ 
+ 
+Version 2.2 of sample exam A Page 14 of 30 2024/10/16 
+© International Software Testing Qualifications Board   
+ 
+Question 
+Number 
+(#) 
+Correct 
+Answer 
+Explanation / Rationale Learning 
+Objective 
+(LO) 
+K-Level Number 
+of 
+Points 
+12 c a) Is not correct. Keyword-driven testing is too complex for this solution. 
+b) Is not correct. Behavior-driven development is too complex and is not 
+necessary. 
+c) Is correct. Capture/playback test automation is easy to set up. 
+d) Is not correct. Data-driven test automation is too complex and is not 
+necessary. 
+TAE-3.1.4 K3 2 
+13 a a) Is correct. The test data is already available and can be reused to 
+increase the test case count. 
+b) Is not correct. Behavior-driven development requires involvement from 
+business representatives, and in this case, there is no specific mention 
+whether the business is involved. 
+c) Is not correct. Capture/playback would be a slow and costly solution, 
+while the test data is already present. 
+d) Is not correct. Acceptance test-driven development is not an automation 
+approach. 
+TAE-3.1.4 K3 2 
+
+
+===== PAGE 15 =====
+Advanced Level Test Automation Engineering (TAE)  
+Sample Exam set A 
+Sample Exam – Answers 
+ 
+ 
+Version 2.2 of sample exam A Page 15 of 30 2024/10/16 
+© International Software Testing Qualifications Board   
+ 
+Question 
+Number 
+(#) 
+Correct 
+Answer 
+Explanation / Rationale Learning 
+Objective 
+(LO) 
+K-Level Number 
+of 
+Points 
+14 b a) Is not correct. Storing the user actions in the page model class files will 
+not allow easy reuse and maintainability of complex user flows. 
+b) Is correct. The flow model pattern combines usage of page models and 
+flow models, storing the structure and logic of the application in class 
+files with different purposes, and is typically used when the SUT’s 
+structure changes frequently. 
+c) Is not correct. Facades provide a simplified interface to a larger body of 
+code. 
+d) Is not correct. The singleton design pattern does not solve the problem 
+in this case. 
+TAE-3.1.5 K3 2 
+15 d a) Is not correct. i, ii and iii are not valid objectives of the pilot project. 
+b) Is not correct. ii is not a valid objective of the pilot project. 
+c) Is not correct. i and ii are not valid objectives of the pilot project. 
+d) Is correct. iv and v are valid objectives of the pilot project. 
+TAE-4.1.1 K3 2 
+
+
+===== PAGE 16 =====
+Advanced Level Test Automation Engineering (TAE)  
+Sample Exam set A 
+Sample Exam – Answers 
+ 
+ 
+Version 2.2 of sample exam A Page 16 of 30 2024/10/16 
+© International Software Testing Qualifications Board   
+ 
+Question 
+Number 
+(#) 
+Correct 
+Answer 
+Explanation / Rationale Learning 
+Objective 
+(LO) 
+K-Level Number 
+of 
+Points 
+16 c a) 1-B: Integrating test automation into the CI/CD pipeline ensures test 
+execution is triggered by the build. 
+b) 2-D: Test harnesses and fixtures allow for more flexible test execution, 
+not limited to full suite runs. 
+c) 3-C: Third-party tools can help generate test data when it's not readily 
+available. 
+d) 4-A: Detailed logging during test execution aids in troubleshooting failed 
+tests. 
+Correct answer is c) 
+TAE-4.2.1 K4 3 
+17 c a) Is not correct. This answer does not improve code maintainability. 
+b) Is not correct. Uniquely naming code variables does not improve code 
+maintainability. 
+c) Is correct. Using static analyzers improves code maintainability. 
+d) Is not correct. Hard coding values does not improve code 
+maintainability. 
+TAE-4.3.1 K2 1 
+
+
+===== PAGE 17 =====
+Advanced Level Test Automation Engineering (TAE)  
+Sample Exam set A 
+Sample Exam – Answers 
+ 
+ 
+Version 2.2 of sample exam A Page 17 of 30 2024/10/16 
+© International Software Testing Qualifications Board   
+ 
+Question 
+Number 
+(#) 
+Correct 
+Answer 
+Explanation / Rationale Learning 
+Objective 
+(LO) 
+K-Level Number 
+of 
+Points 
+18 c a) Is not correct. Storing the code outside of a version control system 
+makes it more difficult for test automation engineers (TAEs) to manage, 
+track, and collaborate on code effectively. 
+b) Is not correct. Hardcoding data in test scripts is not recommended, as it  
+makes the scripts inflexible and difficult to maintain when changes are 
+required. 
+c) Is correct. Structuring the test automation code using design patterns 
+improves reusability and scalability, reducing the time needed for 
+maintenance. 
+d)  Is not correct. Regularly rewriting test scripts from scratch is ineffici ent 
+and leads to unnecessary work. Reusing existing components is more 
+effective in reducing maintenance time. 
+TAE-4.3.1 K2 1 
+19 a, d a) Is correct. Regression testing is necessary, and it can be incorporated 
+into the CI/CD pipeline. 
+b) Is not correct. Executing a build is not a test automation task. 
+c) Is not correct. Static code analysis is not a test automation task. 
+d) Is correct. Performance efficiency tests can be automated. 
+e) Is not correct. Packaging and deployment are not test automation tasks. 
+TAE-5.1.1 K3 2 
+
+
+===== PAGE 18 =====
+Advanced Level Test Automation Engineering (TAE)  
+Sample Exam set A 
+Sample Exam – Answers 
+ 
+ 
+Version 2.2 of sample exam A Page 18 of 30 2024/10/16 
+© International Software Testing Qualifications Board   
+ 
+Question 
+Number 
+(#) 
+Correct 
+Answer 
+Explanation / Rationale Learning 
+Objective 
+(LO) 
+K-Level Number 
+of 
+Points 
+20 c a) Is not correct. Tests are executed during deployment. 
+b) Is not correct. Tests are triggered to execute after successful 
+deployment. 
+c) Is correct. It is not a correct statement since tests do not act as qual ity 
+gates for deployment. 
+d)  Is not correct. Pipelines are an excellent solution for periodic testing, 
+such as regression tests, and the size of these tests does not impact 
+their effectiveness. 
+TAE-5.1.1 K3 2 
+21 a a) Is correct. Test data and test environment configurations can be under 
+configuration management. 
+b) Is not correct. The SUT configuration can be under configuration 
+management, but it is not related to test automation. 
+c) Is not correct. User rights management is not related to configuration 
+management. 
+d) Is not correct. Configuration management does not support test 
+automation results analysis. 
+TAE-5.1.2 K2 1 
+
+
+===== PAGE 19 =====
+Advanced Level Test Automation Engineering (TAE)  
+Sample Exam set A 
+Sample Exam – Answers 
+ 
+ 
+Version 2.2 of sample exam A Page 19 of 30 2024/10/16 
+© International Software Testing Qualifications Board   
+ 
+Question 
+Number 
+(#) 
+Correct 
+Answer 
+Explanation / Rationale Learning 
+Objective 
+(LO) 
+K-Level Number 
+of 
+Points 
+22 d a) Is not correct. URLs are part of the test environment configuration. 
+b) Is not correct. Credentials are part of the test environment 
+configuration. 
+c) Is not correct. Test data is part of the test environment configur ation. 
+d) Is correct. The test environment configuration is a part of the common 
+core library, not vice versa. 
+TAE-5.1.2 K2 1 
+23 d a) Is not correct. Contract testing ensures APIs follow predefined 
+communication agreements, helping manage API dependencies. 
+b) Is not correct. Contract testing can be used to test communication 
+between microservices. 
+c) Is not correct. Contract testing can validate the compatibility of two 
+separate systems. 
+d) Is correct. Contract testing has no relation to the contractual 
+requirements. 
+TAE-5.1.3 K2 1 
+
+
+===== PAGE 20 =====
+Advanced Level Test Automation Engineering (TAE)  
+Sample Exam set A 
+Sample Exam – Answers 
+ 
+ 
+Version 2.2 of sample exam A Page 20 of 30 2024/10/16 
+© International Software Testing Qualifications Board   
+ 
+Question 
+Number 
+(#) 
+Correct 
+Answer 
+Explanation / Rationale Learning 
+Objective 
+(LO) 
+K-Level Number 
+of 
+Points 
+24 b a) Is not correct. Release notes do not help to learn the API connections 
+and details. 
+b) Is correct - API specification provides details about endpoints, and the 
+system architecture diagram shows the relationships between different 
+components. 
+c) Is not correct - The test strategy and release notes don't provide 
+specific information about API dependencies needed for building a 
+TAS. 
+d)  Is not correct - The API specification alone is not sufficient; the system 
+architecture diagram is also needed to understand the relationships 
+between different services. 
+TAE-5.1.3 K2 1 
+
+
+===== PAGE 21 =====
+Advanced Level Test Automation Engineering (TAE)  
+Sample Exam set A 
+Sample Exam – Answers 
+ 
+ 
+Version 2.2 of sample exam A Page 21 of 30 2024/10/16 
+© International Software Testing Qualifications Board   
+ 
+Question 
+Number 
+(#) 
+Correct 
+Answer 
+Explanation / Rationale Learning 
+Objective 
+(LO) 
+K-Level Number 
+of 
+Points 
+25 a, d a) Is correct. Session IDs change with each session, causing screenshot 
+differences even when content looks the same. 
+b) Is not correct. Order isn’t relevant, as all screenshots fail, which 
+wouldn’t happen if only order was the issue. 
+c) Is not correct. This doesn’t explain why all comparisons fail when 
+content appears unchanged. 
+d) Is correct. Dynamic elements like dates in GUI can cause false 
+negatives and should be excluded from comparisons. 
+e)  Is not correct. Browser zoom changes are unlikely to cause all failures 
+if content appears identical to the human eye. 
+TAE-6.1.1 K3 2 
+
+
+===== PAGE 22 =====
+Advanced Level Test Automation Engineering (TAE)  
+Sample Exam set A 
+Sample Exam – Answers 
+ 
+ 
+Version 2.2 of sample exam A Page 22 of 30 2024/10/16 
+© International Software Testing Qualifications Board   
+ 
+Question 
+Number 
+(#) 
+Correct 
+Answer 
+Explanation / Rationale Learning 
+Objective 
+(LO) 
+K-Level Number 
+of 
+Points 
+26 b a) Is not correct. The timestamps can help see when there are problems 
+and if they are connected to a legacy service outage that affects the 
+functionality of the SUT. 
+b) Is correct. The SUT is a web service without a UI, so screenshots are 
+irrelevant. Logging request and response data is more useful for 
+analyzing web service interactions. 
+c) Is not correct. The randomly generated values will not be visible for 
+later investigation. 
+d) Is not correct. Focused assertion messages can aid the investigation of 
+the failures. 
+TAE-6.1.1 K3 2 
+27 c a) Is not correct. Manual data collection is too time-consuming and error-
+prone; automation is essential. 
+b) Is not correct. This doesn’t explain how data can be correlated across 
+different components. 
+c) Is correct. Trace ID is the appropriate way to associate the performance 
+data across the different architectural components, enabling system-
+wide performance analysis. 
+d)  Is not correct. Third- party tools can collect data but don’t provide 
+necessary correlation for complete analysis. 
+TAE-6.1.2 K4 3 
+
+
+===== PAGE 23 =====
+Advanced Level Test Automation Engineering (TAE)  
+Sample Exam set A 
+Sample Exam – Answers 
+ 
+ 
+Version 2.2 of sample exam A Page 23 of 30 2024/10/16 
+© International Software Testing Qualifications Board   
+ 
+Question 
+Number 
+(#) 
+Correct 
+Answer 
+Explanation / Rationale Learning 
+Objective 
+(LO) 
+K-Level Number 
+of 
+Points 
+28 d a) Is not correct. The comparison of the test results and the expected 
+results only gives us the pass/fail rate for one test run only.  
+f) Is not correct. The traffic lights are only for showing the summary of  
+progress of test cases execution and completion within one test run 
+cycle only.  
+g) Is not correct. Detailed reports with Percentages of test completion 
+are only for showing the outcome of test cases execution and 
+completion within one test run cycle only.  
+h) Is correct. This is the correct implementation whereby the analysis 
+feature is able to compare pass rate of previous test run cycles and 
+compare with latest and plot in a trend analysis display 
+ 
+TAE-6.1.3 K2 1 
+
+
+===== PAGE 24 =====
+Advanced Level Test Automation Engineering (TAE)  
+Sample Exam set A 
+Sample Exam – Answers 
+ 
+ 
+Version 2.2 of sample exam A Page 24 of 30 2024/10/16 
+© International Software Testing Qualifications Board   
+ 
+Question 
+Number 
+(#) 
+Correct 
+Answer 
+Explanation / Rationale Learning 
+Objective 
+(LO) 
+K-Level Number 
+of 
+Points 
+29 a   
+a) Correct - This option focuses on verifying that all testers can access 
+and use the same version of the capture/playback tool, which is crucial 
+for ensuring consistency in the test automation environment. 
+b) Incorrect - While documenting installation procedures is important, it's 
+not specifically about verifying the test automation environment. 
+c) Incorrect - This approach doesn't address the need for different 
+environments as specified in the scenario. 
+d) Incorrect - While configuration management is important, this option 
+doesn't specifically address verifying the test automation environment. 
+TAE-7.1.1 K3 3 
+
+
+===== PAGE 25 =====
+Advanced Level Test Automation Engineering (TAE)  
+Sample Exam set A 
+Sample Exam – Answers 
+ 
+ 
+Version 2.2 of sample exam A Page 25 of 30 2024/10/16 
+© International Software Testing Qualifications Board   
+ 
+Question 
+Number 
+(#) 
+Correct 
+Answer 
+Explanation / Rationale Learning 
+Objective 
+(LO) 
+K-Level Number 
+of 
+Points 
+30 a, c a) Is correct. Automated installation and configuration scripts ensure 
+consistency and repeatability during TAS setup. 
+b) Is not correct. The TAS should be designed for portability in multiple 
+test environments. 
+c) Is correct. Repositories can be used to verify consistent TAS versions 
+across all test environments. 
+d) Is not correct. Manual testing is not a scalable solution. 
+e) Is not correct. By omitting component tests, potential issues could go 
+undetected 
+TAE-7.1.1 K3 3 
+31 c a) Is not correct. The issue should be analyzed closely since the root 
+cause is not yet known. 
+b) Is not correct. This answer does not suggest any solution. 
+c) Is correct. This should be the first task in this case. 
+d) Is not correct. The issue should be analyzed closely since the root 
+cause is not yet known. 
+TAE-7.1.2 K2 1 
+
+
+===== PAGE 26 =====
+Advanced Level Test Automation Engineering (TAE)  
+Sample Exam set A 
+Sample Exam – Answers 
+ 
+ 
+Version 2.2 of sample exam A Page 26 of 30 2024/10/16 
+© International Software Testing Qualifications Board   
+ 
+Question 
+Number 
+(#) 
+Correct 
+Answer 
+Explanation / Rationale Learning 
+Objective 
+(LO) 
+K-Level Number 
+of 
+Points 
+32 c a) Is not correct. The goal is to have repeatable tests that give consistent 
+test results. 
+b) Is not correct. Eliminating coverage is not a good response to the 
+situation. 
+c) Is correct. This allows the test suite to continue to be used for 
+repeatable test results while providing time to triage problem test cases. 
+They will be re-added to the test suite once corrected. 
+d) Is not correct. This does not address the random errors that the 
+application is experiencing. 
+TAE-7.1.2 K2 1 
+33 a a) Is correct. Log file analysis can identify the root cause of the problem. 
+b) Is not correct. This process will not help solve the original issue. 
+c) Is not correct. These tests do not directly indicate a problem in the SUT;  
+they should be analyzed first. 
+d) Is not correct. The statement is false. 
+TAE-7.1.3 K2 1 
+
+
+===== PAGE 27 =====
+Advanced Level Test Automation Engineering (TAE)  
+Sample Exam set A 
+Sample Exam – Answers 
+ 
+ 
+Version 2.2 of sample exam A Page 27 of 30 2024/10/16 
+© International Software Testing Qualifications Board   
+ 
+Question 
+Number 
+(#) 
+Correct 
+Answer 
+Explanation / Rationale Learning 
+Objective 
+(LO) 
+K-Level Number 
+of 
+Points 
+34 d a) Is not correct. Test logs may not contain credential data present in the 
+automation code. 
+b) Is not correct. It does not make sense to eliminate test cases as it w ill 
+affect code coverage. 
+c) Is not correct. Slower test execution does not necessarily reveal 
+security vulnerabilities. 
+d) Is correct. Static analysis tools support identification of security 
+vulnerabilities. 
+TAE-7.1.4 K2 1 
+35 d a) Is not correct. Schema validation can be applied in API testing, not GUI  
+testing. 
+b) Is not correct. This is a manual and slow process. 
+c) Is not correct. A test histogram enables identification of fragile test 
+cases, but it does not solve the underlying problem. 
+d) Is correct. Using an AI based algorithm supports identification of broken 
+locators and self-healing of the test cases. 
+TAE-8.1.1 K3 2 
+
+
+===== PAGE 28 =====
+Advanced Level Test Automation Engineering (TAE)  
+Sample Exam set A 
+Sample Exam – Answers 
+ 
+ 
+Version 2.2 of sample exam A Page 28 of 30 2024/10/16 
+© International Software Testing Qualifications Board   
+ 
+Question 
+Number 
+(#) 
+Correct 
+Answer 
+Explanation / Rationale Learning 
+Objective 
+(LO) 
+K-Level Number 
+of 
+Points 
+36 b a) Is not correct. Analyzing test histograms for 1000 test cases will be time  
+consuming. Plus, we can already anticipate the impact on test cases 
+without generating histogram data. 
+b) Is correct. AI algorithms can be used to self-heal the test cases against 
+UI locator value changes, and schema validation tools can be used to 
+quickly assess API schema updates. 
+c) Is not correct. Recreating 75% of the test harness is not feasible when 
+other options are available. 
+d) Is not correct. Although logs, screenshots, and error messages are 
+valid data sources to verify, eliminating test cases is not a viable 
+strategy. 
+TAE-8.1.1 K3 2 
+
+
+===== PAGE 29 =====
+Advanced Level Test Automation Engineering (TAE)  
+Sample Exam set A 
+Sample Exam – Answers 
+ 
+ 
+Version 2.2 of sample exam A Page 29 of 30 2024/10/16 
+© International Software Testing Qualifications Board   
+ 
+Question 
+Number 
+(#) 
+Correct 
+Answer 
+Explanation / Rationale Learning 
+Objective 
+(LO) 
+K-Level Number 
+of 
+Points 
+37 a, e a) Is correct. Splitting up the test suite helps to ensure that the test 
+execution is finished overnight. 
+b) Is not correct. Test result verification cannot be isolated from the test 
+execution process. 
+c) Is not correct. It is not stated generally that the keyword-driven 
+technique executes faster. 
+d) Is not correct. It would reduce the scope to a high-level regression, 
+which in the long term, could potentially result in defects propagating 
+into production. 
+e) Is correct. Removing duplications can reduce test execution time. 
+TAE-8.1.2 K4 3 
+38 b a) Is not correct. The adoption plan needs to occur after impact is 
+determined. 
+b) Is correct. This is the correct order of the activities. 
+c) Is not correct. Updating of dependencies needs to occur after the 
+creation of the adoption plan. 
+d) Is not correct. Determining impact needs to occur after performi ng a 
+pilot. 
+TAE-8.1.2 K3 3 
+
+
+===== PAGE 30 =====
+Advanced Level Test Automation Engineering (TAE)  
+Sample Exam set A 
+Sample Exam – Answers 
+ 
+ 
+Version 2.2 of sample exam A Page 30 of 30 2024/10/16 
+© International Software Testing Qualifications Board   
+ 
+Question 
+Number 
+(#) 
+Correct 
+Answer 
+Explanation / Rationale Learning 
+Objective 
+(LO) 
+K-Level Number 
+of 
+Points 
+39 c a) Is not correct. Separating the testing of controls should be implemented 
+within the core libraries. 
+b) Is not correct. It is not a direct improvement. 
+c) Is correct. It is an improvement to consolidate test scripts in this case. 
+d) Is not correct. It is not a direct improvement. 
+TAE-8.1.3 K3 3 
+40 a a) Is correct. It offers an automated and quick solution to the problem. 
+b) Is not correct. This is not a TAS. 
+c) Is not correct. Using a production database directly as the source of the 
+test data holds high risk. 
+d) Is not correct. Anonymization of test data is important, but it is ou t of the 
+scope of this solution. 
+TAE-8.1.4 K2 1 
+ 

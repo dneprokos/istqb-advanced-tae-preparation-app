@@ -1,0 +1,382 @@
+[
+  {
+    "id": "ch3-q001",
+    "chapter": 3,
+    "section": "3.1.1",
+    "type": "single",
+    "points": 1.67,
+    "text": "Which capability of the Generic Test Automation Architecture (gTAA) is responsible for connecting the test automation solution to the System Under Test via APIs, protocols, and drivers?",
+    "options": [
+      { "id": "a", "text": "Test Generation" },
+      { "id": "b", "text": "Test Definition" },
+      { "id": "c", "text": "Test Execution" },
+      { "id": "d", "text": "Test Adaptation" }
+    ],
+    "correct": ["d"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "The Test Adaptation capability of the gTAA contains the adaptors that connect the TAS to the SUT via specific APIs, protocols, and communication drivers. It bridges the gap between the technology-independent test definition and the concrete technical interface of the SUT. Test Execution handles running tests and logging results; Test Definition specifies test cases and suites; Test Generation optionally generates test cases (e.g., model-based).",
+    "reference": "Syllabus 3.1.1"
+  },
+  {
+    "id": "ch3-q002",
+    "chapter": 3,
+    "section": "3.1.1",
+    "type": "single",
+    "points": 1.67,
+    "text": "The gTAA defines four main capabilities. Which capability is described as OPTIONAL because it is only required when test cases are generated automatically from a model?",
+    "options": [
+      { "id": "a", "text": "Test Adaptation" },
+      { "id": "b", "text": "Test Definition" },
+      { "id": "c", "text": "Test Generation" },
+      { "id": "d", "text": "Test Execution" }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Test Generation is the optional capability in the gTAA that is used when test cases are produced automatically from a model (model-based testing). The other three capabilities — Test Definition (writing test cases and suites), Test Execution (running tests and capturing results), and Test Adaptation (connecting to the SUT) — are core and required in all TAS implementations.",
+    "reference": "Syllabus 3.1.1"
+  },
+  {
+    "id": "ch3-q003",
+    "chapter": 3,
+    "section": "3.1.3",
+    "type": "single",
+    "points": 1.67,
+    "text": "In the TAF layered architecture, which layer contains SUT-independent, reusable components that can be shared across multiple projects?",
+    "options": [
+      { "id": "a", "text": "Test Scripts layer" },
+      { "id": "b", "text": "Business Logic layer" },
+      { "id": "c", "text": "Core Libraries layer" },
+      { "id": "d", "text": "Test Adaptation layer" }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "The Core Libraries layer contains components that are SUT-independent and reusable across multiple projects. These are general-purpose utilities (e.g., logging, reporting, data handling) that are not tied to any specific application. The Business Logic layer is SUT-dependent, and the Test Scripts layer calls business logic but must not directly call core library components.",
+    "reference": "Syllabus 3.1.3"
+  },
+  {
+    "id": "ch3-q004",
+    "chapter": 3,
+    "section": "3.1.3",
+    "type": "single",
+    "points": 1.67,
+    "text": "In the TAF layered architecture, which of the following statements correctly describes the relationship between the Test Scripts layer and the Core Libraries layer?",
+    "options": [
+      { "id": "a", "text": "Test Scripts should call Core Libraries directly to maximise code reuse." },
+      { "id": "b", "text": "Test Scripts should NOT make direct calls to Core Libraries; they should call the Business Logic layer instead." },
+      { "id": "c", "text": "Test Scripts and Core Libraries are interchangeable and can be merged into a single layer." },
+      { "id": "d", "text": "Core Libraries must call Test Scripts to trigger test execution." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "The layered TAF architecture enforces that Test Scripts (top layer) call the Business Logic layer, which in turn uses the Core Libraries. Test Scripts must NOT make direct calls to Core Libraries. This separation ensures maintainability: if the core library changes, only the Business Logic facade needs updating, not every test script.",
+    "reference": "Syllabus 3.1.3"
+  },
+  {
+    "id": "ch3-q005",
+    "chapter": 3,
+    "section": "3.1.4",
+    "type": "single",
+    "points": 1.67,
+    "text": "A team wants to use an approach where automated tests are written BEFORE the corresponding production code. The cycle is: write a failing test → write the minimal code to pass it → refactor. Which approach is this?",
+    "options": [
+      { "id": "a", "text": "Data-driven testing (DDT)" },
+      { "id": "b", "text": "Capture/playback" },
+      { "id": "c", "text": "Test-driven development (TDD)" },
+      { "id": "d", "text": "Keyword-driven testing (KDT)" }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Test-driven development (TDD) follows the red-green-refactor cycle: write a failing test (red), write the minimum code to make it pass (green), then refactor. TDD improves testability and code quality. Data-driven testing separates test data from scripts; capture/playback records interactions; keyword-driven testing uses a table of keywords and data.",
+    "reference": "Syllabus 3.1.4"
+  },
+  {
+    "id": "ch3-q006",
+    "chapter": 3,
+    "section": "3.1.4",
+    "type": "single",
+    "points": 1.67,
+    "text": "Which test automation approach allows non-technical stakeholders such as business analysts to participate in defining test cases by using a structured table of action words and associated data?",
+    "options": [
+      { "id": "a", "text": "Linear scripting" },
+      { "id": "b", "text": "Structured scripting" },
+      { "id": "c", "text": "Behaviour-driven development (BDD)" },
+      { "id": "d", "text": "Keyword-driven testing (KDT)" }
+    ],
+    "correct": ["d"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Keyword-driven testing (KDT) uses a table of keywords (action words) combined with test data, enabling non-technical stakeholders to define and understand test cases without programming knowledge. It is built on top of data-driven testing. BDD also enables collaboration via Given-When-Then feature files, but the primary distinguishing feature of KDT is the keyword/action-word table structure.",
+    "reference": "Syllabus 3.1.4"
+  },
+  {
+    "id": "ch3-q007",
+    "chapter": 3,
+    "section": "3.1.4",
+    "type": "single",
+    "points": 1.67,
+    "text": "Which test automation approach is characterised by requiring the SUT to be available at the time of test creation, producing scripts that are difficult to maintain as the SUT evolves, but is accessible to users with no programming experience?",
+    "options": [
+      { "id": "a", "text": "Test-driven development (TDD)" },
+      { "id": "b", "text": "Capture/playback" },
+      { "id": "c", "text": "Data-driven testing (DDT)" },
+      { "id": "d", "text": "Structured scripting" }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Capture/playback records user interactions with the SUT to generate test scripts. It requires the SUT to be available during recording and produces scripts that are hard to maintain (any UI change may break many recorded tests). It is low-code/no-code, making it accessible to non-programmers. Structured scripting and DDT require more programming knowledge. TDD is a development practice, not a capture mechanism.",
+    "reference": "Syllabus 3.1.4"
+  },
+  {
+    "id": "ch3-q008",
+    "chapter": 3,
+    "section": "3.1.5",
+    "type": "single",
+    "points": 1.67,
+    "text": "Which design pattern ensures that there is only ONE instance of the browser driver communicating with the SUT, preventing conflicts from multiple driver instances being created during test execution?",
+    "options": [
+      { "id": "a", "text": "Facade pattern" },
+      { "id": "b", "text": "Page Object Model" },
+      { "id": "c", "text": "Singleton pattern" },
+      { "id": "d", "text": "Flow Model pattern" }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "The Singleton design pattern ensures that a class has only one instance and provides a global access point to it. In test automation, this is commonly applied to the browser/application driver to prevent multiple driver instances from being created, which could cause conflicts during test execution.",
+    "reference": "Syllabus 3.1.5"
+  },
+  {
+    "id": "ch3-q009",
+    "chapter": 3,
+    "section": "3.1.5",
+    "type": "single",
+    "points": 1.67,
+    "text": "Which design pattern extends the Page Object Model by adding a user-action facade layer that encapsulates sequences of steps into reusable test actions, making test scripts more readable and maintainable?",
+    "options": [
+      { "id": "a", "text": "Singleton pattern" },
+      { "id": "b", "text": "Flow Model pattern" },
+      { "id": "c", "text": "Facade pattern" },
+      { "id": "d", "text": "Observer pattern" }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "The Flow Model pattern extends the Page Object Model (POM) by adding a facade layer that represents common user workflows (e.g., 'login', 'add item to cart'). These reusable action sequences sit between the test scripts and the page objects, reducing duplication and making test scripts more concise and readable. The Facade pattern hides implementation complexity in general; the Flow Model applies this concept specifically to user interactions in test automation.",
+    "reference": "Syllabus 3.1.5"
+  },
+  {
+    "id": "ch3-q010",
+    "chapter": 3,
+    "section": "3.1.1",
+    "type": "single",
+    "points": 1.67,
+    "text": "Match the list of tasks in the Test Automation Architecture Capabilities below with the correct role name. 1. Mapping the abstract test cases to concrete test cases suitable for execution. 2. Implementation of test cases and/or test suites. 3. Test logging with detailed information about the test steps and actions. 4. Mechanism for connecting to the SUT via protocols and services. (Roles: A. Test Definition, B. Test Adaptation, C. Test Generation, D. Test Execution)",
+    "options": [
+      { "id": "a", "text": "1D, 2A, 3C, 4B" },
+      { "id": "b", "text": "1C, 2A, 3B, 4D" },
+      { "id": "c", "text": "1A, 2B, 3D, 4C" },
+      { "id": "d", "text": "1C, 2A, 3D, 4B" }
+    ],
+    "correct": ["d"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Test Generation (C) maps abstract test cases to concrete test cases suitable for execution. Test Definition (A) implements test cases and test suites. Test Execution (D) includes test logging with detailed information about test steps and actions. Test Adaptation (B) provides the mechanism for connecting to the SUT via protocols and services.",
+    "reference": "Syllabus 3.1.1"
+  },
+  {
+    "id": "ch3-q011",
+    "chapter": 3,
+    "section": "3.1.2",
+    "type": "single",
+    "points": 1.67,
+    "text": "As a Test Automation engineer you have encountered a problem during initial implementation of the test automation solution (TAS). The output from the system tests could not be translated back to the automated test cases to determine the test results. Which option may have MOST LIKELY been a cause of the problem?",
+    "options": [
+      { "id": "a", "text": "The test tool libraries were NOT designed to be updated upon each SUT version release." },
+      { "id": "b", "text": "The integration to the SUT was NOT set up via APIs." },
+      { "id": "c", "text": "The SUT-specific adaptors for the selected tool were NOT implemented." },
+      { "id": "d", "text": "The SUT and the test management tool were NOT compatible." }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "The adaptors are necessary for the translation of test results back to the automated test cases. The problem was found in the initial implementation and no updates were introduced yet, eliminating A. The integration method used does not matter whether it is via APIs or another mechanism, eliminating B. The question does not mention test management tool incompatibility, eliminating D.",
+    "reference": "Syllabus 3.1.2"
+  },
+  {
+    "id": "ch3-q012",
+    "chapter": 3,
+    "section": "3.1.3",
+    "type": "single",
+    "points": 1.67,
+    "text": "You are working in an Android development team and have been maintaining a test automation framework. An additional development team has formed to build a new application. Your project manager asks you to build a test automation framework for this newly formed team. At first, you identify the components that could be reused in building that new framework, then start implementing the additional libraries based on the new application. In which layer do you configure the connection to the new app?",
+    "options": [
+      { "id": "a", "text": "Core libraries layer" },
+      { "id": "b", "text": "Test scripts layer" },
+      { "id": "c", "text": "Feature files layer" },
+      { "id": "d", "text": "Business logic layer" }
+    ],
+    "correct": ["d"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "The business logic layer is used to set up the TAF to run against the SUT, including configuring the connection to the application. Core libraries should be application-independent and generic. Test scripts should only contain test scripts and no configuration. Feature files contain scenarios written in the Gherkin language.",
+    "reference": "Syllabus 3.1.3"
+  },
+  {
+    "id": "ch3-q013",
+    "chapter": 3,
+    "section": "3.1.4",
+    "type": "single",
+    "points": 1.67,
+    "text": "You are working on a test automation project used to automate GUI testing of a web-based public transport service. The project has a limited timescale. There are manual test cases which can be automated first. One of the goals is to implement test cases directly into the automated test scripts. Which technique or approach should be used for automating test cases to meet the goals?",
+    "options": [
+      { "id": "a", "text": "Using the keyword-driven test technique" },
+      { "id": "b", "text": "Using the behavior-driven development approach" },
+      { "id": "c", "text": "Using the capture/playback test automation approach" },
+      { "id": "d", "text": "Using the data-driven test automation technique" }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Capture/playback test automation is easy to set up and allows implementing test cases directly into automated test scripts quickly, making it suitable for limited timescales. Keyword-driven testing is too complex for this solution. Behavior-driven development is too complex and is not necessary. Data-driven test automation is too complex and is not necessary for this scenario.",
+    "reference": "Syllabus 3.1.4"
+  },
+  {
+    "id": "ch3-q014",
+    "chapter": 3,
+    "section": "3.1.4",
+    "type": "single",
+    "points": 1.67,
+    "text": "You join a company where manual testing is mature, but test automation has been abandoned for a while. The testers have generated a massive amount of test data and are typically using 10 to 20 variations per scenario. After your initial review, you see that the TAF can easily be fixed, but the test cases need to be completely revamped. Which of the following test automation approaches should you choose to achieve great results quickly?",
+    "options": [
+      { "id": "a", "text": "Data-driven testing" },
+      { "id": "b", "text": "Behavior-driven development" },
+      { "id": "c", "text": "Capture/playback" },
+      { "id": "d", "text": "Acceptance test-driven development" }
+    ],
+    "correct": ["a"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "The test data is already available and can be reused to increase the test case count, making data-driven testing the best choice for quick results. Behavior-driven development requires involvement from business representatives. Capture/playback would be a slow and costly solution when test data is already present. Acceptance test-driven development is not a test automation approach.",
+    "reference": "Syllabus 3.1.4"
+  },
+  {
+    "id": "ch3-q015",
+    "chapter": 3,
+    "section": "3.1.5",
+    "type": "single",
+    "points": 1.67,
+    "text": "You are working on a test automation project used to automate GUI testing of an e-commerce site. The site contains a digital assistant which helps users set up their accounts. The development is in a phase where usability testers check the digital assistant and give recommendations on necessary changes iteratively — developers modify the GUI, and usability testers check the modifications again. Which design pattern is best to implement in this case?",
+    "options": [
+      { "id": "a", "text": "Implement the page object pattern and store all the user actions associated with the GUI elements in the relevant page models." },
+      { "id": "b", "text": "Implement the flow model pattern, store all the web elements in the relevant page models, and store all the user actions associated with the GUI elements in the relevant flow models." },
+      { "id": "c", "text": "Implement the facade design pattern and provide interfaces for the GUI elements to hide the used internal locator mechanism." },
+      { "id": "d", "text": "Implement the singleton design pattern and create a single piece of code to handle the locating of elements." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "The flow model pattern combines page models and flow models, storing the structure and logic of the application in class files with different purposes, and is typically used when the SUT's structure changes frequently. Storing user actions in page model class files will not allow easy reuse and maintainability of complex user flows. Facades provide a simplified interface to a larger body of code. The singleton design pattern does not solve the problem in this case.",
+    "reference": "Syllabus 3.1.5"
+  },
+  {
+    "id": "ch3-q016",
+    "chapter": 3,
+    "section": "3.1.1",
+    "type": "single",
+    "points": 1.67,
+    "text": "What are the four horizontal layers (capabilities) of the gTAA?",
+    "options": [
+      { "id": "a", "text": "Test adaptation, test execution, test design, test definition" },
+      { "id": "b", "text": "Test generation, test execution, test definition, test APIs" },
+      { "id": "c", "text": "Test generation, test definition, test execution, test adaptation" },
+      { "id": "d", "text": "Test definition, test execution, test reporting, test adaptation" }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "The four horizontal capabilities of the generic Test Automation Architecture (gTAA) are: Test Generation, Test Definition, Test Execution, and Test Adaptation. Test Generation is optional and used for model-based testing. Test Definition specifies test cases and suites. Test Execution runs tests and captures results. Test Adaptation connects the TAS to the SUT.",
+    "reference": "Syllabus 3.1.1"
+  },
+  {
+    "id": "ch3-q017",
+    "chapter": 3,
+    "section": "3.2.0",
+    "type": "single",
+    "points": 1.67,
+    "text": "Which of the following BEST describes why it is important to separate test definition from test execution in a TAA?",
+    "options": [
+      { "id": "a", "text": "It allows developing steps of the test process without being closely tied to the SUT interface." },
+      { "id": "b", "text": "It allows choosing different paradigms (e.g., event-driven) for the interaction between TAS and SUT." },
+      { "id": "c", "text": "It allows specifying test cases without being closely tied to the tool used to run them against the SUT." },
+      { "id": "d", "text": "It allows testers to find more defects on the SUT." }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Separating test definition from test execution allows test cases to be specified independently of the execution tool, meaning the same test cases can potentially be run by different execution tools. This separation is a key architectural principle of the gTAA that promotes flexibility and maintainability of the test automation solution.",
+    "reference": "Syllabus 3.2"
+  },
+  {
+    "id": "ch3-q018",
+    "chapter": 3,
+    "section": "3.1.1",
+    "type": "multiple",
+    "points": 1.67,
+    "text": "You are implementing test automation for a project that has a business critical application. A test execution tool is being used to run automated regression tests. You want to merge the test automation results with the test management system so that managers can make informed decisions about progress quickly. Which layer(s) of the gTAA will be used to ensure the proper reporting occurs and the interfaces to the test management system are handled?",
+    "options": [
+      { "id": "a", "text": "The reporting layer" },
+      { "id": "b", "text": "The logging layer" },
+      { "id": "c", "text": "The execution layer" },
+      { "id": "d", "text": "The adaptation layer" }
+    ],
+    "correct": ["a", "c"],
+    "selectCount": 2,
+    "image": null,
+    "explanation": "In the gTAA, the Test Execution layer runs tests and includes both test logging and test reporting components. The reporting component within the execution layer handles interfaces to test management systems. Both the reporting component (A) and the execution layer (C) are involved in ensuring proper reporting and integration with test management systems occurs.",
+    "reference": "Syllabus 3.1.1"
+  },
+  {
+    "id": "ch3-q019",
+    "chapter": 3,
+    "section": "3.1.1",
+    "type": "single",
+    "points": 1.67,
+    "text": "You are implementing test automation and want to generate test cases automatically using test design tools (decision tables, pairwise testing, boundary value analysis) and generate test data automatically. Initially these tests will be run manually to verify correctness and ultimately included in the test execution tool. Which layer of the gTAA will be used to support the specification of the test cases and preparation of the test data?",
+    "options": [
+      { "id": "a", "text": "The generation layer" },
+      { "id": "b", "text": "The definition layer" },
+      { "id": "c", "text": "The execution layer" },
+      { "id": "d", "text": "The adaptation layer" }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "The Test Definition layer supports the specification of test cases and preparation of test data. It contains the test scripts, test data, and test case definitions. The Test Generation layer would be used for automatically generating test cases from models (model-based testing). The Definition layer stores and manages the specified test cases and associated data.",
+    "reference": "Syllabus 3.1.1"
+  },
+  {
+    "id": "ch3-q020",
+    "chapter": 3,
+    "section": "3.2.2",
+    "type": "single",
+    "points": 1.67,
+    "text": "You have been testing a web-based application manually and management has asked you to consider automating some tests. You have investigated tools that automate tests at a web browser level and one tool meets your requirements — you have implemented a trial version. You have basic programming skills and the main goal is to automate a few functional tests to see if the tool is compatible with the application and can recognise the objects and controls. Which scripting technique would be MOST suitable in this scenario?",
+    "options": [
+      { "id": "a", "text": "Structured scripting" },
+      { "id": "b", "text": "Capture-replay scripting" },
+      { "id": "c", "text": "Data-driven scripting" },
+      { "id": "d", "text": "Model-based scripting" }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Capture-replay scripting is most suitable when the main goal is to quickly automate a few functional tests to evaluate tool compatibility, especially with basic programming skills. It does not require deep programming knowledge and allows rapid test creation. Structured scripting, data-driven scripting, and model-based scripting all require more programming expertise and are more appropriate for mature test automation environments.",
+    "reference": "Syllabus 3.2.2"
+  }
+]

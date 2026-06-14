@@ -1,0 +1,486 @@
+ISTQB Advanced Test Automation Engineer v2.0
+Sections 5-6 - Questions and Answers
+
+================================================================================
+QUESTION 1
+================================================================================
+Q19
+
+TAE-5.1.1
+
+
+
+There is an IT company which develops an often-changing financial software product using the Agile software development model. The development, the integration and the deployment processes are highly automated. There is a CI/CD pipeline currently established. You are working on a TAS. The goal is to create a TAS which can be used for as many test automation purposes as possible. 
+
+
+
+Which of the following options are valid purposes for test automation in this case? 
+
+
+
+Select TWO options.
+
+Options:
+A. Run a regression test suite every night
+B. Execute a build of a component
+C. Run a static code analysis
+D. Execute an automated performance efficiency test in the CI/CD pipeline
+E. Package and deploy the application as part of the deployment phase
+
+Correct Answer: A, D
+
+Explanation:
+Correctly answered feedback
+
+
+
+
+a) Is correct. Regression testing is necessary, and it can be incorporated into the CI/CD pipeline. 
+
+
+
+b) Is not correct. Executing a build is not a test automation task. 
+
+
+
+c) Is not correct. Static code analysis is not a test automation task. 
+
+
+
+d) Is correct. Performance efficiency tests can be automated. 
+
+
+
+e) Is not correct. Packaging and deployment are not test automation tasks.
+
+================================================================================
+QUESTION 2
+================================================================================
+Q20
+
+TAE-5.1.1 
+
+
+
+Which statement is correct?
+
+
+
+Select ONE option.
+
+Options:
+A. Tests are not executed as part of the deployment phase
+B. Tests are not executed as a separate pipeline, triggered by the successful deployment
+C. Test cases do not act as a quality gate when different automated test suites will run on each deployment
+D. Pipelines are not recommended for regression testing due to the extensive scope and size of these tests
+
+Correct Answer: C
+
+Explanation:
+Incorrectly answered feedback
+
+
+
+
+a) Is not correct. Tests are executed during deployment. 
+
+
+
+b) Is not correct. Tests are triggered to execute after successful deployment. 
+
+
+
+c) Is correct. It is not a correct statement since tests do not act as quality gates for deployment. 
+
+
+
+d) Is not correct. Pipelines are an excellent solution for periodic testing, such as regression tests, and the size of these tests does not impact their effectiveness.
+
+================================================================================
+QUESTION 3
+================================================================================
+Q21
+
+TAE-5.1.2 
+
+
+
+How is configuration management used in test automation?
+
+
+
+Select ONE option.
+
+Options:
+A. It enables the management of test data and test environment configurations
+B. The SUT configuration can be stored and easily removed
+C. It enables management of user rights for accessing test automation
+D. Test automation results can easily be analyzed
+
+Correct Answer: A
+
+Explanation:
+Correctly answered feedback
+
+
+
+
+a) Is correct. Test data and test environment configurations can be under configuration management. 
+
+
+
+b) Is not correct. The SUT configuration can be under configuration management, but it is not related to test automation. 
+
+
+
+c) Is not correct. User rights management is not related to configuration management. 
+
+
+
+d) Is not correct. Configuration management does not support test automation results analysis.
+
+================================================================================
+QUESTION 4
+================================================================================
+Q22
+
+TAE-5.1.2 
+
+
+
+Which item below is NOT part of the test environment configuration? 
+
+
+
+Select ONE option.
+
+Options:
+A. Uniform resource locators (URLs)
+B. Credentials
+C. Test data
+D. Common core library
+
+Correct Answer: D
+
+Explanation:
+Correctly answered feedback
+
+
+
+
+a) Is not correct. URLs are part of the test environment configuration. 
+
+
+
+b) Is not correct. Credentials are part of the test environment configuration. 
+
+
+
+c) Is not correct. Test data is part of the test environment configuration. 
+
+
+
+d) Is correct. The test environment configuration is a part of the common core library, not vice versa.
+
+================================================================================
+QUESTION 5
+================================================================================
+Q23
+
+TAE-5.1.3 
+
+
+
+How does contract testing NOT contribute to API test automation dependencies in an infrastructure?
+
+
+
+Select ONE option.
+
+Options:
+A. Ensures that APIs adhere to predefined contracts for communication
+B. Can be used to test the communication of microservices
+C. Validates the compatibility of two separate systems
+D. Verifies whether a system satisfies its contractual requirements
+
+Correct Answer: D
+
+Explanation:
+Correctly answered feedback
+
+
+
+
+a) Is not correct. Contract testing ensures APIs follow predefined communication agreements, helping manage API dependencies. 
+
+
+
+b) Is not correct. Contract testing can be used to test communication between microservices. 
+
+
+
+c) Is not correct. Contract testing can validate the compatibility of two separate systems. 
+
+
+
+d) Is correct. Contract testing has no relation to the contractual requirements.
+
+================================================================================
+QUESTION 6
+================================================================================
+Q24
+
+TAE-5.1.3 
+
+
+
+You are on a project where the teams are working on breaking down an old monolithic web service into several microservices. Which of the following documents can assist you in identifying dependencies and developing your Test Automation Solution (TAS) for API testing? 
+
+
+
+i. Application programming interface (API) specification 
+
+ii. System architecture diagram 
+
+iii. Test strategy iv. Release notes 
+
+
+
+Select ONE option.
+
+Options:
+A. i, ii, and iv
+B. i and ii
+C. ii, iii, and iv
+D. i
+
+Correct Answer: B
+
+Explanation:
+Correctly answered feedback
+
+
+
+
+a) Is not correct. Release notes do not help to learn the API connections and details. 
+
+
+
+b) Is correct - API specification provides details about endpoints, and the system architecture diagram shows the relationships between different components. 
+
+
+
+c) Is not correct - The test strategy and release notes don't provide specific information about API dependencies needed for building a TAS. 
+
+
+
+d) Is not correct - The API specification alone is not sufficient; the system architecture diagram is also needed to understand the relationships between different services.
+
+================================================================================
+QUESTION 7
+================================================================================
+Q25
+
+TAE-6.1.1 
+
+
+
+You are working on a test automation project that is used to automate GUI testing of an online web shop. The web shop contains a wizard which helps users to set up their accounts, their name, billing address, shipping address, and security credentials. During the test automation, the steps of the wizard are recorded first. Screenshots are taken and stored during these steps. We consider these as the baseline. The baseline was then rerun with no change to the SUT and all tests passed. 
+
+
+
+After the developers submit a change to the wizard, the recorded test scripts are played back, and the screenshots of each step are compared with the baseline screenshots. During a playback, all test cases failed, even though the visible content seems unchanged. 
+
+
+
+What could be the cause?
+
+
+
+Select TWO options.
+
+Options:
+A. An internally used technical session ID is also recorded, which changes during the playback. This should be substituted with variables to avoid failures.
+B. Screenshots are not correctly associated with the test steps, leading to comparisons being made in the wrong order
+C. The failure occurred because relying solely on screenshot comparisons led to inaccurate results.
+D. The date in the GUI header is different from the date when it was recorded. This date field should be excluded from the comparison
+E. Screenshots were captured in low resolution, causing details to be blurred, making the comparison unreliable.
+
+Correct Answer: A, D
+
+Explanation:
+Correctly answered feedback
+
+
+
+
+a) Is correct. Session IDs change with each session, causing screenshot differences even when content looks the same. 
+
+
+
+b) Is not correct. Order isn’t relevant, as all screenshots fail, which wouldn’t happen if only order was the issue. 
+
+
+
+c) Is not correct. This doesn’t explain why all comparisons fail when content appears unchanged. 
+
+
+
+d) Is correct. Dynamic elements like dates in GUI can cause false negatives and should be excluded from comparisons. 
+
+
+
+e) Is not correct. Browser zoom changes are unlikely to cause all failures if content appears identical to the human eye.
+
+================================================================================
+QUESTION 8
+================================================================================
+Q26
+
+TAE-6.1.1 
+
+
+
+You are working on a project where you are responsible to extend the current TAF that is used for web service testing, with additional test logging capabilities. The TAF uses a third-party tool to create file logs and an HTML report to quickly visualize the test results. In the test implementation, various dynamic values are used to generate the actual test data, and the SUT, a web service without a UI, connects to multiple legacy test systems. Unfortunately, the tests are very unstable, and you need to add meaningful information to the test logging to better analyze the reasons for the failures. 
+
+
+
+What additional information should not be included in the test logging to make it more useful and why? 
+
+
+
+Select ONE option.
+
+Options:
+A. Timestamps should be included in the test logs to see if the failure connects to a given legacy system outage
+B. Screenshots should be included to see actual request-response pairs
+C. Randomly generated values should be logged to allow for analysis of the actual results occured during test executions
+D. In case of assertion failures meaningful information like actual results versus expected results should be logged instead of stack traces
+
+Correct Answer: B
+
+Explanation:
+Correctly answered feedback
+
+
+
+
+a) Is not correct. The timestamps can help see when there are problems
+
+and if they are connected to a legacy service outage that affects the
+
+functionality of the SUT.
+
+
+
+b) Is correct. The SUT is a web service without a UI, so screenshots are
+
+irrelevant. Logging request and response data is more useful for
+
+analyzing web service interactions.
+
+
+
+c) Is not correct. The randomly generated values will not be visible for
+
+later investigation.
+
+
+
+d) Is not correct. Focused assertion messages can aid the investigation of
+
+the failures.
+
+================================================================================
+QUESTION 9
+================================================================================
+Q27
+
+TAE-6.1.2 
+
+
+
+During the design phase of a performance critical software product, management decides to create a TAS to do load testing on the software to measure its performance. The product contains different architectural components, including a browser-based front end, microservices implemented in the back end, and a relational database. It is important to measure all individual transactions in the entire architectural stack. 
+
+
+
+How can you automatically provide this information from the test automation software? 
+
+
+
+Select ONE option.
+
+Options:
+A. You cannot. This information has to be gathered manually at the end of every transaction
+B. The test automation engineer (TAE) can record the timing information during the execution of all transactions
+C. Trace IDs should be populated across the software components and measured time values should be associated with these IDs to correlate the performance data.
+D. Third-party tools should be inserted into the different layers of the architecture and these agents should log the collected data into a database
+
+Correct Answer: C
+
+Explanation:
+Correctly answered feedback
+
+
+
+
+a) Is not correct. Manual data collection is too time-consuming and errorprone; automation is essential. 
+
+
+
+b) Is not correct. This doesn’t explain how data can be correlated across different components. 
+
+
+
+c) Is correct. Trace ID is the appropriate way to associate the performance data across the different architectural components, enabling systemwide performance analysis. 
+
+
+
+d) Is not correct. Third-party tools can collect data but don’t provide necessary correlation for complete analysis.
+
+================================================================================
+QUESTION 10
+================================================================================
+Q28
+
+TAE-6.1.3 
+
+
+
+As a test automation engineer, you are tasked with demonstrating to management whether the test success rate is improving over a series of test runs. 
+
+
+
+What is the right approach to fulfill this requirement? 
+
+
+
+Select ONE option.
+
+Options:
+A. Compare the test results with the expected results
+B. Use traffic light indicators to show test execution progress
+C. Detailed test reports with percentages of test completion
+D. Implement an analysis feature that compares previous test results and highlights trends
+
+Correct Answer: D
+
+Explanation:
+Correctly answered feedback
+
+
+
+
+a) Is not correct. The comparison of the test results and the expected results only gives us the pass/fail rate for one test run only. 
+
+
+
+b) Is not correct. The traffic lights are only for showing the summary of progress of test cases execution and completion within one test run cycle only. 
+
+
+
+c) Is not correct. Detailed reports with Percentages of test completion are only for showing the outcome of test cases execution and completion within one test run cycle only. 
+
+
+
+d) Is correct. This is the correct implementation whereby the analysis feature is able to compare pass rate of previous test run cycles and compare with latest and plot in a trend analysis display

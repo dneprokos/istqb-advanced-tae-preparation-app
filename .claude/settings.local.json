@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(New-Item *)",
+      "PowerShell(ls \"C:\\\\PersonalProjects\\\\istqb-advanced-tae-preparation-app\" -Force | Where-Object { $_.Name -ne \"node_modules\" -and $_.Name -ne \"dist\" } | Select-Object Name, Mode)",
+      "PowerShell(ls \"C:\\\\PersonalProjects\\\\istqb-advanced-tae-preparation-app\\\\src\" -Recurse | Select-Object FullName | ForEach-Object { $_.FullName.Replace\\(\"C:\\\\PersonalProjects\\\\istqb-advanced-tae-preparation-app\\\\\", \"\"\\) })",
+      "PowerShell(python --version; python -c \"import webbrowser; print\\('webbrowser ok'\\)\" 2>&1)",
+      "PowerShell(py *)",
+      "Bash(node scripts/validate-questions.js)"
+    ]
+  }
+}

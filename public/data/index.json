@@ -1,0 +1,13 @@
+{
+  "chapters": [
+    { "id": 1, "title": "Introduction and Objectives for Test Automation", "examQuestions": 3, "points": 3 },
+    { "id": 2, "title": "Preparing for Test Automation", "examQuestions": 5, "points": 9 },
+    { "id": 3, "title": "Test Automation Architecture", "examQuestions": 6, "points": 10 },
+    { "id": 4, "title": "Implementing Test Automation", "examQuestions": 4, "points": 7 },
+    { "id": 5, "title": "Implementation and Deployment Strategies for Test Automation", "examQuestions": 6, "points": 8 },
+    { "id": 6, "title": "Test Automation Reporting and Metrics", "examQuestions": 4, "points": 8 },
+    { "id": 7, "title": "Verifying the Test Automation Solution", "examQuestions": 6, "points": 8 },
+    { "id": 8, "title": "Continuous Improvement", "examQuestions": 6, "points": 13 }
+  ],
+  "exam": { "totalQuestions": 40, "totalPoints": 66, "durationMinutes": 90, "passPercent": 65 }
+}

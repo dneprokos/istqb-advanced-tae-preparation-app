@@ -1,0 +1,173 @@
+[
+  {
+    "id": "ch4-q001",
+    "chapter": 4,
+    "section": "4.1.1",
+    "type": "single",
+    "points": 1.75,
+    "text": "During a test automation pilot, which of the following activities should be performed to ensure the pilot delivers useful information for the broader rollout decision?",
+    "options": [
+      { "id": "a", "text": "Automate every existing manual test case to demonstrate full coverage." },
+      { "id": "b", "text": "Define a specific scope, select representative test cases, and evaluate both technical and non-technical factors such as team skills and licensing." },
+      { "id": "c", "text": "Avoid integrating with CI/CD during the pilot to reduce complexity." },
+      { "id": "d", "text": "Use only production data to ensure test results are realistic." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "A well-structured pilot defines a clear scope and selects representative test cases to evaluate the approach. It should assess both technical factors (tooling, language, test levels) and non-technical factors (team knowledge, licensing, structure). Integrating with CI/CD during the pilot is recommended to validate the full workflow. Automating all existing manual tests during a pilot is impractical and not the goal.",
+    "reference": "Syllabus 4.1.1"
+  },
+  {
+    "id": "ch4-q002",
+    "chapter": 4,
+    "section": "4.2.1",
+    "type": "single",
+    "points": 1.75,
+    "text": "A test automation engineer is configuring logging for the test automation framework. Which logging level should be used to record detailed diagnostic information useful during development and debugging, but typically disabled in production pipeline runs?",
+    "options": [
+      { "id": "a", "text": "Fatal" },
+      { "id": "b", "text": "Error" },
+      { "id": "c", "text": "Warn" },
+      { "id": "d", "text": "Debug" }
+    ],
+    "correct": ["d"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "The Debug logging level records detailed diagnostic information useful for developers and automation engineers when investigating issues. In production pipeline runs, Debug-level logging is typically disabled to reduce log volume and noise. The logging level hierarchy from most to least severe is: Fatal, Error, Warn, Info, Debug, Trace.",
+    "reference": "Syllabus 4.2.1"
+  },
+  {
+    "id": "ch4-q003",
+    "chapter": 4,
+    "section": "4.2.1",
+    "type": "single",
+    "points": 1.75,
+    "text": "Which of the following BEST describes a deployment risk associated with rolling out test automation in distributed or device-based test environments?",
+    "options": [
+      { "id": "a", "text": "Risk that automated tests will be slower than manual tests." },
+      { "id": "b", "text": "Risk of inadequate power supply, network connectivity, or device configuration preventing test execution." },
+      { "id": "c", "text": "Risk that testers will refuse to use the automation framework." },
+      { "id": "d", "text": "Risk that the SUT will be too stable for automated tests to find defects." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "When deploying test automation in distributed or device-heavy environments, practical infrastructure risks include inadequate power supply, poor network connectivity, and incorrect device configuration. These are real deployment risks that must be mitigated by ensuring proper infrastructure. Technical risks also include packaging, logging, and version management of test harnesses and devices.",
+    "reference": "Syllabus 4.2.1"
+  },
+  {
+    "id": "ch4-q004",
+    "chapter": 4,
+    "section": "4.3.1",
+    "type": "single",
+    "points": 1.75,
+    "text": "Which of the following maintainability practices BEST prevents hardcoded test data values from degrading the long-term maintainability of automated test scripts?",
+    "options": [
+      { "id": "a", "text": "Adding extensive comments explaining every hardcoded value." },
+      { "id": "b", "text": "Applying data-driven testing to externalise test data from test scripts into separate data files or tables." },
+      { "id": "c", "text": "Using long and descriptive variable names for hardcoded values." },
+      { "id": "d", "text": "Duplicating hardcoded values across all test scripts to make them self-contained." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Data-driven testing externalises test data from test scripts into separate data files, spreadsheets, or databases. This prevents hardcoded values from appearing in test scripts, making it easy to update data without modifying code. Clean code principles for test automation include avoiding hardcoding values. Duplication is an anti-pattern; comments do not remove the underlying problem of hardcoded values.",
+    "reference": "Syllabus 4.3.1"
+  },
+  {
+    "id": "ch4-q005",
+    "chapter": 4,
+    "section": "4.3.1",
+    "type": "single",
+    "points": 1.75,
+    "text": "Which of the following tools helps enforce coding standards and detect code quality issues in test automation scripts without executing the code?",
+    "options": [
+      { "id": "a", "text": "Test execution framework (e.g., JUnit, pytest)" },
+      { "id": "b", "text": "Static code analyser (e.g., SonarQube, ESLint)" },
+      { "id": "c", "text": "Performance monitoring tool (e.g., Grafana)" },
+      { "id": "d", "text": "Test data generation tool" }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Static code analysers examine source code without executing it to detect code quality issues, style violations, potential bugs, and security vulnerabilities. Using static analysers and code formatters is a recommended maintainability practice for test automation code. Test execution frameworks run tests; performance monitoring tools observe running systems; test data generators create data, not code analysis.",
+    "reference": "Syllabus 4.3.1"
+  },
+  {
+    "id": "ch4-q006",
+    "chapter": 4,
+    "section": "4.1.1",
+    "type": "single",
+    "points": 1.75,
+    "text": "Why is it important to integrate the test automation pilot with the CI/CD pipeline during the pilot phase?",
+    "options": [
+      { "id": "a", "text": "So that pilot tests can replace manual testing immediately." },
+      { "id": "b", "text": "To validate that the automation solution works within the actual delivery pipeline and to identify integration issues early." },
+      { "id": "c", "text": "To ensure the pilot tests are shared with all customers during evaluation." },
+      { "id": "d", "text": "Because CI/CD integration is mandatory for all software projects regardless of context." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Integrating the pilot with the CI/CD pipeline during the pilot phase validates that the chosen tools and approach function correctly in the real delivery pipeline context, and surfaces integration issues (permissions, environment configuration, tooling conflicts) before full rollout. The pilot scope is limited; it does not replace all manual testing, and CI/CD integration is a best practice not an unconditional mandate.",
+    "reference": "Syllabus 4.1.1"
+  },
+  {
+    "id": "ch4-q007",
+    "chapter": 4,
+    "section": "4.1.1",
+    "type": "single",
+    "points": 1.75,
+    "text": "The senior management wants to implement a TAS in your organization and asks you to lead this initiative. You have been given directions to start a pilot project. Consider the following potential objectives: i. Document the SUT parts which have not been documented during the development. ii. Identify the metrics and the measurement methods to monitor the SUT in the production environment. iii. Analyze defects found during the testing of the TAS. iv. Evaluate licensing options and corporation rules. v. Select the most suitable commercial off-the-shelf or open-source tool. Which of the following statements best describes the objectives of this pilot project?",
+    "options": [
+      { "id": "a", "text": "i, ii and iii are valid objectives of the pilot project" },
+      { "id": "b", "text": "ii and iv are valid objectives of the pilot project" },
+      { "id": "c", "text": "i, ii and v are valid objectives of the pilot project" },
+      { "id": "d", "text": "iv and v are valid objectives of the pilot project" }
+    ],
+    "correct": ["d"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Evaluating licensing options and corporation rules (iv) and selecting the most suitable tool (v) are valid objectives of a pilot project. Documenting SUT parts (i) is not a pilot objective. Identifying production monitoring metrics (ii) is not a pilot objective. Analyzing defects found during testing of the TAS (iii) is not a pilot objective.",
+    "reference": "Syllabus 4.1.1"
+  },
+  {
+    "id": "ch4-q008",
+    "chapter": 4,
+    "section": "4.2.1",
+    "type": "single",
+    "points": 1.75,
+    "text": "You are tasked with implementing a TAS for functional suitability tests that must be executed automatically after each daily build and integrated with the existing CI/CD pipeline. You need to match the following deployment risks with their appropriate mitigation strategies. Risks: 1. Test execution not triggered by the build. 2. Only the full test suite can be executed. 3. Test data unavailable when starting the test. 4. Difficulty in troubleshooting failed tests. Mitigations: A. Log detailed information during test execution. B. Integrate test automation into the CI/CD pipeline. C. Use third-party tools to generate test data. D. Utilize test harnesses and test fixtures. Which of the following BEST matches the deployment risks with their appropriate mitigation strategies?",
+    "options": [
+      { "id": "a", "text": "1-B, 2-A, 3-D, 4-C" },
+      { "id": "b", "text": "1-A, 2-B, 3-C, 4-D" },
+      { "id": "c", "text": "1-B, 2-D, 3-C, 4-A" },
+      { "id": "d", "text": "1-D, 2-B, 3-C, 4-A" }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "1-B: Integrating test automation into the CI/CD pipeline ensures test execution is triggered by the build. 2-D: Test harnesses and fixtures allow for more flexible test execution, not limited to full suite runs. 3-C: Third-party tools can help generate test data when it is not readily available. 4-A: Detailed logging during test execution aids in troubleshooting failed tests.",
+    "reference": "Syllabus 4.2.1"
+  },
+  {
+    "id": "ch4-q009",
+    "chapter": 4,
+    "section": "4.3.1",
+    "type": "single",
+    "points": 1.75,
+    "text": "What is the most effective way to reduce the maintenance time for test automation code?",
+    "options": [
+      { "id": "a", "text": "Keep the code outside of a version control system." },
+      { "id": "b", "text": "Embed static data directly within the test scripts for easier access." },
+      { "id": "c", "text": "Apply design patterns in your test automation framework." },
+      { "id": "d", "text": "Regularly rewrite test scripts from scratch instead of reusing existing components." }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Structuring the test automation code using design patterns improves reusability and scalability, reducing the time needed for maintenance. Storing code outside of a version control system makes it more difficult to manage, track, and collaborate. Hardcoding data in test scripts makes scripts inflexible and difficult to maintain. Regularly rewriting test scripts from scratch is inefficient and leads to unnecessary work.",
+    "reference": "Syllabus 4.3.1"
+  }
+]

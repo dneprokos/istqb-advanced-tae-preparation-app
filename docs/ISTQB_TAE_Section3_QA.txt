@@ -1,0 +1,346 @@
+ISTQB Advanced Test Automation Engineer v2.0
+Section 3 - Questions and Answers
+Source: User-provided pasted quiz result export
+
+================================================================================
+QUESTION 1
+================================================================================
+Points: 1 / 1
+
+Q9
+
+TAE-3.1.1
+
+Match the list of tasks in the Test Automation Architecture Capabilities below with its correct role name below.
+
+1. Mapping the abstract test cases to concrete test cases suitable for execution.
+
+2. Implementation of test cases and/or test suites.
+
+3. Test logging with detailed information about the test steps and actions.
+
+4. Mechanism for connecting to the SUT via protocols, and services.
+
+A. Test Definition
+
+B. Test Adaptation
+
+C. Test Generation
+
+D. Test Execution
+
+Select ONE option.
+
+Options:
+A. 1D, 2A, 3C, 4B
+B. 1C, 2A, 3B, 4D
+C. 1A, 2B, 3D, 4C
+D. 1C, 2A, 3D, 4B
+
+Correct Answer: D
+
+Explanation:
+Correctly answered feedback
+
+1-C. Test Generation. Mapping the abstract test cases to concrete test
+
+cases suitable for execution. This is where model based testing tools
+
+support the automated design of test cases based on a test model.
+
+2-A. Test Definition. Implementation of test cases and/or test suites. This
+
+layer supports the definition and implementation of test cases and/or test
+
+suites.
+
+3-D. Test Execution. Test logging with detailed information about the test
+
+steps and actions. This layer provides a test execution tool to run the
+
+selected tests automatically, and a test logging and test reporting
+
+component.
+
+4-B. Test Adaptation. Mechanism for connecting to the SUT via protocols,
+
+and services. This layer provides functionality to adapt the automated tests
+
+for the various components or interfaces of the SUT. It provides different
+
+adaptors for integration mechanism.
+
+a) 1D, 2A, 3C, 4B INCORRECT
+
+b) 1C, 2A, 3B, 4D INCORRECT
+
+c) 1A, 2B, 3D, 4C INCORRECT
+
+d) 1C, 2A, 3D, 4B CORRECT
+
+================================================================================
+QUESTION 2
+================================================================================
+Points: 1 / 1
+
+Q10
+
+TAE-3.1.2
+
+As a Test Automation engineer You have encountered a problem during initial implementation of the test automation solution (TAS). The output from the system tests could not be translated back to the automated test cases to determine the test results.
+
+Which option may have MOST LIKELY been a cause of the problem?
+
+Options:
+A. The test tool libraries were NOT designed to be updated upon each SUT version release.
+B. The integration to the SUT system under test was NOT setup via APIs.
+C. The SUT-Specific adaptors for the selected tool were NOT implemented.
+D. The SUT and the test management tool were NOT compatible.
+
+Correct Answer: C
+
+Explanation:
+Correctly answered feedback
+
+a) Is not correct. The problem was found in the initial implementation and no updates were introduced yet.
+
+b) Is not correct. The integration method used does not matter whether it is via APIs or other mechanism.
+
+c) Is correct. The adaptors are necessary for the translation of the test results.
+
+d) Is not correct. The question does not mention test management tool
+
+incompatibility.
+
+================================================================================
+QUESTION 3
+================================================================================
+Points: 0 / 2
+
+Q12
+
+TAE-3.1.3
+
+You are working in an Android development team and have been maintaining a test automation framework. An additional development team has formed to build a new application. Your project manager asks you to build a test automation framework for this newly formed team. At first, you identify the components that could be reused in building that new framework, then start implementing the additional libraries based on the new application.
+
+In which layer do you configure the connection to the new app?
+
+Select ONE option.
+
+Options:
+A. Core libraries layer
+B. Test scripts layer
+C. Feature files layer
+D. Business logic layer
+
+Correct Answer: D
+
+Explanation:
+Incorrectly answered feedback
+
+a) Is not correct. Core libraries should be application independent and generic.
+
+b) Is not correct. Test scripts should only contain test scripts and no configuration.
+
+c) Is not correct. Feature files contain scenarios written in the Gherkin language.
+
+d) Is correct. The business logic layer is used to set up the TAF to run against the SUT.
+
+================================================================================
+QUESTION 4
+================================================================================
+Points: 2 / 2
+
+Q12
+
+TAE-3.1.4
+
+You are working on a test automation project that is used to automate GUI testing of a web-based public transport service. The project has a limited timescale. There are manual test cases which can be automated first. One of the goals is to implement test cases directly into the automated test scripts.
+
+Which technique or approach should be used for automating test cases to meet the goals?
+
+Select ONE option.
+
+Options:
+A. Using the keyword-driven test technique
+B. Using the behavior-driven development approach
+C. Using the capture/playback test automation approach
+D. Using the data-driven test automation technique
+
+Correct Answer: C
+
+Explanation:
+Correctly answered feedback
+
+a) Is not correct. Keyword-driven testing is too complex for this solution.
+
+b) Is not correct. Behavior-driven development is too complex and is not necessary.
+
+c) Is correct. Capture/playback test automation is easy to set up.
+
+d) Is not correct. Data-driven test automation is too complex and is not necessary.
+
+================================================================================
+QUESTION 5
+================================================================================
+Points: 2 / 2
+
+Q13
+
+TAE-3.1.4
+
+You join a company where manual testing is mature, but test automation has been abandoned for a while now. The testers have generated a massive amount of test data and are typically using 10 to 20 variations per scenario. After your initial review, you see that the TAF (Test Automation Framework) can easily be fixed, but the test cases need to be completely revamped.
+
+Which of the following test automation approaches should you choose to achieve great results quickly?
+
+Select ONE option.
+
+Options:
+A. Data-driven testing
+B. Behavior-driven development
+C. Capture/playback
+D. Acceptance test-driven development
+
+Correct Answer: A
+
+Explanation:
+Correctly answered feedback
+
+a) Is correct. The test data is already available and can be reused to increase the test case count.
+
+b) Is not correct. Behavior-driven development requires involvement from business representatives, and in this case, there is no specific mention whether the business is involved.
+
+c) Is not correct. Capture/playback would be a slow and costly solution, while the test data is already present.
+
+d) Is not correct. Acceptance test-driven development is not an automation
+
+approach.
+
+================================================================================
+QUESTION 6
+================================================================================
+Points: 2 / 2
+
+Q14
+
+TAE-3.1.5
+
+You are working on a test automation project that is used to automate GUI testing of an e-commerce site. The site contains a digital assistant which helps users to set up their accounts, their name, billing address, shipping address, and security credentials. Currently, the development of the software is in a phase where usability testers check the digital assistant and give recommendations on necessary changes. This is done iteratively; the developers modify the graphical user interface (GUI), and the usability testers check the modifications, and do usability testing again.
+
+Which design pattern is the best implemented in this case?
+
+Select ONE option.
+
+Options:
+A. Implement the page object pattern and store all the user actions associated with the GUI elements in the relevant page models
+B. Implement the flow model pattern, store all the web elements in the relevant page models, and store all the user actions associated with the GUI elements in the relevant flow models
+C. Implement the facade design pattern and provide interfaces for the GUI elements to hide the used internal locator mechanism
+D. Implement the singleton design pattern and create a single piece of code to handle the locating of elements
+
+Correct Answer: B
+
+Explanation:
+Correctly answered feedback
+
+a) Is not correct. Storing the user actions in the page model class files will not allow easy reuse and maintainability of complex user flows.
+
+b) Is correct. The flow model pattern combines usage of page models and flow models, storing the structure and logic of the application in class files with different purposes, and is typically used when the SUT’s structure changes frequently.
+
+c) Is not correct. Facades provide a simplified interface to a larger body of code.
+
+d) Is not correct. The singleton design pattern does not solve the problem in this case.
+
+================================================================================
+QUESTION 7
+================================================================================
+Points: 1 / 1
+
+Q Add[73]
+
+Section 3.1 
+
+What are the four horizontal layers of the gTAA?
+
+Options:
+A. Test adaptation, test execution, test design, test definition
+B. Test generation, test execution, test definition, test APIs
+C. Test generation, test definition, test execution, test adaptation
+D. Test definition, test execution, test reporting, test adaptation
+
+Correct Answer: C
+
+================================================================================
+QUESTION 8
+================================================================================
+Points: 1 / 1
+
+Q Add[10]
+
+Section 3.2 
+
+Which of the following BEST describes why it is important to separate test definition from test execution in a TAA?
+
+Options:
+A. It allows developing steps of the test process without being closely tied to the SUT interface.
+B. It allow choosing different paradigms (e.g event-driven) for the interaction TAS and SUT
+C. It allows specify test cases without being closely tied to the tool to run them against the SUT
+D. It allows testers to find more defects on the SUT
+
+Correct Answer: C
+
+================================================================================
+QUESTION 9
+================================================================================
+Points: 0 / 1
+
+Q Add[50]
+
+Section 3.1 
+
+You are implementing test automation for a project that has a business critical application A test execution tool is being used to run automated regression tests. The results from the test execution tool are very important and need to be 100% accurate. You want to merge the test automation results with the test management system that also records the manual test results so that managers can make informed decisions about the progress quickly. Which layer of the gTAA will be used to ensure the proper reporting occurs and the interfaces to the test management system are handled?
+
+Options:
+A. The reporting layer
+B. The logging layer
+C. The execution layer
+D. The adaptation layer
+
+Correct Answer: A, C
+
+================================================================================
+QUESTION 10
+================================================================================
+Points: 0 / 1
+
+Q Add[60]
+
+Section 3.1 
+
+You are implementing test automation for a project and you want to be able to generate test cases automatically using a series of test design tools which use a variety of test design techniques such as decision tables, pairwise testing and boundary value analysis. You also want to generate test data automatically which can then be used by the tests. Initially these tests will be run manually to verify their correctness and ultimately you want to include them in the test execution tool so that they can run unattended. Which layer of the gTAA will be used to support the specification of the test cases and preparation of the test data?
+
+Options:
+A. The generation layer
+B. The definition layer
+C. The execution layer
+D. The adaptation layer
+
+Correct Answer: B
+
+================================================================================
+QUESTION 11
+================================================================================
+Points: 1 / 1
+
+Q Add[79]
+
+Section 3.2.2 
+
+You are working on a web-based application called Book Vault that allows people to upload books and order books. This application must be available on all major browsers. You have been testing the application manually and management have asked you to consider automating some of the tests. You have investigated a number of commercial and free tools which can automate tests at a web browser level and one tool in particular meets your requirements and you have implemented a trial version. You have basic programming skills and the main goal is to automate a few functional tests to see if the tool is compatible with the application and can recognise the objects and controls. Which scripting technique would be MOST suitable in this scenario in order to meet the objectives?
+
+Options:
+A. Structured scripting
+B. Capture-replay scripting
+C. Data-driven scripting
+D. Model-based scripting
+
+Correct Answer: B

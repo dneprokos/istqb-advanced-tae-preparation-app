@@ -1,0 +1,250 @@
+[
+  {
+    "id": "ch8-q001",
+    "chapter": 8,
+    "section": "8.1.1",
+    "type": "single",
+    "points": 2.17,
+    "text": "What is a TEST HISTOGRAM in the context of test automation improvement, and what information does it provide?",
+    "options": [
+      { "id": "a", "text": "A bar chart showing the number of lines of code in each test script." },
+      { "id": "b", "text": "A visual report showing trends in test execution data over time, used to identify fragile or frequently failing tests." },
+      { "id": "c", "text": "A histogram of defect severity found by automated tests." },
+      { "id": "d", "text": "A graph showing the speed of each individual test case execution over one sprint." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "A test histogram is a visual report that displays trends in test execution data over time (e.g., across multiple builds or sprints). It helps identify fragile tests (those that fail frequently), tests with unstable execution times, and overall suite health trends. This information guides decisions about which tests to improve, stabilise, or remove during continuous improvement.",
+    "reference": "Syllabus 8.1.1"
+  },
+  {
+    "id": "ch8-q002",
+    "chapter": 8,
+    "section": "8.1.1",
+    "type": "single",
+    "points": 2.17,
+    "text": "How does AI/ML-based 'self-healing' improve test automation maintenance?",
+    "options": [
+      { "id": "a", "text": "It automatically rewrites the entire test suite when a new release is deployed." },
+      { "id": "b", "text": "It detects when UI element locators have changed and automatically updates them without manual intervention." },
+      { "id": "c", "text": "It generates new test cases based on the defect backlog." },
+      { "id": "d", "text": "It eliminates the need for assertions in test scripts." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "AI/ML-based self-healing locators detect when a UI element's locator (e.g., XPath, CSS selector, ID) has changed in the SUT and automatically identify and update the locator to the correct new value. This significantly reduces maintenance effort caused by UI changes breaking element identification. It does not rewrite test logic, generate test cases from defects, or remove the need for assertions.",
+    "reference": "Syllabus 8.1.1"
+  },
+  {
+    "id": "ch8-q003",
+    "chapter": 8,
+    "section": "8.1.1",
+    "type": "single",
+    "points": 2.17,
+    "text": "What is the PRIMARY benefit of using SCHEMA VALIDATION in API test automation?",
+    "options": [
+      { "id": "a", "text": "It verifies the performance of API endpoints under high load." },
+      { "id": "b", "text": "It validates the structure and data types of API responses in a single check, reducing the need for many individual field assertions." },
+      { "id": "c", "text": "It automatically generates test data for API requests." },
+      { "id": "d", "text": "It ensures that API documentation matches the implementation." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Schema validation checks that an API response (or database result) conforms to an expected structure, including field names, data types, and required fields. This can replace many individual assertions with a single schema check, reducing test maintenance effort. Schema validation can be applied to REST API responses (JSON Schema), database queries, and other structured data sources.",
+    "reference": "Syllabus 8.1.1"
+  },
+  {
+    "id": "ch8-q004",
+    "chapter": 8,
+    "section": "8.1.2",
+    "type": "single",
+    "points": 2.17,
+    "text": "A team currently uses linear scripting for test automation. Tests are failing frequently due to hard-coded data and duplicate steps. Which improvement path is MOST appropriate for the scripting layer?",
+    "options": [
+      { "id": "a", "text": "Replace linear scripting with capture/playback to reduce the need for programming." },
+      { "id": "b", "text": "Upgrade from linear scripting to data-driven testing (DDT), and then to keyword-driven testing (KDT) if appropriate, while consolidating duplicated steps into library functions." },
+      { "id": "c", "text": "Increase the number of hard-coded test cases to achieve broader coverage." },
+      { "id": "d", "text": "Switch entirely to manual testing as the automation approach is too complex." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "The recommended scripting improvement path is to upgrade from lower-maturity approaches (linear scripting) to higher-maturity approaches: first data-driven testing (DDT) to eliminate hardcoded data, then keyword-driven testing (KDT) for further abstraction. Duplicated test steps should be consolidated into reusable library functions. Capture/playback is a step backward in maintainability.",
+    "reference": "Syllabus 8.1.2"
+  },
+  {
+    "id": "ch8-q005",
+    "chapter": 8,
+    "section": "8.1.2",
+    "type": "single",
+    "points": 2.17,
+    "text": "Which wait mechanism in test automation is considered MOST robust and avoids the problems associated with hard-coded wait times?",
+    "options": [
+      { "id": "a", "text": "Hard-coded waits (Thread.sleep), which pause for a fixed duration." },
+      { "id": "b", "text": "Polling (repeatedly checking a condition until it is true or a timeout is reached)." },
+      { "id": "c", "text": "Event subscription (the TAF waits for a specific event or notification from the SUT before proceeding)." },
+      { "id": "d", "text": "Removing all waits, as modern systems are fast enough not to need them." }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Event subscription is the most robust wait mechanism: the TAF registers interest in a specific SUT event (e.g., a callback, webhook, or message queue notification) and proceeds as soon as the event is received. This avoids both the waste of hard-coded waits (which may be too long or too short) and the overhead of polling. Polling is better than hard-coded waits but still consumes resources. Hard-coded waits cause flakiness and slow execution.",
+    "reference": "Syllabus 8.1.2"
+  },
+  {
+    "id": "ch8-q006",
+    "chapter": 8,
+    "section": "8.1.3",
+    "type": "single",
+    "points": 2.17,
+    "text": "When restructuring testware after a major architectural change in the SUT, which approach BEST manages the risk of breaking existing automated tests?",
+    "options": [
+      { "id": "a", "text": "Replace all existing tests at once with newly written tests." },
+      { "id": "b", "text": "Make incremental changes with an MVP mindset, running full regression after each change to validate the restructuring." },
+      { "id": "c", "text": "Freeze the test suite and stop running automation until restructuring is complete." },
+      { "id": "d", "text": "Remove all tests that reference changed SUT components and accept reduced coverage." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "When restructuring testware, the recommended approach is to make incremental changes (applying an MVP/minimum viable product mindset) and run the full regression suite after each change. This ensures that each incremental restructuring step does not break existing test coverage, and any issues can be identified and fixed before the next change is made. Wholesale replacement is high risk; freezing automation creates coverage gaps.",
+    "reference": "Syllabus 8.1.3"
+  },
+  {
+    "id": "ch8-q007",
+    "chapter": 8,
+    "section": "8.1.3",
+    "type": "single",
+    "points": 2.17,
+    "text": "During a testware restructuring review, the team finds several test scripts that test the same functionality from different angles with significant code overlap. What is the RECOMMENDED action?",
+    "options": [
+      { "id": "a", "text": "Keep all scripts as they are to ensure maximum coverage redundancy." },
+      { "id": "b", "text": "Evaluate scripts for revision or elimination, and consolidate functions that operate on the same control types or features into reusable library functions." },
+      { "id": "c", "text": "Merge all overlapping scripts into a single very long test case." },
+      { "id": "d", "text": "Mark duplicated scripts as 'deprecated' but continue running them." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "When restructuring testware, test scripts should be evaluated for revision or elimination. Overlapping functions that act on the same control types or features should be consolidated into reusable library functions. This reduces maintenance burden, improves consistency, and increases the efficiency of the core TAS libraries. Simply merging into one long test case violates atomic test design principles.",
+    "reference": "Syllabus 8.1.3"
+  },
+  {
+    "id": "ch8-q008",
+    "chapter": 8,
+    "section": "8.1.4",
+    "type": "single",
+    "points": 2.17,
+    "text": "Which of the following is a NON-TEST use of test automation technology that can benefit the broader software delivery process?",
+    "options": [
+      { "id": "a", "text": "Using automation scripts to execute test cases and generate pass/fail reports." },
+      { "id": "b", "text": "Using automation scripts to set up test data by registering test users via web service calls, and to perform environment cleanup after releases." },
+      { "id": "c", "text": "Using automation to analyse defect reports and prioritise them by severity." },
+      { "id": "d", "text": "Using automation to write production source code." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Non-test uses of automation include environment setup and control activities such as creating test data (e.g., registering test users via web service calls), configuring environment states, and performing cleanup after test runs or releases. Other non-test uses include data aging (updating date fields in test data) and generating screenshots or videos for documentation and marketing purposes.",
+    "reference": "Syllabus 8.1.4"
+  },
+  {
+    "id": "ch8-q009",
+    "chapter": 8,
+    "section": "8.1.2",
+    "type": "single",
+    "points": 2.17,
+    "text": "When planning an upgrade to a core library used by the test automation framework, what process should be followed to minimise the risk of breaking the existing test suite?",
+    "options": [
+      { "id": "a", "text": "Upgrade the core library directly in the main branch and fix any resulting test failures as they are reported by the team." },
+      { "id": "b", "text": "Conduct a pilot upgrade on a representative subset of tests, perform impact analysis, then roll out the upgrade incrementally while running full regression to validate each step." },
+      { "id": "c", "text": "Skip core library upgrades entirely to avoid any risk of breaking tests." },
+      { "id": "d", "text": "Delegate the library upgrade decision entirely to the SUT development team." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Upgrading a core TAF library requires a controlled process: first, conduct a pilot on a small representative set of tests to understand the impact; perform an impact analysis to identify all affected components; then roll out the upgrade incrementally with full regression testing at each step. This minimises the risk of widespread test suite breakage. Upgrading directly to the main branch without piloting is high-risk.",
+    "reference": "Syllabus 8.1.2"
+  },
+  {
+    "id": "ch8-q010",
+    "chapter": 8,
+    "section": "8.1.1",
+    "type": "single",
+    "points": 2.17,
+    "text": "You are working on a test automation project used to automate GUI testing of an online web shop wizard. Currently, developers often change the internal identifiers of UI elements, so maintaining tests requires a lot of effort. Which of the following could be an important opportunity for improvement?",
+    "options": [
+      { "id": "a", "text": "Apply schema validation, which checks if mandatory response elements are present on the GUI." },
+      { "id": "b", "text": "Improve test logging to include information about UI elements and their locators to easily identify broken test cases." },
+      { "id": "c", "text": "Create a test histogram, which enables the TAEs to identify and select test cases that are fragile." },
+      { "id": "d", "text": "Use an artificial intelligence (AI) algorithm based on machine learning and image recognition to identify the new selectors and use self-healing to fix the test cases." }
+    ],
+    "correct": ["d"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Using an AI-based algorithm supports identification of broken locators and self-healing of test cases when UI element identifiers change frequently. Schema validation applies to API testing, not GUI testing. Improving test logging is a manual and slow process that does not prevent breakage. A test histogram enables identification of fragile test cases but does not solve the underlying problem of broken locators.",
+    "reference": "Syllabus 8.1.1"
+  },
+  {
+    "id": "ch8-q011",
+    "chapter": 8,
+    "section": "8.1.1",
+    "type": "single",
+    "points": 2.17,
+    "text": "Your organization maintains a regression test suite of over 1000 automated test cases. Recently the development team has decided to modernize their technology stack and are refactoring how the front end operates. The application is now far more API-driven and this impacts how UI elements render. You anticipate this will impact the success rate of 75% of your automated test cases. What data analysis approaches should you use to determine how to fix your impacted automated test cases?",
+    "options": [
+      { "id": "a", "text": "Run the test cases several times in a CI/CD pipeline, perform visual report analysis, and draw conclusions from a test histogram." },
+      { "id": "b", "text": "Use AI algorithms and API schema validation tools." },
+      { "id": "c", "text": "Recreate automated test cases to replace the ones that are not working properly and will execute on the new application." },
+      { "id": "d", "text": "Avoid automating certain test cases after analyzing exception logs, screenshots, and error messages." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "AI algorithms can be used to self-heal test cases against UI locator value changes, and schema validation tools can quickly assess API schema updates. Analyzing test histograms for 1000 test cases is too time-consuming. Recreating 75% of the test harness is not feasible when other options are available. Although logs, screenshots, and error messages are valid data sources, eliminating test cases is not a viable strategy.",
+    "reference": "Syllabus 8.1.1"
+  },
+  {
+    "id": "ch8-q012",
+    "chapter": 8,
+    "section": "8.1.2",
+    "type": "multiple",
+    "points": 2.17,
+    "text": "You are working on an automated regression test suite that takes too long to execute and does not finish overnight. The test environment is only available for regression testing during the night. Running multiple suites in parallel is not an option as the target system is expensive and exists only as a single instance. What should be your next steps to ensure the test suite execution finishes overnight?",
+    "options": [
+      { "id": "a", "text": "Split the test suite into multiple parts, executing the parts on different nights of the week." },
+      { "id": "b", "text": "Isolate test result verification from the test execution and start the verification process after the test execution during morning hours." },
+      { "id": "c", "text": "Rewrite the tests using the keyword-driven technique as that will be executed faster." },
+      { "id": "d", "text": "Remove some tests from the test suite to reduce overall execution time." },
+      { "id": "e", "text": "Remove any duplicate tests from the test suite." }
+    ],
+    "correct": ["a", "e"],
+    "selectCount": 2,
+    "image": null,
+    "explanation": "Splitting the test suite into multiple parts helps ensure test execution finishes overnight. Removing duplicate tests reduces test execution time without reducing meaningful coverage. Test result verification cannot be isolated from the test execution process. It is not stated that keyword-driven technique executes faster. Removing tests without duplication analysis would reduce scope and could allow defects to propagate into production.",
+    "reference": "Syllabus 8.1.2"
+  },
+  {
+    "id": "ch8-q013",
+    "chapter": 8,
+    "section": "8.1.3",
+    "type": "single",
+    "points": 2.17,
+    "text": "You have been performing a quality review of a TAS to optimize the interaction of controls within the GUI. The GUI includes several types of controls (e.g., dropdown list, checkbox, text field). There are separate functions in the test scripts which act upon the different types of GUI controls to gather information and set them (e.g., visible/not visible, enabled/not enabled). Which of the following steps should you consider to increase the efficiency of the TAS?",
+    "options": [
+      { "id": "a", "text": "Separate the testing of the controls based on their types into different test suites." },
+      { "id": "b", "text": "Research if there is a test automation tool which can replace the current solution." },
+      { "id": "c", "text": "Check if there are any functions that can work with several types of controls, and consolidate the test scripts using these functions." },
+      { "id": "d", "text": "Use the new operating system functions in the test scripts to handle the GUI controls." }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Consolidating functions that can work with several types of GUI controls increases efficiency by reducing duplication and improving reusability of core library functions. Separating the testing of controls into different test suites should be implemented within core libraries, not as separate suites. Researching a replacement tool is not a direct improvement. Using new OS functions is not a direct improvement and may introduce new dependencies.",
+    "reference": "Syllabus 8.1.3"
+  }
+]

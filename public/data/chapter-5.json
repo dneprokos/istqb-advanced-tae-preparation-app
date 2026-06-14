@@ -1,0 +1,415 @@
+[
+  {
+    "id": "ch5-q001",
+    "chapter": 5,
+    "section": "5.1.1",
+    "type": "single",
+    "points": 1.33,
+    "text": "In a CI/CD pipeline, at which stage are configuration tests MOST typically executed?",
+    "options": [
+      {
+        "id": "a",
+        "text": "After deployment to the production environment."
+      },
+      {
+        "id": "b",
+        "text": "As the first quality gate in the pipeline, checking file paths and environment configuration before building."
+      },
+      {
+        "id": "c",
+        "text": "Only in the preproduction environment as part of non-functional testing."
+      },
+      {
+        "id": "d",
+        "text": "Manually by the infrastructure team before the pipeline starts."
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Configuration tests verify that file paths, environment variables, and configuration files are correct before the build begins. They run early in the pipeline as a fast quality gate to catch environmental setup issues before investing time in building and deploying. Running them after production deployment would be too late to be cost-effective.",
+    "reference": "Syllabus 5.1.1"
+  },
+  {
+    "id": "ch5-q002",
+    "chapter": 5,
+    "section": "5.1.1",
+    "type": "single",
+    "points": 1.33,
+    "text": "A team is deciding how to integrate system-level automated tests into their pipeline. They choose to run them as a separate pipeline triggered AFTER deployment, rather than as part of the deployment phase itself. What is a KEY DISADVANTAGE of this approach?",
+    "options": [
+      {
+        "id": "a",
+        "text": "It does not allow flexible test suite selection."
+      },
+      {
+        "id": "b",
+        "text": "The tests are not a quality gate — a failed test cannot automatically prevent the deployment from completing."
+      },
+      {
+        "id": "c",
+        "text": "Tests must always be run sequentially with no parallelism."
+      },
+      {
+        "id": "d",
+        "text": "Separate pipelines cannot generate test reports."
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "When system-level tests run in a separate pipeline triggered after deployment, they offer flexibility in test suite selection but lose the ability to act as a deployment quality gate. If tests fail, the deployment has already completed, so a rollback (if needed) requires a separate redeployment. The approach that includes tests within the deployment phase allows for automatic rollback on failure.",
+    "reference": "Syllabus 5.1.1"
+  },
+  {
+    "id": "ch5-q003",
+    "chapter": 5,
+    "section": "5.1.2",
+    "type": "single",
+    "points": 1.33,
+    "text": "Where should test environment configuration data (such as URLs and credentials) be stored to ensure the test automation framework can access the correct configuration for each environment?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Hardcoded directly in the test scripts to ensure they always use the correct values."
+      },
+      {
+        "id": "b",
+        "text": "Stored with the testware in version control, with environment-specific values managed as configuration."
+      },
+      {
+        "id": "c",
+        "text": "Only in the testers' personal notes, to prevent accidental exposure."
+      },
+      {
+        "id": "d",
+        "text": "In a single global file shared across all pipelines without environment-specific separation."
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Test environment configuration data (URLs, credentials, environment-specific settings) should be stored with the testware in version control, with environment-specific values clearly separated (e.g., via configuration files, environment variables, or secrets management). This ensures reproducibility and traceability. Hardcoding in scripts is an anti-pattern; storing only in personal notes prevents team access and reproducibility.",
+    "reference": "Syllabus 5.1.2"
+  },
+  {
+    "id": "ch5-q004",
+    "chapter": 5,
+    "section": "5.1.2",
+    "type": "single",
+    "points": 1.33,
+    "text": "A team uses feature toggles in their release management strategy. What is the PRIMARY purpose of feature toggles in the context of test automation?",
+    "options": [
+      {
+        "id": "a",
+        "text": "They allow tests to be permanently disabled without deleting them from the codebase."
+      },
+      {
+        "id": "b",
+        "text": "They enable certain features to be enabled or disabled per release, allowing testware to be configured to match the feature state being tested."
+      },
+      {
+        "id": "c",
+        "text": "They automatically generate test cases for new features."
+      },
+      {
+        "id": "d",
+        "text": "They replace the need for separate test environments."
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Feature toggles (feature flags) allow features to be switched on or off per release or environment. In test automation, this means testware can be configured to match the feature state of the SUT being tested — enabling tests for features that are active and excluding tests for features that are toggled off. This supports continuous delivery without needing separate branches for each feature.",
+    "reference": "Syllabus 5.1.2"
+  },
+  {
+    "id": "ch5-q005",
+    "chapter": 5,
+    "section": "5.1.3",
+    "type": "single",
+    "points": 1.33,
+    "text": "What is the PRIMARY purpose of contract testing in a microservices or API-based architecture?",
+    "options": [
+      {
+        "id": "a",
+        "text": "To verify that the UI of each microservice matches the design specification."
+      },
+      {
+        "id": "b",
+        "text": "To verify that services can communicate with each other and that the shared data structures are consistent between consumer and provider."
+      },
+      {
+        "id": "c",
+        "text": "To measure the performance of API endpoints under load."
+      },
+      {
+        "id": "d",
+        "text": "To check that API documentation is published in the correct format."
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Contract testing verifies that services (consumers and providers) can communicate correctly and that the data exchanged between them is consistent with agreed contracts. It allows defects in service integrations to be found early in the SDLC, before full integration testing. It is distinct from UI testing, performance testing, and documentation validation.",
+    "reference": "Syllabus 5.1.3"
+  },
+  {
+    "id": "ch5-q006",
+    "chapter": 5,
+    "section": "5.1.3",
+    "type": "single",
+    "points": 1.33,
+    "text": "In consumer-driven contract testing, who is responsible for defining the expectations (the contract)?",
+    "options": [
+      {
+        "id": "a",
+        "text": "The infrastructure team defines the contract based on network capabilities."
+      },
+      {
+        "id": "b",
+        "text": "The consumer service defines the contract by specifying the interactions it expects from the provider."
+      },
+      {
+        "id": "c",
+        "text": "The provider service defines the contract and the consumer must conform to it."
+      },
+      {
+        "id": "d",
+        "text": "An independent third-party arbitrator defines the contract."
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "In consumer-driven contract testing, the consuming service defines the contract — it specifies the interactions (requests and expected responses) it requires from the provider. The provider then verifies that it can fulfil those expectations. This is distinct from provider-driven contract testing, where the provider defines the contract. Consumer-driven contracts help catch breaking changes to provider APIs before deployment.",
+    "reference": "Syllabus 5.1.3"
+  },
+  {
+    "id": "ch5-q007",
+    "chapter": 5,
+    "section": "5.1.1",
+    "type": "single",
+    "points": 1.33,
+    "text": "At which stage of the CI/CD pipeline are component integration tests MOST appropriately placed?",
+    "options": [
+      {
+        "id": "a",
+        "text": "In the CI pipeline, after component tests pass, as part of the build phase quality gate."
+      },
+      {
+        "id": "b",
+        "text": "Only in the production environment after a canary release."
+      },
+      {
+        "id": "c",
+        "text": "As the final step before merging into the main branch, after system tests."
+      },
+      {
+        "id": "d",
+        "text": "In a completely separate manual testing phase outside the pipeline."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Component integration tests verify that individual components interact correctly. They are placed in the CI pipeline after component tests pass, acting as part of the build quality gate. They run in the build environment without requiring full deployment. System tests come later in the delivery pipeline, after deployment to the integration environment.",
+    "reference": "Syllabus 5.1.1"
+  },
+  {
+    "id": "ch5-q008",
+    "chapter": 5,
+    "section": "5.1.3",
+    "type": "single",
+    "points": 1.33,
+    "text": "When documenting API infrastructure for test automation purposes, which information is MOST critical to capture?",
+    "options": [
+      {
+        "id": "a",
+        "text": "The colour scheme of the API documentation portal."
+      },
+      {
+        "id": "b",
+        "text": "API parameters, request/response types, headers, and the relationships between business APIs."
+      },
+      {
+        "id": "c",
+        "text": "The name of the developer who originally wrote each API endpoint."
+      },
+      {
+        "id": "d",
+        "text": "The estimated number of users who will call each API endpoint per year."
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "For test automation of API-based systems, critical documentation includes API parameters (required and optional), expected request and response types, authentication headers, and the relationships between APIs (which APIs depend on or call other APIs). This information is essential for building effective API test automation and understanding service dependencies.",
+    "reference": "Syllabus 5.1.3"
+  },
+  {
+    "id": "ch5-q009",
+    "chapter": 5,
+    "section": "5.1.1",
+    "type": "single",
+    "points": 1.33,
+    "text": "Which type of automated tests is MOST appropriate for inclusion in a nightly regression pipeline in addition to the standard deployment pipeline?",
+
+    "options": [
+      {
+        "id": "a",
+        "text": "Only configuration tests, as they run fastest."
+      },
+      {
+        "id": "b",
+        "text": "Long-running regression suites and non-functional tests that are too time-consuming for the main deployment pipeline."
+      },
+      {
+        "id": "c",
+        "text": "No automated tests should be run nightly — only on-demand."
+      },
+      {
+        "id": "d",
+        "text": "Exclusively manual test checklists converted to pipeline scripts."
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Nightly regression pipelines are designed to run longer, more comprehensive test suites and non-functional tests (e.g., performance, security) that take too long to include in the main deployment pipeline. These tests provide deeper quality feedback while not blocking the rapid deployment cycle. Configuration tests are fast enough for the main pipeline.",
+    "reference": "Syllabus 5.1.1"
+  },
+  {
+    "id": "ch5-q010",
+    "chapter": 5,
+    "section": "5.1.1",
+    "type": "multiple",
+    "points": 1.33,
+    "text": "There is an IT company which develops an often-changing financial software product using the Agile software development model. The development, integration and deployment processes are highly automated with an established CI/CD pipeline. You are working on a TAS with the goal of creating a TAS which can be used for as many test automation purposes as possible. Which of the following options are valid purposes for test automation in this case?",
+    "options": [
+      { "id": "a", "text": "Run a regression test suite every night" },
+      { "id": "b", "text": "Execute a build of a component" },
+      { "id": "c", "text": "Run a static code analysis" },
+      { "id": "d", "text": "Execute an automated performance efficiency test in the CI/CD pipeline" },
+      { "id": "e", "text": "Package and deploy the application as part of the deployment phase" }
+    ],
+    "correct": ["a", "d"],
+    "selectCount": 2,
+    "image": null,
+    "explanation": "Regression testing is necessary and can be incorporated into the CI/CD pipeline. Performance efficiency tests can be automated and run in the CI/CD pipeline. Executing a build is not a test automation task. Running static code analysis is not a test automation task. Packaging and deployment are not test automation tasks.",
+    "reference": "Syllabus 5.1.1"
+  },
+  {
+    "id": "ch5-q011",
+    "chapter": 5,
+    "section": "5.1.1",
+    "type": "single",
+    "points": 1.33,
+    "text": "Which statement is correct regarding automated test execution in a CI/CD pipeline?",
+    "options": [
+      { "id": "a", "text": "Tests are not executed as part of the deployment phase." },
+      { "id": "b", "text": "Tests are not executed as a separate pipeline triggered by the successful deployment." },
+      { "id": "c", "text": "Test cases do not act as a quality gate when different automated test suites will run on each deployment." },
+      { "id": "d", "text": "Pipelines are not recommended for regression testing due to the extensive scope and size of these tests." }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "When automated test suites run as separate pipelines triggered after deployment, they do not act as quality gates — a failed test cannot prevent the deployment from completing. Tests are executed during deployment (A is wrong). Tests can be triggered to execute after successful deployment as a separate pipeline (B is wrong). Pipelines are well-suited for regression testing regardless of size (D is wrong).",
+    "reference": "Syllabus 5.1.1"
+  },
+  {
+    "id": "ch5-q012",
+    "chapter": 5,
+    "section": "5.1.2",
+    "type": "single",
+    "points": 1.33,
+    "text": "How is configuration management used in test automation?",
+    "options": [
+      { "id": "a", "text": "It enables the management of test data and test environment configurations." },
+      { "id": "b", "text": "The SUT configuration can be stored and easily removed." },
+      { "id": "c", "text": "It enables management of user rights for accessing test automation." },
+      { "id": "d", "text": "Test automation results can easily be analyzed." }
+    ],
+    "correct": ["a"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Configuration management in test automation enables the management of test data and test environment configurations such as URLs, credentials, and environment-specific settings. SUT configuration can be under configuration management but is not directly related to test automation. User rights management is not related to configuration management. Configuration management does not support test automation results analysis.",
+    "reference": "Syllabus 5.1.2"
+  },
+  {
+    "id": "ch5-q013",
+    "chapter": 5,
+    "section": "5.1.2",
+    "type": "single",
+    "points": 1.33,
+    "text": "Which item below is NOT part of the test environment configuration?",
+    "options": [
+      { "id": "a", "text": "Uniform resource locators (URLs)" },
+      { "id": "b", "text": "Credentials" },
+      { "id": "c", "text": "Test data" },
+      { "id": "d", "text": "Common core library" }
+    ],
+    "correct": ["d"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "The common core library is not part of the test environment configuration. The test environment configuration is actually a part of the common core library, not vice versa. URLs, credentials, and test data are all part of the test environment configuration.",
+    "reference": "Syllabus 5.1.2"
+  },
+  {
+    "id": "ch5-q014",
+    "chapter": 5,
+    "section": "5.1.3",
+    "type": "single",
+    "points": 1.33,
+    "text": "How does contract testing NOT contribute to API test automation dependencies in an infrastructure?",
+    "options": [
+      { "id": "a", "text": "Ensures that APIs adhere to predefined contracts for communication." },
+      { "id": "b", "text": "Can be used to test the communication of microservices." },
+      { "id": "c", "text": "Validates the compatibility of two separate systems." },
+      { "id": "d", "text": "Verifies whether a system satisfies its contractual requirements." }
+    ],
+    "correct": ["d"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Contract testing has no relation to verifying whether a system satisfies its contractual (legal/SLA) requirements — that refers to business contracts, not technical API contracts. Contract testing ensures APIs follow predefined communication agreements, can be used to test communication between microservices, and validates the compatibility of two separate systems.",
+    "reference": "Syllabus 5.1.3"
+  },
+  {
+    "id": "ch5-q015",
+    "chapter": 5,
+    "section": "5.1.3",
+    "type": "single",
+    "points": 1.33,
+    "text": "You are on a project where the teams are working on breaking down an old monolithic web service into several microservices. Which of the following documents can assist you in identifying dependencies and developing your Test Automation Solution (TAS) for API testing? Consider: i. Application programming interface (API) specification. ii. System architecture diagram. iii. Test strategy. iv. Release notes.",
+    "options": [
+      { "id": "a", "text": "i, ii, and iv" },
+      { "id": "b", "text": "i and ii" },
+      { "id": "c", "text": "ii, iii, and iv" },
+      { "id": "d", "text": "i only" }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "The API specification provides details about endpoints, and the system architecture diagram shows the relationships between different components. Together they provide the necessary information to identify API dependencies. Release notes do not help learn API connections and details. The test strategy and release notes don't provide specific API dependency information needed for building a TAS. The API specification alone is insufficient without the architecture diagram.",
+    "reference": "Syllabus 5.1.3"
+  }
+]

@@ -1,0 +1,231 @@
+[
+  {
+    "id": "ch2-q001",
+    "chapter": 2,
+    "section": "2.1.1",
+    "type": "single",
+    "points": 1.80,
+    "text": "Which testability aspect refers to the interfaces that give the test automation solution insight into the internal state and behaviour of the System Under Test?",
+    "options": [
+      { "id": "a", "text": "Controllability" },
+      { "id": "b", "text": "Observability" },
+      { "id": "c", "text": "Architecture transparency" },
+      { "id": "d", "text": "Accessibility" }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Observability refers to the interfaces and mechanisms that allow the Test Automation Solution (TAS) to gain insight into the current state of the SUT, such as log outputs, APIs that expose state, and monitoring endpoints. Controllability refers to the ability to perform actions on the SUT. Architecture transparency relates to the clarity of component and interface documentation.",
+    "reference": "Syllabus 2.1.1"
+  },
+  {
+    "id": "ch2-q002",
+    "chapter": 2,
+    "section": "2.1.1",
+    "type": "single",
+    "points": 1.80,
+    "text": "Which testability aspect of the SUT ensures that the Test Automation Solution can perform actions such as clicking UI elements, sending TCP/IP requests, or triggering USB events?",
+    "options": [
+      { "id": "a", "text": "Observability" },
+      { "id": "b", "text": "Architecture transparency" },
+      { "id": "c", "text": "Controllability" },
+      { "id": "d", "text": "Accessibility identifier coverage" }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Controllability refers to the interfaces available to the TAS that allow it to perform actions on the SUT. Examples include UI controls (buttons, fields), TCP/IP sockets, USB interfaces, and API endpoints. Without sufficient controllability, automation cannot drive the SUT effectively.",
+    "reference": "Syllabus 2.1.1"
+  },
+  {
+    "id": "ch2-q003",
+    "chapter": 2,
+    "section": "2.1.2",
+    "type": "single",
+    "points": 1.80,
+    "text": "A team wants to run automated component integration tests as part of their CI/CD pipeline. The tests should run without deploying the SUT to any server. Which test environment type is MOST appropriate for this purpose?",
+    "options": [
+      { "id": "a", "text": "Integration environment" },
+      { "id": "b", "text": "Build environment" },
+      { "id": "c", "text": "Preproduction environment" },
+      { "id": "d", "text": "Production environment" }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "The build environment (also called the CI agent or build server) is where component tests and component integration tests are executed as part of the build process, without requiring full deployment of the SUT. It also includes static analysis. The integration environment is the first environment with full deployment and monitoring, and is used for system integration and acceptance testing.",
+    "reference": "Syllabus 2.1.2"
+  },
+  {
+    "id": "ch2-q004",
+    "chapter": 2,
+    "section": "2.1.2",
+    "type": "single",
+    "points": 1.80,
+    "text": "Which deployment strategy in the production/operational environment involves directing a small percentage of real user traffic to a new version of the application while the majority of users continue using the old version?",
+    "options": [
+      { "id": "a", "text": "Blue/green deployment" },
+      { "id": "b", "text": "A/B testing" },
+      { "id": "c", "text": "Canary release" },
+      { "id": "d", "text": "Feature toggle" }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "A canary release involves gradually rolling out a new version to a small subset of users (the 'canary') while the rest continue using the stable version. This limits the blast radius of any defects in the new release. Blue/green deployment uses two identical environments and switches traffic between them. A/B testing compares two variants to measure user response.",
+    "reference": "Syllabus 2.1.2"
+  },
+  {
+    "id": "ch2-q005",
+    "chapter": 2,
+    "section": "2.2.1",
+    "type": "single",
+    "points": 1.80,
+    "text": "During SUT analysis for test automation, a team discovers that certain third-party payment services are not available in the test environment and cannot be invoked during automated testing. What is the MOST appropriate solution?",
+    "options": [
+      { "id": "a", "text": "Skip all tests that interact with the payment service." },
+      { "id": "b", "text": "Use emulation or simulation of the third-party system within the test environment." },
+      { "id": "c", "text": "Run those tests only in production using real payment transactions." },
+      { "id": "d", "text": "Redesign the SUT so that it no longer uses third-party payment services." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "When third-party systems are unavailable in the test environment, the standard approach is to emulate or simulate those systems (using mocks, stubs, or service virtualisation). This is a key consideration in SUT analysis for automation planning. Skipping tests creates coverage gaps; running in production is dangerous; redesigning the SUT is not a testing responsibility.",
+    "reference": "Syllabus 2.2.1"
+  },
+  {
+    "id": "ch2-q006",
+    "chapter": 2,
+    "section": "2.2.1",
+    "type": "single",
+    "points": 1.80,
+    "text": "Which of the following is a key consideration when analysing the SUT to determine WHICH test activities to automate?",
+    "options": [
+      { "id": "a", "text": "The personal preference of the test manager regarding which tests look most interesting." },
+      { "id": "b", "text": "The availability of test data and the feasibility of emulating third-party dependencies." },
+      { "id": "c", "text": "The colour scheme of the test reporting dashboard." },
+      { "id": "d", "text": "The number of years the test team has been working together." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "SUT analysis for automation includes evaluating the availability of test data and how third-party or external system dependencies can be managed (emulated, mocked, or stubbed). These factors directly determine which test activities are feasible to automate and at which test level. Other factors include identifying roles/skill sets needed and which test types to support.",
+    "reference": "Syllabus 2.2.1"
+  },
+  {
+    "id": "ch2-q007",
+    "chapter": 2,
+    "section": "2.2.2",
+    "type": "single",
+    "points": 1.80,
+    "text": "When creating a tool evaluation comparison matrix, how should the evaluation be structured?",
+    "options": [
+      { "id": "a", "text": "Tools are listed in rows and evaluation requirements are listed in columns." },
+      { "id": "b", "text": "Tools are listed in columns and evaluation requirements are listed in rows." },
+      { "id": "c", "text": "A single score is assigned to each tool without breaking it down by requirement." },
+      { "id": "d", "text": "Only the vendor's stated features are used; independent testing of tools is not recommended." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "According to the ISTQB TAE syllabus, a tool evaluation comparison table places candidate tools in columns and the list of evaluation requirements (criteria) in rows. This structure allows each requirement to be assessed for each tool systematically. A single overall score without breakdown by requirement lacks the granularity needed for an informed decision.",
+    "reference": "Syllabus 2.2.2"
+  },
+  {
+    "id": "ch2-q008",
+    "chapter": 2,
+    "section": "2.2.2",
+    "type": "single",
+    "points": 1.80,
+    "text": "Which of the following is a valid factor to consider when evaluating and comparing test automation tools?",
+    "options": [
+      { "id": "a", "text": "The tool's ability to integrate with CI/CD pipelines and defect tracking systems." },
+      { "id": "b", "text": "The age of the tool's logo design." },
+      { "id": "c", "text": "The number of social media followers the tool vendor has." },
+      { "id": "d", "text": "Whether the tool's name is easy to pronounce in all team languages." }
+    ],
+    "correct": ["a"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Tool evaluation factors include integration capabilities with CI/CD pipelines, defect tracking systems, test management tools, and version control. Other valid factors include the programming language/technology used, configuration ability, test data management support, reporting features, scalability, maintainability, and reliability. Marketing-related factors are not relevant to technical tool evaluation.",
+    "reference": "Syllabus 2.2.2"
+  },
+  {
+    "id": "ch2-q009",
+    "chapter": 2,
+    "section": "2.1.2",
+    "type": "single",
+    "points": 1.80,
+    "text": "What type of test automation is mainly performed in the Preproduction environment?",
+    "options": [
+      { "id": "a", "text": "Component testing" },
+      { "id": "b", "text": "Performance efficiency testing and user acceptance testing" },
+      { "id": "c", "text": "Static analysis" },
+      { "id": "d", "text": "Component integration testing" }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Performance efficiency testing and user acceptance testing are mainly performed in the Preproduction environment because this environment is used to test real world scenarios. Component testing is performed in a build and development environment. Static analysis is usually done at the development environment. Component integration testing is done at the development environment.",
+    "reference": "Syllabus 2.1.2"
+  },
+  {
+    "id": "ch2-q010",
+    "chapter": 2,
+    "section": "2.1.2",
+    "type": "single",
+    "points": 1.80,
+    "text": "In which environment is a fully automated test suite typically executed against a release candidate for the first time?",
+    "options": [
+      { "id": "a", "text": "Preproduction/staging environment" },
+      { "id": "b", "text": "Build environment" },
+      { "id": "c", "text": "Production/operational environment" },
+      { "id": "d", "text": "Integration/test environment" }
+    ],
+    "correct": ["d"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Robust user interface (UI) and application programming interface (API) test suites are typically executed against fully integrated systems in the Integration/test environment for the first time. Preproduction or staging environment testing has less focus on functional aspects. A build environment is not ready for more robust test execution. Full functional test suites are not typically executed against products in production.",
+    "reference": "Syllabus 2.1.2"
+  },
+  {
+    "id": "ch2-q011",
+    "chapter": 2,
+    "section": "2.2.1",
+    "type": "multiple",
+    "points": 1.80,
+    "text": "You are working for an IT company which is developing a built-in Android-based car multimedia system. The software contains several components working together. Developers are following the test-driven development approach. After the development of the software, it is delivered to another IT company which integrates the software with the hardware elements and sells them together to car manufacturers. Which of the following should be considered during capturing the test automation requirements by the IT company you are working for?",
+    "options": [
+      { "id": "a", "text": "Is it important for the test automation approach to support component testing?" },
+      { "id": "b", "text": "Should the test automation approach support beta testing?" },
+      { "id": "c", "text": "Is it important for the test automation approach to support the testing of the software in as many different types of cars as possible?" },
+      { "id": "d", "text": "Which tester roles should be supported by the test automation approach?" },
+      { "id": "e", "text": "Is it important for the test automation approach to support the mobile application store approval?" }
+    ],
+    "correct": ["a", "d"],
+    "selectCount": 2,
+    "image": null,
+    "explanation": "Component testing is performed by the developing IT company, so supporting it is a relevant automation requirement. Automated component tests are designed and executed by developers, so which tester roles should be supported is also a valid consideration. Beta testing is not performed by this company. Testing in many types of cars is performed by the integrator company. Mobile application store approval is not applicable to this company.",
+    "reference": "Syllabus 2.2.1"
+  },
+  {
+    "id": "ch2-q012",
+    "chapter": 2,
+    "section": "2.2.2",
+    "type": "single",
+    "points": 1.80,
+    "text": "You are evaluating test automation tools. The following findings were recorded for one tool: it has a very informative dashboard; it includes a test logging component; it includes a customizable test reporting component; during the proof of concept, the tool performed very slowly against the SUT compared to other evaluated tools; the current test environment is valid according to the release notes. What should be your next step regarding the selection of this tool?",
+    "options": [
+      { "id": "a", "text": "Acquire more hardware resources for the SUT to decrease the performance degradation." },
+      { "id": "b", "text": "Turn off test logging to improve performance of the tool." },
+      { "id": "c", "text": "Recommend not selecting this tool." },
+      { "id": "d", "text": "Plan to migrate the SUT to another hardware/software environment where there is a possibility for the elimination of the tool overhead." }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "The tool does not meet selection requirements due to poor performance during the proof of concept. Since the test environment is already valid according to the release notes, acquiring more hardware for the SUT is not the right approach. Turning off test logging is not acceptable as the logging component is essential for troubleshooting. Migrating the SUT is completely wrong.",
+    "reference": "Syllabus 2.2.2"
+  }
+]

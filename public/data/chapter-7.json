@@ -1,0 +1,250 @@
+[
+  {
+    "id": "ch7-q001",
+    "chapter": 7,
+    "section": "7.1.1",
+    "type": "single",
+    "points": 1.33,
+    "text": "Why is installing the test automation environment from a version-controlled repository (rather than manually) considered a best practice for verifying the automation environment?",
+    "options": [
+      { "id": "a", "text": "It allows the team to skip documentation entirely." },
+      { "id": "b", "text": "It ensures all team members and pipeline agents use the same version of tools and dependencies, providing repeatability." },
+      { "id": "c", "text": "It prevents the need to test the TAF components themselves." },
+      { "id": "d", "text": "It allows individual team members to customise their tool versions freely." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Automated installation from a version-controlled repository ensures that every team member and every CI/CD agent installs exactly the same version of tools, plugins, and dependencies. This eliminates 'works on my machine' problems and ensures repeatability of the test environment setup and teardown. It is a fundamental practice for verifying that the automation environment is correctly configured.",
+    "reference": "Syllabus 7.1.1"
+  },
+  {
+    "id": "ch7-q002",
+    "chapter": 7,
+    "section": "7.1.1",
+    "type": "single",
+    "points": 1.33,
+    "text": "Which connectivity check is performed as part of verifying the test automation environment BEFORE running any test suites?",
+    "options": [
+      { "id": "a", "text": "Running the full regression suite to confirm the SUT is working." },
+      { "id": "b", "text": "Verifying that the TAF can log in to required servers, access the SUT, and has the correct permissions." },
+      { "id": "c", "text": "Deploying a new version of the SUT to confirm the deployment pipeline is functioning." },
+      { "id": "d", "text": "Running exploratory testing sessions to discover new defects." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Connectivity verification before test execution includes checking that the TAF can log in to required servers, that it has network access to the SUT endpoints, and that the required permissions are in place. These checks confirm the test environment is ready. Running the full regression suite or deploying the SUT are not environment verification activities — they are test execution and deployment activities.",
+    "reference": "Syllabus 7.1.1"
+  },
+  {
+    "id": "ch7-q003",
+    "chapter": 7,
+    "section": "7.1.2",
+    "type": "single",
+    "points": 1.33,
+    "text": "A test suite produces different pass/fail results each time it is executed against an unchanged SUT and an unchanged test environment. What is this characteristic called, and how should it be handled?",
+    "options": [
+      { "id": "a", "text": "Determinism; the tests should be accepted as-is because variation is normal." },
+      { "id": "b", "text": "Flakyness; the affected tests should be identified and moved out of the main regression suite until the root cause is fixed." },
+      { "id": "c", "text": "Intrusiveness; the tests should be isolated from each other in separate environments." },
+      { "id": "d", "text": "Test pollution; all tests should be rewritten from scratch." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Tests that produce inconsistent results (pass sometimes, fail other times) without any change to the SUT or environment are called flaky tests. Flaky tests undermine trust in the test suite and should be identified and moved out of the main regression suite. The root cause (e.g., timing issues, test ordering dependency, resource contention) should be investigated and resolved before returning them to the suite.",
+    "reference": "Syllabus 7.1.2"
+  },
+  {
+    "id": "ch7-q004",
+    "chapter": 7,
+    "section": "7.1.2",
+    "type": "single",
+    "points": 1.33,
+    "text": "What does 'intrusiveness' mean in the context of verifying test suite behaviour, and why is it a problem?",
+    "options": [
+      { "id": "a", "text": "Tests that take too long to execute, making the pipeline slow." },
+      { "id": "b", "text": "Tight coupling between automated tests and the SUT's internals, meaning test interactions can cause failures that would not occur during normal production use." },
+      { "id": "c", "text": "Tests that require elevated security permissions to execute." },
+      { "id": "d", "text": "Tests that generate too many log entries, filling up disk storage." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Intrusiveness refers to the degree to which the automated tests interfere with or are tightly coupled to the SUT in ways that do not reflect normal production usage. An intrusive test can trigger failures in the SUT that would never occur during real use, or it can depend on internal implementation details that are not stable. Reducing intrusiveness improves the validity of test results.",
+    "reference": "Syllabus 7.1.2"
+  },
+  {
+    "id": "ch7-q005",
+    "chapter": 7,
+    "section": "7.1.3",
+    "type": "single",
+    "points": 1.33,
+    "text": "When investigating unexpected test failures, which of the following approaches is MOST systematic for determining the root cause?",
+    "options": [
+      { "id": "a", "text": "Delete the failing tests and recreate them from scratch to see if the problem recurs." },
+      { "id": "b", "text": "Inspect logs and performance data, execute tests in isolation, monitor system resources, and use a debugger to trace the failure." },
+      { "id": "c", "text": "Assume all failures indicate SUT defects and log them all in the defect tracker." },
+      { "id": "d", "text": "Wait until the next sprint and see if the failures resolve themselves." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Systematic root cause analysis for unexpected test failures involves: inspecting test and SUT logs, reviewing performance data, executing the failing test in isolation to eliminate interference from other tests, monitoring system resources (CPU, memory, network), and using a debugger to trace execution. This approach identifies whether the root cause is in the SUT, the TAS, or the infrastructure.",
+    "reference": "Syllabus 7.1.3"
+  },
+  {
+    "id": "ch7-q006",
+    "chapter": 7,
+    "section": "7.1.3",
+    "type": "single",
+    "points": 1.33,
+    "text": "A test consistently passes without detecting any defects even though known defects exist in the SUT. Investigation reveals no assertions are present in the test. What should be done?",
+    "options": [
+      { "id": "a", "text": "Accept the test as passing — if it runs without errors it is valid." },
+      { "id": "b", "text": "Add the appropriate assertions to the test so that it correctly evaluates expected vs actual outcomes." },
+      { "id": "c", "text": "Mark the test as inconclusive in the test management tool and move on." },
+      { "id": "d", "text": "Remove the test from the suite as it is clearly not useful." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "A test without assertions is essentially checking only that the SUT does not crash — it cannot detect functional defects. Tests with missing assertions produce inconclusive or misleading results (false passes). The correct action is to add the appropriate assertions that verify the actual expected outcomes of the SUT behaviour. This is identified during verification of test suite behaviour.",
+    "reference": "Syllabus 7.1.3"
+  },
+  {
+    "id": "ch7-q007",
+    "chapter": 7,
+    "section": "7.1.4",
+    "type": "single",
+    "points": 1.33,
+    "text": "Which of the following security risks can static analysis detect in test automation code?",
+    "options": [
+      { "id": "a", "text": "Runtime performance degradation caused by the SUT processing too many requests." },
+      { "id": "b", "text": "Plaintext passwords or sensitive credentials embedded in test scripts." },
+      { "id": "c", "text": "Incorrect business logic implemented by the development team." },
+      { "id": "d", "text": "Network latency between the TAF and the SUT." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Static analysis tools can detect security violations in source code, including hardcoded or plaintext passwords and credentials in test scripts. This is a particular concern in DevSecOps pipelines. Static analysis examines code without executing it, so it cannot detect runtime issues such as performance degradation or network latency. Business logic defects in the SUT require test execution to surface.",
+    "reference": "Syllabus 7.1.4"
+  },
+  {
+    "id": "ch7-q008",
+    "chapter": 7,
+    "section": "7.1.4",
+    "type": "single",
+    "points": 1.33,
+    "text": "At which point in the SDLC is static analysis MOST valuable for detecting vulnerabilities in the Test Automation Solution?",
+    "options": [
+      { "id": "a", "text": "Only after the product has been released to production, as a post-release audit." },
+      { "id": "b", "text": "Early in the SDLC, integrated into CI/CD pipelines, to catch issues as soon as code is committed." },
+      { "id": "c", "text": "Only during the acceptance testing phase, performed by business stakeholders." },
+      { "id": "d", "text": "Once per year during an annual security review." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Static analysis is most valuable when applied early in the SDLC — ideally integrated into CI/CD pipelines so that issues are detected as soon as code is committed. Early detection reduces the cost of fixing defects. Running static analysis only after production release or annually is too late to be cost-effective and misses the shift-left testing benefit.",
+    "reference": "Syllabus 7.1.4"
+  },
+  {
+    "id": "ch7-q009",
+    "chapter": 7,
+    "section": "7.1.4",
+    "type": "single",
+    "points": 1.33,
+    "text": "Static analysis applied to the Test Automation Solution categorises detected issues by severity. Which severity level typically indicates an issue that must be fixed immediately and may represent a critical security vulnerability or show-stopper defect?",
+    "options": [
+      { "id": "a", "text": "Low" },
+      { "id": "b", "text": "Medium" },
+      { "id": "c", "text": "High" },
+      { "id": "d", "text": "Critical" }
+    ],
+    "correct": ["d"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Static analysis tools categorise findings by severity: Critical issues are the most severe, representing show-stopping defects or significant security vulnerabilities that must be addressed immediately. The severity hierarchy is typically: Critical > High > Medium > Low. Critical findings in test automation code (such as exposed credentials or severe logic errors) should be treated as blocking issues.",
+    "reference": "Syllabus 7.1.4"
+  },
+  {
+    "id": "ch7-q010",
+    "chapter": 7,
+    "section": "7.1.1",
+    "type": "single",
+    "points": 1.33,
+    "text": "Your team has developed a TAS for a computer-aided design (CAD) software program. This software has several different versions in production and has been ported to different languages and platforms. Manual testers have been using the TAS on their local computers with different language settings, versions, and platforms. Before proceeding with further automated testing, you need to verify the test automation environment. What is an important consideration when verifying the environment for this TAS?",
+    "options": [
+      { "id": "a", "text": "Establish a central repository to verify that all testers are using the same version of the capture/playback tool and can access it correctly." },
+      { "id": "b", "text": "Create and document a procedure to verify the proper installation of the CAD software on each tester's machine." },
+      { "id": "c", "text": "Set up a central test environment where the CAD software is installed and verify that automation scripts can interact with it from each local computer." },
+      { "id": "d", "text": "Use configuration management to verify the consistency of test data and scripts across different environments." }
+    ],
+    "correct": ["a"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Establishing a central repository ensures that all testers use the same version of the capture/playback tool, which is crucial for consistency in the test automation environment. Documenting installation procedures is important but not specifically about verifying the test automation environment. A central environment does not address the scenario's need for different local environments. Configuration management is important but does not specifically address verifying the test automation environment.",
+    "reference": "Syllabus 7.1.1"
+  },
+  {
+    "id": "ch7-q011",
+    "chapter": 7,
+    "section": "7.1.1",
+    "type": "multiple",
+    "points": 1.33,
+    "text": "You work in a software development team that requires testing in many different test environments. Your manager reports that the team is spending significant time overcoming false-positive results because the TAS is not configured correctly in new environments. There also appear to be version differences across environments — even new environments are sometimes set up with very old TAS components. Which TWO options would help address this situation?",
+    "options": [
+      { "id": "a", "text": "Create an automated installation script for the tools and configurations that make up the TAS." },
+      { "id": "b", "text": "Limit the TAS to only be used in the most important test environments." },
+      { "id": "c", "text": "Utilize a repository to store the TAS that is accessible to all test environments." },
+      { "id": "d", "text": "Leverage manual testing to verify that the TAS has been configured properly in all test environments." },
+      { "id": "e", "text": "Due to time constraints, skip the implementation of component tests for the TAS." }
+    ],
+    "correct": ["a", "c"],
+    "selectCount": 2,
+    "image": null,
+    "explanation": "Creating an automated installation script ensures consistent and correct TAS configuration across all environments, eliminating manual configuration errors. Utilizing a centrally accessible repository ensures all environments pull the same version of TAS components. Limiting TAS usage reduces test coverage. Manual verification is not scalable. Skipping component tests reduces TAS quality.",
+    "reference": "Syllabus 7.1.1"
+  },
+  {
+    "id": "ch7-q012",
+    "chapter": 7,
+    "section": "7.1.3",
+    "type": "single",
+    "points": 1.33,
+    "text": "You are working on a project to automate a regression test suite. When the regression test suite was executed manually last time, all the tests passed. But when you execute them via the test automation solution (TAS), you find there are some failed tests. What should you do to handle this situation?",
+    "options": [
+      { "id": "a", "text": "Analyze log files to identify the root cause of the problem." },
+      { "id": "b", "text": "Eliminate these test cases from the automated test suite so the remaining tests can pass." },
+      { "id": "c", "text": "Open a defect for the SUT as the failed tests are indicating an SUT problem." },
+      { "id": "d", "text": "This is normal because automated tests behave differently than manual tests." }
+    ],
+    "correct": ["a"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Log file analysis can identify the root cause of the problem when automated tests fail but manual tests pass. Eliminating test cases will not help solve the original issue. The failed tests do not directly indicate a SUT problem — they should be analyzed first to determine whether the issue is in the TAS or the SUT. The statement that automated tests behave differently than manual tests is false as a general principle.",
+    "reference": "Syllabus 7.1.3"
+  },
+  {
+    "id": "ch7-q013",
+    "chapter": 7,
+    "section": "7.1.4",
+    "type": "single",
+    "points": 1.33,
+    "text": "You are preparing to execute a test automation suite for a security-critical application which must fulfill the highest security requirements. Which approach should you follow to verify the test automation code?",
+    "options": [
+      { "id": "a", "text": "Search the test logs for possible credential data." },
+      { "id": "b", "text": "Eliminate test cases using sensitive test data." },
+      { "id": "c", "text": "Execute the test suite slowly and methodically to check if there are any security vulnerabilities." },
+      { "id": "d", "text": "Use a static analysis tool to identify security vulnerabilities." }
+    ],
+    "correct": ["d"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Static analysis tools support identification of security vulnerabilities in the test automation code without executing it. Test logs may not contain credential data present in the automation code itself. Eliminating test cases using sensitive data will affect code coverage. Slower test execution does not reveal security vulnerabilities in the code.",
+    "reference": "Syllabus 7.1.4"
+  }
+]

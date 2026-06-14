@@ -1,0 +1,316 @@
+ISTQB Advanced Test Automation Engineer v2.0
+Section 1 & 2 - Questions and Answers
+
+
+============================================================
+QUESTION 1
+============================================================
+
+1 of 8Points: 1 / 1
+
+		Q1
+
+TAE-1.1.1 
+
+Which of the following is a limitation of test automation?
+
+Select ONE option.
+
+                A.
+                Only usability tests can be automated effectively 
+
+                B.
+                Test automation can be executed only after system testing is done
+
+                C.
+                Test automation can only check results that can be verified visually 
+
+                D.
+                Test automation can only check results that can be verified by code 
+
+                Correctly answered feedback
+
+                a) Is not correct. Test automation can be performed before and after system testing. 
+
+b) Is not correct. It refers to non-existing limitation. 
+
+c) Is not correct. Test automation is not limited to check only the results that can be verified visually. 
+
+d) Is correct. As in syllabus: "Test automation can only check test results that can be verified by an automated test oracle". This is a limitation and means that results of the automated scripts are verified by the machine which is programmed to do so (code).
+
+        
+
+============================================================
+QUESTION 2
+============================================================
+
+2 of 8Points: 1 / 1
+
+		Q2
+
+TAE-1.2.1
+
+Which of the following is true about test automation and the SDLC? 
+
+Select ONE option.
+
+                A.
+                In Agile software development automated tests focus more on acceptance tests than on component tests
+
+                B.
+                In Agile software development automated tests focus more on component tests than on acceptance tests
+
+                C.
+                In the V-model automated test execution must be performed after manual test execution
+
+                D.
+                In the V-model implementation of test automation is performed throughout the whole software development cycle
+
+                Correctly answered feedback
+
+                a) Is not correct. In Agile software development, automated component tests are higher in volume compared to automated acceptance tests. 
+
+b) Is correct. In Agile software development, automated component tests are higher in volume compared to automated acceptance tests. 
+
+c) Is not correct. There is no such rule in the V-model. 
+
+d) Is not correct. V-model test planning, including planning of test automation, is performed in the early phase of the software development lifecycle.
+
+        
+
+============================================================
+QUESTION 3
+============================================================
+
+3 of 8Points: 1 / 1
+
+		Q3
+
+TAE-1.2.2 
+
+Which one of the following factors is NOT necessary to consider when selecting suitable test tools?
+
+Select ONE option.
+
+                A.
+                SUT architecture
+
+                B.
+                Actual composition and experience of the test team
+
+                C.
+                Licensing and support of the test tool
+
+                D.
+                Quality of the SUT requirements
+
+                Correctly answered feedback
+
+                a) Is not correct. The SUT architecture should be considered. 
+
+b) Is not correct. The actual composition and experience of the test team needs to be evaluated. 
+
+c) Is not correct. It is necessary to have knowledge about the licensing and support of the tool. 
+
+d) Is correct. The quality of the SUT requirements is not directly related to selecting the tool itself.
+
+        
+
+============================================================
+QUESTION 4
+============================================================
+
+4 of 8Points: 1 / 1
+
+		Q4
+
+TAE-2.1.1 
+
+When a system is designed for testability, one of the characteristics is that the test automation framework (TAF) can access interfaces to perform actions on the system. What is this characteristic called?
+
+Select ONE option.
+
+                A.
+                Observability
+
+                B.
+                Controllability
+
+                C.
+                Maintainability
+
+                D.
+                Interoperability
+
+                Correctly answered feedback
+
+                a) Is not correct. Observability means to give insight into the system. 
+
+b) Is correct. See Chapter 2.1.1 of the syllabus. 
+
+c) Is not correct. Maintainability is a quality characteristic. 
+
+e) Is not correct. Interoperability is also a quality characteristic.
+
+        
+
+============================================================
+QUESTION 5
+============================================================
+
+5 of 8Points: 1 / 1
+
+		Q5
+
+TAE-2.1.2 
+
+What type of test automation is mainly performed in the Preproduction environment?
+
+Select ONE option.
+
+                A.
+                Component testing
+
+                B.
+                 Performance efficiency testing and user acceptance testing
+
+                C.
+                Static analysis
+
+                D.
+                Component Integration testing
+
+                Correctly answered feedback
+
+                a) Is not correct. Component testing is performed in a build and development environment. 
+
+b) Is correct. It is necessary to perform performance efficiency testing and user acceptance testing in a preproduction environment to test real world scenarios. 
+
+c) Is not correct. Static analysis is usually done at the development environment. 
+
+d) Is not correct. Component integration testing is done at the development environment.
+
+        
+
+============================================================
+QUESTION 6
+============================================================
+
+6 of 8Points: 1 / 1
+
+		Q6
+
+TAE-2.1.2 
+
+In which environment is a fully automated test suite typically executed against a release candidate for the first time?
+
+                A.
+                Preproduction/staging environment
+
+                B.
+                Build environment
+
+                C.
+                Production/operational environment
+
+                D.
+                Integration/test environment
+
+                Correctly answered feedback
+
+                a) Is not correct. Preproduction or staging environment testing has less focus on functional aspects. 
+
+b) Is not correct. A build environment is not ready for more robust test execution. 
+
+c) Is not correct. Full functional test suites are not typically executed against products in production. 
+
+d) Is correct. Robust user interface (UI), and application programming interface (API) test suites are typically executed against fully integrated systems.
+
+        
+
+============================================================
+QUESTION 7
+============================================================
+
+7 of 8Points: 3 / 3
+
+		Q7
+
+TAE-2.2.1
+
+You are working for an IT company which is developing a built-in Android-based car multimedia system. The software contains several components working together. Developers are following the test-driven development approach. After the development of the software, it is delivered to another IT company which integrates the software with the hardware elements and sells them together to car manufacturers. 
+
+Which of the following should be considered during capturing the test automation requirements by the IT company you are working for? 
+
+Select TWO options.
+
+                    A.
+                    Is it important for the test automation approach to support component testing?
+
+                    B.
+                    Should the test automation approach support beta testing?
+
+                    C.
+                    Is it important for the test automation approach to support the testing of the software in as many different types of cars as possible?
+
+                    D.
+                    Which tester roles should be supported by the test automation approach?
+
+                    E.
+                    Is it important for the test automation approach to support the mobile application store approval?
+
+                Correctly answered feedback
+
+                a) Is correct. Component testing is performed by the developing IT company. 
+
+b) Is not correct. Beta testing is not performed. 
+
+c) Is not correct. The testing of as many different types of cars as possible is performed by the integrator IT company. 
+
+d) Is correct. Automated component tests are designed and executed by the developers. 
+
+e) Is not correct. The test automation approach to support the mobile application store approval is not performed.
+
+        
+
+============================================================
+QUESTION 8
+============================================================
+
+8 of 8Points: 3 / 3
+
+		Q8
+
+TAE-2.2.2
+
+You are evaluating test automation tools. The following is a list of findings for one of the tools that were evaluated against the selection requirements:
+
+The tool has a very informative dashboard which shows all the relevant test information about the SUT.The tool includes a test logging component which logs all the necessary information that follows test execution and to troubleshoot problems found during the tests.The tool includes a customizable test reporting component.During the proof of concept, the tool performed very slowly against the SUT, compared to the other tools that were evaluated.The current test environment is valid according to the release notes of the tool which means it fulfills the hardware and software requirements. 
+
+What should be your next step regarding the selection of this tool?
+
+Select ONE option.
+
+                A.
+                Acquire more hardware resources for the SUT to decrease the performance degradation
+
+                B.
+                Turn off test logging to improve performance of the tool
+
+                C.
+                Recommend not selecting this tool
+
+                D.
+                Plan to migrate the SUT to another hardware/software environment where there is a possibility for the elimination of the tool overhead
+
+                Correctly answered feedback
+
+                a) Is not correct. The test environment is valid according to the release notes. 
+
+b) Is not correct. The test logging component is essential for troubleshooting. 
+
+c) Is correct. The tool does not meet selection requirements. 
+
+d) Is not correct. It is completely wrong to migrate the SUT
+
+        

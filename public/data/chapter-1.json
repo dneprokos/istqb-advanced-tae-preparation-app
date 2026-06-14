@@ -1,0 +1,154 @@
+[
+  {
+    "id": "ch1-q001",
+    "chapter": 1,
+    "section": "1.1.1",
+    "type": "single",
+    "points": 1.00,
+    "text": "Which of the following is a LIMITATION of test automation rather than a disadvantage?",
+    "options": [
+      { "id": "a", "text": "Test automation requires a significant initial investment of time and resources." },
+      { "id": "b", "text": "Automated tests can only verify results that are machine-interpretable." },
+      { "id": "c", "text": "Automation frameworks can introduce additional defects into the test suite." },
+      { "id": "d", "text": "Automated tests tend to be rigid and difficult to maintain when the SUT changes." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "A limitation of test automation is that it can only check results that a machine can interpret (e.g., return codes, data values, screen text). Usability, look-and-feel, and other subjective qualities cannot be automatically verified. The other options describe disadvantages (costs, defects in automation, rigidity) not fundamental limitations of what automation is capable of checking.",
+    "reference": "Syllabus 1.1.1"
+  },
+  {
+    "id": "ch1-q002",
+    "chapter": 1,
+    "section": "1.1.1",
+    "type": "single",
+    "points": 1.00,
+    "text": "Which of the following is an ADVANTAGE of test automation that enables executing tests that would be impractical to perform manually?",
+    "options": [
+      { "id": "a", "text": "Automation reduces the need for test documentation." },
+      { "id": "b", "text": "Automation allows testing of real-time system responses and parallel test execution across multiple environments simultaneously." },
+      { "id": "c", "text": "Automation eliminates the cost of test maintenance." },
+      { "id": "d", "text": "Automation guarantees that all defects will be found before release." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Parallel test execution across multiple environments and testing real-time responses are tasks that are physically impossible or impractical to do manually. These represent unique advantages of automation that expand the scope of what testing can achieve. The other options are false statements: automation does not eliminate documentation needs, does not remove maintenance costs, and cannot guarantee all defects are found.",
+    "reference": "Syllabus 1.1.1"
+  },
+  {
+    "id": "ch1-q003",
+    "chapter": 1,
+    "section": "1.2.1",
+    "type": "single",
+    "points": 1.00,
+    "text": "In the V-model SDLC, at which phase is test automation typically IMPLEMENTED?",
+    "options": [
+      { "id": "a", "text": "During the requirements analysis phase, before any design work begins." },
+      { "id": "b", "text": "In parallel with or after the implementation phase, with automated tests executed during the verification phase." },
+      { "id": "c", "text": "Only after the product has been released to production." },
+      { "id": "d", "text": "Exclusively during the acceptance testing phase by end users." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "In the V-model, test automation is implemented in parallel with or after the implementation (coding) phase. The automated tests are then executed during the corresponding verification phase on the right side of the V. This allows a test automation framework (TAF) to be built for each test level (component, integration, system, acceptance).",
+    "reference": "Syllabus 1.2.1"
+  },
+  {
+    "id": "ch1-q004",
+    "chapter": 1,
+    "section": "1.2.1",
+    "type": "single",
+    "points": 1.00,
+    "text": "In Agile development, what is the term used when a team achieves test automation coverage for new features within the same sprint in which the feature is developed?",
+    "options": [
+      { "id": "a", "text": "Sprint automation" },
+      { "id": "b", "text": "Shift-left testing" },
+      { "id": "c", "text": "In-sprint automation" },
+      { "id": "d", "text": "Continuous automation" }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "In-sprint automation is the practice of creating automated tests for new features within the same sprint in which those features are developed. This is a key Agile test automation practice that requires close collaboration between developers and testers, including practices like code reviews and pair programming.",
+    "reference": "Syllabus 1.2.1"
+  },
+  {
+    "id": "ch1-q005",
+    "chapter": 1,
+    "section": "1.2.2",
+    "type": "single",
+    "points": 1.00,
+    "text": "A test team consists primarily of business analysts and testers who have minimal programming experience. They need to implement test automation for a new web application. Which tool selection approach is MOST appropriate?",
+    "options": [
+      { "id": "a", "text": "Select a tool that uses the same programming language as the SUT so that developers can write the automated tests." },
+      { "id": "b", "text": "Select a low-code or no-code tool that allows test automation without significant programming expertise." },
+      { "id": "c", "text": "Delay test automation until the team has completed a full programming course." },
+      { "id": "d", "text": "Select the tool with the highest market share regardless of team experience." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "When team members have minimal programming experience, the tool selection should consider team capabilities. Low-code or no-code automation tools are designed to enable non-programmers to create and maintain automated tests without requiring deep coding skills. This is a key factor in SUT and team analysis during tool evaluation.",
+    "reference": "Syllabus 1.2.2"
+  },
+  {
+    "id": "ch1-q006",
+    "chapter": 1,
+    "section": "1.1.1",
+    "type": "single",
+    "points": 1.00,
+    "text": "Which of the following statements about test automation DISADVANTAGES is CORRECT according to the ISTQB CTAL-TAE syllabus?",
+    "options": [
+      { "id": "a", "text": "Test automation always reduces the total cost of testing over any timeframe." },
+      { "id": "b", "text": "Automated tests are inherently more reliable than manual tests." },
+      { "id": "c", "text": "The automation framework itself can introduce additional defects that are unrelated to the SUT." },
+      { "id": "d", "text": "Test automation eliminates the need for manual exploratory testing." }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "A recognised disadvantage of test automation is that the automation framework and test scripts are software themselves, and therefore can contain defects. These defects can cause false test failures (test reports failures that do not exist in the SUT) or false passes. The other options are incorrect: automation requires upfront investment so cost reduction is not guaranteed in the short term; automated tests can have their own reliability issues; and automation does not eliminate the need for exploratory testing.",
+    "reference": "Syllabus 1.1.1"
+  },
+  {
+    "id": "ch1-q007",
+    "chapter": 1,
+    "section": "1.2.1",
+    "type": "single",
+    "points": 1.00,
+    "text": "Which of the following is true about test automation and the SDLC?",
+    "options": [
+      { "id": "a", "text": "In Agile software development automated tests focus more on acceptance tests than on component tests." },
+      { "id": "b", "text": "In Agile software development automated tests focus more on component tests than on acceptance tests." },
+      { "id": "c", "text": "In the V-model automated test execution must be performed after manual test execution." },
+      { "id": "d", "text": "In the V-model implementation of test automation is performed throughout the whole software development cycle." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "In Agile software development, automated component tests are higher in volume compared to automated acceptance tests. In the V-model, test planning including planning of test automation is performed in the early phase of the SDLC, not throughout the whole cycle. There is no rule in the V-model that automated test execution must be performed after manual test execution.",
+    "reference": "Syllabus 1.2.1"
+  },
+  {
+    "id": "ch1-q008",
+    "chapter": 1,
+    "section": "1.2.2",
+    "type": "single",
+    "points": 1.00,
+    "text": "Which one of the following factors is NOT necessary to consider when selecting suitable test tools?",
+    "options": [
+      { "id": "a", "text": "SUT architecture" },
+      { "id": "b", "text": "Actual composition and experience of the test team" },
+      { "id": "c", "text": "Licensing and support of the test tool" },
+      { "id": "d", "text": "Quality of the SUT requirements" }
+    ],
+    "correct": ["d"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "The quality of the SUT requirements is not directly related to selecting the test tool itself. SUT architecture should be considered as it determines which tools can interact with the system. The actual composition and experience of the test team needs to be evaluated to ensure the team can use the tool. Knowledge about licensing and support is necessary to assess long-term viability.",
+    "reference": "Syllabus 1.2.2"
+  }
+]

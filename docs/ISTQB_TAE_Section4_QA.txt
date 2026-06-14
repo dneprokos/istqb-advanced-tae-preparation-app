@@ -1,0 +1,244 @@
+ISTQB Advanced Test Automation Engineer v2.0
+Section 4 - Questions and Answers
+
+======================================================================
+QUESTION 1
+======================================================================
+Q15
+
+TAE-4.1.1 
+
+
+
+The senior management wants to implement a TAS in your organization and asks you to lead this initiative. You have been given directions to start a pilot project.
+
+
+
+Which of the following statements best describes the objective of this pilot project?
+
+
+
+i. Document the SUT parts which have not been documented during the development
+
+ii. Identify the metrics and the measurement methods to monitor the SUT in the
+
+production environment
+
+iii. Analyze defects found during the testing of the TAS
+
+iv. Evaluate licensing options and corporation rules
+
+v. Select the most suitable commercial off-the-shelf or open-source tool 
+
+
+
+Select ONE option.
+
+A. i, ii and iii are valid objectives of the pilot project
+B. ii and iv are valid objectives of the pilot project
+C. i, ii and v are valid objectives of the pilot project
+D. iv and v are valid objectives of the pilot project
+
+Correct Answer: D
+
+Explanation:
+Correctly answered feedback
+
+
+
+
+a) Is not correct. i, ii and iii are not valid objectives of the pilot project. 
+
+
+
+b) Is not correct. ii is not a valid objective of the pilot project. 
+
+
+
+c) Is not correct. i and ii are not valid objectives of the pilot project. 
+
+
+
+d) Is correct. iv and v are valid objectives of the pilot project.
+
+======================================================================
+QUESTION 2
+======================================================================
+Q16
+
+TAE-4.2.1 
+
+
+
+You are tasked with implementing a Test Automation Solution (TAS) for functional suitability tests that must be executed automatically after each daily build. The TAS needs to integrate seamlessly with the existing CI/CD pipeline and provide quick feedback on the software's quality. However, you've identified several potential risks that could impact the successful deployment and operation of the TAS. 
+
+
+
+As the test automation engineer, you need to analyze the deployment risks associated with implementing the TAS and determine the BEST mitigation strategies for each risk. Your goal is to ensure a smooth integration of the TAS into the existing development process while maintaining the quality and reliability of the testing process. 
+
+
+
+Which of the following BEST matches the deployment risks with their appropriate mitigation strategies? 
+
+
+
+1. Test execution not triggered by the build 
+
+2. Only the full test suite can be executed 
+
+3. Test data unavailable when starting the test 
+
+4. Difficulty in troubleshooting failed tests 
+
+
+
+A. Log detailed information during test execution 
+
+B. Integrate test automation into the CI/CD pipeline 
+
+C. Use third-party tools to generate test data 
+
+D. Utilize test harnesses and test fixtures 
+
+
+
+Select ONE option.
+
+A. 1-B, 2-A, 3-D, 4-C
+B. 1-A, 2-B, 3-C, 4-D
+C. 1-B, 2-D, 3-C, 4-A
+D. 1-D, 2-B, 3-C, 4-A
+
+Correct Answer: C
+
+Explanation:
+Correctly answered feedback
+
+
+
+
+a) 1-B: Integrating test automation into the CI/CD pipeline ensures test
+
+execution is triggered by the build.
+
+
+
+b) 2-D: Test harnesses and fixtures allow for more flexible test execution,
+
+not limited to full suite runs.
+
+
+
+c) 3-C: Third-party tools can help generate test data when it's not readily
+
+available.
+
+
+
+d) 4-A: Detailed logging during test execution aids in troubleshooting failed
+
+tests.
+
+
+
+Correct answer is c)
+
+======================================================================
+QUESTION 3
+======================================================================
+Q17
+
+TAE-4.3.1 
+
+
+
+Which one of the following is an important factor to improve code maintainability?
+
+
+
+Select ONE option.
+
+A. Define generic functions with all the necessary parameters
+B. Let developers uniquely name code variables
+C. Use static analyzers to keep the code clean
+D. Hardcode values to easily understand their meaning
+
+Correct Answer: C
+
+Explanation:
+Incorrectly answered feedback
+
+
+
+
+a) Is not correct. This answer does not improve code maintainability. 
+
+
+
+b) Is not correct. Uniquely naming code variables does not improve code maintainability. 
+
+
+
+c) Is correct. Using static analyzers improves code maintainability. 
+
+
+
+d) Is not correct. Hard coding values does not improve code maintainability.
+
+======================================================================
+QUESTION 4
+======================================================================
+Q18
+
+TAE-4.3.1 
+
+
+
+What is the most effective way to reduce the maintenance time for test automation code? 
+
+
+
+Select ONE option.
+
+A. Keep the code outside of a version control system
+B. Embed static data directly within the test scripts for easier access
+C. Apply design patterns in your test automation framework
+D. Regularly rewrite test scripts from scratch instead of reusing existing components
+
+Correct Answer: C
+
+Explanation:
+Correctly answered feedback
+
+
+
+
+a) Is not correct. Storing the code outside of a version control system
+
+makes it more difficult for test automation engineers (TAEs) to manage,
+
+track, and collaborate on code effectively.
+
+
+
+b) Is not correct. Hardcoding data in test scripts is not recommended, as it
+
+makes the scripts inflexible and difficult to maintain when changes are
+
+required.
+
+
+
+c) Is correct. Structuring the test automation code using design patterns
+
+improves reusability and scalability, reducing the time needed for
+
+maintenance.
+
+
+
+d) Is not correct. Regularly rewriting test scripts from scratch is inefficient
+
+and leads to unnecessary work. Reusing existing components is more
+
+effective in reducing maintenance time.
