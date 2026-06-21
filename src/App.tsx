@@ -71,6 +71,7 @@ export default function App() {
           <HomePage
             indexData={indexData}
             passPercent={settings.passPercent}
+            questionsByChapter={questionsByChapter}
             onStartFullExam={examHook.startFullExam}
             onStartSection={examHook.startSectionPractice}
           />

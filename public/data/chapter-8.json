@@ -246,5 +246,119 @@
     "image": null,
     "explanation": "Consolidating functions that can work with several types of GUI controls increases efficiency by reducing duplication and improving reusability of core library functions. Separating the testing of controls into different test suites should be implemented within core libraries, not as separate suites. Researching a replacement tool is not a direct improvement. Using new OS functions is not a direct improvement and may introduce new dependencies.",
     "reference": "Syllabus 8.1.3"
+  },
+  {
+    "id": "ch8-q014",
+    "chapter": 8,
+    "section": "8.1.1",
+    "type": "single",
+    "points": 2.17,
+    "text": "You are having repeated failures with the automation every time a new version of the SUT is released. You have done analysis and discovered that the majority of problems are due to issues with the API response elements changing. What is a cost-effective and time-saving approach that you can implement to deal with this issue?",
+    "options": [
+      { "id": "a", "text": "Implement mocks and stubs for the services being called via the APIs and use those in your test automation" },
+      { "id": "b", "text": "Develop your own APIs to call the services and code your automation to use your own controlled APIs" },
+      { "id": "c", "text": "Implement contracts for the APIs and test via the contracts" },
+      { "id": "d", "text": "Get a schema validation tool that will check that the APIs comply to the requirements" }
+    ],
+    "correct": ["d"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "A schema validation tool is the easiest way to quickly check API compliance before executing the tests. Mocks and stubs would mask the problem rather than detect it. Developing your own APIs would not be a valid test. Implementing contracts is the right long-term approach but must be initiated by developers, not the test team.",
+    "reference": "Syllabus 8.1.1"
+  },
+  {
+    "id": "ch8-q015",
+    "chapter": 8,
+    "section": "8.1.1",
+    "type": "single",
+    "points": 2.17,
+    "text": "You have been reviewing the test automation suite and have found that at least 40% of the code is reused more than twice. What should you do to improve the maintainability of the test suite?",
+    "options": [
+      { "id": "a", "text": "Delete the duplicated code" },
+      { "id": "b", "text": "Create a library in the framework and store the common code there, then update the individual scripts to call the library code modules as needed" },
+      { "id": "c", "text": "Run a schema validation to ensure the code is accurate and the data is being handled correctly" },
+      { "id": "d", "text": "Use static analysis to ensure the re-used code is clean and efficient" }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Since the code is reused multiple times, it should be removed from individual scripts and placed in a library in the framework where it can be called by multiple scripts and maintained in only one place. Deleting the code is incorrect because it is still needed. Schema validation is not relevant to this problem. Static analysis may be useful after the change but does not address the maintenance problem directly.",
+    "reference": "Syllabus 8.1.1"
+  },
+  {
+    "id": "ch8-q016",
+    "chapter": 8,
+    "section": "8.1.2",
+    "type": "single",
+    "points": 2.17,
+    "text": "You have a test automation suite for a health care application. This application interfaces with a number of external systems via APIs. You have found that the APIs don't necessarily return the right codes when a request times out and you're finding that your automation is getting stuck as you are checking for specific values. In addition to reporting this as a defect, what should you do to make your automation more robust?",
+    "options": [
+      { "id": "a", "text": "Ensure that there are waits and timeouts coded in your automation to avoid an eternal wait" },
+      { "id": "b", "text": "Stop testing as this is a fundamental defect and invalidates any further tests" },
+      { "id": "c", "text": "Terminate your test when the wait exceeds five seconds as this is adequate time for a response" },
+      { "id": "d", "text": "Wait until you get a response because continuing on would not make sense for the test" }
+    ],
+    "correct": ["a"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Anytime waits are used, there should be a timeout to ensure you exit the wait in the case of an error. Stopping testing entirely is not warranted as there is nothing to indicate testing could not continue. A fixed five-second timeout may not be appropriate for all scenarios. Waiting indefinitely could result in an eternal wait.",
+    "reference": "Syllabus 8.1.2"
+  },
+  {
+    "id": "ch8-q017",
+    "chapter": 8,
+    "section": "8.1.2",
+    "type": "single",
+    "points": 2.17,
+    "text": "You have a need for your test automation scripts to comb through the SUT system logs looking for specific values. Currently that check is coded into each script because each script is seeking different information. How should this be implemented to reduce maintenance?",
+    "options": [
+      { "id": "a", "text": "The logs should be checked manually because that will be more flexible and will require no maintenance" },
+      { "id": "b", "text": "The values checked should be compiled together so the search will always be for all values" },
+      { "id": "c", "text": "A new reusable function should be developed that can accept data values passed from the test script which will search the log for those specific values" },
+      { "id": "d", "text": "A unique function should be developed for each value so that the precise function can be called by the appropriate test script" }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Creating a reusable function that accepts specific values as parameters reduces code duplication and maintenance. Each script calls the same function with different parameters rather than implementing its own log-searching logic. Manual checking is not scalable. Compiling all values together would search unnecessarily. A unique function per value would create as many maintenance points as the current approach.",
+    "reference": "Syllabus 8.1.2"
+  },
+  {
+    "id": "ch8-q018",
+    "chapter": 8,
+    "section": "8.1.3",
+    "type": "single",
+    "points": 2.17,
+    "text": "One of the test automation engineers has built a function for handling GUI components. This function takes the control ID, control type and the action as input parameters and then it executes the action on the specified control. The TAE says all common controls (buttons, check boxes, text boxes, drop downs, etc.) have already been added, but more controls can be added easily to this function. He also pointed out that it will be available for any test automation script that needs to access a particular control. Is this a good approach?",
+    "options": [
+      { "id": "a", "text": "No, it is better for a function to deal with only one type of control at a time, such as one for buttons and another for drop down lists" },
+      { "id": "b", "text": "No, this function will require considerable maintenance as the GUI adds more pages" },
+      { "id": "c", "text": "Yes, this is an example of a good practice that will put common code into one function that can be maintained in one place but used by many test automation scripts" },
+      { "id": "d", "text": "Yes, this function will be easy to extend as more individual buttons, dropdowns and text boxes are added to the GUI assuming these will all behave in an expected manner for their control type" }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "This is a good practice that improves maintenance and reusability by putting common code into one function usable by many scripts. There is no need to separate this into multiple modules (A is incorrect). Adding more pages to the GUI will reuse existing controls, actually reducing maintenance (B is incorrect). There would be no need to extend this function as new instances of existing control types are added (D is incorrect).",
+    "reference": "Syllabus 8.1.3"
+  },
+  {
+    "id": "ch8-q019",
+    "chapter": 8,
+    "section": "8.1.4",
+    "type": "single",
+    "points": 2.17,
+    "text": "You have been asked to develop test automation for a system that has no documented requirements and no existing test cases. You do have access to the business users of the system. How could test automation be used to help you determine what you need to automate?",
+    "options": [
+      { "id": "a", "text": "The business users could use the record/playback capability to record what they do, and you could then use those recordings as examples to develop maintainable test automation code." },
+      { "id": "b", "text": "You could use the tools to prepare test data for the users" },
+      { "id": "c", "text": "A test automation script could be used to configure the test environment" },
+      { "id": "d", "text": "The developers could use the TAS to define their solution and could implement their code in the TAF which would let you develop the test automation solution from the SUT source code" }
+    ],
+    "correct": ["a"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Turning on the record/playback capability to see what the business users are doing can help determine what to automate when no requirements or test cases exist. The recordings provide examples of real usage that can be used to write proper automated tests. Options B and C can be done but don't help determine what to automate. Option D is not a valid approach.",
+    "reference": "Syllabus 8.1.4"
   }
 ]

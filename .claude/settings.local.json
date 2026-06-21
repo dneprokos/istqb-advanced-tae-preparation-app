@@ -6,7 +6,27 @@
       "PowerShell(ls \"C:\\\\PersonalProjects\\\\istqb-advanced-tae-preparation-app\\\\src\" -Recurse | Select-Object FullName | ForEach-Object { $_.FullName.Replace\\(\"C:\\\\PersonalProjects\\\\istqb-advanced-tae-preparation-app\\\\\", \"\"\\) })",
       "PowerShell(python --version; python -c \"import webbrowser; print\\('webbrowser ok'\\)\" 2>&1)",
       "PowerShell(py *)",
-      "Bash(node scripts/validate-questions.js)"
+      "Bash(node scripts/validate-questions.js)",
+      "Bash(gh api *)",
+      "Bash(gh run *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "PowerShell(npm run *)",
+      "PowerShell(git status --short 2>&1; echo \"---BRANCH SCRIPT---\"; Test-Path \"C:\\\\Users\\\\Master\\\\.claude\\\\skills\\\\git-branch-creator\\\\scripts\\\\create-branch.ps1\"; echo \"---PR SCRIPT---\"; Test-Path \"C:\\\\Users\\\\Master\\\\.claude\\\\skills\\\\git-pr-creator\\\\scripts\\\\create-pr.ps1\"; echo \"---TOKEN---\"; if \\($env:GITHUB_TOKEN -or $env:GH_TOKEN\\) { \"env token present\" } else { \"no env token\" }; Test-Path \"C:\\\\PersonalProjects\\\\istqb-advanced-tae-preparation-app\\\\github-pr.local.json\")",
+      "PowerShell(gh auth *)",
+      "PowerShell(git checkout *)",
+      "PowerShell(git push *)",
+      "PowerShell(gh api *)",
+      "PowerShell(gh run *)",
+      "Skill(playwright-cli)",
+      "Bash(npm i *)",
+      "Bash(node -e \"console.log\\(require\\('./node_modules/@testing-library/jest-dom/package.json'\\).version\\)\")",
+      "PowerShell(pwsh -NoProfile -File ./.github/skills/git-branch-creator/scripts/create-branch.ps1 -BranchName \"feature/testing-and-question-bank\")",
+      "Bash(git fetch *)",
+      "Bash(git checkout *)",
+      "Bash(git pull *)",
+      "Bash(git switch *)"
     ]
   }
 }

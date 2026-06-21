@@ -246,5 +246,119 @@
     "image": null,
     "explanation": "Static analysis tools support identification of security vulnerabilities in the test automation code without executing it. Test logs may not contain credential data present in the automation code itself. Eliminating test cases using sensitive data will affect code coverage. Slower test execution does not reveal security vulnerabilities in the code.",
     "reference": "Syllabus 7.1.4"
+  },
+  {
+    "id": "ch7-q014",
+    "chapter": 7,
+    "section": "7.1.1",
+    "type": "single",
+    "points": 1.33,
+    "text": "You have found that the TAS requires different components depending on the deployment environment. This includes such items as URLs being different, different test data and the use of mocks and stubs. What should you do to make the TAS easily installed in the different environments?",
+    "options": [
+      { "id": "a", "text": "Ensure all the components are under configuration management with clear versioning and environment requirements" },
+      { "id": "b", "text": "Create a different TAS for each unique environment and maintain each of them as separate entities to avoid deployment issues" },
+      { "id": "c", "text": "Provide the developers with links to the different environments so they can deploy the TAS for you in the various environments making whatever changes are required during the deployment effort" },
+      { "id": "d", "text": "Reduce the use of different test environments and instead just use different versions of the TAS to simulate different environments" }
+    ],
+    "correct": ["a"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "All components of the TAS should be under configuration management with clear versioning and environment requirements. Creating a different TAS for each environment would be a maintenance nightmare. Developers should not be deploying the TAS. Using different TAS versions to simulate environments is not a valid approach.",
+    "reference": "Syllabus 7.1.1"
+  },
+  {
+    "id": "ch7-q015",
+    "chapter": 7,
+    "section": "7.1.1",
+    "type": "single",
+    "points": 1.33,
+    "text": "You are working on a new TAF, and you are getting some interesting results. When the tests are run under the TAF, they are noticeably slower than when they are run manually. This happens right from the beginning of execution and stays slow throughout. What is a likely cause of this problem?",
+    "options": [
+      { "id": "a", "text": "There is not enough logging, more should be added for better troubleshooting" },
+      { "id": "b", "text": "The SUT is not adequately provisioned for the proper performance level" },
+      { "id": "c", "text": "The data being used by the test automation is making the tests take too long and should be reduced in size" },
+      { "id": "d", "text": "The TAF is affecting the performance for some reason, more timing information may be needed, but there may be too much logging already occurring" }
+    ],
+    "correct": ["d"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Since the tests are slower from the very beginning of execution (not just at specific points), the most likely cause is the TAF itself affecting performance. This could be due to excessive logging or other TAF overhead. More timing information is needed to diagnose the exact cause.",
+    "reference": "Syllabus 7.1.1"
+  },
+  {
+    "id": "ch7-q016",
+    "chapter": 7,
+    "section": "7.1.2",
+    "type": "single",
+    "points": 1.33,
+    "text": "You have been running a set of 10 tests, but you are getting inconsistent results from the tests. What type of 'correct' behavior is missing?",
+    "options": [
+      { "id": "a", "text": "Repeatability" },
+      { "id": "b", "text": "Intrusion" },
+      { "id": "c", "text": "Composition" },
+      { "id": "d", "text": "Visibility" }
+    ],
+    "correct": ["a"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Since you are not getting the same results consistently, these tests are not repeatable. Repeatability means that tests produce the same results when run against the same version of the SUT under the same conditions.",
+    "reference": "Syllabus 7.1.2"
+  },
+  {
+    "id": "ch7-q017",
+    "chapter": 7,
+    "section": "7.1.2",
+    "type": "single",
+    "points": 1.33,
+    "text": "What do you check when you are checking for completeness of a test automation suite?",
+    "options": [
+      { "id": "a", "text": "All tests pass" },
+      { "id": "b", "text": "Approximately 10% of the tests fail consistently" },
+      { "id": "c", "text": "The test data is correct and available" },
+      { "id": "d", "text": "The tests are repeatable across different SUT versions" }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Completeness (composition) of a test automation suite requires checking that the test data is correct and available. All tests passing (A) or a fixed failure percentage (B) are not feasible completeness criteria. Repeatability across SUT versions (D) relates to repeatability rather than completeness.",
+    "reference": "Syllabus 7.1.2"
+  },
+  {
+    "id": "ch7-q018",
+    "chapter": 7,
+    "section": "7.1.3",
+    "type": "single",
+    "points": 1.33,
+    "text": "Which of the following would be sufficient to determine that an action has actually occurred?",
+    "options": [
+      { "id": "a", "text": "Add a user and verify that the user can no longer log in" },
+      { "id": "b", "text": "Add a user and then delete that user" },
+      { "id": "c", "text": "Add a user, delete the user, add the user again" },
+      { "id": "d", "text": "Add a user and verify in the database that the user exists" }
+    ],
+    "correct": ["d"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Verifying directly in the database that the user exists is the only option that actually validates the action occurred. The other options could mask false positives caused by other failures — for example, the delete in option B could fail silently, making it appear the add worked when something else went wrong.",
+    "reference": "Syllabus 7.1.3"
+  },
+  {
+    "id": "ch7-q019",
+    "chapter": 7,
+    "section": "7.1.4",
+    "type": "single",
+    "points": 1.33,
+    "text": "Which of the following is a benefit from using a static analysis tool?",
+    "options": [
+      { "id": "a", "text": "The code will run faster" },
+      { "id": "b", "text": "The code will have extensive logging" },
+      { "id": "c", "text": "The developer will be given suggestions for fixes to problems" },
+      { "id": "d", "text": "The tool will automatically generate defect reports for any found problems" }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Static analysis tools give developers suggestions for fixing problems found in the code. Automatic defect report generation can often be turned on, but it is not a recommended practice as it may flood the defect tracking system with issues that won't be fixed, such as code formatting issues.",
+    "reference": "Syllabus 7.1.4"
   }
 ]

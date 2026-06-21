@@ -150,5 +150,62 @@
     "image": null,
     "explanation": "The quality of the SUT requirements is not directly related to selecting the test tool itself. SUT architecture should be considered as it determines which tools can interact with the system. The actual composition and experience of the test team needs to be evaluated to ensure the team can use the tool. Knowledge about licensing and support is necessary to assess long-term viability.",
     "reference": "Syllabus 1.2.2"
+  },
+  {
+    "id": "ch1-q009",
+    "chapter": 1,
+    "section": "1.1.1",
+    "type": "single",
+    "points": 1.00,
+    "text": "Which of the following is a disadvantage of test automation?",
+    "options": [
+      { "id": "a", "text": "They are less subject to human error during execution" },
+      { "id": "b", "text": "They execute faster than manual tests" },
+      { "id": "c", "text": "They always verify exactly what they were programmed to verify" },
+      { "id": "d", "text": "They can execute more complex tests more reliably" }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "C is a disadvantage because the test coverage cannot be expanded by varying the tests — automation only checks what it was explicitly programmed to check. A, B, and D are all advantages of test automation.",
+    "reference": "Syllabus 1.1.1"
+  },
+  {
+    "id": "ch1-q010",
+    "chapter": 1,
+    "section": "1.2.1",
+    "type": "single",
+    "points": 1.00,
+    "text": "Which of the following characteristics of Agile software development allows the team to cover all test levels with the appropriate amount and depth of automation?",
+    "options": [
+      { "id": "a", "text": "The right tools" },
+      { "id": "b", "text": "The right training for the test automation engineers" },
+      { "id": "c", "text": "The elimination of silos within the team" },
+      { "id": "d", "text": "The early publishing of completed requirements" }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "The elimination of silos within the Agile team allows developers, testers, and business representatives to collaborate closely, enabling the team to cover all test levels with the appropriate depth of automation. Right tools, training, and early requirements are helpful but not the defining Agile characteristic that enables full-level coverage.",
+    "reference": "Syllabus 1.2.1"
+  },
+  {
+    "id": "ch1-q011",
+    "chapter": 1,
+    "section": "1.2.2",
+    "type": "single",
+    "points": 1.00,
+    "text": "You have a highly technical test automation team with all engineers being adept at coding in a wide set of languages. Which of the following would be the best tool to use for implementing test automation for the SUT?",
+    "options": [
+      { "id": "a", "text": "Full code" },
+      { "id": "b", "text": "Commercial off-the-shelf (COTS)" },
+      { "id": "c", "text": "Open-source" },
+      { "id": "d", "text": "A tool based on the same code as the SUT" }
+    ],
+    "correct": ["d"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Using a tool based on the same code as the SUT is the best choice when the team has strong programming skills. This allows easier integration into the CI/CD pipeline and the developers can also provide support to the engineers if needed.",
+    "reference": "Syllabus 1.2.2"
   }
 ]

@@ -1,0 +1,942 @@
+ISTQB Advanced Test Automation Engineer v2.0
+Full Questions and Answers (US set) - 42 Questions
+Source: ClassMarker results export (quiz 2484441)
+
+
+============================================================
+QUESTION 1
+============================================================
+
+Q1
+TAE-1.1.1
+
+Which of the following is a disadvantage of test automation?
+
+Select ONE option.
+
+	A. They are less subject to human error during execution
+	B. They execute faster than manual tests
+	C. They always verify exactly what they were programmed to verify
+	D. They can execute more complex tests more reliably
+
+Correct Answer: C
+
+Feedback:
+C is correct. This is a disadvantage because the test coverage can't be expanded by varying the tests. A, B and D are all advantages to using test automation. (CT-TAE-1.1.1 (K2) Explain the advantages and disadvantages of test automation)
+
+
+============================================================
+QUESTION 2
+============================================================
+
+Q2
+TAE-1.2.1
+
+Which of the following characteristics of Agile software development allows the team to cover all test levels with the appropriate amount and depth of automation?
+
+Select ONE option.
+
+	A. The right tools
+	B. The right training for the test automation engineers
+	C. The elimination of silos within the team
+	D. The early publishing of completed requirements
+
+Correct Answer: C
+
+
+============================================================
+QUESTION 3
+============================================================
+
+Q3
+TAE-1.2.2
+
+You have a highly technical test automation team with all engineers being adept at coding in a wide set of languages. Which of the following would be the best tool to use for implementing test automation for the SUT?
+
+Select ONE option.
+
+	A. Full code
+	B. Commercial off-the-shelf (COTS)
+	C. Open-source
+	D. A tool based on the same code as the SUT
+
+Correct Answer: D
+
+Feedback:
+D is correct. This would be the best choice if possible. This will allow easier integration into the CI/CD pipeline and the developers can also provide some support to the engineers if needed. (CT-TAE-1.2.2 (K2) Outline suitable test tools for a given system under test)
+
+
+============================================================
+QUESTION 4
+============================================================
+
+Q4
+TAE-2.1.1
+
+How does observability in the SUT help with test automation development?
+
+Select ONE option.
+
+	A. The TAE can watch the code while it executes
+	B. The automation software can access interfaces that will let it determine if the expected results have been achieved
+	C. The automation software can access controls such as function calls, to drive the software and verify results
+	D. It makes the components and their interfaces more clear and easier to understand
+
+Correct Answer: B
+
+
+============================================================
+QUESTION 5
+============================================================
+
+Q5
+TAE-2.1.2
+
+Which environment should be used to run performance testing in order to obtain the most accurate results?
+
+Select ONE option.
+
+	A. Local dev
+	B. Build
+	C. Integration
+	D. Staging
+
+Correct Answer: D
+
+Feedback:
+D is correct. This system should be the closest replication of production. Performance tests can be run in all environments, but until you have everything integrated and a system that is representative of production, the results may not be indicative of production performance. (CTTAE-2.1.2 (K2) Explain how test automation is leveraged within different environments)
+
+
+============================================================
+QUESTION 6
+============================================================
+
+Q6
+TAE-2.1.2
+
+Which environment is best suited for running automated API tests?
+
+Select ONE option.
+
+	A. Local dev
+	B. Build
+	C. Integration
+	D. Staging
+
+Correct Answer: C
+
+Feedback:
+C is correct. The integration environment is the best place to run these automated tests. They can be run earlier, but stubs and mocks will likely be required because the integrations are not in place. (CTTAE-2.1.2 (K2) Explain how test automation is leveraged within different environments)
+
+
+============================================================
+QUESTION 7
+============================================================
+
+Q7
+TAE-2.2.1
+
+You are working on a new test automation project. The developers have implemented a CI/CD pipeline with automatic generation of environments as needed. Everyone agrees that it would be best if the test automation code was executed automatically as the code passes through the pipeline. How does this affect your approach to the automation implementation?
+
+Select ONE option.
+
+	A. Automated reporting will be critical
+	B. You will need a tool that integrates easily and uses similar technology to the SUT
+	C. Environment setups will need to be tested prior to the execution of any test automation as they are being generated from code
+	D. There will be no need for a test architect since the developers have already implemented CI/CD and the automation code just needs to comply with the pipeline rules
+
+Correct Answer: B
+
+Feedback:
+B is correct. In this environment, you will need a tool that allows you to develop code that will work with the SUT code - allowing automated execution within the CI/CD and simplifying the tool landscape. A may be true, but that isn't necessarily indicated by the question. C is less likely to be needed than if the environments were manually configured. D is unlikely because test architects are needed with any test automation solution that is complex. (CT-TAE-2.2.1 (K4) Analyze a system under test to determine the appropriate test automation solution)
+
+
+============================================================
+QUESTION 8
+============================================================
+
+Q8
+TAE-2.2.2
+
+You have done the following tool comparison:
+
+                    Tool A   Tool B   Tool C        Tool D
+Record/Playback     O        O        O             X
+Integrates CI/CD    O        P        P             O
+API automation      O        X        P             O
+Mobile capability   X        O        O             P
+Source              COTS     COTS     Open Source   Open Source
+
+O = out of the box functionality
+P = functionality can be implemented with programming
+X = functionality is not available
+
+You have assigned the following importance to these areas:
+Record/Playback - nice to have
+Integrates with CI/CD - nice to have
+API automation - must have
+Mobile - nice to have
+Source - open source preferred
+
+The team who will use this tool has strong programming skills.
+
+Given this information, which is the best tool for your organization?
+
+Select ONE option.
+
+	A. Tool A
+	B. Tool B
+	C. Tool C
+	D. Tool D
+
+Correct Answer: D
+
+Feedback:
+D is the best choice in this case. They don't need the record/playback capability since they are experienced programmers. D is better than C because it has built in API testing capability. (CT-TAE-2.2.2 (K4) Present technical findings of a tool evaluation)
+
+
+============================================================
+QUESTION 9
+============================================================
+
+Q9
+CT-TAE-3.1.1
+
+In which part of the test automation design should you find the interface to the test management software?
+
+Select ONE option.
+
+	A. In the gTAA
+	B. In the TAA
+	C. In the TAS
+	D. In the SUT
+
+Correct Answer: A
+
+Feedback:
+A is correct. The interface to the test management software is described in the gTAA. (CT-TAE-3.1.1 (K2) Explain the difference between test automation architecture and solution)
+
+
+============================================================
+QUESTION 10
+============================================================
+
+Q10
+CT-TAE-3.1.1
+
+Which is the correct ecosystem in which the test automation runs?
+
+Select ONE option.
+
+	A. TAF
+	B. TAS
+	C. TAA
+	D. gTAA
+
+Correct Answer: B
+
+Feedback:
+B is correct. The test automation runs within the ecosystem of the Test Automation Solution. (CT-TAE-3.1.1 (K2) Explain the difference between test automation architecture and solution)
+
+
+============================================================
+QUESTION 11
+============================================================
+
+Q11
+CT-TAE-3.1.2
+
+Which of the following elements of the TAA support connecting to the SUT via APIs?
+
+Select ONE option.
+
+	A. Test generation
+	B. Test definition
+	C. Test adaptation
+	D. Test execution
+
+Correct Answer: C
+
+Feedback:
+C is correct. CT-TAE-3.1.2 (K2) Explain the major capabilities in a test automation architecture
+
+
+============================================================
+QUESTION 12
+============================================================
+
+Q12
+CT-TAE-3.1.3
+
+You have inherited a set of test automation that was developed over several years by multiple test automation engineers. You have found that the framework is very complicated with the same page and flow models incorporated into multiple scripts. Scripts that access page models for different SUTs are all mixed together in one directory. It also appears that generic user actions have been implemented into multiple scripts. What is the proper pairing between these items and the TAF layers?
+
+Select ONE option.
+
+	A. Page and Flow models to the Business Logic Layer, generic user actions to Core Libraries Layer, the remaining script code to Test Scripts Layer
+	B. Page Models and generic user actions to Core Libraries Layer, Flow Models to Business Logic Layer
+	C. Test Scripts to the Test Script Layer, SUT specific code to the Test Adaptation Layer, anything called multiple times to the Core Libraries layer
+	D. Logging and Reporting to the Business Logic Layer, API and Database tests to the Core Libraries, Core Library calls to the Test Script Layer
+
+Correct Answer: A
+
+Feedback:
+A is correct. (CT-TAE-3.1.3 (K3) Apply layering of test automation frameworks)
+
+
+============================================================
+QUESTION 13
+============================================================
+
+Q13
+CT-TAE-3.1.4
+
+You have just started a new job with a company that builds application software. Your manager knows nothing about test automation but likes the idea. He has requested a demo of some test automation on one of their applications in production. He would like to have the demo at the end of this week. You have explained to him that you can put together a quick demo, but that developing real maintainable test automation will take longer. Given this information, what approach would be the most cost effective and expedient to create the demo?
+
+Select ONE option.
+
+	A. Capture/playback
+	B. Structured scripting
+	C. Data-driven testing
+	D. Behavior-driven development
+
+Correct Answer: A
+
+Feedback:
+A is correct. This will be fastest way to create a demo. The code won't be maintainable, but you've already made that clear to your manager. (CT-TAE-3.1.4 (K3) Apply different approaches for automating test cases)
+
+
+============================================================
+QUESTION 14
+============================================================
+
+Q14
+CT-TAE-3.1.5
+
+You have been maintaining a Test Automation Solution (TAS) and you are finding that you are frequently needing to change the test cases when one of the objects on a page in the UI changes. Because the objects are used by multiple tests, one changed object can result in needing to modify multiple tests. This is taking a considerable amount of time each time the team receives a new code drop from the developers. What design principle should you apply when refactoring the code to make it more maintainable?
+
+Select ONE option.
+
+	A. The SOLID principles
+	B. Design patterns
+	C. Page object pattern
+	D. Flow model pattern
+
+Correct Answer: C
+
+Feedback:
+C is correct. In this case, capturing all the UI elements in a page model and then having the tests interact with the page model will save considerable maintenance time. In this way, when an element changes on the page, only the model needs to be updated rather than having to update each test script. (CT-TAE-3.1.5 (K3) Apply design principles and design patterns in test automation)
+
+
+============================================================
+QUESTION 15
+============================================================
+
+Q15
+CT-TAE-4.1.1
+
+You have been assigned to a new test automation project. The developers are using Java with Spring Boot in their deployment pipeline. They would like to see the automation using the same tools, particularly for the deployment and execution of the tests. Given this information, what is a primary consideration you need to have when building the team?
+
+Select ONE option.
+
+	A. How many people will you need
+	B. Can you find the people you need with the specific programming skills
+	C. Which test levels will be targeted by the automation
+	D. Where should the team members be located
+
+Correct Answer: B
+
+Feedback:
+B is correct. Because there are specific skills required, you need to know if you can find people with those skills. (CT-TAE-4.1.1 (K3) Apply guidelines that support effective test tool pilot and deployment activities)
+
+
+============================================================
+QUESTION 16
+============================================================
+
+Q16
+CT-TAE-4.2.1
+
+You have developed a full suite of test automation for a new mobile application. This involves using physical devices for the tests. This has worked well, but you are concerned with future maintenance requirements. Which of the following is an area that should be considered with this approach?
+
+Select ONE option.
+
+	A. License cost of the devices
+	B. Simulator installation responsibility
+	C. OS upgrades for the physical devices and retesting/test updates as needed
+	D. Acceptance testing using the physical devices versus using simulated devices to gain user approval
+
+Correct Answer: C
+
+Feedback:
+C is correct. This is an area to be considered since OSs update frequently and across a large set of physical devices this could take a prohibitive amount of time to install the updates. (CT-TAE-4.2.1)
+
+
+============================================================
+QUESTION 17
+============================================================
+
+Q17
+CT-TAE-4.3.1
+
+Which of the following is a maintainability issue with some record/playback tools?
+
+Select ONE option.
+
+	A. The user interface is difficult to use
+	B. The logging is burdensom
+	C. The coverage is usually inappropriate
+	D. The data is hardcoded
+
+Correct Answer: D
+
+Feedback:
+D is a common problem with record/playback tools. They record the inputs and sometimes put them into the code rather than parameterizing these variables. (CT-TAE-4.3.1 (K2) Explain which factors support and affect test automation solution maintainability)
+
+
+============================================================
+QUESTION 18
+============================================================
+
+Q18
+CT-TAE-4.3.1
+
+What is the purpose of using static analyzers on test automation code?
+
+Select ONE option.
+
+	A. They shouldn't be used for test automation code
+	B. To ensure a higher quality of the code by checking for coding standards
+	C. To optimize the code for faster execution
+	D. To find and eliminate any global variables
+
+Correct Answer: B
+
+Feedback:
+B is correct. This is what static analyzers do. (CT-TAE-4.3.1 (K2) Explain which factors support and affect test automation solution maintainability)
+
+
+============================================================
+QUESTION 19
+============================================================
+
+Q19
+CT-TAE-5.1.1
+
+Your organization is using a modern continuous integration system which differentiates between the build and deployment phases of the continuous delivery pipelines. The developers have implemented some testing in the build pipeline and that seems to be working, but you are seeing frequent issues with transaction workflows that are either missing or not implemented correctly. You have now developed tests to cover the problem scenarios. How should this testing be implemented in the pipeline?
+
+Select ONE option.
+
+	A. It should be implemented as integration tests in the continuous integration pipeline
+	B. It should be implemented as component integration tests in the continuous deployment pipeline
+	C. It should be implemented as system tests in the continuous deployment pipeline
+	D. It should be implemented as component tests in the continuous integration pipeline
+
+Correct Answer: C
+
+Feedback:
+C is correct. These are system level tests and should be implemented in the continuous deployment pipeline. (CT-TAE-5.1.1 (K3) Explain how test automation at different test levels integrates into pipelines)
+
+
+============================================================
+QUESTION 20
+============================================================
+
+Q20
+CT-TAE-5.1.1
+
+You are developing performance efficiency tests to combat production issues with slow performance, particularly with any reporting transactions. Where should these be implemented in a CI/CD environment to provide the earliest quality gate?
+
+Select ONE option.
+
+	A. In the continuous integration pipeline
+	B. In the continuous deployment pipeline
+	C. After the deployment, in the test environment
+	D. After the deployment, in the production environment
+
+Correct Answer: B
+
+Feedback:
+B is correct. This would give the earliest feedback possible. A is not correct because reports won't be executable this early in the build cycle. C may be possible, but it is later.
+
+
+============================================================
+QUESTION 21
+============================================================
+
+Q21
+CT-TAE-5.1.2
+
+How are test environments influenced by configuration management?
+
+Select ONE option.
+
+	A. Environments are only accessed through the configuration management software
+	B. Environments are secured and security tested when added to configuration management
+	C. Environment configuration and access information can be stored in configuration management
+	D. Environment access is controlled by the configuration management system and software
+
+Correct Answer: C
+
+Feedback:
+C is correct. In the case of multiple environments being used, the configuration and URLs of specific environments can be tracked under configuration management to ensure changes are recorded and versions are clearly saved and reusable. (CT-TAE-5.1.2 (K2) Describe configuration management for testware)
+
+
+============================================================
+QUESTION 22
+============================================================
+
+Q22
+CT-TAE-5.1.2
+
+What is the primary purpose of using a feature toggle in testware?
+
+Select ONE option.
+
+	A. To reduce cost of maintaining the test cases
+	B. To allow execution of certain tests depending on the setting of the toggle
+	C. To be able to bypass tests that are failing due to a defect
+	D. To provide more explicit test reporting information based on the toggle setting
+
+Correct Answer: B
+
+Feedback:
+B is correct. The point of a toggle is to determine which test cases or suites will be executed. These toggles usually align with toggles in the SUT. (CT-TAE-5.1.2 (K2) Describe configuration management for testware)
+
+
+============================================================
+QUESTION 23
+============================================================
+
+Q23
+CT-TAE-5.1.3
+
+Why is it important to understand the APIs connections?
+
+Select ONE option.
+
+	A. Developers will be coding according to these requirements
+	B. Performance testing is dependent on understanding each API connection
+	C. This is where the tester will find the documentation regarding the required parameters
+	D. The business logic is controlled through the API connections and their relationships
+
+Correct Answer: D
+
+Feedback:
+D is correct. Test automation should ensure it is automating realistic transactions and this requires understanding the business logic that underlies the various APIs and how they relate to each other. (CT-TAE-5.1.3 (K2) Define test automation dependencies for an API infrastructure)
+
+
+============================================================
+QUESTION 24
+============================================================
+
+Q24
+CT-TAE-5.1.3
+
+What is the purpose of a contract between services?
+
+Select ONE option.
+
+	A. It defines how the provider will supply services to the consumer
+	B. It defines who has access to which data for security purposes
+	C. It defines how a service signs on and off the system
+	D. It defines the expected speed of transactions and allows that to be tuned up or down as needed
+
+Correct Answer: A
+
+Feedback:
+A is correct. (CT-TAE-5.1.3 (K2) Define test automation dependencies for an API infrastructure)
+
+
+============================================================
+QUESTION 25
+============================================================
+
+Q25
+CT-TAE-6.1.1
+
+You have created a test automation suite that is testing critical functionality in a new system. It is finding a significant number of defects. You have repeatedly shown your output logs to your manager, but he is not understanding that most of the test cases are failing. What should you do to enhance your logs to make them more understandable?
+
+Select ONE option.
+
+	A. Nothing. Get a new manager.
+	B. Ensure the start and end of every test is logged and presented in bold font
+	C. Add color to the results showing red for failures and green for passes
+	D. Add screen shots for all the failures
+
+Correct Answer: C
+
+Feedback:
+C is correct. This will help make it obvious to your manager that there is a lot of red on the report. Putting together a summary at the beginning would also be helpful. A might also be a good, if not practical, solution. B should already be done but that won't help your manager understand the logs. D should also be done, but would help the developers, not your manager. (CT-TAE-6.1.1 (K3) Identify data collection methods from the test automation solution and the system under test)
+
+
+============================================================
+QUESTION 26
+============================================================
+
+Q26
+CT-TAE-6.1.1
+
+You have a test automation suite that is encountering a failure. You have investigated the logs, but you can't see where it's failing. You've tried running the tests manually and they work without a problem. What other information should you capture in your scripts to help debug the problem?
+
+Select ONE option.
+
+	A. Screen shots at the point of the failure
+	B. Lines of code executed
+	C. Equivalent manual testing hours saved
+	D. Number of executions with pass/fail information
+
+Correct Answer: A
+
+Feedback:
+(Feedback not captured in screenshot)
+
+
+============================================================
+QUESTION 27
+============================================================
+
+Q27
+CT-TAE-6.1.2
+
+You are working on a Customer Relationship Management (CRM) system that uses a third-party address lookup to help the user when they enter an address. This also ensures that only valid addresses are entered into the system. Unfortunately, you are finding that addresses in one state are always failing - Kansas. You can't see any problems in the test automation code, and you have determined that there are no data or formatting errors in the failing addresses. You have tried the same test manually and you get the same failure.
+
+Given this information, what should you do next?
+
+Select ONE option.
+
+	A. You should run the code under the debugger to be sure there are no errors occurring
+	B. You should contact the third-party vendor and log an incident with information regarding the failed addresses
+	C. You should capture screen shots of the failure
+	D. You should ensure that the addresses being entered are valid addresses
+
+Correct Answer: B
+
+Feedback:
+B is correct. You've already made sure that the TAS and SUT are working correctly, and that the data being passed is correct, so it's likely the problem is with the third party. C might be something you do as part of B, but just the screen shots alone wouldn't be helpful. (CTTAE-6.1.2 (K4) Analyze data from the test automation solution and the system under test)
+
+
+============================================================
+QUESTION 28
+============================================================
+
+Q28
+CT-TAE-6.1.3
+
+Who should receive a copy of a test progress report?
+
+Select ONE option.
+
+	A. Only the testers until the software is ready to release
+	B. Management, but only if there is an issue they need to resolve
+	C. All stakeholders who have a need and/or interest in the testing
+	D. No one - this information should only be tracked in a dashboard that is accessible to the technical team members
+
+Correct Answer: C
+
+Feedback:
+(Feedback not captured in screenshot)
+
+
+============================================================
+QUESTION 29
+============================================================
+
+Q29
+CT-TAE-7.1.1
+
+You have found that the TAS requires different components depending on the deployment environment. This includes such items as URLs being different, different test data and the use of mocks and stubs. What should you do to make the TAS easily installed in the different environments?
+
+Select ONE option.
+
+	A. Ensure all the components are under configuration management with clear versioning and environment requirements
+	B. Create a different TAS for each unique environment and maintain each of them as separate entities to avoid deployment issues
+	C. Provide the developers with links to the different environments so they can deploy the TAS for you in the various environments making whatever changes are required during the deployment effort
+	D. Reduce the use of different test environments and instead just use different versions of the TAS to simulate different environments
+
+Correct Answer: A
+
+Feedback:
+A is correct. All components of the TAS should be under configuration management and that includes anything that has to be altered based on environment or even the version of the SUT. B is not correct because this would be a maintenance nightmare as soon as the TAS itself needed to be updated. C is not correct because the developers should not be deploying the TAS - that should be the configuration management team or the test automation team. D is not correct because that doesn't even make sense. (CT-TAE-7.1.1 (K3) Verify the correctness of a test automation environment including test tool setup)
+
+
+============================================================
+QUESTION 30
+============================================================
+
+Q30
+CT-TAE-7.1.1
+
+You are working on a new TAF, and you are getting some interesting results. When the tests are run under the TAF, they are noticeably slower than when they are run manually. This happens right from the beginning of execution and stays slow throughout. What is a likely cause of this problem?
+
+Select ONE option.
+
+	A. There is not enough logging, more should be added for better troubleshooting
+	B. The SUT is not adequately provisioned for the proper performance level
+	C. The data being used by the test automation is making the tests take too long and should be reduced in size
+	D. The TAF is affecting the performance for some reason, more timing information may be needed, but there may be too much logging already occurring
+
+Correct Answer: D
+
+Feedback:
+(Feedback not captured in screenshot)
+
+
+============================================================
+QUESTION 31
+============================================================
+
+Q31
+CT-TAE-7.1.2
+
+You have been running a set of 10 tests, but you are getting inconsistent results from the tests. What type of "correct" behavior is missing?
+
+Select ONE option.
+
+	A. Repeatability
+	B. Intrusion
+	C. Composition
+	D. Visibility
+
+Correct Answer: A
+
+Feedback:
+A is correct. You are not getting the same results, so these tests are not repeatable. (CT-TAE-7.1.2 (K2) Verify the correct behavior for a given automated test script and/or test suite)
+
+
+============================================================
+QUESTION 32
+============================================================
+
+Q32
+CT-TAE-7.1.2
+
+What do you check when you are checking for completeness of a test automation suite?
+
+Select ONE option.
+
+	A. All tests pass
+	B. Approximately 10% of the tests fail consistently
+	C. The test data is correct and available
+	D. The tests are repeatable across different SUT versions
+
+Correct Answer: C
+
+Feedback:
+C is correct per the syllabus. A and B are not feasible. D is more related to repeatability than to composition/completeness. (CT-TAE-7.1.2 (K2) Verify the correct behavior for a given automated test script and/or test suite)
+
+
+============================================================
+QUESTION 33
+============================================================
+
+Q33
+CT-TAE-7.1.3
+
+Which of the following would be sufficient to determine that an action has actually occurred?
+
+Select ONE option.
+
+	A. Add a user and verify that the user can no longer log in
+	B. Add a user and then delete that user
+	C. Add a user, delete the user, add the user again
+	D. Add a user and verify in the database that the user exists
+
+Correct Answer: D
+
+Feedback:
+D is the only one that actually validates that the action occurred. The others could be masking false positives caused by other failures (such as the delete actually failing). (CT-TAE-7.1.3 (K2) Identify where test automation may produce false-positive and false-negative test results)
+
+
+============================================================
+QUESTION 34
+============================================================
+
+Q34
+CT-TAE-7.1.4
+
+Which of the following is a benefit from using a static analysis tool?
+
+Select ONE option.
+
+	A. The code will run faster
+	B. The code will have extensive logging
+	C. The developer will be given suggestions for fixes to problems
+	D. The tool will automatically generate defect reports for any found problems
+
+Correct Answer: C
+
+Feedback:
+C is correct. You often can turn on defect generation, but that's not a recommended practice as it may flood the defect tracking system with problems that won't be fixed - such as code formatting. (CT-TAE-7.1.4 (K2) Explain how static analysis can aid test automation code quality)
+
+
+============================================================
+QUESTION 35
+============================================================
+
+Q35
+CT-TAE-8.1.1
+
+You are having repeated failures with the automation every time a new version of the SUT is released. You have done analysis and discovered that the majority of problems are due to issues with the API response elements changing. What is a cost-effective and time-saving approach that you can implement to deal with this issue?
+
+Select ONE option.
+
+	A. Implement mocks and stubs for the services being called via the APIs and use those in your test automation
+	B. Develop your own APIs to call the services and code your automation to use your own controlled APIs
+	C. Implement contracts for the APIs and test via the contracts
+	D. Get a schema validation tool that will check that the APIs comply to the requirements
+
+Correct Answer: D
+
+Feedback:
+D is correct. That would be the easiest way to quickly check before executing the tests. A would not help because it would mask the problem. B would not be a valid test. C is what should be done, but that has to be initiated by the developers. (CT-TAE-8.1.1 (K3) Identify opportunities for improving test cases through data collection and analysis)
+
+
+============================================================
+QUESTION 36
+============================================================
+
+Q36
+CT-TAE-8.1.1
+
+You have been reviewing the test automation suite and have found that at least 40% of the code is reused more than twice. What should you do to improve the maintainability of the test suite?
+
+Select ONE option.
+
+	A. Delete the duplicated code
+	B. Create a library in the framework and store the common code there, then update the individual scripts to call the library code modules as needed
+	C. Run a schema validation to ensure the code is accurate and the data is being handled correctly
+	D. Use static analysis to ensure the re-used code is clean and efficient
+
+Correct Answer: B
+
+Feedback:
+B is correct. Since the code is re-used multiple times, it should be removed from the scripts and put into a library in the framework where it can be called by multiple scripts and maintained only in one place. A is not correct because the code is needed. C is not correct as this is not the problem. There is no indication that the code is not current. D is also not correct although it might be a good idea to run the static analyzer after the code change. (CT-TAE-8.1.1)
+
+
+============================================================
+QUESTION 37
+============================================================
+
+Q37
+CT-TAE-8.1.2
+
+You have a test automation suite for a health care application. This application interfaces with a number of external systems via APIs. You have found that the APIs don't necessarily return the right codes when a request times out and you're finding that your automation is getting stuck as you are checking for specific values. In addition to reporting this as a defect, what should you do to make your automation more robust?
+
+Select ONE option.
+
+	A. Ensure that there are waits and timeouts coded in your automation to avoid an eternal wait
+	B. Stop testing as this is a fundamental defect and invalidates any further tests
+	C. Terminate your test when the wait exceeds five seconds as this is adequate time for a response
+	D. Wait until you get a response because continuing on would not make sense for the test
+
+Correct Answer: A
+
+Feedback:
+A is correct. Anytime waits are used, there should be a timeout to ensure you get out of the wait in the case of an error. B and C might not be warranted as there is nothing to indicate you couldn't continue without the data being retrieved by the call (you might be able to use default values, etc.). D is not valid as this could become an eternal wait. (CT-TAE-8.1.2 (K3) Analyze the technical aspects of a deployed test automation solution and provide recommendations for improvement)
+
+
+============================================================
+QUESTION 38
+============================================================
+
+Q38
+CT-TAE-8.1.2
+
+You have a need for your test automation scripts to comb through the SUT system logs looking for specific values. Currently that check is coded into each script because each script is seeking different information. How should this be implemented to reduce maintenance?
+
+Select ONE option.
+
+	A. The logs should be checked manually because that will be more flexible and will require no maintenance
+	B. The values checked should be compiled together so the search will always be for all values
+	C. A new reusable function should be developed that can accept data values passed from the test script which will search the log for those specific values
+	D. A unique function should be developed for each value so that the precise function can be called by the appropriate test script
+
+Correct Answer: C
+
+
+============================================================
+QUESTION 39
+============================================================
+
+Q39
+CT-TAE-8.1.3
+
+One of the test automation engineers has built a function for handling GUI components. This function takes the control ID, control type and the action as input parameters and then it executes the action on the specified control. The TAE says all common controls (buttons, check boxes, text boxes, drop downs, etc.) have already been added, but more controls can be added easily to this function. He also pointed out that it will be available for any test automation script that needs to access a particular control. Is this a good approach?
+
+Select ONE option.
+
+	A. No, it is better for a function to deal with only one type of control at a time, such as one for buttons and another for drop down lists
+	B. No, this function will require considerable maintenance as the GUI adds more pages
+	C. Yes, this is an example of a good practice that will put common code into one function that can be maintained in one place but used by many test automation scripts
+	D. Yes, this function will be easy to extend as more individual buttons, dropdowns and text boxes are added to the GUI assuming these will all behave in an expected manner for their control type
+
+Correct Answer: C
+
+Feedback:
+C is correct. This is a good practice and will improve maintenance and reusability. A is to correct as this approach is fine - there is no need to separate this into multiple modules. B is not correct. If anything, adding more pages to the GUI will just reuse the existing controls so will actually reduce maintenance. D is not correct because there would be no need to extend this function as new instances of the controls are added to the SUT. (CT-TAE-8.1.3 (K3) Analyze the automated testware, to understand where consolidation and updates should be made following a given set of test environment or system under test changes)
+
+
+============================================================
+QUESTION 40
+============================================================
+
+Q40
+CT-TAE-8.1.4
+
+You have been asked to develop test automation for a system that has no documented requirements and no existing test cases. You do have access to the business users of the system. How could test automation be used to help you determine what you need to automate?
+
+Select ONE option.
+
+	A. The business users could use the record/playback capability to record what they do, and you could then use those recordings as examples to develop maintainable test automation code.
+	B. You could use the tools to prepare test data for the users
+	C. A test automation script could be used to configure the test environment
+	D. The developers could use the TAS to define their solution and could implement their code in the TAF which would let you develop the test automation solution from the SUT source code
+
+Correct Answer: A
+
+Feedback:
+A is correct. This could be done by turning on the record/playback capability to see what the users are doing and then using this information to write good test automation code. B and C can both be done, but that doesn't help you determine what to automate. D is just crazy! (CT-TAE-8.1.4 (K2) Summarize opportunities for use of test automation tools)
+
+
+============================================================
+QUESTION 41
+============================================================
+
+Q41
+TAE-3.1.5
+
+You are reworking a TAS to accommodate changes made to the SUT. You have found that the test automation engineer who wrote most of the test scripts used a record/playback tool to find all the UI components on each page to be tested. The objects were then directly referenced from the scripts that used the components. You noticed this problem when you needed to update the test automation scripts because the "gender" radio buttons had to be changed to a drop-down list. This required changes on multiple pages for this web application. What design approach should the previous TAE have used to make this code more maintainable?
+
+Select ONE option.
+
+	A. Flow model pattern
+	B. Page object pattern
+	C. SOLID principles
+	D. Object-oriented programming principles
+
+Correct Answer: B
+
+Feedback:
+B is correct. A page object model should be created that will capture all the objects shown on a page and that one model can be referenced by all scripts interacting with the objects. That will mean only the model will have to change if an object changes.
+
+
+============================================================
+QUESTION 42
+============================================================
+
+Q42
+TAE-3.1.5
+
+You are currently using a page object model approach for your test automation for a mobile banking application. This has significantly helped the maintenance effort, but you are still spending time fixing scripts that cover common user transactions such as login and check account balance. What would be the best design approach to reduce the time you are spending coding transactional workflows?
+
+Select ONE option.
+
+	A. Flow model pattern
+	B. Page object pattern
+	C. SOLID principles
+	D. Object-oriented programming principles
+
+Correct Answer: A
+
+Feedback:
+A is correct. You are coding commonly used flows, so by using a flow model pattern that overlays the object page model you already have in place, you should be able to reduce the time you're spending modifying and changing the common flows.
