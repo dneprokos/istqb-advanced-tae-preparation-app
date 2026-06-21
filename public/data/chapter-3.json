@@ -378,5 +378,138 @@
     "image": null,
     "explanation": "Capture-replay scripting is most suitable when the main goal is to quickly automate a few functional tests to evaluate tool compatibility, especially with basic programming skills. It does not require deep programming knowledge and allows rapid test creation. Structured scripting, data-driven scripting, and model-based scripting all require more programming expertise and are more appropriate for mature test automation environments.",
     "reference": "Syllabus 3.2.2"
+  },
+  {
+    "id": "ch3-q021",
+    "chapter": 3,
+    "section": "3.1.1",
+    "type": "single",
+    "points": 1.67,
+    "text": "In which part of the test automation design should you find the interface to the test management software?",
+    "options": [
+      { "id": "a", "text": "In the gTAA" },
+      { "id": "b", "text": "In the TAA" },
+      { "id": "c", "text": "In the TAS" },
+      { "id": "d", "text": "In the SUT" }
+    ],
+    "correct": ["a"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "The interface to the test management software is described in the gTAA (generic Test Automation Architecture). The gTAA defines the overall structure and interfaces, including connections to external systems such as test management tools.",
+    "reference": "Syllabus 3.1.1"
+  },
+  {
+    "id": "ch3-q022",
+    "chapter": 3,
+    "section": "3.1.1",
+    "type": "single",
+    "points": 1.67,
+    "text": "Which is the correct ecosystem in which the test automation runs?",
+    "options": [
+      { "id": "a", "text": "TAF" },
+      { "id": "b", "text": "TAS" },
+      { "id": "c", "text": "TAA" },
+      { "id": "d", "text": "gTAA" }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "The test automation runs within the ecosystem of the Test Automation Solution (TAS). The TAS is the instantiation of the architecture defined by the TAA, and it is the complete set of tools, scripts, and components that run the automated tests.",
+    "reference": "Syllabus 3.1.1"
+  },
+  {
+    "id": "ch3-q023",
+    "chapter": 3,
+    "section": "3.1.3",
+    "type": "single",
+    "points": 1.67,
+    "text": "You have inherited a set of test automation that was developed over several years by multiple test automation engineers. You have found that the framework is very complicated with the same page and flow models incorporated into multiple scripts. Scripts that access page models for different SUTs are all mixed together in one directory. It also appears that generic user actions have been implemented into multiple scripts. What is the proper pairing between these items and the TAF layers?",
+    "options": [
+      { "id": "a", "text": "Page and Flow models to the Business Logic Layer, generic user actions to Core Libraries Layer, the remaining script code to Test Scripts Layer" },
+      { "id": "b", "text": "Page Models and generic user actions to Core Libraries Layer, Flow Models to Business Logic Layer" },
+      { "id": "c", "text": "Test Scripts to the Test Script Layer, SUT specific code to the Test Adaptation Layer, anything called multiple times to the Core Libraries layer" },
+      { "id": "d", "text": "Logging and Reporting to the Business Logic Layer, API and Database tests to the Core Libraries, Core Library calls to the Test Script Layer" }
+    ],
+    "correct": ["a"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Page and Flow models belong to the Business Logic Layer as they are SUT-specific. Generic user actions (reusable across tests and projects) belong to the Core Libraries Layer. The remaining test script code belongs to the Test Scripts Layer.",
+    "reference": "Syllabus 3.1.3"
+  },
+  {
+    "id": "ch3-q024",
+    "chapter": 3,
+    "section": "3.1.4",
+    "type": "single",
+    "points": 1.67,
+    "text": "You have just started a new job with a company that builds application software. Your manager knows nothing about test automation but likes the idea. He has requested a demo of some test automation on one of their applications in production. He would like to have the demo at the end of this week. You have explained to him that you can put together a quick demo, but that developing real maintainable test automation will take longer. Given this information, what approach would be the most cost effective and expedient to create the demo?",
+    "options": [
+      { "id": "a", "text": "Capture/playback" },
+      { "id": "b", "text": "Structured scripting" },
+      { "id": "c", "text": "Data-driven testing" },
+      { "id": "d", "text": "Behavior-driven development" }
+    ],
+    "correct": ["a"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Capture/playback is the fastest way to create a demo. The code will not be maintainable, but this has already been made clear to the manager. Structured scripting, data-driven testing, and BDD all require more setup time and are not appropriate for a one-week demo.",
+    "reference": "Syllabus 3.1.4"
+  },
+  {
+    "id": "ch3-q025",
+    "chapter": 3,
+    "section": "3.1.5",
+    "type": "single",
+    "points": 1.67,
+    "text": "You have been maintaining a Test Automation Solution (TAS) and you are finding that you are frequently needing to change the test cases when one of the objects on a page in the UI changes. Because the objects are used by multiple tests, one changed object can result in needing to modify multiple tests. This is taking a considerable amount of time each time the team receives a new code drop from the developers. What design principle should you apply when refactoring the code to make it more maintainable?",
+    "options": [
+      { "id": "a", "text": "The SOLID principles" },
+      { "id": "b", "text": "Design patterns" },
+      { "id": "c", "text": "Page object pattern" },
+      { "id": "d", "text": "Flow model pattern" }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Capturing all UI elements in a page model and then having the tests interact with the page model will save considerable maintenance time. When an element changes on the page, only the model needs to be updated rather than every test script that uses that element.",
+    "reference": "Syllabus 3.1.5"
+  },
+  {
+    "id": "ch3-q026",
+    "chapter": 3,
+    "section": "3.1.5",
+    "type": "single",
+    "points": 1.67,
+    "text": "You are reworking a TAS to accommodate changes made to the SUT. You have found that the test automation engineer who wrote most of the test scripts used a record/playback tool to find all the UI components on each page to be tested. The objects were then directly referenced from the scripts that used the components. You noticed this problem when you needed to update the test automation scripts because the 'gender' radio buttons had to be changed to a drop-down list. This required changes on multiple pages for this web application. What design approach should the previous TAE have used to make this code more maintainable?",
+    "options": [
+      { "id": "a", "text": "Flow model pattern" },
+      { "id": "b", "text": "Page object pattern" },
+      { "id": "c", "text": "SOLID principles" },
+      { "id": "d", "text": "Object-oriented programming principles" }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "A page object model should be created that captures all the objects shown on a page, and that one model can be referenced by all scripts interacting with the objects. That means only the model will have to change if an object changes, rather than modifying every script that references that object directly.",
+    "reference": "Syllabus 3.1.5"
+  },
+  {
+    "id": "ch3-q027",
+    "chapter": 3,
+    "section": "3.1.5",
+    "type": "single",
+    "points": 1.67,
+    "text": "You are currently using a page object model approach for your test automation for a mobile banking application. This has significantly helped the maintenance effort, but you are still spending time fixing scripts that cover common user transactions such as login and check account balance. What would be the best design approach to reduce the time you are spending coding transactional workflows?",
+    "options": [
+      { "id": "a", "text": "Flow model pattern" },
+      { "id": "b", "text": "Page object pattern" },
+      { "id": "c", "text": "SOLID principles" },
+      { "id": "d", "text": "Object-oriented programming principles" }
+    ],
+    "correct": ["a"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "You are coding commonly used flows, so by using a flow model pattern that overlays the object page model already in place, you should be able to reduce the time spent modifying and changing common flows. The flow model encapsulates user transaction sequences into reusable components.",
+    "reference": "Syllabus 3.1.5"
   }
 ]

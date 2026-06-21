@@ -5,14 +5,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 ```bash
-npm run dev        # start dev server (Vite HMR)
-npm run build      # tsc -b && vite build
-npm run lint       # eslint .
-npm run preview    # preview production build
-npm run validate   # validate question bank JSON integrity
+npm run dev           # start dev server (Vite HMR)
+npm run build         # tsc -b && vite build
+npm run lint          # eslint .
+npm run preview       # preview production build
+npm run validate      # validate question bank JSON integrity
+npm run test          # run component tests once (vitest)
+npm run test:watch    # vitest in watch mode
+npm run test:coverage # run tests + generate coverage report
 ```
-
-No test suite exists (no jest/vitest).
 
 ## Architecture
 
@@ -35,6 +36,19 @@ React 19 + TypeScript + Vite + Tailwind CSS. No router library — `App.tsx` man
 - Run `npm run validate` after editing any JSON to check structural integrity
 
 **Types** (`src/types.ts`): single source of truth — `Question`, `Attempt`, `InProgressAttempt`, `AppSettings`, `IndexData`.
+
+## Testing
+
+**Stack:** Vitest + React Testing Library + `@testing-library/jest-dom` + `@testing-library/user-event`. Test environment is jsdom. No globals — import `describe`/`it`/`expect`/`vi` explicitly from `'vitest'`.
+
+**Conventions:**
+- Test files live next to source: `Component.test.tsx` / `module.test.ts`
+- Shared helpers in `src/test/`: `renderWithUser.tsx` (RTL render + userEvent.setup()), `factories.ts` (makeQuestion, makeAttempt, makeIndexData)
+- `tsconfig.app.json` excludes `*.test.*` and `src/test/**` — test files are transpiled by esbuild only, not tsc
+
+**Coverage:** `src/components/*` and `src/utils/exam.ts` are at or near 100%. `useExam`, `useData`, and pages have no tests yet (Phase 3/4 of COMPONENT_TESTING_PLAN.md).
+
+**CI:** `.github/workflows/component-tests.yml` runs lint + validate + test:coverage on every PR to `main`. Make it a required status check via GitHub branch protection.
 
 ## Protected directories — never touch
 - `docs/` — source PDFs and reference material. Never delete, overwrite, or pass `--overwrite` / `-f` flags to any scaffolding tool that could affect this directory.

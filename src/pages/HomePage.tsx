@@ -1,24 +1,24 @@
 import { useState } from 'react';
-import type { IndexData } from '../types';
+import type { IndexData, Question } from '../types';
 import { getAttempts } from '../utils/storage';
 import { getWeakChapters } from '../utils/exam';
 
 interface Props {
   indexData: IndexData;
   passPercent: number;
+  questionsByChapter: Map<number, Question[]>;
   onStartFullExam: () => void;
   onStartSection: (chapterId: number, count: number, timedMinutes: number | null) => void;
 }
 
-export function HomePage({ indexData, passPercent, onStartFullExam, onStartSection }: Props) {
+export function HomePage({ indexData, passPercent, questionsByChapter, onStartFullExam, onStartSection }: Props) {
   const [mode, setMode] = useState<'full' | 'section' | null>(null);
   const weakChapters = getWeakChapters(getAttempts(), indexData.chapters, passPercent);
   const [selectedChapter, setSelectedChapter] = useState<number>(1);
-  const [questionCount, setQuestionCount] = useState(5);
+  const maxQuestions = questionsByChapter.get(selectedChapter)?.length ?? 1;
+  const [questionCount, setQuestionCount] = useState(() => Math.min(5, questionsByChapter.get(1)?.length ?? 5));
   const [timed, setTimed] = useState(false);
   const [timerMinutes, setTimerMinutes] = useState(10);
-
-  const chapter = indexData.chapters.find(c => c.id === selectedChapter);
 
   return (
     <div className="space-y-8">
@@ -84,7 +84,12 @@ export function HomePage({ indexData, passPercent, onStartFullExam, onStartSecti
             <label className="block text-sm font-medium mb-1">Chapter</label>
             <select
               value={selectedChapter}
-              onChange={e => setSelectedChapter(Number(e.target.value))}
+              onChange={e => {
+                const id = Number(e.target.value);
+                setSelectedChapter(id);
+                const newMax = questionsByChapter.get(id)?.length ?? 1;
+                setQuestionCount(prev => Math.min(prev, newMax));
+              }}
               className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 bg-white dark:bg-gray-700 text-sm"
             >
               {indexData.chapters.map(ch => (
@@ -95,14 +100,14 @@ export function HomePage({ indexData, passPercent, onStartFullExam, onStartSecti
 
           <div>
             <label className="block text-sm font-medium mb-1">
-              Number of questions (max {chapter?.examQuestions ?? 10})
+              Number of questions (max {maxQuestions})
             </label>
             <input
               type="number"
               min={1}
-              max={chapter?.examQuestions ?? 10}
+              max={maxQuestions}
               value={questionCount}
-              onChange={e => setQuestionCount(Math.max(1, Number(e.target.value)))}
+              onChange={e => setQuestionCount(Math.min(maxQuestions, Math.max(1, Number(e.target.value))))}
               className="w-24 border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 bg-white dark:bg-gray-700 text-sm"
             />
           </div>

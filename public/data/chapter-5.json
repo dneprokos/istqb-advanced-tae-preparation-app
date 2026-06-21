@@ -411,5 +411,100 @@
     "image": null,
     "explanation": "The API specification provides details about endpoints, and the system architecture diagram shows the relationships between different components. Together they provide the necessary information to identify API dependencies. Release notes do not help learn API connections and details. The test strategy and release notes don't provide specific API dependency information needed for building a TAS. The API specification alone is insufficient without the architecture diagram.",
     "reference": "Syllabus 5.1.3"
+  },
+  {
+    "id": "ch5-q016",
+    "chapter": 5,
+    "section": "5.1.1",
+    "type": "single",
+    "points": 1.33,
+    "text": "Your organization is using a modern continuous integration system which differentiates between the build and deployment phases of the continuous delivery pipelines. The developers have implemented some testing in the build pipeline and that seems to be working, but you are seeing frequent issues with transaction workflows that are either missing or not implemented correctly. You have now developed tests to cover the problem scenarios. How should this testing be implemented in the pipeline?",
+    "options": [
+      { "id": "a", "text": "It should be implemented as integration tests in the continuous integration pipeline" },
+      { "id": "b", "text": "It should be implemented as component integration tests in the continuous deployment pipeline" },
+      { "id": "c", "text": "It should be implemented as system tests in the continuous deployment pipeline" },
+      { "id": "d", "text": "It should be implemented as component tests in the continuous integration pipeline" }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Transaction workflow tests are system-level tests and should be implemented in the continuous deployment pipeline. System tests require a fully deployed and integrated environment, which is available in the deployment pipeline but not the build pipeline.",
+    "reference": "Syllabus 5.1.1"
+  },
+  {
+    "id": "ch5-q017",
+    "chapter": 5,
+    "section": "5.1.1",
+    "type": "single",
+    "points": 1.33,
+    "text": "You are developing performance efficiency tests to combat production issues with slow performance, particularly with any reporting transactions. Where should these be implemented in a CI/CD environment to provide the earliest quality gate?",
+    "options": [
+      { "id": "a", "text": "In the continuous integration pipeline" },
+      { "id": "b", "text": "In the continuous deployment pipeline" },
+      { "id": "c", "text": "After the deployment, in the test environment" },
+      { "id": "d", "text": "After the deployment, in the production environment" }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Implementing performance efficiency tests in the continuous deployment pipeline would give the earliest feasible feedback. The CI pipeline is not correct because reports will not be executable this early in the build cycle. Running after deployment in a test or production environment is later than necessary.",
+    "reference": "Syllabus 5.1.1"
+  },
+  {
+    "id": "ch5-q018",
+    "chapter": 5,
+    "section": "5.1.2",
+    "type": "single",
+    "points": 1.33,
+    "text": "How are test environments influenced by configuration management?",
+    "options": [
+      { "id": "a", "text": "Environments are only accessed through the configuration management software" },
+      { "id": "b", "text": "Environments are secured and security tested when added to configuration management" },
+      { "id": "c", "text": "Environment configuration and access information can be stored in configuration management" },
+      { "id": "d", "text": "Environment access is controlled by the configuration management system and software" }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "In the case of multiple environments being used, the configuration and URLs of specific environments can be tracked under configuration management to ensure changes are recorded and versions are clearly saved and reusable.",
+    "reference": "Syllabus 5.1.2"
+  },
+  {
+    "id": "ch5-q019",
+    "chapter": 5,
+    "section": "5.1.3",
+    "type": "single",
+    "points": 1.33,
+    "text": "Why is it important to understand the API connections?",
+    "options": [
+      { "id": "a", "text": "Developers will be coding according to these requirements" },
+      { "id": "b", "text": "Performance testing is dependent on understanding each API connection" },
+      { "id": "c", "text": "This is where the tester will find the documentation regarding the required parameters" },
+      { "id": "d", "text": "The business logic is controlled through the API connections and their relationships" }
+    ],
+    "correct": ["d"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Test automation should ensure it is automating realistic transactions, and this requires understanding the business logic that underlies the various APIs and how they relate to each other. The business logic is controlled through API connections and their relationships.",
+    "reference": "Syllabus 5.1.3"
+  },
+  {
+    "id": "ch5-q020",
+    "chapter": 5,
+    "section": "5.1.3",
+    "type": "single",
+    "points": 1.33,
+    "text": "What is the purpose of a contract between services?",
+    "options": [
+      { "id": "a", "text": "It defines how the provider will supply services to the consumer" },
+      { "id": "b", "text": "It defines who has access to which data for security purposes" },
+      { "id": "c", "text": "It defines how a service signs on and off the system" },
+      { "id": "d", "text": "It defines the expected speed of transactions and allows that to be tuned up or down as needed" }
+    ],
+    "correct": ["a"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "A contract between services defines how the provider will supply services to the consumer, specifying the expected request and response formats, data types, and interaction patterns. This enables both services to be tested independently against the contract.",
+    "reference": "Syllabus 5.1.3"
   }
 ]

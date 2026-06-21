@@ -189,5 +189,81 @@
     "image": null,
     "explanation": "Implementing an analysis feature that compares previous test run results and highlights trends is the correct approach for demonstrating improvement in test success rate over a series of runs. Comparing test results with expected results only gives the pass/fail rate for one test run. Traffic lights only show the summary of progress within one test run cycle. Detailed reports with percentages only show outcome within one test run cycle.",
     "reference": "Syllabus 6.1.3"
+  },
+  {
+    "id": "ch6-q011",
+    "chapter": 6,
+    "section": "6.1.1",
+    "type": "single",
+    "points": 2.00,
+    "text": "You have created a test automation suite that is testing critical functionality in a new system. It is finding a significant number of defects. You have repeatedly shown your output logs to your manager, but he is not understanding that most of the test cases are failing. What should you do to enhance your logs to make them more understandable?",
+    "options": [
+      { "id": "a", "text": "Nothing. Get a new manager." },
+      { "id": "b", "text": "Ensure the start and end of every test is logged and presented in bold font" },
+      { "id": "c", "text": "Add color to the results showing red for failures and green for passes" },
+      { "id": "d", "text": "Add screen shots for all the failures" }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Adding color to results (red for failures, green for passes) will help make it obvious to management that there are many failures. A summary at the beginning would also be helpful. Bold start/end logging (B) should already be done but won't help the manager understand the logs. Screenshots (D) would help developers, not the manager.",
+    "reference": "Syllabus 6.1.1"
+  },
+  {
+    "id": "ch6-q012",
+    "chapter": 6,
+    "section": "6.1.1",
+    "type": "single",
+    "points": 2.00,
+    "text": "You have a test automation suite that is encountering a failure. You have investigated the logs, but you can't see where it's failing. You've tried running the tests manually and they work without a problem. What other information should you capture in your scripts to help debug the problem?",
+    "options": [
+      { "id": "a", "text": "Screen shots at the point of the failure" },
+      { "id": "b", "text": "Lines of code executed" },
+      { "id": "c", "text": "Equivalent manual testing hours saved" },
+      { "id": "d", "text": "Number of executions with pass/fail information" }
+    ],
+    "correct": ["a"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Screenshots at the point of failure provide visual evidence of the SUT state at the moment the automation fails. Since manual tests pass but automated tests fail, visual capture helps identify UI state differences or timing issues that are not apparent from text logs alone.",
+    "reference": "Syllabus 6.1.1"
+  },
+  {
+    "id": "ch6-q013",
+    "chapter": 6,
+    "section": "6.1.2",
+    "type": "single",
+    "points": 2.00,
+    "text": "You are working on a Customer Relationship Management (CRM) system that uses a third-party address lookup to help the user when they enter an address. This also ensures that only valid addresses are entered into the system. Unfortunately, you are finding that addresses in one state are always failing — Kansas. You can't see any problems in the test automation code, and you have determined that there are no data or formatting errors in the failing addresses. You have tried the same test manually and you get the same failure.\n\nGiven this information, what should you do next?",
+    "options": [
+      { "id": "a", "text": "You should run the code under the debugger to be sure there are no errors occurring" },
+      { "id": "b", "text": "You should contact the third-party vendor and log an incident with information regarding the failed addresses" },
+      { "id": "c", "text": "You should capture screen shots of the failure" },
+      { "id": "d", "text": "You should ensure that the addresses being entered are valid addresses" }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "You have already verified that the TAS and SUT are working correctly, and that the data being passed is correct. Since the same failure occurs manually, it is likely the problem is with the third-party address lookup service. Contacting the vendor and logging an incident is the appropriate next step.",
+    "reference": "Syllabus 6.1.2"
+  },
+  {
+    "id": "ch6-q014",
+    "chapter": 6,
+    "section": "6.1.3",
+    "type": "single",
+    "points": 2.00,
+    "text": "Who should receive a copy of a test progress report?",
+    "options": [
+      { "id": "a", "text": "Only the testers until the software is ready to release" },
+      { "id": "b", "text": "Management, but only if there is an issue they need to resolve" },
+      { "id": "c", "text": "All stakeholders who have a need and/or interest in the testing" },
+      { "id": "d", "text": "No one - this information should only be tracked in a dashboard that is accessible to the technical team members" }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Test progress reports should be distributed to all stakeholders who have a need or interest in the testing progress. This includes management, developers, business representatives, and other relevant parties — not just the test team.",
+    "reference": "Syllabus 6.1.3"
   }
 ]

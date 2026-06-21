@@ -227,5 +227,100 @@
     "image": null,
     "explanation": "The tool does not meet selection requirements due to poor performance during the proof of concept. Since the test environment is already valid according to the release notes, acquiring more hardware for the SUT is not the right approach. Turning off test logging is not acceptable as the logging component is essential for troubleshooting. Migrating the SUT is completely wrong.",
     "reference": "Syllabus 2.2.2"
+  },
+  {
+    "id": "ch2-q013",
+    "chapter": 2,
+    "section": "2.1.1",
+    "type": "single",
+    "points": 1.80,
+    "text": "How does observability in the SUT help with test automation development?",
+    "options": [
+      { "id": "a", "text": "The TAE can watch the code while it executes" },
+      { "id": "b", "text": "The automation software can access interfaces that will let it determine if the expected results have been achieved" },
+      { "id": "c", "text": "The automation software can access controls such as function calls, to drive the software and verify results" },
+      { "id": "d", "text": "It makes the components and their interfaces more clear and easier to understand" }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Observability provides the automation software with access to interfaces (such as APIs, log outputs, and monitoring endpoints) that allow it to determine whether the expected results have been achieved. Option C describes controllability, not observability. Option D relates to architecture transparency.",
+    "reference": "Syllabus 2.1.1"
+  },
+  {
+    "id": "ch2-q014",
+    "chapter": 2,
+    "section": "2.1.2",
+    "type": "single",
+    "points": 1.80,
+    "text": "Which environment should be used to run performance testing in order to obtain the most accurate results?",
+    "options": [
+      { "id": "a", "text": "Local dev" },
+      { "id": "b", "text": "Build" },
+      { "id": "c", "text": "Integration" },
+      { "id": "d", "text": "Staging" }
+    ],
+    "correct": ["d"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "The staging (preproduction) environment should be used for performance testing as it is the closest replication of production. Performance tests can be run in all environments, but until everything is integrated in a production-representative system, the results may not be indicative of production performance.",
+    "reference": "Syllabus 2.1.2"
+  },
+  {
+    "id": "ch2-q015",
+    "chapter": 2,
+    "section": "2.1.2",
+    "type": "single",
+    "points": 1.80,
+    "text": "Which environment is best suited for running automated API tests?",
+    "options": [
+      { "id": "a", "text": "Local dev" },
+      { "id": "b", "text": "Build" },
+      { "id": "c", "text": "Integration" },
+      { "id": "d", "text": "Staging" }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "The integration environment is the best place to run automated API tests. They can be run earlier, but stubs and mocks will likely be required because the integrations are not in place. In the integration environment, all components are deployed and connected, enabling realistic API test execution.",
+    "reference": "Syllabus 2.1.2"
+  },
+  {
+    "id": "ch2-q016",
+    "chapter": 2,
+    "section": "2.2.1",
+    "type": "single",
+    "points": 1.80,
+    "text": "You are working on a new test automation project. The developers have implemented a CI/CD pipeline with automatic generation of environments as needed. Everyone agrees that it would be best if the test automation code was executed automatically as the code passes through the pipeline. How does this affect your approach to the automation implementation?",
+    "options": [
+      { "id": "a", "text": "Automated reporting will be critical" },
+      { "id": "b", "text": "You will need a tool that integrates easily and uses similar technology to the SUT" },
+      { "id": "c", "text": "Environment setups will need to be tested prior to the execution of any test automation as they are being generated from code" },
+      { "id": "d", "text": "There will be no need for a test architect since the developers have already implemented CI/CD and the automation code just needs to comply with the pipeline rules" }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "In this environment, you will need a tool that allows you to develop code that will work with the SUT code — allowing automated execution within the CI/CD and simplifying the tool landscape. A may be true, but it is not specifically indicated by the question. C is less likely needed than if environments were manually configured. D is unlikely because test architects are needed with any complex automation solution.",
+    "reference": "Syllabus 2.2.1"
+  },
+  {
+    "id": "ch2-q017",
+    "chapter": 2,
+    "section": "2.2.2",
+    "type": "single",
+    "points": 1.80,
+    "text": "You have done the following tool comparison:\n\n| Criteria | Tool A | Tool B | Tool C | Tool D |\n|---|---|---|---|---|\n| Record/Playback | O | O | O | X |\n| Integrates CI/CD | O | P | P | O |\n| API automation | O | X | P | O |\n| Mobile capability | X | O | O | P |\n| Source | COTS | COTS | Open Source | Open Source |\n\nO = out of the box functionality, P = functionality can be implemented with programming, X = functionality is not available\n\nYou have assigned the following importance: Record/Playback - nice to have; Integrates with CI/CD - nice to have; API automation - must have; Mobile - nice to have; Source - open source preferred.\n\nThe team who will use this tool has strong programming skills.\n\nWhich is the best tool for your organization?",
+    "options": [
+      { "id": "a", "text": "Tool A" },
+      { "id": "b", "text": "Tool B" },
+      { "id": "c", "text": "Tool C" },
+      { "id": "d", "text": "Tool D" }
+    ],
+    "correct": ["d"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Tool D is the best choice. The team does not need record/playback capability since they are experienced programmers. Tool D is better than Tool C because it has built-in API testing capability (must have), is open source (preferred), and the team can implement mobile capability with their programming skills.",
+    "reference": "Syllabus 2.2.2"
   }
 ]

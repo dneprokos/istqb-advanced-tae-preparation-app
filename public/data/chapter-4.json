@@ -169,5 +169,81 @@
     "image": null,
     "explanation": "Structuring the test automation code using design patterns improves reusability and scalability, reducing the time needed for maintenance. Storing code outside of a version control system makes it more difficult to manage, track, and collaborate. Hardcoding data in test scripts makes scripts inflexible and difficult to maintain. Regularly rewriting test scripts from scratch is inefficient and leads to unnecessary work.",
     "reference": "Syllabus 4.3.1"
+  },
+  {
+    "id": "ch4-q010",
+    "chapter": 4,
+    "section": "4.1.1",
+    "type": "single",
+    "points": 1.75,
+    "text": "You have been assigned to a new test automation project. The developers are using Java with Spring Boot in their deployment pipeline. They would like to see the automation using the same tools, particularly for the deployment and execution of the tests. Given this information, what is a primary consideration you need to have when building the team?",
+    "options": [
+      { "id": "a", "text": "How many people will you need" },
+      { "id": "b", "text": "Can you find the people you need with the specific programming skills" },
+      { "id": "c", "text": "Which test levels will be targeted by the automation" },
+      { "id": "d", "text": "Where should the team members be located" }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Because there are specific skills required (Java with Spring Boot), you need to know if you can find people with those skills. Team size, test levels, and location are secondary concerns compared to the availability of people with the required technology skills.",
+    "reference": "Syllabus 4.1.1"
+  },
+  {
+    "id": "ch4-q011",
+    "chapter": 4,
+    "section": "4.2.1",
+    "type": "single",
+    "points": 1.75,
+    "text": "You have developed a full suite of test automation for a new mobile application. This involves using physical devices for the tests. This has worked well, but you are concerned with future maintenance requirements. Which of the following is an area that should be considered with this approach?",
+    "options": [
+      { "id": "a", "text": "License cost of the devices" },
+      { "id": "b", "text": "Simulator installation responsibility" },
+      { "id": "c", "text": "OS upgrades for the physical devices and retesting/test updates as needed" },
+      { "id": "d", "text": "Acceptance testing using the physical devices versus using simulated devices to gain user approval" }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "OS upgrades for physical devices is a key maintenance consideration since operating systems update frequently. Across a large set of physical devices, installing updates and retesting could take a prohibitive amount of time.",
+    "reference": "Syllabus 4.2.1"
+  },
+  {
+    "id": "ch4-q012",
+    "chapter": 4,
+    "section": "4.3.1",
+    "type": "single",
+    "points": 1.75,
+    "text": "Which of the following is a maintainability issue with some record/playback tools?",
+    "options": [
+      { "id": "a", "text": "The user interface is difficult to use" },
+      { "id": "b", "text": "The logging is burdensome" },
+      { "id": "c", "text": "The coverage is usually inappropriate" },
+      { "id": "d", "text": "The data is hardcoded" }
+    ],
+    "correct": ["d"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Hardcoded data is a common problem with record/playback tools. They record the inputs and sometimes put them directly into the code rather than parameterising these variables. This makes the scripts difficult to maintain when test data needs to change.",
+    "reference": "Syllabus 4.3.1"
+  },
+  {
+    "id": "ch4-q013",
+    "chapter": 4,
+    "section": "4.3.1",
+    "type": "single",
+    "points": 1.75,
+    "text": "What is the purpose of using static analyzers on test automation code?",
+    "options": [
+      { "id": "a", "text": "They shouldn't be used for test automation code" },
+      { "id": "b", "text": "To ensure a higher quality of the code by checking for coding standards" },
+      { "id": "c", "text": "To optimize the code for faster execution" },
+      { "id": "d", "text": "To find and eliminate any global variables" }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Static analyzers check test automation code for adherence to coding standards, identify quality issues, and suggest improvements. They should be used on test automation code just as they are used on production code to maintain code quality.",
+    "reference": "Syllabus 4.3.1"
   }
 ]
