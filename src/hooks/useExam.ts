@@ -289,6 +289,7 @@ export function useExam(
       view: 'question',
       result: null,
     };
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setExamState(state);
     if (saved.remainingSeconds !== null && saved.remainingSeconds > 0) {
       startTimeRef.current = Date.now();
