@@ -360,5 +360,43 @@
     "image": null,
     "explanation": "Static analysis tools give developers suggestions for fixing problems found in the code. Automatic defect report generation can often be turned on, but it is not a recommended practice as it may flood the defect tracking system with issues that won't be fixed, such as code formatting issues.",
     "reference": "Syllabus 7.1.4"
+  },
+  {
+    "id": "ch7-q020",
+    "chapter": 7,
+    "section": "7.1.2",
+    "type": "single",
+    "points": 1.33,
+    "text": "You are about to verify an automated test suite. During the verification process you have found that some test scripts pass one time and fail at another, therefore not providing reliable test results. What should you do to verify the validity of your test scripts?",
+    "options": [
+      { "id": "a", "text": "This is due to the parallel execution of the test scripts; synchronization would solve the problem." },
+      { "id": "b", "text": "Re-execute the automated test suite and analyze the test results again." },
+      { "id": "c", "text": "Remove the test scripts from the automated test suite and analyze them separately." },
+      { "id": "d", "text": "This happens because several test scripts are using the same test data, so the separation of test data for each test script would resolve the problem." }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "When test scripts are intermittently passing and failing (flaky), they should be removed from the active test suite and analyzed separately to identify the root cause. Simply re-executing does not identify the problem. Assuming parallelism or shared test data as causes without investigation is premature — removal and isolated analysis is the correct first step.",
+    "reference": "Syllabus 7.1.2"
+  },
+  {
+    "id": "ch7-q021",
+    "chapter": 7,
+    "section": "7.1.2",
+    "type": "single",
+    "points": 1.33,
+    "text": "You have a test suite containing 25 automated tests that verify the login functionality of an application's home page. The test suite is executed at the end of each two-week sprint cycle for regression test purposes. You notice that two test cases out of the 25 may sometimes cause a race condition in the application or receive a random error. What action should you take for these two test cases?",
+    "options": [
+      { "id": "a", "text": "Take no action because sometimes they execute successfully." },
+      { "id": "b", "text": "Reduce the amount of test cases in the test suite from 25 to 15 and see if the test suite passes with the smaller amount." },
+      { "id": "c", "text": "Remove the two test cases from the active test suite and analyze them separately to find the root cause." },
+      { "id": "d", "text": "Replace the two test cases with ones that pass repeatedly so that the test suite still has 25 automated test cases." }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Flaky tests that intermittently cause race conditions or random errors should be removed from the active suite and analyzed separately to find the root cause. Taking no action allows unreliable tests to undermine trust in the suite. Reducing the suite arbitrarily or replacing tests without fixing the root cause does not address the underlying problem.",
+    "reference": "Syllabus 7.1.2"
   }
 ]
