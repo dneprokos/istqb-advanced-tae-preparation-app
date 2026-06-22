@@ -360,5 +360,43 @@
     "image": null,
     "explanation": "Turning on the record/playback capability to see what the business users are doing can help determine what to automate when no requirements or test cases exist. The recordings provide examples of real usage that can be used to write proper automated tests. Options B and C can be done but don't help determine what to automate. Option D is not a valid approach.",
     "reference": "Syllabus 8.1.4"
+  },
+  {
+    "id": "ch8-q020",
+    "chapter": 8,
+    "section": "8.1.2",
+    "type": "single",
+    "points": 2.17,
+    "text": "As a TAE, you are evaluating new versions of core libraries. Which is the correct order of steps to manage the upgrade?",
+    "options": [
+      { "id": "a", "text": "Create adoption plan; determine impact; update dependencies; perform pilot" },
+      { "id": "b", "text": "Perform pilot; determine impact; create adoption plan; update dependencies" },
+      { "id": "c", "text": "Update dependencies; determine impact; perform pilot; create adoption plan" },
+      { "id": "d", "text": "Determine impact; update dependencies; create adoption plan; perform pilot" }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "The correct upgrade order is: (1) Perform pilot on a representative subset to understand the practical impact; (2) Determine impact — analyze how much of the TAS is affected; (3) Create adoption plan based on findings; (4) Update dependencies across the full TAS. This order minimizes risk by validating the upgrade in a controlled scope before committing to a full rollout.",
+    "reference": "Syllabus 8.1.2"
+  },
+  {
+    "id": "ch8-q021",
+    "chapter": 8,
+    "section": "8.1.4",
+    "type": "single",
+    "points": 2.17,
+    "text": "As a test automation engineer, you have automated the performance test of a customer management system. In order to effectively test the performance of this system, you need to create diverse test data that includes customers with varying profiles based on different input criteria. What is the best way to implement such a solution?",
+    "options": [
+      { "id": "a", "text": "Employ a test automation tool to invoke a web service API that creates new user accounts and populates their profiles with the specified data." },
+      { "id": "b", "text": "Register these users manually via the GUI, so the GUI functionality can also be tested." },
+      { "id": "c", "text": "Use the production database during the test as it has the real volume and type of data." },
+      { "id": "d", "text": "Implement a test automation script to anonymize customer data before using it during the performance test." }
+    ],
+    "correct": ["a"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Invoking a web service API to create user accounts with specified profiles is the most efficient and scalable way to generate diverse test data for performance testing. Manual GUI registration is too slow and does not scale. Using the production database introduces data privacy risks and can affect live users. Anonymizing production data is an option but does not address the need for varied profiles based on specific input criteria.",
+    "reference": "Syllabus 8.1.4"
   }
 ]
