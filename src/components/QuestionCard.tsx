@@ -1,4 +1,5 @@
 import type { Question } from '../types';
+import { QuestionText } from './QuestionText';
 
 interface Props {
   question: Question;
@@ -44,7 +45,7 @@ export function QuestionCard({ question, selected, isFlagged, onAnswer, onToggle
               </span>
             )}
           </div>
-          <p className="text-base font-medium leading-snug">{question.text}</p>
+          <QuestionText text={question.text} className="text-base font-medium leading-snug" />
         </div>
         <button
           onClick={onToggleFlag}
