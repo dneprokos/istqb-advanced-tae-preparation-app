@@ -322,5 +322,119 @@
     "image": null,
     "explanation": "Tool D is the best choice. The team does not need record/playback capability since they are experienced programmers. Tool D is better than Tool C because it has built-in API testing capability (must have), is open source (preferred), and the team can implement mobile capability with their programming skills.",
     "reference": "Syllabus 2.2.2"
+  },
+  {
+    "id": "ch2-q018",
+    "chapter": 2,
+    "section": "2.2.1",
+    "type": "single",
+    "points": 1.80,
+    "text": "Which of the following information in API documentation is LEAST relevant for implementing automated tests on that API?",
+    "options": [
+      { "id": "a", "text": "Release notes/change logs on past changes to the API." },
+      { "id": "b", "text": "Details about the parameters accepted by each API endpoint." },
+      { "id": "c", "text": "Authentication mechanisms required to access the API." },
+      { "id": "d", "text": "Details about the format of the API responses." }
+    ],
+    "correct": ["a"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Implementing automated API tests requires precise, actionable interface specifications: endpoint parameters, authentication mechanisms, and response formats directly support test design (valid/invalid inputs, protected calls, robust assertions). Release notes and change logs are useful for understanding evolution and migration but are not typically required to implement tests for the API's current behaviour, making them the least relevant of the options.",
+    "reference": "Syllabus 2.2.1"
+  },
+  {
+    "id": "ch2-q019",
+    "chapter": 2,
+    "section": "2.1.2",
+    "type": "single",
+    "points": 1.80,
+    "text": "A release candidate has passed all required functional tests after full integration. It is now necessary to perform reliability tests to evaluate whether the release can guarantee an MTBF (Mean Time Between Failures) in production higher than a given threshold. Which test environment is BEST suited to perform these reliability tests?",
+    "options": [
+      { "id": "a", "text": "Local development environment" },
+      { "id": "b", "text": "Build environment" },
+      { "id": "c", "text": "Integration environment" },
+      { "id": "d", "text": "Preproduction environment" }
+    ],
+    "correct": ["d"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Reliability testing (long-duration runs, endurance, MTBF measurement) requires an environment that closely resembles production in configuration, resource allocation, and operational characteristics, since such measurements are highly sensitive to environmental differences. A local dev environment is unrepresentative and unstable; a build environment focuses on packaging/fast verification; an integration environment is often shared, volatile, and may not match production sizing. Preproduction (staging) is the closest safe approximation to production while remaining controlled, making it the best fit for credible reliability evaluation.",
+    "reference": "Syllabus 2.1.2"
+  },
+  {
+    "id": "ch2-q020",
+    "chapter": 2,
+    "section": "2.2.2",
+    "type": "single",
+    "points": 1.80,
+    "text": "Which of the following describes the LEAST relevant concern when selecting suitable test automation tools for a test automation project?",
+    "options": [
+      { "id": "a", "text": "The degree of technical knowledge and skills within the test team to implement code-based test automation for the project." },
+      { "id": "b", "text": "For open-source tools, whether they are released under permissive or restrictive licenses, and whether they can be modified and by whom." },
+      { "id": "c", "text": "Whether the test team has been formed with the different personalities of its members in mind, to ensure effective interaction between them." },
+      { "id": "d", "text": "For commercial tools, what factors determine licensing costs, e.g., maximum number of users supported and whether the license is fixed or floating." }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Tool selection focuses on factors that materially affect feasibility, cost of ownership, and sustainability: technical/skill fit (A), licensing constraints (B), and licensing cost models (D) are all directly relevant. Team personality mix, while important for general team effectiveness, does not describe tool capability, integration constraints, cost, or risk, and is typically a project/organisational concern rather than a tool-selection criterion.",
+    "reference": "Syllabus 2.2.2"
+  },
+  {
+    "id": "ch2-q021",
+    "chapter": 2,
+    "section": "2.1.2",
+    "type": "single",
+    "points": 1.80,
+    "text": "In User Acceptance Testing (UAT) for a new SUT, in addition to the manual tests performed by end-users, automated tests are performed that focus on repetitive and routine test scenarios. In which of the following environments are these tests typically performed?",
+    "options": [
+      { "id": "a", "text": "Build environment" },
+      { "id": "b", "text": "Integration environment" },
+      { "id": "c", "text": "Preproduction environment" },
+      { "id": "d", "text": "Production environment" }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "UAT is typically performed in an environment that is as production-like as feasible while still controlled and safe — the preproduction (staging) environment. It supports realistic end-to-end flows and lets business users validate acceptance criteria while enabling routine automated checks without risking live operations. A build environment focuses on compiling/packaging; an integration environment may not reflect full production-like configuration and is often shared/volatile; production is generally avoided for UAT due to business risk to live data and users.",
+    "reference": "Syllabus 2.1.2"
+  },
+  {
+    "id": "ch2-q022",
+    "chapter": 2,
+    "section": "2.2.2",
+    "type": "single",
+    "points": 1.80,
+    "text": "You are evaluating a test automation tool for UI tests on a web app. The tests locate HTML elements, perform actions, and check expected text; they are independent and run nightly against the latest build. There is a high risk that the web app will crash while running some tests. Based only on this information, which is your MOST important concern when evaluating the tool?",
+    "options": [
+      { "id": "a", "text": "Does the tool provide a feature to specify tests in a descriptive meta-language that is not directly executable on the web app?" },
+      { "id": "b", "text": "Does the tool offer a feature to restore the web app, recover from the failed test, skip such tests, and resume the next one in the suite?" },
+      { "id": "c", "text": "Does the tool offer a feature to create a mock server that simulates a real API by accepting requests and returning responses?" },
+      { "id": "d", "text": "Does the tool support a licensing scheme that allows accessing different feature sets?" }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Given the explicit risk of the app crashing during unattended nightly runs, the highest-priority capability is resilience: recovering, continuing, and producing usable results despite a crash. If one crash aborts the whole suite, feedback is lost for many tests and triage cost rises. A descriptive meta-language (A) aids readability but is not the urgent need; a mock server (C) addresses dependency isolation, not the stated crash risk; licensing (D) affects procurement, not this operational risk.",
+    "reference": "Syllabus 2.2.2"
+  },
+  {
+    "id": "ch2-q023",
+    "chapter": 2,
+    "section": "2.1.1",
+    "type": "single",
+    "points": 1.80,
+    "text": "Which aspect of 'design for testability' is MOST directly associated with the need to define precisely which interfaces are available in the SUT for test automation at different test levels?",
+    "options": [
+      { "id": "a", "text": "Autonomy" },
+      { "id": "b", "text": "Architecture transparency" },
+      { "id": "c", "text": "Controllability" },
+      { "id": "d", "text": "Observability" }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Architecture transparency concerns how clearly a system's structure, layers, and accessible interfaces are documented and exposed, so automation can reliably connect to the right interaction points at each test level. Controllability is about the ability to set inputs, states, and preconditions; observability is about the ability to see outputs and internal state; autonomy concerns whether tests can run independently without external dependencies or manual intervention. The specific emphasis on precisely defining available interfaces across test levels is fundamentally an architecture transparency concern.",
+    "reference": "Syllabus 2.1.1"
   }
 ]

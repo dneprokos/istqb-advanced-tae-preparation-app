@@ -245,5 +245,81 @@
     "image": null,
     "explanation": "Static analyzers check test automation code for adherence to coding standards, identify quality issues, and suggest improvements. They should be used on test automation code just as they are used on production code to maintain code quality.",
     "reference": "Syllabus 4.3.1"
+  },
+  {
+    "id": "ch4-q014",
+    "chapter": 4,
+    "section": "4.3.1",
+    "type": "single",
+    "points": 1.75,
+    "text": "To improve the maintainability of test automation code, it is recommended to adopt design principles and patterns that allow the code to be structured into:",
+    "options": [
+      { "id": "a", "text": "Highly coupled and loosely cohesive modules" },
+      { "id": "b", "text": "Highly coupled and highly cohesive modules" },
+      { "id": "c", "text": "Loosely coupled and highly cohesive modules" },
+      { "id": "d", "text": "Loosely coupled and loosely cohesive modules" }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Maintainable automation aligns with classic software design fundamentals: modules should have clear, well-defined responsibilities (high cohesion) and minimal dependencies on one another (low coupling). High cohesion makes modules easier to understand, test, and change; low coupling means changes in one module are less likely to ripple across others — important given how often UI locators, workflows, and environments change. Low cohesion increases confusion and duplication; high coupling increases fragility and maintenance cost, so loosely coupled, highly cohesive modules is the recommended structure.",
+    "reference": "Syllabus 4.3.1"
+  },
+  {
+    "id": "ch4-q015",
+    "chapter": 4,
+    "section": "4.1.1",
+    "type": "single",
+    "points": 1.75,
+    "text": "You have agreed with your organization's managers to conduct a pilot project to introduce test automation. Managers' expectations about the benefits of automation are too optimistic. Which of the following is LEAST relevant when deciding the scope of the pilot project's objectives?",
+    "options": [
+      { "id": "a", "text": "Evaluate the suitability of different test automation tools based on the technology stack used by the applications to be automated." },
+      { "id": "b", "text": "Evaluate the potential cost savings and benefits (e.g., faster execution, better coverage) of automated testing versus manual testing." },
+      { "id": "c", "text": "Evaluate the knowledge and skills of people who will be involved in automating test cases for applicable frameworks and technologies." },
+      { "id": "d", "text": "Evaluate the performance of the organization's network infrastructure in terms of availability, bandwidth, latency, packet loss, and jitter." }
+    ],
+    "correct": ["d"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Pilot projects validate feasibility, calibrate expectations, and reduce adoption risk. Typical objectives include assessing tool fit, estimating realistic benefits/costs, and assessing team readiness (skills, training needs). A deep evaluation of enterprise network infrastructure is generally not a primary objective for a test automation pilot, especially when the central concern is overly optimistic expectations about automation benefits — that kind of assessment is more characteristic of IT operations or performance engineering initiatives.",
+    "reference": "Syllabus 4.1.1"
+  },
+  {
+    "id": "ch4-q016",
+    "chapter": 4,
+    "section": "4.1.1",
+    "type": "single",
+    "points": 1.75,
+    "text": "You are conducting a Proof of Concept (PoC) to select a tool for a TAS that will be used exclusively by one team to implement automated UI-level test scripts for two web apps. The two candidate tools use JavaScript/TypeScript and offer capture/playback. Three test cases per app were selected for the PoC, which will compare the tools' effectiveness in recognising and interacting with UI widgets, to quickly determine feasibility and which tool is better. Which TAF is BEST suited for conducting this PoC?",
+    "options": [
+      { "id": "a", "text": "A one-layer TAF (test scripts)" },
+      { "id": "b", "text": "A two-layer TAF (test scripts, test libraries)" },
+      { "id": "c", "text": "A three-layer TAF (test scripts, business logic, core libraries)" },
+      { "id": "d", "text": "A layered TAF with more than three layers" }
+    ],
+    "correct": ["a"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "For a PoC focused on rapid feasibility assessment and tool comparison, minimising framework complexity and upfront engineering gives the shortest path to observing tool behaviour, stability, and ease of driving the in-scope widgets. Multi-layer frameworks are appropriate when establishing maintainability and scaling for the long term, but for a PoC of only six test cases they would introduce extra design decisions that could obscure whether outcomes stem from the tool or the framework. A one-layer TAF keeps the PoC's learning fast and its conclusions clearly attributable to the tool.",
+    "reference": "Syllabus 4.1.1"
+  },
+  {
+    "id": "ch4-q017",
+    "chapter": 4,
+    "section": "4.3.1",
+    "type": "single",
+    "points": 1.75,
+    "text": "Which of the following recommendations can help improve the maintainability of test automation code?",
+    "options": [
+      { "id": "a", "text": "Use error codes in test automation code instead of exceptions (if supported by the language) for error handling." },
+      { "id": "b", "text": "Avoid producing test automation code containing methods with too many levels of nesting, as deeply nested code is more difficult to understand." },
+      { "id": "c", "text": "Avoid adopting design patterns that introduce high levels of abstraction, such as the flow model pattern." },
+      { "id": "d", "text": "Avoid using static analyzers on test automation code, as they are designed to improve the maintainability of SUT code only." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Maintainable automation code should be readable and easy to modify. Deeply nested logic increases cognitive load and complicates debugging and refactoring, so avoiding excessive nesting is a direct, widely applicable maintainability recommendation. Exceptions typically provide clearer error propagation than manual error codes; design patterns and abstraction are often recommended to manage complexity when applied appropriately; static analysis can substantially improve automation code quality just as it does for SUT code.",
+    "reference": "Syllabus 4.3.1"
   }
 ]

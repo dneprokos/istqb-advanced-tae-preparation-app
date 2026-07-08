@@ -207,5 +207,43 @@
     "image": null,
     "explanation": "Using a tool based on the same code as the SUT is the best choice when the team has strong programming skills. This allows easier integration into the CI/CD pipeline and the developers can also provide support to the engineers if needed.",
     "reference": "Syllabus 1.2.2"
+  },
+  {
+    "id": "ch1-q012",
+    "chapter": 1,
+    "section": "1.1.1",
+    "type": "single",
+    "points": 1.00,
+    "text": "Which of the following statements refers to a typical advantage of test automation?",
+    "options": [
+      { "id": "a", "text": "Automated tests can determine whether actual results match expected results, even for non-machine-interpretable results." },
+      { "id": "b", "text": "On average, automated tests written at the API level are likely to run faster than automated tests written at the UI level." },
+      { "id": "c", "text": "Artificial intelligence can be used to help identify redundant tests within large, long-running automated regression test suites." },
+      { "id": "d", "text": "Automated tests can allow defects to be detected earlier than manual tests because their execution times can be shorter." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "A core, typical advantage of test automation is faster feedback through efficient execution, especially at lower levels such as API/service rather than through the UI. UI tests traverse more layers (browser, rendering, network timing, multiple back-end calls) so they tend to be slower and more brittle; API-level tests bypass most of that overhead. Many results (visual aesthetics, subjective usability) are not reliably machine-interpretable, so option A is false. AI-based redundancy identification is not a foundational, standard automation benefit. Early defect detection mainly comes from earlier and more frequent execution (e.g., CI), not merely from a single run being shorter.",
+    "reference": "Syllabus 1.1.1"
+  },
+  {
+    "id": "ch1-q013",
+    "chapter": 1,
+    "section": "1.2.1",
+    "type": "single",
+    "points": 1.00,
+    "text": "Which of the following statements about how test automation is applied across different software development lifecycle models is TRUE?",
+    "options": [
+      { "id": "a", "text": "In Agile software development, automated regression test suites sometimes grow so large that they can become difficult to maintain, making it crucial to invest in test automation at multiple test levels." },
+      { "id": "b", "text": "In a Waterfall model, automated tests are usually executed only during the last phase of the development lifecycle, but their implementation occurs in the early stages." },
+      { "id": "c", "text": "In Agile software development, regardless of context, test automation must be based on the test pyramid model." },
+      { "id": "d", "text": "Unlike Agile, where automated unit tests are written by developers, in a V-model automated unit tests are written by testers as part of unit testing." }
+    ],
+    "correct": ["a"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Agile/iterative delivery drives frequent change and frequent regression risk, which often leads teams to expand automated regression suites over time. As suites grow they can become slower and harder to maintain, especially if concentrated too heavily at the UI level, so investing in automation across multiple test levels (unit/component, API, and selected UI) is important. Waterfall/V-model testing activities are planned and may start early, with execution across phases, not solely in the last phase. The test pyramid is a common heuristic, not an absolute mandate regardless of context. Unit testing is typically a developer responsibility in both Agile and V-model contexts, not a defining V-model rule for testers.",
+    "reference": "Syllabus 1.2.1"
   }
 ]

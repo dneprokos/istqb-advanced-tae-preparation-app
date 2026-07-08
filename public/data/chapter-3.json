@@ -511,5 +511,100 @@
     "image": null,
     "explanation": "You are coding commonly used flows, so by using a flow model pattern that overlays the object page model already in place, you should be able to reduce the time spent modifying and changing common flows. The flow model encapsulates user transaction sequences into reusable components.",
     "reference": "Syllabus 3.1.5"
+  },
+  {
+    "id": "ch3-q028",
+    "chapter": 3,
+    "section": "3.1",
+    "type": "single",
+    "points": 1.67,
+    "text": "Automated test scripts can locate and interact with elements of a web UI indirectly through the browser using browser-specific drivers and APIs provided by an automated test tool. Alternatively, test scripts can locate and interact with elements of the same web UI directly at the HTML level by accessing the DOM and internal JavaScript code. The first (browser-driver-based) implementation:",
+    "options": [
+      { "id": "a", "text": "Has a lower level of intrusion than the alternative, and therefore its test scripts are less likely to produce false positives." },
+      { "id": "b", "text": "Has a higher level of intrusion than the alternative, and therefore its test scripts are less likely to produce false positives." },
+      { "id": "c", "text": "Has a lower level of intrusion than the alternative, and therefore its test scripts are more likely to produce false positives." },
+      { "id": "d", "text": "Has the same level of intrusion as the alternative, so the risk of false positives is the same in both cases." }
+    ],
+    "correct": ["a"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Intrusiveness is the degree to which automation reaches into internal implementation details of the SUT rather than interacting through externally visible, user-realistic interfaces. Browser drivers exercise the UI similarly to a real user, which is less intrusive than directly manipulating the DOM/JavaScript, which can bypass real interaction pathways and depend on unstable internal structures. Lower intrusion is associated with stronger validity of results and lower false-positive risk, since observed behaviour more reliably reflects real user experience.",
+    "reference": "Syllabus 3.1"
+  },
+  {
+    "id": "ch3-q029",
+    "chapter": 3,
+    "section": "3.1.5",
+    "type": "single",
+    "points": 1.67,
+    "text": "A TAS must support cross-browser compatibility for web UI tests, running the same test script unmodified on different browsers. This is achieved by introducing appropriate abstractions into the TAA so that test scripts do not depend on any specific browser, while each browser's native automation support is used underneath via an adapter. Which SOLID principle was adopted?",
+    "options": [
+      { "id": "a", "text": "Dependency inversion principle" },
+      { "id": "b", "text": "Open-closed principle" },
+      { "id": "c", "text": "Liskov substitution principle" },
+      { "id": "d", "text": "Interface segregation principle" }
+    ],
+    "correct": ["a"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Introducing an abstraction (e.g., a BrowserDriver interface) so that test scripts depend on the abstraction rather than on concrete browser-specific implementations, while each browser adapter depends on that same abstraction, is a direct application of the Dependency Inversion Principle: high-level modules should not depend on low-level modules, both should depend on abstractions. This reduces coupling and lets browser implementations change with minimal impact on test scripts. Open-Closed is also supported but the key phrase 'introducing abstractions to decouple tests from concrete drivers' specifically targets DIP.",
+    "reference": "Syllabus 3.1.5"
+  },
+  {
+    "id": "ch3-q030",
+    "chapter": 3,
+    "section": "3.1",
+    "type": "single",
+    "points": 1.67,
+    "text": "SUT1 is a client-server system based on a thin client, where the server provides almost all resources and functionality. SUT2 is based on a fat client that relies little on the server. A TAS automates tests on both, aiming to cover as many functionalities as possible, executed as fast as possible. Which statement about the automation solution is BEST in this scenario?",
+    "options": [
+      { "id": "a", "text": "The TAS should support mainly client-side automation for both SUT1 and SUT2." },
+      { "id": "b", "text": "The TAS should support mainly client-side automation for SUT1 and server-side automation for SUT2." },
+      { "id": "c", "text": "The TAS should support mainly server-side automation for both SUT1 and SUT2." },
+      { "id": "d", "text": "The TAS should support mainly server-side automation for SUT1 and client-side automation for SUT2." }
+    ],
+    "correct": ["d"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Selecting automation interfaces close to where business logic resides maximises speed and coverage while minimising unnecessary UI traversal. For a thin client, most logic resides on the server, so server-side interfaces (APIs, services) give efficient, reliable coverage. For a fat client, substantial logic resides on the client, so server-side automation alone would miss client-side validations and UI-driven flows; client-side automation is needed for high functional coverage there. The optimal combination is therefore server-side for SUT1 (thin client) and client-side for SUT2 (fat client).",
+    "reference": "Syllabus 3.1"
+  },
+  {
+    "id": "ch3-q031",
+    "chapter": 3,
+    "section": "3.1.1",
+    "type": "single",
+    "points": 1.67,
+    "text": "Which of the following statements about the relationship between TAA, TAS, and TAF is true?",
+    "options": [
+      { "id": "a", "text": "A TAF can be used to implement a TAS, which is an implementation of a TAA." },
+      { "id": "b", "text": "A TAS can be used to implement a TAF, which is an implementation of a TAA." },
+      { "id": "c", "text": "A TAS can be used to implement a TAA, which is an implementation of a TAF." },
+      { "id": "d", "text": "A TAF can be used to implement a TAA, which is an implementation of a TAS." }
+    ],
+    "correct": ["a"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "The Test Automation Architecture (TAA) is the conceptual blueprint describing structure, layers, and how automation connects to the SUT. The Test Automation Solution (TAS) is the concrete realisation of that architecture in a specific context. The Test Automation Framework (TAF) is a structured set of reusable libraries and mechanisms commonly used to build the TAS. The relationship is: TAA (design) is implemented as a TAS (solution), constructed using one or more TAFs. The other options invert this relationship.",
+    "reference": "Syllabus 3.1.1"
+  },
+  {
+    "id": "ch3-q032",
+    "chapter": 3,
+    "section": "3.1.4",
+    "type": "single",
+    "points": 1.67,
+    "text": "You are choosing an approach for automating manual regression test suites written at the UI level for already-developed web apps. The TAS uses a programming language that allows building test libraries and also offers capture/playback. The tests will be implemented by team members with strong programming skills, and the approach should reduce both maintenance effort and the effort to add new tests. Which approach would you choose?",
+    "options": [
+      { "id": "a", "text": "Test-Driven Development (TDD)" },
+      { "id": "b", "text": "Capture/playback" },
+      { "id": "c", "text": "Linear scripting" },
+      { "id": "d", "text": "Structured scripting" }
+    ],
+    "correct": ["d"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Capture/playback and linear scripting often produce brittle, duplicated sequences tightly coupled to UI details, which are quick initially but costly to maintain. With a language that supports libraries and a team with strong programming skills, structured scripting (modularisation, reuse through functions/classes, patterns such as Page Object) centralises UI interaction logic so changes are made in one place, reducing both maintenance effort and the effort to add new tests by composing scenarios from reusable building blocks. TDD is a development practice and does not itself describe how to structure UI regression tests.",
+    "reference": "Syllabus 3.1.4"
   }
 ]

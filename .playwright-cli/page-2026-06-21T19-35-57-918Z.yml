@@ -1,0 +1,16 @@
+- main [ref=e8]:
+  - generic:
+    - banner [ref=e9]:
+      - img "ClassMarker logo" [ref=e11]
+      - button "My Tests" [ref=e15] [cursor=pointer]:
+        - generic [ref=e16]:
+          - generic:
+            - text: My Tests
+            - img:
+              - generic:
+                - img
+    - generic [ref=e23]:
+      - generic [ref=e30]: Your session has expired. Please go back to the test to try again.
+      - button "Start" [ref=e33] [cursor=pointer]:
+        - generic [ref=e34]:
+          - generic: Start

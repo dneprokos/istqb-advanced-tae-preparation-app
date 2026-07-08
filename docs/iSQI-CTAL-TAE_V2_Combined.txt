@@ -1,0 +1,1414 @@
+ISTQB Certified Tester
+Advanced Level - Test
+Automation
+Engineering CTAL-
+TAE (Syllabus v2.0)
+Version: 3.0
+[ Total Questions: 40]
+Web: www.dumpscafe.com
+Email: support@dumpscafe.com
+iSQI
+CTAL-TAE_V2
+
+IMPORTANT NOTICE
+Feedback
+We have developed quality product and state-of-art service to ensure our customers interest. If you have any 
+suggestions, please feel free to contact us at feedback@dumpscafe.com
+Support
+If you have any questions about our product, please provide the following items:
+exam code
+screenshot of the question
+login id/email
+please contact us at 
+ and our technical experts will provide support within 24 hours.
+support@dumpscafe.com
+Copyright
+The product of each order has its own encryption code, so you should use it independently. Any unauthorized 
+changes will inflict legal punishment. We reserve the right of final explanation for this statement.
+
+iSQI - CTAL-TAE_V2
+Pass Exam
+1 of 29
+Verified Solution - 100% Result
+A.  
+B.  
+C.  
+D.  
+A.  
+B.  
+C.  
+D.  
+Question #:1
+To improve the maintainability of test automation code, it is recommended to adopt design principles and 
+design patterns that allow the code to be structured into:
+Highly coupled and loosely cohesive modules
+Highly coupled and highly cohesive modules
+Loosely coupled and highly cohesive modules
+Loosely coupled and loosely cohesive modules
+Answer: C
+Explanation
+TAE aligns maintainable automation with classic software design fundamentals: modules should have clear 
+responsibilities (high cohesion) and minimal dependencies on one another (low coupling). High cohesion 
+means each module focuses on a well-defined purpose—e.g., a page object responsible only for UI element 
+interaction for a page, or an API client responsible only for a service boundary—making it easier to 
+understand, test, and change. Low coupling means changes in one module are less likely to ripple across many 
+others, which is crucial in test automation where UI locators, workflows, and environments change frequently. 
+Patterns and principles promoted in TAE contexts (e.g., layered frameworks, encapsulation, separation of 
+concerns, façade/page objects, adapters) are commonly used to achieve this structure. Options A and D are 
+undesirable because low cohesion increases confusion and duplication, while high coupling increases fragility 
+and maintenance cost. Option B (high coupling, high cohesion) still leaves the codebase vulnerable to 
+cascading changes and tight dependencies on tools or SUT details. Therefore, the recommended structure for 
+maintainable test automation code is loosely coupled and highly cohesive modules.
+Question #:2
+Which of the following information in API documentation is LEAST relevant for implementing automated 
+tests on that API?
+Release notes/change logs on past changes to the API
+Details about the parameters accepted by each API endpoint
+Authentication mechanisms required to access the API
+Details about the format of the API responses
+Answer: A
+Explanation
+To implement automated API tests, TAE emphasizes that testers need precise, actionable interface 
+specifications: what endpoints exist, what inputs they accept, how to authenticate/authorize requests, and what 
+
+iSQI - CTAL-TAE_V2
+Pass Exam
+2 of 29
+Verified Solution - 100% Result
+A.  
+B.  
+C.  
+D.  
+outputs are returned (status codes, headers, response body schemas/formats). Options B, C, and D directly 
+support test design and implementation: parameter details enable valid/invalid request construction and 
+boundary coverage; authentication mechanisms are required to execute any protected calls and to test auth-
+related behaviors; response formats enable robust assertions (including schema validation). Release notes and 
+change logs are valuable for understanding evolution, migration, and backward compatibility considerations, 
+but they are not typically required to implement the tests for the current API behavior when the current 
+specification is available. They may help explain why something changed or guide test updates over time, yet 
+they are less directly relevant to writing the core automated checks compared with endpoint inputs, auth, and 
+response structure. Therefore, among the options, past release notes/change logs are the least relevant for 
+implementing automated tests on the API.
+Question #:3
+A release candidate of a SUT, after being fully integrated with all other necessary systems, has successfully 
+passed all required functional tests (90% were automated tests and 10% were manual tests). Now, it is 
+necessary to perform reliability tests aimed at evaluating whether, under certain conditions, that release will 
+be able to guarantee an MTBF (Mean Time Between Failures) in the production environment higher than a 
+certain threshold (expressed in CPU time). Which of the following test environments is BEST suited to 
+perform these reliability tests?
+Local development environment
+Build environment
+Integration environment
+Preproduction environment
+Answer: D
+Explanation
+Reliability testing (e.g., long-duration runs, endurance/soak, stability measurements, MTBF assessment) 
+requires an environment that closely resembles production in terms of configuration, resource allocation, 
+deployment topology, integrations, and operational characteristics. TAE guidance emphasizes that 
+measurements like MTBF are highly sensitive to environmental differences such as CPU quotas, background 
+load, database sizing, network topology, virtualization settings, and monitoring agents. A local development 
+environment is unsuitable because it is not representative, is often unstable, and typically lacks full system 
+integration. A build environment focuses on building/packaging and fast verification, not production-like 
+reliability evaluation. An integration environment can validate that systems work together, but it is frequently 
+shared, changes often, and may not match production sizing and operational constraints; it is also commonly 
+disrupted by other teams’ deployments. Preproduction (often called staging) is designed to be the closest safe 
+approximation to production while still allowing controlled testing, including reliability and performance-
+related evaluations, without risking real users or live data. Therefore, preproduction is the best-suited 
+environment to run reliability tests intended to predict production MTBF behavior with credible confidence.
+Question #:4
+
+iSQI - CTAL-TAE_V2
+Pass Exam
+3 of 29
+Verified Solution - 100% Result
+A.  
+B.  
+C.  
+D.  
+Consider a TAS implemented to perform automated testing on native mobile apps at the UI level, where the 
+TAF implements a client-server architecture. The client runs on-premise and allows creation of automated test 
+scripts using TAF libraries to recognize and interact with the app’s UI objects. The server runs in the cloud as 
+part of a PaaS service, receiving commands from the client, translating them into actions for the mobile 
+device, and sending the results to the client. The cloud platform hosts several mobile devices dedicated for use 
+by this TAS. The device on which to run test scripts/test suites is specified at run time. You are currently 
+verifying whether the test automation environment and all other TAS/TAF components work correctly. Which 
+of the following activities would you perform to achieve your goal?
+Manage the infrastructure that hosts the server, including hardware, software updates, and security 
+patches
+Check whether the references to the device on which the given test scripts/test suites will be executed 
+are correctly hard-coded within these test scripts/test suites
+Check whether the TAF libraries that the test scripts will use to recognize and interact with the app’s UI 
+objects (widgets) function as expected
+Check whether all test scripts that will be executed by the TAS as part of a given test suite have 
+expected results
+Answer: C
+Explanation
+The task is to verify the test automation environment and TAS/TAF components, not to validate the 
+correctness of specific test suites. In a client-server TAF for mobile automation, a critical component is the 
+automation library layer that exposes functions to locate and interact with UI objects, and that communicates 
+with the cloud server/device farm. TAE guidance highlights that environment verification should focus on 
+ensuring that the automation tooling stack can reliably perform its fundamental operations: connect to the 
+execution infrastructure, select target devices at runtime, execute commands, and receive results. Checking 
+that the TAF libraries correctly recognize and interact with widgets directly validates that the end-to-end 
+automation mechanism (client # server # device # response) is functioning. Option A is not appropriate 
+because the server is on PaaS; infrastructure management is typically handled by the provider and is not part 
+of validating your TAS operation. Option B is incorrect because the scenario states the device is specified at 
+run time, so hard-coding device references is not the expected design and is not the right verification focus. 
+Option D concerns test suite correctness (expected results), which is a later step after confirming the 
+automation environment works. Therefore, verifying that the TAF libraries function as expected is the correct 
+activity.
+Question #:5
+In a first possible implementation, the automated test scripts within a suite locate and interact with elements of 
+a web UI indirectly through the browsers using browser-specific drivers and APIs, provided by an automated 
+test tool used as part of the TAS. In an alternative implementation, these test scripts locate and interact with 
+elements of the same web UI directly at the HTML level by accessing the DOM (Document Object Model) 
+and internal JavaScript code. The first possible implementation:
+
+iSQI - CTAL-TAE_V2
+Pass Exam
+4 of 29
+Verified Solution - 100% Result
+A.  
+B.  
+C.  
+D.  
+A.  
+B.  
+C.  
+Has a lower level of intrusion than the alternative implementation, and therefore its test scripts are less 
+likely to produce false positives
+Has a higher level of intrusion than the alternative implementation, and therefore its test scripts are less 
+likely to produce false positives
+Has a lower level of intrusion than the alternative implementation, and therefore its test scripts are more 
+likely to produce false positives
+Has the same level of intrusion as the alternative implementation, and therefore the risk of test scripts 
+producing false positives is the same in both cases
+Answer: A
+Explanation
+TAE describes “intrusiveness” as the degree to which automation reaches into internal implementation details 
+of the SUT rather than interacting through externally visible, user-realistic interfaces. Using browser drivers 
+and browser automation APIs exercises the UI similarly to a real user (via the browser’s supported automation 
+hooks), which is generally less intrusive than directly manipulating the DOM and internal JavaScript. Direct 
+DOM/JS access can bypass real user interaction pathways, skip browser event chains, and depend on internal 
+structures that are not part of the stable external contract. This increases the risk of false positives: tests may 
+“pass” by forcing UI states or reading internal values even when the application would not behave correctly 
+for real users. Less intrusive automation (through browser-level drivers) tends to provide higher confidence 
+that observed behavior reflects real user experience, reducing the chance that tests succeed while user-visible 
+behavior is broken. TAE therefore associates lower intrusion with stronger validity of results and lower false-
+positive risk, especially for system/UI-level validation. While browser-driven automation can still be flaky for 
+other reasons (timing, environment), in the specific comparison of interaction method, browser-driver-based 
+execution is the less intrusive option and is less likely to create false positives than direct internal DOM/JS 
+manipulation.
+Question #:6
+Some automated regression test scripts run by a TAS in a given test environment make calls to private APIs 
+that require authentication for all requests (the authentication method is the same for all APIs). The SUT is a 
+business-critical system. The following two changes are planned: a change in the authentication method of all 
+APIs and a minor upgrade of the OS (Operating System) in the test environment. You have updated the test 
+scripts to cope with the change in the API authentication method. Which of the following sequences of 
+activities is BEST to ensure that the test scripts are not adversely affected by these changes?
+First upgrade the OS, then implement the change in the API authentication method, and finally run all 
+the updated test scripts
+Implement one change at a time and run a subset of the updated test scripts after each change, and 
+finally run all the updated test scripts
+First implement the change in the API authentication method, then upgrade the OS, and finally run all 
+the updated test scripts
+
+iSQI - CTAL-TAE_V2
+Pass Exam
+5 of 29
+Verified Solution - 100% Result
+D.  
+A.  
+B.  
+C.  
+D.  
+Implement one change at a time and run a subset of the updated test scripts after each change
+Answer: B
+Explanation
+TAE recommends controlled change management to isolate causes when multiple changes are introduced. 
+When you apply more than one change at once, diagnosing failures becomes harder because you cannot easily 
+attribute effects to a specific change. The best practice is to implement changes incrementally, validating 
+automation and system behavior after each change using a representative subset of tests (e.g., smoke/build 
+verification or targeted regression) to quickly detect issues. Because the system is business-critical, risk 
+mitigation is stronger: you want early detection and clear attribution. After each change is validated with a 
+subset, you then execute the full updated regression suite to ensure overall coverage and confidence. Options 
+A and C apply two changes before running tests, which reduces diagnostic clarity and increases the risk of 
+late discovery. Option D describes incremental changes with subset testing but omits the final full-suite run, 
+which TAE would recommend to ensure broad coverage after all changes have been applied. Therefore, the 
+best sequence is: change one item, run a subset, repeat for the next change, then run all updated scripts.
+Question #:7
+A suite of automated test cases was run multiple times on the same release of the SUT in the same test 
+environment. Consider analyzing a test histogram that shows the distribution of test results (pass, fail, etc.) for 
+each test case across these runs. Which of the following potential issues is MOST likely to be identified as a 
+result of such an analysis?
+Outliers in test execution times
+Security vulnerabilities in automated test cases
+Unstable automated test cases
+Maintainability issues in automated test cases
+Answer: C
+Explanation
+TAE recommends monitoring test results over repeated executions to detect non-determinism and flakiness. A 
+histogram showing pass/fail distributions per test across multiple runs in the same environment and on the 
+same SUT version is especially useful for identifying tests whose outcomes vary without corresponding 
+changes. If a test sometimes passes and sometimes fails under equivalent conditions, the distribution reveals 
+instability: repeated failures for the same test, intermittent patterns, or inconsistent outcomes compared with 
+other tests that remain stable. This is a classic indicator of flaky tests or unstable test design (e.g., 
+synchronization issues, hidden dependencies, data leakage, timing sensitivity) and is a key maintainability
+/reliability concern in automation programs. While execution time outliers (A) require time-series or duration 
+metrics rather than pass/fail distributions, a result histogram primarily focuses on outcome variability, not 
+performance. Security vulnerabilities (B) are not identifiable from outcome distributions; they require static 
+analysis, code review, or security testing methods. Maintainability issues (D) are generally inferred from code 
+structure metrics (complexity, duplication), change frequency, or effort trends, not from pass/fail distributions 
+
+iSQI - CTAL-TAE_V2
+Pass Exam
+6 of 29
+Verified Solution - 100% Result
+A.  
+B.  
+C.  
+D.  
+A.  
+B.  
+across runs. Therefore, the most likely issue identified by analyzing such a histogram is unstable automated 
+test cases.
+Question #:8
+As a TA-E, you have successfully verified that a test automation environment and all other components of the 
+TAS are working as expected. Now your goal is to verify the correct behavior for a given automated test suite 
+that will be run by the TAS. Which of the following should NOT be part of the verifications aimed at 
+achieving your goal?
+Is the connectivity between the TAS and the necessary internal and external systems available and 
+stable?
+Does the level of intrusion of automated test tools influence confidence in the suite's test results?
+Do all automated tests within the suite always provide the same results across multiple runs?
+Are all automated tests within the suite complete in terms of test data, including expected results?
+Answer: A
+Explanation
+TAE separates two verification scopes: (1) verifying the automation environment and TAS components 
+(infrastructure, connectivity, toolchain readiness), and (2) verifying the correctness and trustworthiness of a 
+specific automated test suite (test completeness, determinism, result validity). The scenario explicitly states 
+that the environment and all TAS components have already been verified as working as expected. 
+Connectivity between the TAS and internal/external systems is an environment-level readiness check and 
+therefore belongs primarily to the first scope. For the second scope—verifying the behavior of the automated 
+test suite—TAE emphasizes ensuring tests are complete (including correct expected results and data), are 
+repeatable/deterministic across runs, and that the approach/tool intrusion level is understood so stakeholders 
+can interpret confidence in results. That maps to options B, C, and D as suite-focused considerations. Option 
+A repeats an environment connectivity check that should have been addressed in the prior phase and is not a 
+core part of verifying the suite’s behavior once environment readiness has been established. Therefore, option 
+A should NOT be part of the suite-behavior verification in this stated situation.
+Question #:9
+Consider a TAS aimed at implementing and running automated test scripts at the UI level on web apps. The 
+TAS must support cross-browser compatibility for a variety of supported browsers, by ensuring that the same 
+test script will run on such browsers in the same way without making any changes to it. This is achieved by 
+introducing appropriate abstractions into the TAA for connection and interaction with different browsers. 
+Because of this, the TAS will be able to make direct calls to the supported browsers using each different 
+browser’s native support for automation. Which of the following SOLID principles was adopted?
+Dependency inversion principle
+Open-closed principle
+
+iSQI - CTAL-TAE_V2
+Pass Exam
+7 of 29
+Verified Solution - 100% Result
+C.  
+D.  
+A.  
+B.  
+C.  
+D.  
+Liskov substitution principle
+Interface segregation principle
+Answer: A
+Explanation
+The scenario describes introducing abstractions so that test scripts do not depend directly on concrete browser-
+specific automation implementations. Instead, tests depend on an abstraction (e.g., a “BrowserDriver” 
+interface), while each concrete browser implementation (Chrome, Firefox, Edge, etc.) provides its own 
+adapter using native automation support. This is a classic application of the Dependency Inversion Principle 
+(DIP): high-level modules (test scripts and business-level actions) should not depend on low-level modules 
+(specific browser drivers); both should depend on abstractions. Additionally, details (browser-specific 
+integrations) depend on the abstraction, not the reverse. TAE emphasizes that this reduces coupling and 
+improves maintainability: you can add or update browser implementations with minimal impact on test 
+definitions. While Open-Closed is also supported (extending with new browser adapters without modifying 
+existing tests), the key phrase “introducing appropriate abstractions” specifically to decouple tests from 
+concrete drivers is DIP. Liskov Substitution relates to substituting implementations without breaking 
+correctness, and Interface Segregation concerns keeping interfaces small and specific—neither is as directly 
+targeted by the described architectural decoupling. Therefore, the SOLID principle most clearly adopted is 
+Dependency Inversion.
+Question #:10
+Automated tests at the UI level for a web app adopt an asynchronous waiting mechanism that allows them to 
+synchronize test steps with the app, so that they are executed correctly and at the right time, only when the 
+app is ready and has processed the previous step: this is done when there are no timeouts or pending 
+asynchronous requests. In this way, the tests automatically synchronize with the app's web pages. The same 
+initialization tasks to set test preconditions are implemented as test steps for all tests. Regarding the pre-
+processing (Setup) features defined at the test suite level, the TAS provides both a Suite Setup (which runs 
+exactly once when the suite starts) and a Test Setup (which runs at the start of each test case in the suite). 
+Which of the following recommendations would you provide for improving the TAS (assuming it is possible 
+to perform all of them)?
+Adopt a manual synchronization with the app’s web pages using hard-coded waits instead of the current 
+automatic synchronization
+Implement the initialization tasks aimed at setting the preconditions of the tests within the Test Setup 
+feature at the test suite level
+Adopt a manual synchronization with the app’s web pages using dynamic waits via polling instead of 
+the current automatic synchronization
+Implement the initialization tasks aimed at setting the preconditions of the tests within the Suite Setup 
+feature at the test suite level
+Answer: B
+Explanation
+
+iSQI - CTAL-TAE_V2
+Pass Exam
+8 of 29
+Verified Solution - 100% Result
+A.  
+B.  
+C.  
+D.  
+TAE strongly discourages replacing robust, app-aware synchronization with manual waits. Automatic 
+synchronization based on application readiness signals (e.g., no pending async requests) reduces flakiness and 
+unnecessary delays. Hard-coded waits (A) are brittle and slow; polling waits (C) can be better than fixed 
+sleeps but are still generally inferior to event/readiness-based synchronization already in place. The 
+improvement opportunity described is that the same initialization steps are repeated in every test as explicit 
+test steps, which increases test script length, duplication, and maintenance effort. TAE recommends 
+centralizing common setup logic using framework setup/teardown mechanisms to enforce consistency and 
+reduce duplication. Since the initialization tasks are needed to set preconditions for each test (so each test 
+starts from a known state and remains independent), they belong in the Test Setup, which runs before each 
+test case. Putting them in Suite Setup (D) would run them only once, risking that later tests inherit polluted 
+state, making tests interdependent and more brittle. Therefore, moving shared per-test initialization tasks into 
+the Test Setup is the best recommendation.
+Question #:11
+(Which of the following answers describes the LEAST relevant concern in selecting suitable test automation 
+tools for a test automation project?)
+What is the degree of technical knowledge and skills within the test team to implement code-based test 
+automation for the project (e.g., in terms of programming and design patterns)?
+In the case of open-source test automation tools, are these tools released under permissive or restrictive 
+licenses, and, if applicable, is it specified whether they can be modified and by whom?
+Has the test team been formed with the different personalities of its members in mind, to ensure that the 
+interaction between them is effective in achieving the objectives of the test automation project?
+In the case of commercial test automation tools, what factors determine the licensing costs of these 
+tools (e.g., in terms of the maximum number of users supported and whether the license type is fixed or 
+floating)?
+Answer: C
+Explanation
+TAE tool selection focuses on factors that materially affect feasibility, total cost of ownership, and long-term 
+sustainability of the Test Automation Solution (TAS): technical fit, skill fit, integration capability, licensing
+/legal constraints, and cost model. Option A is directly relevant because the team’s capability strongly 
+influences whether a code-heavy tool and framework approach is realistic and maintainable. Option B is 
+relevant because licensing constraints can affect usage rights, redistribution, modification, internal 
+compliance, and legal risk—critical for tool adoption in many organizations. Option D is also highly relevant 
+because commercial licensing costs and licensing models (named user vs. floating, execution limits, 
+parallelism add-ons, feature tiers) impact budgeting and scaling, and therefore the project’s viability. Option 
+C, while important for general team effectiveness, is not a primary criterion for selecting automation tools; it 
+does not describe tool capability, integration constraints, cost, or risk in a way that distinguishes one tool from 
+another. TAE typically treats team collaboration/communication and roles as project and organizational 
+concerns (e.g., governance and processes) rather than tool-selection criteria. Therefore, among the provided 
+choices, “team personality mix” is the least relevant concern for choosing suitable test automation tools in a 
+TAE-focused tool selection.
+
+iSQI - CTAL-TAE_V2
+Pass Exam
+9 of 29
+Verified Solution - 100% Result
+A.  
+B.  
+C.  
+D.  
+A.  
+B.  
+C.  
+D.  
+Question #:12
+(Which of the following statements refers to a typical advantage of test automation?)
+Automated tests can determine whether actual results match expected results, even for non-machine-
+interpretable results
+On average, automated tests written at the API level are likely to run faster than automated tests written 
+at the UI level
+Artificial intelligence can be used to help identify redundant tests within large, long-running automated 
+regression test suites
+Automated tests can allow defects to be detected earlier than manual tests because their execution times 
+can be shorter
+Answer: B
+Explanation
+In the ISTQB Test Automation Engineer (TAE) body of knowledge, a core, typical advantage of test 
+automation is faster feedback through efficient execution, especially when tests are implemented at lower 
+levels (e.g., API/service) rather than through the UI. UI tests inherently traverse more layers (browser, 
+rendering, client-side code, network timing, and often multiple back-end calls), so they tend to be slower and 
+more brittle. API-level tests bypass most UI-related overhead and interact closer to business logic/services, 
+reducing execution time and improving reliability. Option A is incorrect because many results (e.g., visual 
+aesthetics, subjective usability, tone, or “looks right”) are not reliably machine-interpretable without 
+specialized approaches and still often require human judgment. Option C may be possible in some contexts, 
+but “AI redundancy identification” is not a typical, foundational advantage emphasized as a standard 
+automation benefit. Option D is misleading: early defect detection is mainly achieved by earlier and more 
+frequent execution (e.g., CI) and shifting tests left, not merely because a single automated run is shorter than 
+manual execution. Therefore, the most typical advantage presented is that API automation generally runs 
+faster than UI automation.
+Question #:13
+(In User Acceptance Testing (UAT) for a new SUT, in addition to the manual tests performed by the end-
+users, automated tests are performed that focus on the execution of repetitive and routine test scenarios. In 
+which of the following environments are all these tests typically performed?)
+Build environment
+Integration environment
+Preproduction environment
+Production environment
+
+iSQI - CTAL-TAE_V2
+Pass Exam
+10 of 29
+Verified Solution - 100% Result
+A.  
+B.  
+C.  
+D.  
+Answer: C
+Explanation
+TAE distinguishes test environments by purpose and risk. User Acceptance Testing is typically performed in 
+an environment that is as production-like as feasible (configuration, data shape, integrations) but still 
+controlled and safe for testing activities. This is commonly referred to as 
+ (often “staging”): it 
+preproduction
+supports realistic end-to-end flows, allows business users to validate that the SUT meets acceptance criteria, 
+and enables running routine/repetitive automated checks without risking live operations. A build environment 
+is focused on compiling/packaging and basic verification, not business acceptance. An integration 
+environment is used to validate interactions among components/systems, but may not reflect full production-
+like configuration, and it’s often shared and volatile—less suitable for formal acceptance activities involving 
+end users. Production is generally avoided for UAT because acceptance testing can alter live data, disrupt 
+users, and introduce unacceptable business risk; production testing is typically limited to tightly controlled 
+smoke checks, monitoring, or specific “in-production” validation patterns with strong safeguards. Therefore, 
+the environment in which both end-user manual UAT and supporting automated routine scenarios are 
+typically executed is the 
+, aligning with TAE’s guidance on balancing realism 
+preproduction environment
+with risk containment.
+Question #:14
+As a TAE, you are evaluating a test automation tool to automate some UI tests for a web app. The automated 
+tests will first locate the required HTML elements on the web page using their corresponding identifiers 
+(locators), then perform actions on those elements, and finally check the presence of any expected text for an 
+HTML element. These tests are independent of each other and are organized into a test suite that must be run 
+every night against the most recent build of the web app. There is a high risk that the web app will crash while 
+running some automated tests. Based only on the given information, which of the following is your MOST 
+important concern related to the evaluation of the test automation tool?
+Does the test automation tool provide a feature to specify automated tests in a descriptive meta-
+language that is not directly executable on the web app?
+Does the test automation tool offer a feature to restore the web app, recover from the failed test, skip 
+such tests, and resume the next one in the suite?
+Does the test automation tool offer a feature to create a mock server that simulates the behavior of a real 
+API by accepting requests and returning responses?
+Does the test automation tool support a licensing scheme that allows accessing different feature sets?
+Answer: B
+Explanation
+Given the explicit risk that the web app may crash during execution, the highest-priority tool capability is 
+resilience: the ability to recover, continue, and provide usable results from unattended nightly runs. TAE 
+emphasizes that automation must be reliable as a process, not just at the single-test level. If one crash aborts 
+the entire suite, the organization loses feedback for many tests, reduces confidence in the pipeline, and 
+increases triage cost. Therefore, capabilities such as automatic restart of the browser/app, test isolation, robust 
+teardown, failure handling, skipping/marking affected tests, and resuming execution with proper reporting are 
+
+iSQI - CTAL-TAE_V2
+Pass Exam
+11 of 29
+Verified Solution - 100% Result
+A.  
+B.  
+C.  
+D.  
+A.  
+B.  
+critical evaluation criteria. Option A (descriptive meta-language) can help readability or non-coder authoring 
+but is not the most urgent need based on the scenario. Option C (mock server) is useful for isolating 
+dependencies in some test levels, but the scenario is UI tests against the most recent build; nothing indicates 
+an API dependency problem that drives tool selection here. Option D (licensing feature sets) affects 
+procurement, but it does not directly mitigate the stated operational risk. Hence, recovery and continuation 
+support is the most important concern.
+Question #:15
+A SUT (SUT1) is a client-server system based on a thin client. The client is primarily a display and input 
+interface, while the server provides almost all the resources and functionality of the system. Another SUT 
+(SUT2) is a client-server system based on a fat client that relies little on the server and provides most of the 
+resources and functionality of the system. A given TAS is used to implement automated tests on both SUT1 
+and SUT2. The main objective of the TAS is to cover as many system functionalities as possible through 
+automated tests executed as fast as possible. Which of the following statements about the automation solution 
+is BEST in this scenario?
+The TAS should support mainly client-side automation for both SUT1 and SUT2
+The TAS should support mainly client-side automation for SUT1 and server-side automation for SUT2
+The TAS should support mainly server-side automation for both SUT1 and SUT2
+The TAS should support mainly server-side automation for SUT1 and client-side automation for SUT2
+Answer: D
+Explanation
+TAE promotes selecting automation interfaces that maximize speed, robustness, and functional coverage 
+while minimizing unnecessary UI traversal. For a thin client architecture, most business logic and system 
+functionality resides on the server. To cover functionality efficiently, tests should interact as close as possible 
+to where the logic is implemented—typically via server-side interfaces (e.g., APIs/services, backend 
+endpoints, message interfaces). This reduces GUI overhead and accelerates execution while improving 
+reliability. For a fat client, substantial logic resides on the client side; server-side automation alone may miss 
+critical client behavior, validations, local processing, and UI-driven flows that embody much of the 
+functionality. In such cases, client-side automation (often UI automation or client-level interfaces) is more 
+directly aligned to achieving high functional coverage. TAE also highlights that the “best” interface depends 
+on where behavior is implemented and which interface yields the most stable, fastest checks for the targeted 
+risks. Therefore, the optimal combination is server-side automation for SUT1 (thin client) and client-side 
+automation for SUT2 (fat client), which best meets the goal of broad coverage with minimal execution time.
+Question #:16
+Which of the following statements about the relationship between TAA, TAS and TAF is true?
+A TAF can be used to implement a TAS, which is an implementation of a TAA
+A TAS can be used to implement a TAF, which is an implementation of a TAA
+
+iSQI - CTAL-TAE_V2
+Pass Exam
+12 of 29
+Verified Solution - 100% Result
+C.  
+D.  
+A.  
+B.  
+C.  
+D.  
+A TAS can be used to implement a TAA, which is an implementation of a TAF
+A TAF can be used to implement a TAA, which is an implementation of a TAS
+Answer: A
+Explanation
+In TAE terminology, the Test Automation Architecture (TAA) is the conceptual, high-level blueprint that 
+describes how automation will be structured, what layers exist, how components interact, and how the 
+automation connects to the SUT and supporting systems. The Test Automation Solution (TAS) is the concrete 
+realization of that architecture in a specific context—tools, infrastructure, pipelines, conventions, and 
+components assembled to deliver automated testing capability. The Test Automation Framework (TAF) is a 
+structured set of reusable libraries, guidelines, and mechanisms that supports efficient development, 
+execution, reporting, and maintenance of automated tests; it is commonly a key part used to build the TAS. 
+TAE documents commonly present this relationship as: TAA (design) # implemented as TAS (solution) # 
+constructed using one or more TAFs (framework elements) plus tools and environment components. Options 
+B, C, and D invert these relationships and misrepresent the concept that architecture is implemented by a 
+solution, not the other way around. Therefore, the statement that a TAF can be used to implement a TAS, 
+which is an implementation of a TAA, is the correct relationship.
+Question #:17
+Consider choosing an approach for the automated implementation of manual regression test suites written at 
+the UI level for some already developed web apps. The TAS is based on a programming language that allows 
+the creation of test libraries and provides a capture/playback feature that allows recognition and interaction 
+with all widgets in the web UIs being tested. The automated tests will be implemented by team members with 
+strong programming skills. The chosen approach should aim to reduce both the effort required to maintain 
+automated tests and the effort required to add new automated tests. Which of the following approaches would 
+you choose?
+Test-Driven Development (TDD)
+Capture/playback
+Linear scripting
+Structured scripting
+Answer: D
+Explanation
+TAE guidance links maintainability and scalability to reducing duplication and encapsulating common actions 
+behind reusable abstractions. For UI regression suites on existing web apps, capture/playback and linear 
+scripting often produce brittle, duplicated sequences tightly coupled to UI details. They may be quick initially, 
+but maintenance cost grows rapidly when locators, flows, or timing change. With a programming language 
+that supports libraries—and a team with strong programming skills—TAE recommends structured scripting 
+(often including modularization, reuse through functions/classes, and design patterns such as Page Object or 
+
+iSQI - CTAL-TAE_V2
+Pass Exam
+13 of 29
+Verified Solution - 100% Result
+A.  
+B.  
+C.  
+D.  
+similar abstractions). Structured scripting reduces maintenance by centralizing UI interaction logic (e.g., 
+element locators and common workflows) so changes are made in one place. It also reduces effort to add new 
+tests because test authors can compose new scenarios from existing reusable building blocks rather than 
+duplicating low-level steps. TDD is a development practice and is not the primary approach for converting 
+existing manual UI regression suites into automation; it does not directly describe how the UI tests should be 
+structured. Capture/playback remains useful as a helper (e.g., for quickly discovering locators) but is not the 
+best overall approach for long-term maintainability. Therefore, structured scripting best matches the stated 
+goals.
+Question #:18
+Which one of the following answers does NOT refer to an example of configuration item(s) that should be 
+specified in development pipelines to identify a test environment (and its specific test data) associated with a 
+web app under test on which to execute automated tests?
+The number and type of automated tests to execute in the test environment where the web app is 
+deployed
+The base URL of the test environment where the web app is deployed (i.e., the root address for 
+accessing the web app)
+The connection string(s) to connect to the test database(s) within the test environment where the web 
+app is deployed
+The URLs of web APIs/web services related to the web app’s backend within the test environment 
+where the app is deployed
+Answer: A
+Explanation
+In TAE guidance, pipeline configuration items used to identify a specific test environment (and its associated 
+test data) are those that uniquely define where the SUT is running and how automation connects to the 
+deployed system and its dependent services and data stores. That typically includes the base URL of the 
+deployed web application, endpoints/URLs for backend services used in that environment, and connection 
+details to environment-specific databases (or references to secrets/credentials that enable those connections). 
+These items allow the same automated tests to be executed against different environments by switching 
+configuration rather than changing test code. By contrast, “the number and type of automated tests to execute” 
+is a test selection/execution configuration decision (what to run), not an environment identification 
+configuration (where to run). You can run different subsets of tests in the same environment without changing 
+the environment identity. TAE distinguishes environment configuration (addresses, endpoints, credentials, 
+data sources) from orchestration configuration (suite selection, tags, parallelism). Therefore, option A does 
+not describe a configuration item that identifies the test environment and its specific test data.
+Question #:19
+The last few runs for a suite of automated keyword-driven tests on a SUT were never completed. The test 
+where the run was aborted was not the same between runs. Currently, it is not possible to identify the root 
+cause of these aborts, but only determine that test execution aborted when exceptions (e.g., 
+
+iSQI - CTAL-TAE_V2
+Pass Exam
+14 of 29
+Verified Solution - 100% Result
+A.  
+B.  
+C.  
+D.  
+A.  
+NullPointerException, OutOfMemoryError) occurred on the SUT by analyzing its log files. Test execution 
+log files are currently generated, in HTML format, by the TAS as follows: all expected logging data is logged 
+for each keyword in intermediate log files. This data is then inserted into the final log file only for keywords 
+that fail, while only a configurable subset of that data is logged for keywords that execute successfully. Which 
+of the following actions (assuming it is possible to perform all of them) would you take FIRST to help find 
+the root cause of the aborts?
+Log the stack trace and amount of memory available to the SUT at the start and end of each test in the 
+suite, in the SUT log files
+Split the generated log file into smaller parts, load them into external files that are loaded into the 
+browser in transparent mode when needed
+Log all expected logging data in the final test execution log file, not only for keywords that fail, but also 
+for keywords that execute successfully
+Use appropriate colors to effectively visually highlight different types of information in the test 
+execution log files
+Answer: C
+Explanation
+TAE stresses that when diagnosing intermittent aborts with unclear root cause, the first priority is ensuring 
+sufficient, consistent observability from the automation side to reconstruct what happened immediately before 
+termination. In this scenario, the suite aborts in different tests across runs, and the final HTML report 
+currently contains full detail only for failing keywords, while successful keywords have reduced logging. If 
+the run aborts due to an exception in the SUT, the “last executed successful keywords” and their full context 
+may be essential to correlate actions with the SUT failure point. The fastest, most direct improvement is to 
+include complete keyword-level logging for successful steps as well, at least until the issue is understood. 
+This aligns with TAE guidance to temporarily increase logging verbosity during investigation to capture the 
+sequence of actions, inputs, timings, and states leading up to failure. Option A could be helpful, but it changes 
+SUT-side logging and may require additional access or instrumentation; also, it does not guarantee visibility 
+into the exact automation step sequence. Options B and D improve presentation/performance of logs but do 
+not add diagnostic content. Therefore, first increase the completeness of the final execution logs for all 
+keywords to maximize evidence for root cause analysis.
+Question #:20
+An automated test script makes a well-formed request to a REST API in the backend of a web app to add a 
+single item for a product (with ID = 710) to the cart and expects a response confirming that the product is 
+successfully added. The status line of the API response is HTTP/1.1 200 OK, while the response body 
+indicates that the product is out of stock. The API response is correct, the test script fails but completes, and 
+the message to log is: The product with ID = 710 is out of stock. Cart not updated. When this occurs, you are 
+already aware that both the failed test and the API are behaving correctly and that the problem is in the test 
+data. The TAS supports the following test logging levels: FATAL, ERROR, WARN, INFO, DEBUG. Which 
+of the following is the MOST appropriate test logging level to use to log the specified message?
+FATAL
+
+iSQI - CTAL-TAE_V2
+Pass Exam
+15 of 29
+Verified Solution - 100% Result
+B.  
+C.  
+D.  
+A.  
+B.  
+C.  
+D.  
+INFO
+DEBUG
+WARN
+Answer: D
+Explanation
+TAE logging guidance focuses on making logs actionable while reflecting severity and intent. Here, the test 
+failed due to an expected, non-system fault condition: the product is out of stock, which is a valid business-
+state response and confirms the API behaved correctly. The issue is that the test data (product availability) did 
+not satisfy the test’s precondition. This is not a fatal condition (FATAL) because execution continues and the 
+overall system is not unusable. It is not best treated as ERROR either (not offered as an option here) because 
+an error-level message usually indicates a defect, malfunction, or unexpected failure needing immediate 
+engineering attention. INFO would be too low because it may be lost among normal run messages and does 
+not adequately flag that the test outcome is affected by a precondition violation requiring action (e.g., 
+reseeding data, choosing a different product ID). DEBUG is typically reserved for highly detailed diagnostic 
+traces intended for deeper troubleshooting, not for highlighting a test-data problem affecting test validity. 
+WARN is intended for abnormal or noteworthy conditions that do not indicate a product defect but may 
+require attention to maintain test reliability. Therefore, WARN is the most appropriate level.
+Question #:21
+Which of the following practices can be used to specify the active (i.e., actually available) features for each 
+release of the SUT and determine the corresponding automated tests that must be executed for a given release?
+Feature-driven development
+The use of feature files
+Test-driven development
+The use of feature toggles
+Answer: D
+Explanation
+TAE materials commonly describe feature toggles (feature flags) as a mechanism to control which features 
+are active in a given release or deployment without necessarily changing the codebase structure for each 
+variant. Because toggles determine what functionality is actually enabled, they provide a practical basis for 
+selecting which automated tests should run for that release configuration. When a feature is disabled via a 
+toggle, executing tests for it can create false failures or wasted effort; when enabled, the corresponding tests 
+become relevant as release evidence. Feature-driven development is a product/development planning 
+approach and does not, by itself, provide an operational mechanism to declare what is active at runtime. 
+Feature files (often associated with BDD) specify behavior scenarios, but they do not inherently indicate 
+whether a feature is active in a particular release unless explicitly tied to toggles or release configuration. 
+TDD focuses on coding practices at the unit level and similarly does not specify release-time feature 
+
+iSQI - CTAL-TAE_V2
+Pass Exam
+16 of 29
+Verified Solution - 100% Result
+A.  
+B.  
+C.  
+D.  
+availability. Feature toggles directly express “active vs. inactive” functionality and can be used to drive risk-
+based and relevance-based test execution decisions, matching the requirement precisely.
+Question #:22
+You have agreed with your organization's managers to conduct a pilot project to introduce test automation. 
+Managers' expectations about the benefits of automation are too optimistic. Which of the following is LEAST 
+relevant when deciding the scope of the pilot project's objectives?
+Evaluate the suitability of different test automation tools based on the technology stack used by the 
+applications for which the automated tests will be developed
+Evaluate the potential cost savings and benefits (e.g., faster test execution, better test coverage) of using 
+automated testing versus manual testing
+Evaluate the knowledge and skills of people who will be involved in automating test cases for 
+applicable test automation frameworks and technologies
+Evaluate the performance of an organization's network infrastructure in terms of factors such as 
+availability, bandwidth, latency, packet loss, and jitter
+Answer: D
+Explanation
+TAE positions pilot projects as a controlled way to validate feasibility, calibrate expectations, and reduce 
+adoption risk. Pilot objectives typically include assessing tool fit (technical compatibility, integration, 
+reporting, maintainability), estimating realistic benefits and costs (execution speed, regression efficiency, 
+coverage improvements, maintenance overhead), and assessing team readiness (skills, training needs, required 
+roles). Those align directly with options A, B, and C. Network performance characteristics can matter for 
+distributed test execution or remote environments, but evaluating enterprise network infrastructure at a deep 
+level (availability, jitter, packet loss) is generally not a primary objective for a test automation pilot—
+especially when the central concern is overly optimistic expectations about automation benefits. A pilot 
+should focus on demonstrating what can be automated, at what cost, with what stability and maintainability, 
+and what process changes are needed. Infrastructure constraints may be observed as risks during the pilot, but 
+a full network performance evaluation is more characteristic of IT operations or performance engineering 
+initiatives, not a test automation introduction pilot scope. Therefore, option D is the least relevant when 
+defining the pilot’s objectives in a TAE-aligned approach.
+Question #:23
+A TAS that performs automated testing in a single test environment was successfully manually installed and 
+configured from a central repository, with all its components in the correct versions. It was also verified that 
+all TAS components in this environment are capable of providing reliable and repeatable performance. The 
+TAS will be used to run several suites of automated regression test scripts on various SUTs in the test 
+environment. Your current goal is to complete all preliminary verifications to ensure that the TAS works 
+correctly. Which of the following activities would you perform FIRST?
+
+iSQI - CTAL-TAE_V2
+Pass Exam
+17 of 29
+Verified Solution - 100% Result
+A.  
+B.  
+C.  
+D.  
+A.  
+B.  
+C.  
+D.  
+Create scripts to automatically install and configure the TAS in the test environment from the central 
+repository
+Check whether the TAS connectivity to all required internal systems, external systems, and interfaces is 
+available
+Run a given suite multiple times using TAS to determine whether all regression test scripts always 
+provide the same result
+Check whether all regression test scripts in a given suite have expected results
+Answer: B
+Explanation
+TAE differentiates verifying the automation environment and infrastructure (the ability of the TAS to operate) 
+from verifying the test suites’ correctness (the behavior of specific automated tests). The scenario states the 
+TAS was installed correctly and its components perform reliably in isolation. The next preliminary 
+verification is ensuring the TAS can actually interact with the necessary systems and interfaces required to 
+execute tests end-to-end: SUT endpoints, browsers/devices, authentication services, databases, messaging 
+systems, third-party integrations, and any CI/CD or artifact services it must access. If connectivity is missing 
+or unstable, any subsequent suite executions or repeatability checks can fail for reasons unrelated to test logic, 
+creating noise and wasted investigation. Creating installation scripts (A) is valuable for scalability, but it is not 
+needed to confirm the TAS works in the already-installed single environment. Checking expected results in 
+scripts (D) and running suites repeatedly for determinism (C) are important, but they assume the TAS can 
+reliably reach all required dependencies. TAE recommends validating connectivity and access prerequisites 
+early as a gate for meaningful execution. Therefore, the first activity is to verify TAS connectivity to all 
+required internal/external systems and interfaces.
+Question #:24
+Automated tests run by a TAS on a SUT can be subject to sudden bursts of messages to log during their 
+execution. All log messages that occur during execution must be permanently stored in the corresponding test 
+execution logs by the TAS for later analysis. If logging is not performed correctly, these bursts can reduce the 
+execution speed of these automated tests, causing them to produce unreliable results. Which of the following 
+solutions would you expect to be MOST useful to address this issue for TAS logging?
+Use a Network Time Protocol (NTP) server to ensure that the clocks of the machines running TAS and 
+SUT are synchronized with a common time source
+Log all the messages in memory using a circular buffer and periodically flush the buffer to the 
+corresponding log files associated with the specific execution
+Avoid logging the messages that occur during the specified bursts to minimize any potential 
+performance overhead in test execution
+Log all the messages directly on the corresponding log files associated with the specific execution to 
+ensure the permanent storage of test execution logs
+
+iSQI - CTAL-TAE_V2
+Pass Exam
+18 of 29
+Verified Solution - 100% Result
+A.  
+B.  
+C.  
+D.  
+Answer: B
+Explanation
+TAE highlights that logging must balance diagnostic value with execution performance and reliability. Direct 
+synchronous file I/O for every log message can become a bottleneck during bursts, increasing latency and 
+perturbing the timing of the automated interactions—especially for UI or time-sensitive integration tests—
+leading to flaky outcomes. Since all messages must be permanently stored, dropping burst logs (option C) 
+violates the requirement. NTP synchronization (option A) helps correlate events across systems, but it does 
+not address the performance overhead caused by bursty logging. The most useful approach is to buffer log 
+events in memory and flush them periodically or asynchronously to disk. A circular buffer (or similar in-
+memory queue) reduces immediate I/O pressure and smooths bursts, while still preserving messages for later 
+analysis when combined with an appropriate flush strategy and sizing. This design is aligned with TAE’s 
+emphasis on making the TAS itself reliable and non-intrusive, ensuring logging supports triage without 
+materially slowing or destabilizing test execution. Therefore, buffering in memory and periodically flushing 
+to log files is the best solution.
+Question #:25
+Which of the following layers within the TAA contains technology-specific implementations that enable 
+automated tests to have the execution of their logical actions result in actual interaction with the appropriate 
+interfaces of the SUT?
+Test generation layer
+Test definition layer
+Test execution layer
+Test adaptation layer
+Answer: D
+Explanation
+TAE describes layered automation architectures where higher layers express intent and test logic, while lower 
+layers handle concrete interaction with specific technologies and interfaces. The test adaptation layer is the 
+layer that “adapts” abstract test actions to the real SUT interaction mechanisms. It typically contains 
+technology-specific adapters, drivers, wrappers, or connectors (e.g., browser drivers, mobile automation 
+bridges, API clients, message-bus connectors, database utilities) that translate logical operations like “click 
+login,” “submit order,” or “query customer” into the correct low-level calls for the target interface. This is 
+where the details of protocols, locator strategies, synchronization primitives, data access methods, and tool-
+specific APIs live, shielding higher layers from churn when technologies change. The test execution layer is 
+responsible for orchestrating execution (running suites, scheduling, collecting results, reporting), but not 
+primarily for implementing the technology-specific SUT interaction itself. The test definition layer focuses on 
+how tests are specified (scripts, keywords, models, data), and the test generation layer concerns deriving tests 
+(e.g., model-based generation). Therefore, the layer containing technology-specific implementations enabling 
+actual interaction with SUT interfaces is the test adaptation layer.
+
+iSQI - CTAL-TAE_V2
+Pass Exam
+19 of 29
+Verified Solution - 100% Result
+A.  
+B.  
+C.  
+D.  
+A.  
+B.  
+C.  
+Question #:26
+An API's response to a request made to the corresponding endpoint should return some specific data about a 
+payment transaction in JSON format. In particular, your goal is to write the test automation code, keeping it as 
+short as possible, aimed at determining whether that response includes certain properties (transaction_id, 
+amount, status, timestamp) with the data types and formats expected. Assuming that the TAF provides all the 
+necessary support to validate the specified API response, how would you BEST achieve your goal?
+Specify the schema for the expected response data (properties, data types, and formats) and validate the 
+actual response data against this schema
+Write a single assertion for each property to check whether the data types and formats for that property 
+are as expected in the actual response
+Use an artificial intelligence algorithm based on machine learning and image recognition to implement 
+a self-healing capability
+Write custom code that parses the actual response data and checks whether the extracted properties, 
+data types, and formats are as expected
+Answer: A
+Explanation
+TAE encourages using the highest-leverage validation mechanisms available in the framework/tooling to keep 
+tests concise, expressive, and maintainable. When validating JSON responses for presence of fields plus 
+correct data types and formats, schema-based validation (e.g., JSON Schema or an equivalent contract/schema 
+mechanism provided by the TAF) is typically the most efficient approach. It allows you to declare the 
+expected structure once (required properties, types, constraints such as regex/date-time format, numeric 
+ranges) and then validate the whole response in a single operation. This minimizes code and reduces repetitive 
+assertions while producing clearer diagnostics when validation fails. Option B can work but usually results in 
+more lines of code and repeated checks, and it is easier to miss constraints (e.g., timestamp format). Option D 
+increases code volume and duplication by re-implementing parsing and validation logic that the TAF already 
+provides, increasing maintenance burden. Option C is irrelevant to the goal of validating response properties
+/types/formats. Therefore, specifying an expected schema and validating the response against it is the best 
+way to keep code short and aligned with TAE maintainability recommendations.
+Question #:27
+Which of the following descriptions of what some test automation tools can be used to do is TRUE?
+Autonomously design intuitive UIs and evaluate them, as well as evaluate the overall UX (User 
+Experience) of an application
+Analyze test results, code changes, and metrics to predict potential defects and areas of high risk within 
+an application
+Autonomously perform exploratory testing sessions based on test charters to find defects within an 
+application
+
+iSQI - CTAL-TAE_V2
+Pass Exam
+20 of 29
+Verified Solution - 100% Result
+D.  
+A.  
+B.  
+C.  
+D.  
+Make video recordings of UI testing sessions to share with stakeholders to show the functionality and 
+appearance of an application
+Answer: D
+Explanation
+TAE recognizes a range of supporting capabilities offered by test tools beyond pure scripted execution, 
+including reporting, evidence capture, and run artifacts that help stakeholders understand what was tested. 
+Video recording of UI test sessions is a common feature in several UI automation ecosystems and cloud device
+/browser platforms, used to provide visual evidence of steps performed, failures observed, and the application’
+s look-and-feel during execution. This supports debugging and communication with non-technical 
+stakeholders. Option A overstates what test automation tools do: autonomously designing intuitive UIs and 
+evaluating UX is largely outside typical test automation tool scope and requires human-centered design 
+methods. Option C is also overstated: exploratory testing is inherently human-driven; tools can assist (session 
+notes, heuristics support, telemetry) but do not truly conduct exploratory testing autonomously based on 
+charters in the general TAE framing. Option B touches on advanced analytics and AI/ML-assisted quality 
+insights; while some platforms offer risk prediction features, the phrasing implies broad predictive defect 
+capability, which is not a standard, dependable tool function emphasized in TAE compared with concrete 
+capabilities like artifact capture. Therefore, the clearly true, commonly supported capability is making video 
+recordings of UI testing sessions.
+Question #:28
+You are evaluating the best approach to implement automated tests at the UI level for a web app. Specifically, 
+your goal is to allow test analysts to write automated tests in tabular format, within files that encapsulate 
+logical test steps related to how a user interacts with the web UI, along with the corresponding test data. These 
+steps must be expressed using natural language words that represent the actions performed by the user on the 
+web UI. These files will then be interpreted and executed by a test execution tool. Which of the following 
+approaches to test automation is BEST suited to achieve your goal?
+Test-driven development
+Keyword-driven testing
+Data-driven testing
+Linear scripting
+Answer: B
+Explanation
+The described goal matches the defining characteristics of keyword-driven testing: tests are expressed using 
+keywords (action words) that represent user operations, often arranged in tabular form with parameters/test 
+data. TAE describes keyword-driven approaches as enabling non-programmers (e.g., test analysts) to create 
+and maintain tests by combining high-level keywords such as “Open Browser,” “Click,” “Enter Text,” 
+“Select,” “Verify Text,” etc., while the underlying automation framework maps those keywords to executable 
+code. The use of files interpreted by a test execution tool is also typical: keyword tables (or similar structured 
+
+iSQI - CTAL-TAE_V2
+Pass Exam
+21 of 29
+Verified Solution - 100% Result
+A.  
+B.  
+C.  
+D.  
+specifications) are read and executed by the automation engine. Data-driven testing focuses on separating test 
+logic from test data, typically running the same script multiple times with different datasets; it does not 
+inherently require natural-language action words or tabular step definitions (though it can be combined). 
+Linear scripting is code-centric and not aligned with analyst-authored natural language step tables. TDD is 
+unrelated to the requirement of tabular, natural-language keyword specification for UI test steps. Therefore, 
+keyword-driven testing is the best fit for the stated approach.
+Question #:29
+(Which of the following statements about how test automation is applied across different software 
+development lifecycle models is TRUE?)
+In Agile software development, automated regression test suites sometimes grow so large that they can 
+become difficult to maintain, and thus, it becomes crucial to invest in test automation at multiple test 
+levels
+In a Waterfall model, automated tests are usually executed only during the last phase of the 
+development lifecycle, but their implementation occurs in the early stages
+In Agile software development, regardless of context (e.g., type of application to be developed, tools 
+available), test automation must be based on the test automation distribution known as the test pyramid 
+model
+Unlike Agile software development, where automated unit tests are written by developers, often in a 
+test-first fashion, in a V-model, automated unit tests are written by testers as part of unit testing
+Answer: A
+Explanation
+TAE guidance emphasizes that Agile/iterative delivery drives frequent change and frequent regression risk, 
+which often leads teams to expand automated regression suites over time. As suites grow, they can become 
+slower, costlier to maintain, and harder to keep stable—especially if the suite is concentrated too heavily at 
+the UI level. For this reason, TAE stresses investing in automation across multiple test levels (unit
+/component, API/service, and selected UI), aligning with principles behind balanced automation strategies 
+(often illustrated by the “test pyramid”). This directly supports option A. Option B is not generally true: in 
+Waterfall/V-model, testing activities (including automation design and implementation) are planned and may 
+start early, but execution and refinement occur across phases aligned with integration and system readiness—
+not “usually only during the last phase.” Option C is too absolute: the test pyramid is a common heuristic, but 
+TAE does not mandate it “regardless of context”; constraints like legacy systems, risk, architecture, and 
+tooling can change the optimal distribution. Option D is incorrect because unit testing is typically a developer 
+responsibility in both Agile and V-model contexts; testers may support, review, or contribute but do not 
+“write automated unit tests” as a defining V-model rule. Therefore, A best matches documented lifecycle 
+realities and maintenance concerns.
+Question #:30
+You are currently conducting a Proof of Concept (PoC) aimed at selecting a tool that will be used for the 
+development of a TAS. This TAS will exclusively be used by one team within your organization to implement 
+
+iSQI - CTAL-TAE_V2
+Pass Exam
+22 of 29
+Verified Solution - 100% Result
+A.  
+B.  
+C.  
+D.  
+A.  
+B.  
+C.  
+D.  
+automated UI-level test scripts for two web apps. The two tools selected for the PoC use JavaScript
+/TypeScript to implement the automated test scripts and offer capture and playback capabilities. Three test 
+cases for each of the two web apps were selected to be automated during the PoC. The PoC will compare 
+these two tools in terms of their effectiveness in recognizing and interacting with UI widgets exercised by the 
+test cases, to quickly determine whether test automation is possible and which tool is better. Which of the 
+following TAFs is BEST suited for conducting the PoC?
+A one-layer TAF (test scripts)
+A two-layer TAF (test scripts, test libraries)
+A three-layer TAF (test scripts, business logic, core libraries)
+A layered TAF with more than three layers
+Answer: A
+Explanation
+For a PoC whose primary goal is rapid feasibility assessment and tool comparison (especially around object 
+recognition and interaction), TAE recommends minimizing framework complexity and upfront engineering. 
+In a PoC, you want the shortest path to executing representative tests so you can observe tool behavior, 
+stability, locator robustness, synchronization support, and ease of driving the UI widgets in scope. A one-layer 
+approach—simple test scripts with minimal abstraction—reduces the time spent building reusable libraries, 
+enforcing architecture, or creating business layers that are not necessary for answering the PoC question. 
+Multi-layer frameworks (two-layer and beyond) are more appropriate when you are establishing 
+maintainability, reuse, and scaling for long-term automation. Those benefits matter in the full TAS 
+implementation, but they can distort PoC outcomes by introducing additional design decisions, patterns, and 
+glue code that hide or compensate for tool limitations. Since only six test cases are being automated and the 
+objective is to quickly determine whether UI automation is possible and which tool performs better at widget 
+interaction, the simplest structure (one-layer TAF) is best aligned with TAE PoC guidance: rapid learning, 
+minimal overhead, and clear attribution of outcomes to the tool rather than to framework design.
+Question #:31
+Which of the following statements about contract testing is TRUE?
+Contract testing, regardless of the approach chosen (provider-driven or consumer-driven) does not need 
+to rely on the creation of stubs/mocks since it is used to implement integration testing, not unit
+/component testing
+Contract testing can be viewed as a specialized form of API testing that can be applied to effectively 
+and efficiently test integration between microservices, but only if they interact with REST APIs
+The differences between the two approaches to contract testing stem primarily from which side creates 
+the contract: this creation is done by the provider for the provider-driven approach and by the consumer
+(s) for the consumer-driven approach
+Contract testing can be viewed as a specialized form of API testing that can be applied to effectively 
+and efficiently test integration between systems, but only if they interact synchronously
+
+iSQI - CTAL-TAE_V2
+Pass Exam
+23 of 29
+Verified Solution - 100% Result
+A.  
+B.  
+C.  
+D.  
+Answer: C
+Explanation
+TAE describes contract testing as verifying that two parties (e.g., consumer and provider services) adhere to 
+an agreed interface contract, enabling earlier, more targeted detection of integration mismatches without 
+requiring full end-to-end integration in every test run. A key distinction in approaches is indeed who defines
+/publishes the contract. In provider-driven contracts, the provider defines the contract describing what it 
+offers; consumers validate compatibility against it. In consumer-driven contract testing, consumers define 
+expectations (often per consumer), and providers verify they satisfy those expectations. Option A is false 
+because stubs/mocks (or simulated counterparts) are frequently used to allow each side to test independently 
+and deterministically, which is one of contract testing’s practical strengths. Option B is too narrow: contract 
+testing can apply beyond REST (e.g., GraphQL, gRPC, messaging/event contracts). Option D is also too 
+restrictive: it can apply to asynchronous interactions (events/messages) as well as synchronous calls. 
+Therefore, the accurate statement is option C.
+Question #:32
+A TAS is used to run on a test environment a suite of automated regression tests, written at the UI level, on 
+different releases of a web app: all executions complete successfully, always providing correct results (i.e., 
+producing neither false positives nor false negatives). The tests, all independent of each other, consist of 
+executable test scripts based on the flow model pattern which has been implemented in a three-layer TAF (test 
+scripts, business logic, core libraries) by expanding the page object model via the façade pattern. Currently the 
+suite takes too long to run, and the test scripts are considered too long in terms of LOC (Lines of Code). 
+Which of the following recommendations would you provide for improving the TAS (assuming it is possible 
+to perform all of them)?
+Modify the TAF so that test scripts are based on the page object model, rather than the flow model 
+pattern
+Implement a mechanism to automatically reboot the entire web app in the event of a crash
+Split the suite into sub-suites and run each of them concurrently on different test environments
+Modify the architecture of the SUT to improve its testability and, if necessary, the TAA accordingly
+Answer: C
+Explanation
+The primary problem is execution time; correctness and independence are already strong. TAE recommends 
+improving feedback time for long-running regression suites by parallelizing execution when tests are 
+independent and the infrastructure supports it. Because the tests are explicitly independent, they are well-
+suited to parallel execution across multiple environments (or multiple nodes within an environment), reducing 
+overall wall-clock duration without changing test intent. Option B addresses crash recovery, but the scenario 
+says executions complete successfully; crash recovery does not solve the current bottleneck. Option A 
+changes the modeling pattern; it may or may not reduce LOC, but it introduces risk and rework without 
+directly addressing runtime. Also, flow model and façade-expanded page objects are already architectural 
+choices aimed at maintainability and reuse; replacing them is not the most direct solution for speed. Option D 
+
+iSQI - CTAL-TAE_V2
+Pass Exam
+24 of 29
+Verified Solution - 100% Result
+A.  
+B.  
+C.  
+D.  
+A.  
+(improving SUT testability) can help in general, but it is invasive, expensive, and not targeted to the stated 
+issue when tests already yield correct results. Therefore, the best improvement is to split the suite and run 
+parts concurrently on different environments to reduce total execution time, consistent with TAE guidance on 
+scaling automation execution.
+Question #:33
+An automated test case that should always pass sometimes passes and sometimes fails intermittently (non-
+deterministic behavior) when executed in the same test environment, even if no code (i.e., SUT code or the 
+test automation code) has been changed. Which of the following statements about the root cause of this non-
+deterministic behavior is TRUE?
+The specified root cause is a race condition that can be identified by also analyzing the log files of the 
+test case, the SUT, and the TAF
+Determining the specified root cause may require, in addition to the TAE, the support of others such as 
+developers and system engineers
+The specified root cause must be in the instability of the test environment, since no code has been 
+changed
+Determining the specified root cause is certainly easier than if the automated test always fails 
+(deterministic behavior)
+Answer: B
+Explanation
+TAE treats non-deterministic (flaky) test behavior as a symptom that can originate from multiple sources: 
+timing and synchronization issues, race conditions, concurrency, environmental variability (resource 
+contention, network latency), unstable test data, third-party dependencies, or hidden state leakage between 
+tests. Because these causes often span boundaries—application code, infrastructure, deployment 
+configuration, test tooling, and data pipelines—finding the true root cause frequently requires collaboration 
+beyond the TAE role. Developers may need to inspect application logs, thread behavior, and recent 
+architectural assumptions; system engineers may need to analyze resource saturation, container orchestration 
+events, network anomalies, or environment drift. Option A is too specific and assertive: the root cause is not 
+necessarily a race condition, and logs may not be sufficient to identify it. Option C is incorrect because no 
+code change does not imply the environment is the only cause; flaky behavior can stem from hidden 
+nondeterminism in the system or tests that is always present but only sometimes triggers. Option D is also 
+incorrect; intermittent failures are often harder to diagnose than consistent deterministic failures because 
+evidence is less reproducible. Therefore, the true statement is that determining the root cause may require 
+support from developers and system engineers in addition to the TAE.
+Question #:34
+Which of the following recommendations can help improve the maintainability of test automation code?
+Use error codes in test automation code instead of exceptions (if exceptions are supported by the 
+programming language) for error handling
+
+iSQI - CTAL-TAE_V2
+Pass Exam
+25 of 29
+Verified Solution - 100% Result
+B.  
+C.  
+D.  
+A.  
+B.  
+C.  
+D.  
+Avoid producing test automation code containing methods with too many levels of nesting, as deeply 
+nested code is more difficult to understand
+Avoid adopting design patterns that introduce high levels of abstraction in test automation code, such as 
+the flow model pattern
+Avoid using static analyzers on test automation code and other development tools, as they are designed 
+to improve the maintainability of SUT code
+Answer: B
+Explanation
+TAE emphasizes that maintainable automation code should be readable, understandable, and easy to modify 
+when the SUT or test intent changes. Deeply nested logic increases cognitive load, makes control flow harder 
+to follow, and complicates debugging and refactoring—especially in automation where synchronization, 
+retries, and error handling are common. Therefore, avoiding excessive nesting is a direct, widely applicable 
+maintainability recommendation. Option A is generally contrary to modern maintainability guidance: 
+exceptions (used appropriately) typically provide clearer error propagation and richer diagnostic information 
+than manual error codes scattered across call chains. Option C is too broad and misleading: abstraction and 
+patterns are often recommended by TAE to manage complexity and improve maintainability (when applied 
+appropriately); the issue is not “patterns,” but misusing them or overengineering. Option D is incorrect 
+because static analysis and developer tooling can substantially improve automation code quality by detecting 
+issues such as dead code, complexity hotspots, duplicated code, insecure practices, and style violations. Thus, 
+the most aligned maintainability recommendation in TAE terms is to avoid overly nested methods.
+Question #:35
+Which of the following statements about a test progress report produced for an automated test suite is TRUE?
+The test progress report should indicate, for each test in the suite, the timestamps related to the test steps
+The content of the test progress report should not be affected by the stakeholders to whom the report is 
+intended
+The test progress report should indicate the test environment in which the tests were performed
+The test progress report should indicate, for each test in the suite, the start and end timestamps of the test
+Answer: C
+Explanation
+TAE reporting guidance emphasizes that stakeholders must be able to interpret results in context. A 
+fundamental contextual attribute is the test environment: where the SUT was deployed, what configuration 
+was used, and (by implication) what data and integrations were in play. Without environment identification, 
+results can be misleading, non-reproducible, or not comparable across runs (e.g., failures caused by 
+environment instability vs. product defects). Therefore, including the environment in the progress report is a 
+core requirement. Option B is incorrect because TAE explicitly promotes tailoring reports to stakeholder 
+
+iSQI - CTAL-TAE_V2
+Pass Exam
+26 of 29
+Verified Solution - 100% Result
+A.  
+B.  
+C.  
+D.  
+A.  
+needs; different audiences require different levels of detail, summaries, and views. Option A is generally too 
+granular for a progress report: step-level timestamps belong more to detailed execution logs and 
+troubleshooting artifacts, not to a progress report intended to communicate status efficiently. Option D may be 
+included in some reports, but it is not as universally required as the environment identifier; and in TAE, 
+“progress report” tends to focus on overall status (what ran, what passed/failed, trends, coverage, 
+environment) rather than per-test timing metadata. Thus, the reliably true statement is that the report should 
+indicate the test environment.
+Question #:36
+(Which of the following aspects of “design for testability” is MOST directly associated with the need to 
+define precisely which interfaces are available in the SUT for test automation at different test levels?)
+Autonomy
+Architecture transparency
+Controllability
+Observability
+Answer: B
+Explanation
+In TAE, “design for testability” includes attributes that make it easier to create, execute, and maintain 
+automated tests across levels (component, integration, system, UI). The need to define precisely which 
+interfaces are available at different test levels—e.g., public APIs, service endpoints, message queues, UI 
+automation hooks, test seams, logs, and internal test interfaces—maps most directly to architecture 
+. Architecture transparency concerns how clearly the system’s structure, layers, and accessible 
+transparency
+interfaces are documented and exposed so test automation can reliably connect to the right interaction points. 
+This includes understanding which interfaces are stable, supported, and appropriate for each level of testing, 
+and avoiding “guesswork” that increases brittleness. Controllability is about the ability to set inputs, states, 
+and preconditions (e.g., reset data, seed databases, drive system state). Observability is about the ability to see 
+outputs, internal states, and logs to assess outcomes. Autonomy concerns whether tests can run independently 
+without external dependencies or manual intervention (e.g., isolated environments, stable test data). While 
+controllability/observability/autonomy are critical for automation, the specific emphasis on “precisely 
+defining which interfaces are available” is fundamentally an architectural transparency issue: clear interface 
+availability and documentation enable correct, maintainable automation connections across test levels.
+Question #:37
+Which of the following is the BEST example of how static analysis tools can help improve the test 
+automation code quality in terms of security?
+Static analysis tools do not generate false positives when attempting to detect security vulnerabilities 
+within test automation code
+
+iSQI - CTAL-TAE_V2
+Pass Exam
+27 of 29
+Verified Solution - 100% Result
+B.  
+C.  
+D.  
+A.  
+B.  
+C.  
+D.  
+Static analysis tools can help detect the presence of repeated instances of code within test automation 
+code
+Static analysis tools can help detect hard-coded credentials that expose sensitive information within test 
+automation code
+Static analysis tools can ensure there are no security vulnerabilities within test automation code
+Answer: C
+Explanation
+TAE highlights that test automation code can introduce security risks, particularly when it handles secrets 
+(API keys, passwords, tokens), test accounts, and connections to production-like systems. Static analysis tools 
+can scan source code for insecure patterns and policy violations without executing the code. A common, high-
+impact security issue in automation is hard-coded credentials or secrets embedded in scripts, configuration 
+files committed to version control, or test utilities. Detecting these is a direct security-quality improvement: it 
+reduces exposure risk and supports compliance. Option A is incorrect because static analysis can produce 
+false positives; detection heuristics are not perfect. Option B is useful for maintainability (duplication), but it 
+is not specifically a security improvement example. Option D overclaims: static analysis cannot guarantee the 
+absence of security vulnerabilities; it can only detect certain classes of issues. Therefore, the best security-
+focused example is that static analysis can identify hard-coded credentials and other sensitive data exposure in 
+test automation code.
+Question #:38
+You have been tasked with adding the execution of build verification tests to the current CI/CD pipeline used 
+in an Agile project. The goal of these tests is to verify the stability of daily builds and ensure that the most 
+recent changes have not altered core functionality. Currently, the first activity performed as part of this 
+pipeline is the static source code analysis. Which of the following stages in the pipeline would you add the 
+execution of these smoke tests to?
+As a first activity, before performing static source code analysis and before generating the new build
+After performing static analysis on the source code and before generating the new build
+After deploying the new build to the test environment and before performing more extensive testing
+As a final activity, immediately before releasing the new build into production
+Answer: C
+Explanation
+Build verification tests (often called smoke tests) are intended to provide fast confirmation that a new build is 
+deployable and that core, end-to-end functionality remains intact. TAE describes these as early, lightweight 
+checks that run after deployment to a suitable test environment, because they need an executable, running 
+instance of the SUT to validate system readiness. Static analysis occurs before packaging/deployment and is a 
+
+iSQI - CTAL-TAE_V2
+Pass Exam
+28 of 29
+Verified Solution - 100% Result
+A.  
+B.  
+C.  
+D.  
+quality activity on source code; smoke tests are runtime checks. Running them before generating the build (A 
+or B) is not feasible because there is no deployed artifact to validate. Running smoke tests as the final activity 
+right before production release (D) defeats their purpose as an early feedback mechanism and increases risk 
+by discovering basic failures too late. The practical and TAE-aligned placement is immediately after 
+deploying the new build into the test environment and before launching broader, longer-running regression, 
+system, or acceptance suites. This ensures failures are detected quickly, prevents wasting time running 
+extensive tests on an unstable build, and provides a clear quality gate for “is this build worth testing further?” 
+Therefore, stage C is the correct insertion point for build verification tests.
+Question #:39
+A CI/CD pipeline consists of two phases: build and deployment. The build phase, among other activities, runs 
+automated test cases at the following test levels: Component Testing (CT) and Component Integration Testing 
+(CIT). If the build phase is successful, the deployment phase is started. The deployment phase first provisions 
+the test environment infrastructure needed to deploy the SUT, then deploys the SUT to this environment, and 
+finally triggers another separate pipeline that runs automated test cases at the following test levels: System 
+Testing (ST) and Acceptance Testing (AT). Which of the following statements is TRUE?
+Both automated test cases for CT-CIT and ST-AT can act as quality gates
+Automated test cases for CT-CIT can act as quality gates, while automated test cases for ST-AT cannot 
+act as quality gates
+Automated test cases for CT-CIT cannot act as quality gates, while automated test cases for ST-AT can 
+act as quality gates
+Neither automated test cases for CT-CIT nor automated test cases for ST-AT can act as quality gates
+Answer: A
+Explanation
+TAE describes quality gates as defined checkpoints in pipelines where objective criteria determine whether 
+the pipeline may proceed (e.g., thresholds, pass/fail rules, coverage, or risk-based acceptance). Automated 
+tests at multiple levels can serve as such gates. In the build phase, CT and CIT are commonly used as strong, 
+fast quality gates because they provide quick feedback on code correctness and integration of closely related 
+components; failures typically block promotion. In the deployment phase, after provisioning and deploying 
+into a test environment, automated System Testing and Acceptance Testing can also serve as quality gates for 
+promoting a build to later stages or release candidates, especially when the organization relies on automated 
+regression and automated acceptance criteria for release decisions. While ST/AT may take longer and may be 
+more prone to environmental factors, TAE still supports using them as gates when they are sufficiently stable, 
+relevant, and aligned with release risk. The scenario explicitly places ST/AT in a separate triggered pipeline, 
+which still qualifies as a gating mechanism if downstream promotion depends on its outcome. Therefore, both 
+CT-CIT and ST-AT can act as quality gates.
+Question #:40
+A new TAS allows the implementation of automated data-driven test scripts. All the tasks planned for the 
+initial deployment of this TAS, aimed at installing and configuring the TAS components and provisioning the 
+
+iSQI - CTAL-TAE_V2
+Pass Exam
+29 of 29
+Verified Solution - 100% Result
+A.  
+B.  
+C.  
+D.  
+infrastructure, will be performed manually by a dedicated, specialized team. This TAS is expected to be 
+deployed in the future in other similar environments. As a TAE, you see a risk that the correct and 
+reproducible deployment of the TAS cannot be guaranteed. Which of the following options is BEST suited for 
+mitigating this risk?
+Nothing needs to be done, because the team that will manually perform the specified tasks, as they are 
+specialized, will not make mistakes and will therefore be able to ensure a correct and reproducible 
+deployment
+Partition the data tables containing test data used by data-driven test scripts into smaller data tables, 
+using an appropriate logical criterion, to make them more manageable
+Review data-driven test scripts to better organize test libraries by adding test functions containing 
+identical sequences of actions commonly implemented in a relevant number of scripts
+Try to automate most of the tasks related to the installation and configuration of the TAS components 
+and those related to the provisioning of the infrastructure
+Answer: D
+Explanation
+TAE guidance treats repeatable, reliable deployment of the Test Automation Solution as a foundational 
+requirement, especially when the TAS will be rolled out to multiple environments. Manual installation and 
+provisioning are error-prone and difficult to reproduce consistently, even with skilled teams, due to small 
+variations in steps, configuration drift, and undocumented assumptions. The recommended mitigation is to 
+automate deployment activities using repeatable mechanisms (e.g., scripted installation, configuration 
+management, Infrastructure as Code, versioned environment definitions). This supports traceability (what 
+changed and when), repeatability (same inputs produce same environment), and rapid recovery (rebuild 
+environments quickly after failure). Option A is explicitly unsafe because human processes are never 
+guaranteed error-free and do not scale well across environments. Options B and C focus on test data and 
+library organization, which can improve test maintainability, but they do not address the stated risk: 
+inconsistent and non-reproducible TAS deployment. By automating installation/configuration and 
+infrastructure provisioning, the organization reduces deployment variance and ensures that future 
+deployments of the TAS can be performed reliably, consistently, and auditable across similar environments, 
+aligning directly with TAE best practices for sustaining automation at scale.
+
+About dumpscafe.com
+dumpscafe.com was founded in 2007. We provide latest & high quality IT / Business Certification Training Exam 
+Questions, Study Guides, Practice Tests.
+We help you pass any IT / Business Certification Exams with 100% Pass Guaranteed or Full Refund. Especially 
+Cisco, CompTIA, Citrix, EMC, HP, Oracle, VMware, Juniper, Check Point, LPI, Nortel, EXIN and so on.
+View list of all certification exams: All vendors
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+We prepare state-of-the art practice tests for certification exams. You can reach us at any of the email addresses 
+listed below.
+Sales: sales@dumpscafe.com
+Feedback: feedback@dumpscafe.com
+Support: support@dumpscafe.com
+Any problems about IT certification or our products, You can write us back and we will get back to you within 24 
+hours.

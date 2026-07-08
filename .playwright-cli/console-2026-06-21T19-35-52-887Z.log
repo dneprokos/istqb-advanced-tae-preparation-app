@@ -1,0 +1,12 @@
+[     815ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://www.classmarker.com/public/api/test/auth?test_id=2484441&type=rg:0
+[     898ms] [ERROR] TypeError: Cannot read properties of null (reading 'show_ads')
+    at https://www.classmarker.com/online-test/start/v4/js/733.1b40e2e5aec5ed31.js:1:68334
+    at Object.o [as default] (https://www.classmarker.com/online-test/start/v4/js/chunk-vendors.1b40e2e5aec5ed31.js:20:5423)
+    at Proxy.<anonymous> (https://www.classmarker.com/online-test/start/v4/js/chunk-vendors.1b40e2e5aec5ed31.js:172:1499)
+    at vo (https://www.classmarker.com/online-test/start/v4/js/chunk-vendors.1b40e2e5aec5ed31.js:22:31357)
+    at u.c [as fn] (https://www.classmarker.com/online-test/start/v4/js/chunk-vendors.1b40e2e5aec5ed31.js:22:22844)
+    at u.run (https://www.classmarker.com/online-test/start/v4/js/chunk-vendors.1b40e2e5aec5ed31.js:31:1777)
+    at N (https://www.classmarker.com/online-test/start/v4/js/chunk-vendors.1b40e2e5aec5ed31.js:22:23221)
+    at I (https://www.classmarker.com/online-test/start/v4/js/chunk-vendors.1b40e2e5aec5ed31.js:22:21858)
+    at L (https://www.classmarker.com/online-test/start/v4/js/chunk-vendors.1b40e2e5aec5ed31.js:22:21650)
+    at b (https://www.classmarker.com/online-test/start/v4/js/chunk-vendors.1b40e2e5aec5ed31.js:22:18560) @ https://www.classmarker.com/online-test/start/v4/js/chunk-vendors.1b40e2e5aec5ed31.js:19

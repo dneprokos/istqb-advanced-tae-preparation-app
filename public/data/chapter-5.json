@@ -506,5 +506,100 @@
     "image": null,
     "explanation": "A contract between services defines how the provider will supply services to the consumer, specifying the expected request and response formats, data types, and interaction patterns. This enables both services to be tested independently against the contract.",
     "reference": "Syllabus 5.1.3"
+  },
+  {
+    "id": "ch5-q021",
+    "chapter": 5,
+    "section": "5.0",
+    "type": "single",
+    "points": 1.33,
+    "text": "Automated regression test scripts make calls to private APIs requiring authentication (same method for all APIs) on a business-critical SUT. Two changes are planned: a change to the API authentication method and a minor OS upgrade in the test environment. You have already updated the test scripts for the new authentication method. Which sequence of activities is BEST to ensure the test scripts are not adversely affected?",
+    "options": [
+      { "id": "a", "text": "First upgrade the OS, then implement the authentication change, then run all updated test scripts." },
+      { "id": "b", "text": "Implement one change at a time and run a subset of updated test scripts after each change, finally running all updated test scripts." },
+      { "id": "c", "text": "First implement the authentication change, then upgrade the OS, then run all updated test scripts." },
+      { "id": "d", "text": "Implement one change at a time and run a subset of updated test scripts after each change." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "When multiple changes are introduced, applying them all before testing makes it harder to attribute failures to a specific change. The best practice is to implement changes incrementally, validating with a representative subset of tests after each change to detect issues early — especially important for a business-critical system. After each change is validated, the full updated regression suite should still be run to ensure overall coverage. Applying two changes before testing (A, C) reduces diagnostic clarity; stopping after subset validation without a final full run (D) omits the broad coverage check needed after all changes are applied.",
+    "reference": "Syllabus 5.0"
+  },
+  {
+    "id": "ch5-q022",
+    "chapter": 5,
+    "section": "5.1.1",
+    "type": "single",
+    "points": 1.33,
+    "text": "Which of the following does NOT refer to a configuration item that should be specified in development pipelines to identify a test environment (and its specific test data) for a web app under test?",
+    "options": [
+      { "id": "a", "text": "The number and type of automated tests to execute in the test environment where the web app is deployed." },
+      { "id": "b", "text": "The base URL of the test environment where the web app is deployed." },
+      { "id": "c", "text": "The connection string(s) to connect to the test database(s) within the test environment." },
+      { "id": "d", "text": "The URLs of web APIs/services related to the web app's backend within the test environment." }
+    ],
+    "correct": ["a"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Configuration items that identify a specific test environment and its data are those that define where the SUT runs and how automation connects to it and its dependencies: base URL, backend service endpoints, and database connection strings. The number and type of automated tests to execute is a test selection/orchestration decision (what to run), not an environment identification configuration (where to run) — the same environment identity supports running different test subsets.",
+    "reference": "Syllabus 5.1.1"
+  },
+  {
+    "id": "ch5-q023",
+    "chapter": 5,
+    "section": "5.1.1",
+    "type": "single",
+    "points": 1.33,
+    "text": "You are adding build verification (smoke) tests to a CI/CD pipeline for an Agile project, to verify daily build stability and ensure recent changes have not broken core functionality. Static source code analysis is currently the pipeline's first activity. At which stage should you add these smoke tests?",
+    "options": [
+      { "id": "a", "text": "As a first activity, before static analysis and before generating the new build." },
+      { "id": "b", "text": "After static analysis and before generating the new build." },
+      { "id": "c", "text": "After deploying the new build to the test environment and before more extensive testing." },
+      { "id": "d", "text": "As a final activity, immediately before releasing the new build into production." }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Smoke tests provide fast confirmation that a build is deployable and core end-to-end functionality remains intact, so they need a running instance of the SUT — they must run after deployment to a test environment. Running them before generating the build (A, B) is infeasible since there is no deployed artifact yet. Running them only immediately before production release (D) defeats their purpose as an early feedback mechanism. The correct placement is immediately after deployment to the test environment and before broader, longer-running suites.",
+    "reference": "Syllabus 5.1.1"
+  },
+  {
+    "id": "ch5-q024",
+    "chapter": 5,
+    "section": "5.1.1",
+    "type": "single",
+    "points": 1.33,
+    "text": "A CI/CD pipeline has a build phase (running Component Testing and Component Integration Testing) and a deployment phase, which provisions infrastructure, deploys the SUT, then triggers a separate pipeline running System Testing and Acceptance Testing. Which statement is TRUE?",
+    "options": [
+      { "id": "a", "text": "Both automated test cases for CT-CIT and ST-AT can act as quality gates." },
+      { "id": "b", "text": "Automated test cases for CT-CIT can act as quality gates, while automated test cases for ST-AT cannot." },
+      { "id": "c", "text": "Automated test cases for CT-CIT cannot act as quality gates, while automated test cases for ST-AT can." },
+      { "id": "d", "text": "Neither automated test cases for CT-CIT nor for ST-AT can act as quality gates." }
+    ],
+    "correct": ["a"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Quality gates are checkpoints where objective criteria determine whether a pipeline may proceed. In the build phase, CT and CIT commonly act as fast quality gates, blocking promotion on failure. After provisioning and deployment, automated System Testing and Acceptance Testing can also act as gates for promoting a build to later stages, provided downstream promotion depends on their outcome — which is the case here even though ST/AT run in a separately triggered pipeline. Both sets of automated tests can therefore act as quality gates.",
+    "reference": "Syllabus 5.1.1"
+  },
+  {
+    "id": "ch5-q025",
+    "chapter": 5,
+    "section": "5.0",
+    "type": "single",
+    "points": 1.33,
+    "text": "A new TAS supports data-driven test scripts. All tasks for its initial deployment — installing/configuring TAS components and provisioning infrastructure — will be performed manually by a dedicated, specialised team. The TAS is expected to be deployed in other similar environments in the future. You see a risk that correct, reproducible deployment of the TAS cannot be guaranteed. Which option is BEST suited to mitigate this risk?",
+    "options": [
+      { "id": "a", "text": "Nothing needs to be done, because the specialized team will not make mistakes and will ensure correct, reproducible deployment." },
+      { "id": "b", "text": "Partition the data tables used by data-driven scripts into smaller tables using an appropriate logical criterion, to make them more manageable." },
+      { "id": "c", "text": "Review data-driven test scripts to better organize test libraries by adding functions for identical action sequences common across scripts." },
+      { "id": "d", "text": "Automate most of the tasks related to installing/configuring the TAS components and provisioning the infrastructure." }
+    ],
+    "correct": ["d"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Repeatable, reliable deployment of the TAS is foundational, especially when it will be rolled out to multiple environments. Manual installation and provisioning are error-prone and hard to reproduce consistently even with skilled teams, due to small variations and configuration drift. Automating deployment (scripted installation, configuration management, infrastructure as code) supports traceability, repeatability, and rapid recovery. Human processes are never guaranteed error-free (making A unsafe), and reorganising test data or libraries (B, C) improves test maintainability but does not address non-reproducible TAS deployment.",
+    "reference": "Syllabus 5.0"
   }
 ]

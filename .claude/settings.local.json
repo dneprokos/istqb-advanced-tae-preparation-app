@@ -26,7 +26,11 @@
       "Bash(git fetch *)",
       "Bash(git checkout *)",
       "Bash(git pull *)",
-      "Bash(git switch *)"
+      "Bash(git switch *)",
+      "Bash(gh auth *)",
+      "Bash(gh pr *)",
+      "Bash(git stash *)",
+      "Bash(echo \"EXIT:$?\")"
     ]
   }
 }

@@ -265,5 +265,81 @@
     "image": null,
     "explanation": "Test progress reports should be distributed to all stakeholders who have a need or interest in the testing progress. This includes management, developers, business representatives, and other relevant parties — not just the test team.",
     "reference": "Syllabus 6.1.3"
+  },
+  {
+    "id": "ch6-q015",
+    "chapter": 6,
+    "section": "6.1.2",
+    "type": "single",
+    "points": 2.00,
+    "text": "The last few runs of a suite of automated keyword-driven tests were never completed; the aborted test differed between runs. You can only determine that execution aborted due to exceptions on the SUT by analysing its log files. The TAS currently logs all expected data per keyword to intermediate log files, but the final HTML log includes full data only for failing keywords, with just a configurable subset for successful keywords. Which action would you take FIRST to help find the root cause of the aborts?",
+    "options": [
+      { "id": "a", "text": "Log the stack trace and memory available to the SUT at the start and end of each test, in the SUT log files." },
+      { "id": "b", "text": "Split the generated log file into smaller parts, loaded into external files shown in the browser in transparent mode when needed." },
+      { "id": "c", "text": "Log all expected data in the final test execution log file, not only for failing keywords but also for successful ones." },
+      { "id": "d", "text": "Use appropriate colors to visually highlight different types of information in the test execution log files." }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "When aborts occur unpredictably with unclear root cause, the priority is sufficient, consistent observability to reconstruct events leading up to termination. Since the abort location varies and full detail currently exists only for failing keywords, the last successfully executed keywords and their context may be essential to correlate actions with the SUT failure. The fastest, most direct improvement is including complete keyword-level logging for successful steps too, at least during investigation. Option A changes SUT-side logging and doesn't guarantee visibility into the automation step sequence; B and D improve presentation/performance, not diagnostic content.",
+    "reference": "Syllabus 6.1.2"
+  },
+  {
+    "id": "ch6-q016",
+    "chapter": 6,
+    "section": "6.1.1",
+    "type": "single",
+    "points": 2.00,
+    "text": "An automated test makes a well-formed request to add product ID 710 to a cart. The API returns HTTP 200 OK, but the response body says the product is out of stock. The API is behaving correctly, the test fails but completes, and the message logged is 'The product with ID = 710 is out of stock. Cart not updated.' You already know both the test and the API are behaving correctly and the problem is the test data. Available logging levels are FATAL, ERROR, WARN, INFO, DEBUG. Which is the MOST appropriate level for this message?",
+    "options": [
+      { "id": "a", "text": "FATAL" },
+      { "id": "b", "text": "INFO" },
+      { "id": "c", "text": "DEBUG" },
+      { "id": "d", "text": "WARN" }
+    ],
+    "correct": ["d"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "The failure stems from an expected, non-system fault condition (a valid business-state response), confirming the API behaved correctly — the issue is that the test data (product availability) didn't satisfy the test's precondition. It is not FATAL since execution continues and the system remains usable. INFO would be too low-visibility to flag a precondition problem needing action; DEBUG is reserved for detailed diagnostic traces, not for highlighting a test-data validity issue. WARN is intended for abnormal or noteworthy conditions that aren't a product defect but may need attention to maintain test reliability, making it the most appropriate level.",
+    "reference": "Syllabus 6.1.1"
+  },
+  {
+    "id": "ch6-q017",
+    "chapter": 6,
+    "section": "6.1.1",
+    "type": "single",
+    "points": 2.00,
+    "text": "Automated tests run by a TAS can be subject to sudden bursts of log messages during execution, and all messages must be permanently stored for later analysis. If logging is not done correctly, these bursts can reduce execution speed and cause unreliable results. Which solution would be MOST useful for this TAS logging issue?",
+    "options": [
+      { "id": "a", "text": "Use an NTP server to ensure the clocks of the machines running the TAS and SUT are synchronized." },
+      { "id": "b", "text": "Log all messages in memory using a circular buffer and periodically flush the buffer to the corresponding log files." },
+      { "id": "c", "text": "Avoid logging the messages that occur during the specified bursts to minimize performance overhead." },
+      { "id": "d", "text": "Log all messages directly to the corresponding log files to ensure permanent storage." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Logging must balance diagnostic value with execution performance. Direct synchronous file I/O for every message can become a bottleneck during bursts, perturbing timing and destabilising time-sensitive tests. Since all messages must be permanently stored, dropping burst logs (C) violates the requirement, and NTP synchronization (A) helps correlate events but doesn't address the overhead. Buffering log events in memory (e.g., a circular buffer) and flushing periodically reduces immediate I/O pressure and smooths bursts while still preserving messages for later analysis.",
+    "reference": "Syllabus 6.1.1"
+  },
+  {
+    "id": "ch6-q018",
+    "chapter": 6,
+    "section": "6.1.3",
+    "type": "single",
+    "points": 2.00,
+    "text": "Which of the following statements about a test progress report produced for an automated test suite is TRUE?",
+    "options": [
+      { "id": "a", "text": "The test progress report should indicate, for each test in the suite, the timestamps related to the test steps." },
+      { "id": "b", "text": "The content of the test progress report should not be affected by the stakeholders to whom the report is intended." },
+      { "id": "c", "text": "The test progress report should indicate the test environment in which the tests were performed." },
+      { "id": "d", "text": "The test progress report should indicate, for each test in the suite, the start and end timestamps of the test." }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Stakeholders must be able to interpret results in context, and a fundamental contextual attribute is the test environment — without it, results can be misleading or non-comparable across runs. Reports should be tailored to stakeholder needs (making option B false). Step-level timestamps (A) are generally too granular for a progress report, belonging more to detailed execution logs. Per-test start/end timestamps (D) may appear in some reports but are not as universally required as identifying the environment.",
+    "reference": "Syllabus 6.1.3"
   }
 ]
