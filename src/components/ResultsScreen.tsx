@@ -1,5 +1,6 @@
 import type { Attempt, Question, AttemptAnswer, IndexData } from '../types';
 import { scoreQuestion, getOptionText } from '../utils/exam';
+import { QuestionText } from './QuestionText';
 
 interface Props {
   result: Attempt;
@@ -71,7 +72,7 @@ export function ResultsScreen({ result, questions, answers, indexData, onGoHome 
                   <span className={`text-sm font-bold ${correct ? 'text-green-600' : 'text-red-500'}`}>
                     {correct ? '✓' : '✗'} Q{i + 1}
                   </span>
-                  <p className="text-sm flex-1">{q.text}</p>
+                  <div className="flex-1"><QuestionText text={q.text} className="text-sm" /></div>
                   <span className="text-xs text-gray-400">{earned.toFixed(1)}/{q.points.toFixed(1)}pts</span>
                 </div>
                 <div className="text-xs space-y-1 pl-6">
