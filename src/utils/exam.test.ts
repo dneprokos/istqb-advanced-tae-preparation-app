@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { shuffle, selectQuestions, scoreQuestion, computeResult, getWeakChapters } from './exam';
+import { shuffle, selectQuestions, scoreQuestion, computeResult, getWeakChapters, getOptionText } from './exam';
 import type { ChapterMeta, Attempt } from '../types';
 import { makeQuestion, makeAttempt } from '../test/factories';
 
@@ -18,6 +18,18 @@ describe('shuffle', () => {
     const copy = [...arr];
     shuffle(arr);
     expect(arr).toEqual(copy);
+  });
+});
+
+describe('getOptionText', () => {
+  it('returns text for matching option id', () => {
+    const q = makeQuestion({ options: [{ id: 'a', text: 'Option A' }, { id: 'b', text: 'Option B' }] });
+    expect(getOptionText(q, 'b')).toBe('Option B');
+  });
+
+  it('falls back to the id when option is not found', () => {
+    const q = makeQuestion({ options: [{ id: 'a', text: 'Option A' }] });
+    expect(getOptionText(q, 'z')).toBe('z');
   });
 });
 

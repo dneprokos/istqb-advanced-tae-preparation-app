@@ -398,5 +398,62 @@
     "image": null,
     "explanation": "Invoking a web service API to create user accounts with specified profiles is the most efficient and scalable way to generate diverse test data for performance testing. Manual GUI registration is too slow and does not scale. Using the production database introduces data privacy risks and can affect live users. Anonymizing production data is an option but does not address the need for varied profiles based on specific input criteria.",
     "reference": "Syllabus 8.1.4"
+  },
+  {
+    "id": "ch8-q022",
+    "chapter": 8,
+    "section": "8.1.2",
+    "type": "single",
+    "points": 2.17,
+    "text": "Automated tests at the UI level use an asynchronous waiting mechanism that synchronizes test steps with the app, executing only when the app is ready with no pending asynchronous requests. The same initialization tasks used to set test preconditions are implemented as test steps in every test. The TAS provides both a Suite Setup (runs once when the suite starts) and a Test Setup (runs at the start of each test case). Which recommendation would you provide for improving the TAS (assuming all are possible)?",
+    "options": [
+      { "id": "a", "text": "Adopt manual synchronization using hard-coded waits instead of the current automatic synchronization." },
+      { "id": "b", "text": "Implement the initialization tasks that set test preconditions within the Test Setup feature at the suite level." },
+      { "id": "c", "text": "Adopt manual synchronization using dynamic waits via polling instead of the current automatic synchronization." },
+      { "id": "d", "text": "Implement the initialization tasks that set test preconditions within the Suite Setup feature at the suite level." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Replacing robust, app-aware synchronization with manual waits is discouraged: hard-coded waits are brittle and slow, and polling is generally still inferior to the readiness-based synchronization already in place. The real improvement opportunity is that the same initialization steps are duplicated as explicit test steps in every test, increasing length and maintenance effort; centralizing this shared per-test setup logic reduces duplication. Since each test needs its own known starting state to remain independent, this belongs in Test Setup (run before each test), not Suite Setup (D), which would run it only once and risk later tests inheriting polluted state.",
+    "reference": "Syllabus 8.1.2"
+  },
+  {
+    "id": "ch8-q023",
+    "chapter": 8,
+    "section": "8.1.4",
+    "type": "single",
+    "points": 2.17,
+    "text": "Which of the following descriptions of what some test automation tools can be used to do is TRUE?",
+    "options": [
+      { "id": "a", "text": "Autonomously design intuitive UIs and evaluate them, as well as evaluate the overall UX of an application." },
+      { "id": "b", "text": "Analyze test results, code changes, and metrics to predict potential defects and areas of high risk within an application." },
+      { "id": "c", "text": "Autonomously perform exploratory testing sessions based on test charters to find defects within an application." },
+      { "id": "d", "text": "Make video recordings of UI testing sessions to share with stakeholders, showing the functionality and appearance of an application." }
+    ],
+    "correct": ["d"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Video recording of UI test sessions is a common feature in several UI automation ecosystems and cloud device/browser platforms, providing visual evidence of steps, failures, and look-and-feel to support debugging and communication with non-technical stakeholders. Autonomously designing/evaluating UX (A) and autonomously conducting exploratory testing (C) are largely outside typical test automation tool scope, requiring human-centred methods. Broad predictive defect capability (B) overstates what is a standard, dependable tool function compared with concrete artifact capture.",
+    "reference": "Syllabus 8.1.4"
+  },
+  {
+    "id": "ch8-q024",
+    "chapter": 8,
+    "section": "8.1.2",
+    "type": "single",
+    "points": 2.17,
+    "text": "A TAS runs a suite of independent, automated UI-level regression tests on a test environment across releases of a web app: all executions complete successfully with correct results (no false positives or negatives). The scripts are based on the flow model pattern in a three-layer TAF (test scripts, business logic, core libraries), expanding the page object model via the façade pattern. The suite now takes too long to run, and scripts are considered too long in LOC. Which recommendation would you provide for improving the TAS (assuming all are possible)?",
+    "options": [
+      { "id": "a", "text": "Modify the TAF so test scripts are based on the page object model rather than the flow model pattern." },
+      { "id": "b", "text": "Implement a mechanism to automatically reboot the entire web app in the event of a crash." },
+      { "id": "c", "text": "Split the suite into sub-suites and run each of them concurrently on different test environments." },
+      { "id": "d", "text": "Modify the architecture of the SUT to improve its testability, and the TAA accordingly if necessary." }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "The primary problem is execution time; correctness and independence are already strong. Because the tests are explicitly independent, they are well-suited to parallel execution across multiple environments, reducing wall-clock duration without changing test intent. Crash recovery (B) doesn't apply since executions already complete successfully. Changing the scripting pattern (A) may or may not reduce LOC but introduces risk and rework without directly addressing runtime, especially since the current pattern already targets maintainability and reuse. Improving SUT testability (D) is invasive and expensive, and not targeted at the stated speed issue.",
+    "reference": "Syllabus 8.1.2"
   }
 ]

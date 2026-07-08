@@ -398,5 +398,81 @@
     "image": null,
     "explanation": "Flaky tests that intermittently cause race conditions or random errors should be removed from the active suite and analyzed separately to find the root cause. Taking no action allows unreliable tests to undermine trust in the suite. Reducing the suite arbitrarily or replacing tests without fixing the root cause does not address the underlying problem.",
     "reference": "Syllabus 7.1.2"
+  },
+  {
+    "id": "ch7-q022",
+    "chapter": 7,
+    "section": "7.1.1",
+    "type": "single",
+    "points": 1.33,
+    "text": "A TAS performs automated UI-level testing of native mobile apps via a client-server TAF: the client runs on-premise and creates test scripts using TAF libraries to recognise and interact with the app's UI objects, while a cloud-hosted server translates commands into device actions and returns results. The device to run on is specified at runtime. You are verifying whether the test automation environment and all TAS/TAF components work correctly. Which activity would you perform to achieve this?",
+    "options": [
+      { "id": "a", "text": "Manage the infrastructure hosting the server, including hardware, software updates, and security patches." },
+      { "id": "b", "text": "Check whether the references to the device on which test scripts will run are correctly hard-coded within those scripts." },
+      { "id": "c", "text": "Check whether the TAF libraries used to recognise and interact with the app's UI objects function as expected." },
+      { "id": "d", "text": "Check whether all test scripts executed as part of a given test suite have expected results." }
+    ],
+    "correct": ["c"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "The goal is to verify the automation environment and TAS/TAF components, not the correctness of specific test suites. In a client-server TAF for mobile automation, the automation library layer that locates and interacts with UI objects is critical; checking it confirms the end-to-end automation mechanism (client → server → device → response) functions. Managing PaaS infrastructure (A) is the provider's job; hard-coding device references (B) contradicts the runtime-specified design; checking expected test results (D) is suite-correctness verification, a later step after confirming the environment works.",
+    "reference": "Syllabus 7.1.1"
+  },
+  {
+    "id": "ch7-q023",
+    "chapter": 7,
+    "section": "7.1.2",
+    "type": "single",
+    "points": 1.33,
+    "text": "You have successfully verified that a test automation environment and all TAS components are working as expected. Your goal now is to verify the correct behaviour of a given automated test suite that will be run by the TAS. Which of the following should NOT be part of the verifications aimed at achieving this goal?",
+    "options": [
+      { "id": "a", "text": "Is the connectivity between the TAS and the necessary internal and external systems available and stable?" },
+      { "id": "b", "text": "Does the level of intrusion of automated test tools influence confidence in the suite's test results?" },
+      { "id": "c", "text": "Do all automated tests within the suite always provide the same results across multiple runs?" },
+      { "id": "d", "text": "Are all automated tests within the suite complete in terms of test data, including expected results?" }
+    ],
+    "correct": ["a"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "There are two verification scopes: the automation environment/TAS components (infrastructure, connectivity, toolchain readiness), and the correctness/trustworthiness of a specific automated suite (completeness, determinism, result validity). The scenario states the environment has already been verified, so connectivity belongs to that prior scope and should not be repeated as part of verifying the suite's behaviour. Intrusion level (B), repeatability (C), and data/result completeness (D) are all suite-focused considerations that remain in scope.",
+    "reference": "Syllabus 7.1.2"
+  },
+  {
+    "id": "ch7-q024",
+    "chapter": 7,
+    "section": "7.1.1",
+    "type": "single",
+    "points": 1.33,
+    "text": "A TAS running in a single test environment was successfully manually installed and configured from a central repository, with all components at the correct versions, and it has been verified that all TAS components provide reliable and repeatable performance. The TAS will run several suites of regression tests on various SUTs. Your current goal is to complete all preliminary verifications to ensure the TAS works correctly. Which activity would you perform FIRST?",
+    "options": [
+      { "id": "a", "text": "Create scripts to automatically install and configure the TAS in the test environment from the central repository." },
+      { "id": "b", "text": "Check whether TAS connectivity to all required internal systems, external systems, and interfaces is available." },
+      { "id": "c", "text": "Run a given suite multiple times using the TAS to determine whether all regression test scripts always provide the same result." },
+      { "id": "d", "text": "Check whether all regression test scripts in a given suite have expected results." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Verifying the automation environment/infrastructure is distinct from verifying test suites' correctness. Since the TAS is installed correctly and its components perform reliably in isolation, the next preliminary verification is confirming the TAS can actually reach the systems and interfaces it needs end-to-end (SUT endpoints, auth services, databases, integrations). Without confirmed connectivity, later suite executions or repeatability checks could fail for reasons unrelated to test logic. Creating installation scripts (A) aids scalability but isn't needed to confirm the already-installed environment; checking expected results (D) and repeatability (C) both assume reachable dependencies, so connectivity should be verified first.",
+    "reference": "Syllabus 7.1.1"
+  },
+  {
+    "id": "ch7-q025",
+    "chapter": 7,
+    "section": "7.1.3",
+    "type": "single",
+    "points": 1.33,
+    "text": "An automated test case that should always pass sometimes passes and sometimes fails intermittently (non-deterministic behaviour) in the same test environment, even though no SUT or test automation code has changed. Which statement about the root cause of this behaviour is TRUE?",
+    "options": [
+      { "id": "a", "text": "The root cause is a race condition that can be identified by analysing the log files of the test case, the SUT, and the TAF." },
+      { "id": "b", "text": "Determining the root cause may require, in addition to the TAE, the support of others such as developers and system engineers." },
+      { "id": "c", "text": "The root cause must be instability in the test environment, since no code has changed." },
+      { "id": "d", "text": "Determining the root cause is certainly easier than if the automated test always failed (deterministic behaviour)." }
+    ],
+    "correct": ["b"],
+    "selectCount": 1,
+    "image": null,
+    "explanation": "Flaky (non-deterministic) behaviour can originate from many sources spanning application code, infrastructure, deployment configuration, tooling, and data — boundaries that often require collaboration beyond the TAE role, such as developers inspecting application internals or system engineers analysing resource/network conditions. Asserting the cause is definitely a race condition (A) is too specific and assertive; no code change does not imply the environment is the only possible cause (C); intermittent failures are typically harder to diagnose than consistent ones because evidence is less reproducible (making D false).",
+    "reference": "Syllabus 7.1.3"
   }
 ]

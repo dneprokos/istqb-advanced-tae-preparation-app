@@ -1,5 +1,5 @@
 import type { Attempt, Question, AttemptAnswer, IndexData } from '../types';
-import { scoreQuestion } from '../utils/exam';
+import { scoreQuestion, getOptionText } from '../utils/exam';
 
 interface Props {
   result: Attempt;
@@ -78,13 +78,17 @@ export function ResultsScreen({ result, questions, answers, indexData, onGoHome 
                   <div>
                     <span className="text-gray-500">Your answer: </span>
                     <span className={correct ? 'text-green-600' : 'text-red-500'}>
-                      {selected.length > 0 ? selected.map(s => s.toUpperCase()).join(', ') : '(no answer)'}
+                      {selected.length > 0
+                        ? selected.map(s => `${s.toUpperCase()}. ${getOptionText(q, s)}`).join(', ')
+                        : '(no answer)'}
                     </span>
                   </div>
                   {!correct && (
                     <div>
                       <span className="text-gray-500">Correct: </span>
-                      <span className="text-green-600">{q.correct.map(s => s.toUpperCase()).join(', ')}</span>
+                      <span className="text-green-600">
+                        {q.correct.map(s => `${s.toUpperCase()}. ${getOptionText(q, s)}`).join(', ')}
+                      </span>
                     </div>
                   )}
                   <div className="text-gray-500 italic">{q.explanation}</div>
