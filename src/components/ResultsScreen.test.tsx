@@ -64,6 +64,21 @@ describe('ResultsScreen', () => {
     expect(screen.getByText(/Correct:/)).toBeTruthy();
   });
 
+  it('shows full option text, not just the letter, for the selected answer', () => {
+    const answers: AttemptAnswer[] = [{ questionId: 'q1', selected: ['a'] }];
+    const result = makeAttempt({ percent: 100, passed: true });
+    render(<ResultsScreen result={result} questions={[q1]} answers={answers} indexData={indexData} onGoHome={vi.fn()} />);
+    expect(screen.getByText('A. Option A')).toBeTruthy();
+  });
+
+  it('shows full option text for the revealed correct answer', () => {
+    const answers: AttemptAnswer[] = [{ questionId: 'q1', selected: ['b'] }];
+    const result = makeAttempt({ percent: 0, passed: false });
+    render(<ResultsScreen result={result} questions={[q1]} answers={answers} indexData={indexData} onGoHome={vi.fn()} />);
+    expect(screen.getByText('A. Option A')).toBeTruthy();
+    expect(screen.getByText('B. Option B')).toBeTruthy();
+  });
+
   it('does not reveal correct answer when the answer is right', () => {
     const answers: AttemptAnswer[] = [{ questionId: 'q1', selected: ['a'] }];
     const result = makeAttempt({ percent: 100, passed: true });

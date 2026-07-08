@@ -30,7 +30,9 @@
       "Bash(gh auth *)",
       "Bash(gh pr *)",
       "Bash(git stash *)",
-      "Bash(echo \"EXIT:$?\")"
+      "Bash(echo \"EXIT:$?\")",
+      "Bash(xargs grep -liE \"result|review\")",
+      "Bash(npm run *)"
     ]
   }
 }

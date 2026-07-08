@@ -20,6 +20,10 @@ export function scoreQuestion(question: Question, selected: string[]): number {
   return correct === given ? question.points : 0;
 }
 
+export function getOptionText(question: Question, optionId: string): string {
+  return question.options.find(o => o.id === optionId)?.text ?? optionId;
+}
+
 export function computeResult(
   questions: Question[],
   answers: AttemptAnswer[],
